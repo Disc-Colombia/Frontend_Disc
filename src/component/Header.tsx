@@ -1,41 +1,68 @@
-import { Link } from 'react-router-dom'
-import logo from '../img/logoDISC_sinfondo.png'
-import Col from '../img/col.png';
-import Us from '../img/us.png';
-import '../style/headers.css';
-import { Outlet } from 'react-router-dom';
-import { Footers } from './Footers';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import logo from "../img/logoDISC_sinfondo.png";
+import Col from "../img/col.png";
+import Us from "../img/us.png";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import "../style/headers.css";
+import { Outlet } from "react-router-dom";
+import { Footers } from "./Footers";
 export const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);//controla estado del menu
+//Muestra el menu
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+  //Cierra el menu
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
   return (
     <>
-    <div className='container_header'>
-        <div className='container_logo'>
-            <Link to={"/"}>
-            <img className='container_logo--img' src={logo} alt='logo development'/>
-            </Link>
-            
+      <div className="container_header line-bottom">
+        <div className="container_logo">
+          <Link to={"/"}>
+            <img
+              className="container_logo--img"
+              src={logo}
+              alt="logo development"
+            />
+          </Link>
         </div>
-        <div className='container'>
-         <div className='container_nav'>
-            <nav className='container_nav--lin'>
-             <Link className='navegations_links'  to={"/"}>Home</Link>
-             <Link className='navegations_links' to={"#"}>Services</Link>
-             <Link className='navegations_links' to={"#"}>About us</Link>
-             <Link className='navegations_links' to={"#"}>Conatct us</Link>
+        <div className="container">
+          <button className="menu-toggle" onClick={toggleMenu}>
+            <i className="bi bi-list icono-menu"></i>
+          </button>
+          <div className={`container_nav ${isMenuOpen ? "open" : ""}`}>
+            <nav className="container_nav--lin">
+              <Link className={`navegations_links ${location.pathname==="/"? "active":""}`} onClick={closeMenu} to={"/"}>
+                Home
+              </Link>
+              <Link className={`navegations_links ${location.pathname==="/services"? "active":""}`} onClick={closeMenu} to={"/services"}>
+                Services
+              </Link>
+              <Link className={`navegations_links ${location.pathname==="/aboutUs"? "active":""}`} onClick={closeMenu} to={"/aboutUs"}>
+                About us
+              </Link>
+              <Link className={`navegations_links ${location.pathname==="/contactUs"? "active":""}`} onClick={closeMenu} to={"/contactUs"}>
+                Contact us
+              </Link>
             </nav>
-         </div>
-         <div className='container_flags'>
-           <div className='container_flags--contry'>
-            <img className='flags' src={Col}/>
-           </div>
-           <div className='container_flags--contry'>
-            <img className='flags usaflag' src={Us}/>
-           </div>
-         </div>
+            <div className="container_flags">
+            <div className="container_flags--contry">
+              <img className="flags" src={Col} />
+            </div>
+            <div className="container_flags--contry">
+              <img className="flags usaflag" src={Us} />
+            </div>
+          </div>
+          </div>
+        
         </div>
-    </div>
-    <Outlet/>
-    <Footers/>
+      
+      </div>
+      <Outlet />
+      <Footers />
     </>
-  )
-}
+  );
+};
