@@ -35,17 +35,17 @@ export const Header = () => {
           </button>
           <div className={`container_nav ${isMenuOpen ? "open" : ""}`}>
             <nav className="container_nav--lin">
-              <Link className="navegations_links" onClick={closeMenu} to={"/"}>
+              <Link className={`navegations_links ${location.pathname==="/"? "active":""}`} onClick={closeMenu} to={"/"}>
                 Home
               </Link>
-              <Link className="navegations_links" onClick={closeMenu} to={"/services"}>
+              <Link className={`navegations_links ${location.pathname==="/services"? "active":""}`} onClick={closeMenu} to={"/services"}>
                 Services
               </Link>
-              <Link className="navegations_links" onClick={closeMenu} to={"/aboutUs"}>
+              <Link className={`navegations_links ${location.pathname==="/aboutUs"? "active":""}`} onClick={closeMenu} to={"/aboutUs"}>
                 About us
               </Link>
-              <Link className="navegations_links" onClick={closeMenu} to={"/contactUs"}>
-                Conatct us
+              <Link className={`navegations_links ${location.pathname==="/contactUs"? "active":""}`} onClick={closeMenu} to={"/contactUs"}>
+                Contact us
               </Link>
             </nav>
             <div className="container_flags">
