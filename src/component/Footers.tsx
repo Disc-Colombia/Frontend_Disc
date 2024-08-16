@@ -1,4 +1,4 @@
-import React from 'react'
+
 import '../style/headers.css';
 export const Footers = () => {
   return (

@@ -26,6 +26,74 @@
     justify-content: center;
     align-items: center;
 }
+/* Estilos para dispositivos móviles */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .container_nav {
+    display: flex;
+  }
+  
+  /* Ocultar el menú lateral por defecto en pantallas pequeñas */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block; /* Mostrar el ícono de hamburguesa */
+    }
+  
+    .container_nav {
+      position: fixed;
+      top: 0;
+       left: -250px; 
+      width: 250px;
+      height: 100vh;
+      /* background-color: #fff; */
+      flex-direction: column;
+      justify-content: start;
+      padding: 2rem;
+      transition: left 0.3s ease-in-out;
+      z-index: 1000;
+    }
+  
+    /* Cuando el menú esté abierto, desplázalo dentro de la pantalla */
+    .container_nav.open {
+      left: 0;
+      background-color: #000;
+    }
+    .icono-menu{
+        font-size: 3rem;
+        color: #fff;
+    }
+  
+    .container_nav--lin {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
+  
+    .navegations_links {
+      padding: 1rem 0;
+      font-size: 1.2rem;
+      color: #333;
+      text-decoration: none;
+    }
+  
+    .navegations_links:hover {
+      color: #000;
+    }
+  
+    /* Ajustar los estilos de las banderas */
+    .container_flags {
+      position: absolute;
+      bottom: 1rem;
+      left: 2rem;
+      display: flex;
+    }
+  }
 .container_nav--links{
  margin-right: 2rem;
 }
@@ -49,12 +117,9 @@
     height: 50px;
     
 }
-.usaflag{
-color: var(--White);
-}
 /*
 Footers styel here 
  */
  .footer_container{
-    background-color: var(--LogoBackgound);
+    background-color:black;
  }

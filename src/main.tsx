@@ -3,6 +3,8 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Header } from "./component/Header";
 import { IndexPage } from "./pages/Index";
+import 'normalize.css';
+
 //Rutas de las paginas aqui
 const router = createBrowserRouter([
   {
