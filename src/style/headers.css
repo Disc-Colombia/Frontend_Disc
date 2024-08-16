@@ -121,13 +121,16 @@
 Footers styel here 
  */
 .footer_container {
-  height: 20rem;
+  height: 25rem;
   background: linear-gradient(to right, var(--Black),var(--LogoBackgound));
 
 }
 .footer_logo{
+    display: flex;
     margin-top: 4rem;
     padding: 2px;
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 .footer_container--logo{
     display: flex;
@@ -137,4 +140,7 @@ Footers styel here
     width: 260px;
     height: 100px;
     margin-top: 3rem;
+}
+.informations_dis{
+    color: var(--White);
 }

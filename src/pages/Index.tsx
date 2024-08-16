@@ -1,7 +1,10 @@
-import React from 'react'
+
+import { Home } from '../component/Home'
 
 export const IndexPage = () => {
   return (
-    <div>IndexPage</div>
+    <div>
+      <Home/>
+    </div>
   )
 }
