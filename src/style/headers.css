@@ -43,7 +43,7 @@
 }
 
 /* Ocultar el menú lateral por defecto en pantallas pequeñas */
-@media (max-width: 768px) {
+@media (max-width:1024px) {
   .menu-toggle {
     display: block;
   }
@@ -64,7 +64,7 @@
   /*desplazamiento del menu*/
   .container_nav.open {
     left: 0;
-    background-color:var(--LogoBackgound);
+    background-color: var(--LogoBackgound);
   }
   .icono-menu {
     font-size: 3rem;
@@ -118,29 +118,107 @@
 }
 /*=============================================================================*/
 /*
-Footers styel here 
+Footers styles here 
  */
 .footer_container {
-  height: 25rem;
-  background: linear-gradient(to right, var(--Black),var(--LogoBackgound));
+  display: flex;
+  height: auto;
+  background: linear-gradient(to right, var(--Black), var(--LogoBackgound));
+  flex-direction: column;
+  padding-bottom: 2rem;
+}
 
+.footer_logo {
+  display: flex;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  flex-direction: column;
 }
-.footer_logo{
+.footer_container--logo {
+  display: flex;
+}
+.footer_logo--img {
+  width: 260px;
+  height: 100px;
+  margin-top: 3rem;
+}
+.footer_informations {
+  margin-top: 0;
+}
+.informations_dis {
+  color: var(--White);
+  width: 260px;
+  font-size: 12px;
+  text-align: justify;
+  margin-top: 0;
+}
+.policies {
+  display: inline;
+}
+@media (min-width:768px) {
+  .policies{
     display: flex;
+  }
+  .informations_dis--policies{
+    display: flex;
+  }
+  .informations_dis--policies:last-child {
+    margin-left: 5rem;
+  }
+  .social_tittle{
     margin-top: 4rem;
-    padding: 2px;
-    margin-left: 3rem;
-    margin-right: 3rem;
+  }
 }
-.footer_container--logo{
+
+.informations_dis--policies {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--White);
+}
+
+.footer_social--networks {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+  margin-top: 0;
+}
+.social_tittle {
+  font-size: 1.5rem;
+  color: var(--White);
+  font-weight: 800;
+  
+}
+
+.footer_social-media {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.copyrights {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--White);
+  text-align: center;
+}
+.socialinformations {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.informations_dis--paragraph {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--White);
+  margin: 4px;
+}
+.contact {
+  font-size: 1.5rem;
+  color: var(--White);
+}
+@media (min-width: 768px) {
+  .footer_logo {
     display: flex;
-    
-}
-.footer_logo--img{
-    width: 260px;
-    height: 100px;
-    margin-top: 3rem;
-}
-.informations_dis{
-    color: var(--White);
+    justify-content: space-between;
+    flex-direction: row;
+  }
 }

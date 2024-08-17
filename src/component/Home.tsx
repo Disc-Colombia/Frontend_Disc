@@ -1,7 +1,8 @@
-import React from 'react'
-
+import "../style/home.css";
 export const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <div>
+      <div></div>
+    </div>
+  );
+};
