@@ -4,10 +4,11 @@ import logo from "../img/logoDISC_sinfondo.png";
 import Col from "../img/col.png";
 import Us from "../img/us.png";
 import "bootstrap-icons/font/bootstrap-icons.css";
+
 import "../style/headers.css";
 import { Outlet } from "react-router-dom";
 import { Footers } from "./Footers";
-import { Home } from "./Home";
+
 export const Header = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);//controla estado del menu

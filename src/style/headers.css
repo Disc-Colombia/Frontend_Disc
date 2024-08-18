@@ -6,7 +6,7 @@
   justify-content: space-between;
   align-items: center;
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
-  position: absolute;
+  /* position: absolute; */
   top: 0px;
   left: 0px;
   width: 100%;
@@ -43,7 +43,7 @@
 }
 
 /* Ocultar el menú lateral por defecto en pantallas pequeñas */
-@media (max-width:1024px) {
+@media (max-width: 1024px) {
   .menu-toggle {
     display: block;
   }
@@ -69,6 +69,7 @@
   .icono-menu {
     font-size: 3rem;
     color: #fff;
+    padding-right: 2rem;
   }
 
   .container_nav--lin {
@@ -100,6 +101,7 @@
 }
 .navegations_links {
   font-weight: 600;
+  font-family: var(--font-makina);
   font-size: 1.5rem;
   color: var(--White);
   text-decoration: none;
@@ -118,7 +120,7 @@
 }
 /*=============================================================================*/
 /*
-Footers styles here 
+Footers styles here
  */
 .footer_container {
   display: flex;
@@ -155,17 +157,17 @@ Footers styles here
 .policies {
   display: inline;
 }
-@media (min-width:768px) {
-  .policies{
+@media (min-width: 768px) {
+  .policies {
     display: flex;
   }
-  .informations_dis--policies{
+  .informations_dis--policies {
     display: flex;
   }
   .informations_dis--policies:last-child {
     margin-left: 5rem;
   }
-  .social_tittle{
+  .social_tittle {
     margin-top: 4rem;
   }
 }
@@ -186,7 +188,6 @@ Footers styles here
   font-size: 1.5rem;
   color: var(--White);
   font-weight: 800;
-  
 }
 
 .footer_social-media {
