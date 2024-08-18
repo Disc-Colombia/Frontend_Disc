@@ -68,7 +68,7 @@
   }
   .icono-menu {
     font-size: 3rem;
-    color: #fff;
+    color:var(--White);
     padding-right: 2rem;
   }
 
@@ -81,12 +81,15 @@
   .navegations_links {
     padding: 1rem 0;
     font-size: 1.2rem;
-    color: #333;
+    color:var(--GrisOscuro);
     text-decoration: none;
   }
 
   .navegations_links:hover {
-    color: #000;
+    color: var(--White);
+    cursor: pointer;
+    background-color: var(--Black);
+    border-radius: 5px;
   }
 
   .container_flags {
@@ -108,6 +111,13 @@
   padding: 2px;
   margin-right: 2rem;
   text-transform: uppercase;
+  transition: background-color 0.5s ease, transform 0.5s ease;
+}
+.navegations_links:hover{
+  cursor: pointer;
+  background-color: var(--SombraAzulVerdoso);
+  border-radius: 10px;
+  padding: 4px;
 }
 .container_flags {
   display: flex;

@@ -32,7 +32,7 @@ export const Header = () => {
             />
           </Link>
         </div>
-        <div className="container">
+        <div className="container_menu">
           <button className="menu-toggle" onClick={toggleMenu}>
             <i className="bi bi-list icono-menu"></i>
           </button>
