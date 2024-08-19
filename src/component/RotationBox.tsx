@@ -1,0 +1,35 @@
+
+import { useState } from 'react';
+import '../style/rotationBox.css'; // Importa el archivo CSS
+import type { RotationBoxProps } from '../type/type';
+import { motion } from 'framer-motion';
+
+
+const FlipCard = ({image,children,tittle}:RotationBoxProps) => {
+  const [flipped, setFlipped] = useState(false);
+
+  const handleClick = () => {
+    setFlipped(!flipped);
+  };
+
+  return (
+    <div className="flip-card-container" onClick={handleClick}>
+      <motion.div
+        className={`flip-card ${flipped ? 'flipped' : ''}`}
+        animate={{ rotateY: flipped ? 180 : 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <div className="flip-card-front">
+          <h2>Front Side</h2>
+          <img className="flip-card-container" src={image}/>
+        </div>
+        <div className="flip-card-back">
+          <h2>{tittle}</h2>
+          <p>{children}</p>
+        </div>
+      </motion.div>
+    </div>
+  );
+};
+
+export default FlipCard;

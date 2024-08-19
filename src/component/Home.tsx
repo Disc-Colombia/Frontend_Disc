@@ -3,6 +3,7 @@ import "../style/home.css";
 import gobierno from "../img/dc_government.png";
 import ong from "../img/ong.png";
 import corporations from "../img/corporaciones.png";
+import FlipCard from "../component/RotationBox";
 export const Home = () => {
   return (
     <div className="container_home">
@@ -13,7 +14,7 @@ export const Home = () => {
       </div>
       <div className="container_home--information">
         <div className="home_information">
-          <img className="home_img" src={gobierno} alt="" />
+          {/* <img className="home_img" src={gobierno} alt="" />
           <div className="container_agenci--information">
             <h3 className="agenci_tittle">Government</h3>
             <p className="agenci_text">
@@ -22,7 +23,12 @@ export const Home = () => {
               provide staffing, information technology, and operational
               services.
             </p>
-          </div>
+          </div> */}
+          <FlipCard image={gobierno} tittle="Back">
+            We are a proudly minority-owned, certified company that has earned
+            the trust of state, local, and federal government agencies to
+            provide staffing, information technology, and operational services
+          </FlipCard>
         </div>
         <div className="home_information">
           <img className="home_img" src={corporations} alt="" />
