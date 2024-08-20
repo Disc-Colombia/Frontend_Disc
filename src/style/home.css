@@ -13,6 +13,7 @@
     font-family: var(--montserrat-font-family);
     font-size: 2.5rem;
     font-weight: 600;
+    text-transform: uppercase;
 }
 .tittle_home--span{
     color: var(--LogoBackgound);
@@ -21,6 +22,8 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
 }
 @media (min-width:1024px) {
     .container_home--information{
@@ -28,7 +31,7 @@
         grid-template-columns: repeat(3,1fr);
         align-items: center;
         justify-items: center;
-        margin-top: 3rem;
+        
     }
     .home_img{
         width: 150px;

@@ -12,48 +12,31 @@ export const Home = () => {
           Uor <span className="tittle_home--span">Ecosystem</span>
         </h1>
       </div>
+      <Carrousel />
       <div className="container_home--information">
         <div className="home_information">
-          {/* <img className="home_img" src={gobierno} alt="" />
-          <div className="container_agenci--information">
-            <h3 className="agenci_tittle">Government</h3>
-            <p className="agenci_text">
-              We are a proudly minority-owned, certified company that has earned
-              the trust of state, local, and federal government agencies to
-              provide staffing, information technology, and operational
-              services.
-            </p>
-          </div> */}
-          <FlipCard image={gobierno} tittle="Back">
+          <FlipCard image={gobierno} tittle="Government">
             We are a proudly minority-owned, certified company that has earned
             the trust of state, local, and federal government agencies to
             provide staffing, information technology, and operational services
           </FlipCard>
         </div>
         <div className="home_information">
-          <img className="home_img" src={corporations} alt="" />
-          <div className="container_agenci--information">
-            <h3 className="agenci_tittle">Corporations</h3>
-            <p className="agenci_text">
-              DISC is the solution for large corporations that need to outsource
-              their technological, human, and healthcare strategy requirements
-              to support commercial and governmental task orders
-            </p>
-          </div>
+          <FlipCard image={corporations} tittle="Corporations">
+            DISC is the solution for large corporations that need to outsource
+            their technological, human, and healthcare strategy requirements to
+            support commercial and governmental task orders
+          </FlipCard>
         </div>
         <div className="home_information">
-          <img className="home_img" src={ong} alt="" />
-          <div className="container_agenci--information">
-            <h3 className="agenci_tittle">Ong</h3>
-            <p className="agenci_text">
-              DISC collaborates with nonprofit organizations at the local,
-              national, and international levels to meet their technological,
-              service delivery, and programmatic needs.
-            </p>
-          </div>
+          <FlipCard image={ong} tittle="Ong">
+            DISC collaborates with nonprofit organizations at the local,
+            national, and international levels to meet their technological,
+            service delivery, and programmatic needs.
+          </FlipCard>
         </div>
       </div>
-      <Carrousel />
+      
     </div>
   );
 };
