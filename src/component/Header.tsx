@@ -1,13 +1,16 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../img/logoDISC_sinfondo.png";
 import Col from "../img/col.png";
 import Us from "../img/us.png";
 import "bootstrap-icons/font/bootstrap-icons.css";
+
 import "../style/headers.css";
 import { Outlet } from "react-router-dom";
 import { Footers } from "./Footers";
+
 export const Header = () => {
+  const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);//controla estado del menu
 //Muestra el menu
   const toggleMenu = () => {
@@ -29,7 +32,7 @@ export const Header = () => {
             />
           </Link>
         </div>
-        <div className="container">
+        <div className="container_menu">
           <button className="menu-toggle" onClick={toggleMenu}>
             <i className="bi bi-list icono-menu"></i>
           </button>
@@ -63,6 +66,7 @@ export const Header = () => {
       </div>
       <Outlet />
       <Footers />
+      
     </>
   );
 };

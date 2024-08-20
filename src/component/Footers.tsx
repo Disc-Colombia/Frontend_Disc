@@ -5,14 +5,51 @@ export const Footers = () => {
   return (
     <div className="footer_container">
       <div className="footer_logo">
-        <div className="footer_container--logo">
-          <img className="footer_logo--img" src={logo} alt="logo disc" />
+        <div className="containe_section--logo">
+          <div className="footer_container--logo">
+            <img className="footer_logo--img" src={logo} alt="logo disc" />
+          </div>
+          <div className="footer_informations">
+            <p className="informations_dis">
+              We are a proudly minority-owned, certified company that has earned
+              the trust of state, local, and federal government agencies to
+              provide staffing, information technology, and operational
+              services.
+            </p>
+            <div className="policies">
+              <p className="informations_dis--policies">Privacy policy</p>
+              <p className="informations_dis--policies">Terms and conditions</p>
+            </div>
+          </div>
         </div>
-        <div className="footer_informations">
-          <p>Somos una empresa orgullosamente certificada propiedad de minorias que se ha ganado la confinza</p>
+        <div className="footer_social--networks">
+          <h3 className="social_tittle">Our social media</h3>
+          <div className="footer_social-media">
+            <div className="socialinformations">
+              <i className="bi bi-envelope contact"></i>
+              <p className="informations_dis--paragraph">info@discd.com</p>
+            </div>
+            <div className="socialinformations">
+              <i className="bi bi-whatsapp contact"></i>
+              <p className="informations_dis--paragraph">(1)202-446878</p>
+            </div>
+            <div className="socialinformations">
+              <i className="bi bi-geo-alt contact"></i>
+              <p className="informations_dis--paragraph">
+                4613 B St SE Washintong,DC.2019
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="footer_social--networks"></div>
+      <div className="copyrights">
+        <hr />
+        <p className="informations_dis--paragraph">
+          {" "}
+          Development Innovations System C -All Rights Reserved &copy;{" "}
+          {new Date().getFullYear()}
+        </p>
+      </div>
     </div>
   );
 };

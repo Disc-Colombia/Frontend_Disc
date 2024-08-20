@@ -1,5 +1,12 @@
-:root{
-    --Black:rgb(0, 0, 0);
-    --White:rgba(255, 255, 255, 1);
-    --LogoBackgound:rgba(40, 180, 99,1);
+:root {
+  --Black: #000000;
+  --White: #ffffff;
+  --BlancoVerdoso: #edf7f5;
+  --LogoBackgound: #52b39d;
+  --SombraAzulVerdoso:rgba(82, 179, 157, 0.5);
+  --GrisOscuro: #1d1d1b;
+  --MoradoOscuro: #461d2d;
+  --montserrat-font-family: "Montserrat", sans-serif;
+  --font-makina: 'Kohne Makina', sans-serif;
+                                                
 }

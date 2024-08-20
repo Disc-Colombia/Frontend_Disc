@@ -1,0 +1,61 @@
+@import'./colores.css';
+.container_home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: var(--SombraAzulVerdoso); */
+}
+.container_home--tittle{
+    margin-top: 2rem;
+}
+.tittle_home{
+    text-align: center;
+    font-family: var(--montserrat-font-family);
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.tittle_home--span{
+    color: var(--LogoBackgound);
+}
+.container_home--information{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+}
+@media (min-width:1024px) {
+    .container_home--information{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        align-items: center;
+        justify-items: center;
+        
+    }
+    .home_img{
+        width: 150px;
+    }
+}
+.home_img{
+    width: 260px;
+}
+
+.home_information{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+.container_agenci--information{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+}
+.agenci_text{
+text-align: justify;
+line-height: 1.5;
+ 
+}

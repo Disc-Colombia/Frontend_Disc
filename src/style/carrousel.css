@@ -1,0 +1,9 @@
+
+.container_carrousel{
+ margin-bottom: 2rem;
+    padding: 2px;
+}
+.carousel_img{
+    height: 35rem;
+    filter: brightness(50%);
+}
