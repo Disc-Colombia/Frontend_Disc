@@ -68,7 +68,7 @@
   }
   .icono-menu {
     font-size: 3rem;
-    color:var(--White);
+    color: var(--White);
     padding-right: 2rem;
   }
 
@@ -81,7 +81,7 @@
   .navegations_links {
     padding: 1rem 0;
     font-size: 1.2rem;
-    color:var(--GrisOscuro);
+    color: var(--GrisOscuro);
     text-decoration: none;
   }
 
@@ -113,7 +113,7 @@
   text-transform: uppercase;
   transition: background-color 0.5s ease, transform 0.5s ease;
 }
-.navegations_links:hover{
+.navegations_links:hover {
   cursor: pointer;
   background-color: var(--SombraAzulVerdoso);
   border-radius: 10px;
@@ -141,10 +141,11 @@ Footers styles here
 }
 
 .footer_logo {
-  display: flex;
-  margin-left: 3rem;
-  margin-right: 3rem;
-  flex-direction: column;
+ display: grid;
+ grid-template-columns: repeat(4,1fr);
+ align-items: center;
+ margin-left: 2rem;
+ margin-right: 2rem;
 }
 .footer_container--logo {
   display: flex;
@@ -187,8 +188,21 @@ Footers styles here
   font-weight: 600;
   color: var(--White);
 }
+@media (min-width: 1920px) {
+  .footer_social--networks {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 500px 500px 1fr;
+    padding-right: 2rem;
+  }
+}
 
 .footer_social--networks {
+ display: flex;
+ justify-content: space-between;
+ align-items:center;
+}
+.footer_container--contact {
   display: flex;
   flex-direction: column;
   margin-right: 2rem;
@@ -205,6 +219,29 @@ Footers styles here
   flex-direction: column;
   align-items: flex-start;
 }
+.footer_container--media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.container_social--icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 2rem;
+}
+.media {
+  font-size: 2rem;
+  color: var(--White);
+  transition: transform 0.3s ease, z-index 0s ease;
+}
+.media:hover {
+  cursor: pointer;
+  transform: scale(1.5); /* Aumenta el tamaño de la imagen */
+  z-index: 10;
+}
 .copyrights {
   font-size: 1.5rem;
   font-weight: bold;
@@ -217,7 +254,7 @@ Footers styles here
   align-items: center;
 }
 .informations_dis--paragraph {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 400;
   color: var(--White);
   margin: 4px;

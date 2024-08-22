@@ -13,10 +13,11 @@
   width: 100%;
   height: 100vh;
   height: calc(100vh); /* Ajustar el espacio reservado para el header */
-  filter: brightness(50%);
+   filter: brightness(35%); 
   position: relative;
+  
 }
-/* .container_background::before {
+ /* .container_background::before {
   content: '';
   position: absolute;
   top: 0;
@@ -25,7 +26,7 @@
   bottom: 0;
   background-color: var(--SombraAzulVerdoso); 
   z-index: 1;
-} */
+}  */
 .container_index--tittle{
   margin-top: 5rem;
   position: absolute; 

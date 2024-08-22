@@ -9,7 +9,7 @@ export const Index = () => {
     <img className='tittle_index--img' src={logo} alt="logo develoment" />
     <h2 className='text_index--tittle'>Innovative <span className='tittle_index--span'>Results</span> </h2>
   </div>
-  <div className='container_background'></div>
+  <div rel="preload" className='container_background'></div>
       <Home/>
     </div>
 </>
