@@ -5,9 +5,6 @@
   justify-content: center;
   /* background-color: var(--SombraAzulVerdoso); */
 }
-.container_home--tittle {
-  margin-top: 2rem;
-}
 .tittle_home {
   text-align: center;
   font-family: var(--font-makina);
@@ -42,9 +39,7 @@
   }
   .home_img:hover {
     filter: brightness(100%);
-    width: 300px;
-    transform: scale(1.1); /* Aumenta el tamaño de la imagen */
-    z-index: 10; /* Trae la imagen al frente */
+   
   }
 }
 .home_img {

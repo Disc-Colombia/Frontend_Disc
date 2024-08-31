@@ -2,10 +2,10 @@ import image1 from "../img/consultoria_IT.png";
 import image2 from "../img/seguridad_cibernetica.png";
 import image3 from "../img/soluciones_financieras.png";
 import "bootstrap/dist/css/bootstrap.min.css";
-import '../style/carrousel.css';
+import "../style/carrousel.css";
 export const Carrousel = () => {
   return (
-    < div className="container_carrousel">
+    <div className="container_carrousel">
       <div
         id="carouselExampleCaptions"
         className="carousel slide"
@@ -35,7 +35,12 @@ export const Carrousel = () => {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src={image1} className="d-block w-100 carousel_img" alt="..." />
+            <img
+              rel="preload"
+              src={image1}
+              className="d-block w-100 carousel_img"
+              alt="..."
+            />
             <div className="carousel-caption d-none d-md-block">
               <h5>Information technology consulting</h5>
               <p>
@@ -45,7 +50,12 @@ export const Carrousel = () => {
             </div>
           </div>
           <div className="carousel-item">
-            <img src={image2} className="d-block w-100 carousel_img" alt="..." />
+            <img
+              rel="preload"
+              src={image2}
+              className="d-block w-100 carousel_img"
+              alt="..."
+            />
             <div className="carousel-caption d-none d-md-block">
               <h5>Cybersecurity solutions</h5>
               <p>
@@ -56,7 +66,12 @@ export const Carrousel = () => {
             </div>
           </div>
           <div className="carousel-item">
-            <img src={image3} className="d-block w-100 carousel_img" alt="..." />
+            <img
+              rel="preload"
+              src={image3}
+              className="d-block w-100 carousel_img"
+              alt="..."
+            />
             <div className="carousel-caption d-none d-md-block">
               <h5>Financial solutions</h5>
               <p>

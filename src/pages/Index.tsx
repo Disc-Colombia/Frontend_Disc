@@ -15,9 +15,9 @@ export const Index = () => {
         </div>
         <div rel="preload" className="container_background container_carrousell--index">
           <Carrousel/>
+          <ColorLines />
+          <Home />
         </div>
-        <ColorLines />
-        <Home />
       </div>
     </>
   );

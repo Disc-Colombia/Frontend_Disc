@@ -1,0 +1,50 @@
+@import'./colores.css';
+.container_general--box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    width: 259px;
+    
+}
+/* .container_box--imag{
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+} */
+ .container_box--imag{
+    position: relative;
+ }
+.image_box{ 
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    display: block; /* Elimina espacios alrededor de la imagen */
+}
+.container_box--tittle{
+    position: absolute; /* Posiciona el título sobre la imagen */
+    top: 0; /* Comienza en la parte superior */
+    left: 0; /* Alinea a la izquierda */
+    width: 100%; /* Asegura que cubra todo el ancho de la imagen */
+   margin: 0;
+    color: white; /* Color del texto */
+    padding: 10px; /* Añade algo de espacio alrededor del texto */
+    text-align: center; /* Centra el texto */
+ 
+}
+.container_botondesplegable{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom:2rem;
+}
+.container_box--text {
+    height: 0;
+    overflow: hidden; /* Oculta el contenido cuando no está expandido */
+    transition: height 0.3s ease; /* Duración de la transición y efecto */
+  }
+  .container_box--text.expanded {
+    height: auto; /* Cambia la altura automáticamente para que se ajuste al contenido */
+    overflow: visible; /* Hace visible el contenido cuando está expandido */
+    /* Para una transición más suave, necesitamos calcular la altura exacta */
+    /* Sin embargo, CSS puro no puede animar 'height: auto', por lo que utilizamos una técnica diferente */
+  }
