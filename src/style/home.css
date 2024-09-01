@@ -1,4 +1,16 @@
 @import "./colores.css";
+.container_content--home{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container_home--general{
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
 .container_home {
   display: flex;
   flex-direction: column;
@@ -66,8 +78,7 @@
   margin-left: 2rem;
   margin-right: 2rem;
 }
-.agenci_text,
-.agenci_text--end {
+.agenci_text{
   text-align: justify;
   line-height: 1.5;
   font-family: var(--montserrat-font-family);

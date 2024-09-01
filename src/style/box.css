@@ -1,50 +1,200 @@
-@import'./colores.css';
-.container_general--box{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-    width: 259px;
-    
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  cursor: pointer;
+  height: 300px;
+  margin: 20px;
+  padding: 0 20px;
+  position: relative;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.025);
+  text-align: center;
+  transition: height 1000ms;
+  width: 260px;
 }
-/* .container_box--imag{
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-} */
- .container_box--imag{
-    position: relative;
- }
-.image_box{ 
-    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
-    display: block; /* Elimina espacios alrededor de la imagen */
+
+.tittle {
+  position: absolute; /* Posiciona el texto sobre la imagen */
+  top: 0; /* Posiciona el texto en la parte superior */
+  left: 50%; /* Centra horizontalmente el texto */
+  transform: translateX(-50%); /* Ajusta el centro del texto */
+  width: 100%; /* Asegura que el contenedor del texto ocupe todo el ancho */
+  text-align: center; /* Centra el texto dentro del contenedor */
+  color: var(--Black); 
+  padding: 10px; /* Espacio alrededor del texto */
 }
-.container_box--tittle{
-    position: absolute; /* Posiciona el título sobre la imagen */
-    top: 0; /* Comienza en la parte superior */
-    left: 0; /* Alinea a la izquierda */
-    width: 100%; /* Asegura que cubra todo el ancho de la imagen */
-   margin: 0;
-    color: white; /* Color del texto */
-    padding: 10px; /* Añade algo de espacio alrededor del texto */
-    text-align: center; /* Centra el texto */
- 
+
+.container_box--imag {
+  position: relative;
 }
-.container_botondesplegable{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 3rem;
-    margin-bottom:2rem;
+
+.icon_chevron {
+  margin-top: 5rem;
 }
-.container_box--text {
-    height: 0;
-    overflow: hidden; /* Oculta el contenido cuando no está expandido */
-    transition: height 0.3s ease; /* Duración de la transición y efecto */
+
+.image_box {
+  max-width: 100%;
+  position: relative;
+  height: auto; /* Mantiene la proporción de la imagen */
+  z-index: 2;
+}
+
+@media (max-width: 767px) {
+  .card {
+    left: calc(50% - 20px);
+    transform: translateX(-50%);
   }
-  .container_box--text.expanded {
-    height: auto; /* Cambia la altura automáticamente para que se ajuste al contenido */
-    overflow: visible; /* Hace visible el contenido cuando está expandido */
-    /* Para una transición más suave, necesitamos calcular la altura exacta */
-    /* Sin embargo, CSS puro no puede animar 'height: auto', por lo que utilizamos una técnica diferente */
-  }
+}
+
+.card.expanded {
+  height: 420px;
+}
+
+.label {
+  margin-top: 30px;
+  transform: translateY(10px);
+  transition: transform 1000ms;
+}
+
+.card.expanded .label {
+  transform: translateY(0);
+}
+
+.text1,
+.text2,
+.text-content {
+  visibility: hidden; 
+  transition: visibility 0.3s ease, clip-path 1000ms; /* Asegura que la transición sea suave */
+}
+
+.card.expanded .text1,
+.card.expanded .text2,
+.card.expanded .text-content {
+  visibility: visible; /* Hace el texto visible cuando la tarjeta está expandida */
+}
+
+.text1 {
+  clip-path: polygon(0% 100%, 0 -90%, 50% -5%, 100% -90%, 100% 100%);
+  -webkit-clip-path: polygon(0% 100%, 0 -90%, 50% -5%, 100% -90%, 100% 100%);
+  transition: clip-path 1000ms;
+}
+
+.card.expanded .text1 {
+  clip-path: polygon(0% 100%, 0 -100%, 50% -15%, 100% -100%, 100% 100%);
+  -webkit-clip-path: polygon(0% 100%, 0 -100%, 50% -15%, 100% -100%, 100% 100%);
+}
+
+.text2 {
+  clip-path: polygon(
+    0% 100%,
+    0% -80%,
+    15% -70%,
+    17.23% -53.59%,
+    23% -40%,
+    27.23% -28.94%,
+    35% -20%,
+    41.09% -13.59%,
+    50% -10%,
+    58.91% -13.23%,
+    65% -20%,
+    72.77% -28.23%,
+    77% -40%,
+    82.77% -54.65%,
+    85% -70%,
+    100% -80%,
+    100% 100%
+  );
+  -webkit-clip-path: polygon(
+    0% 100%,
+    0% -80%,
+    15% -70%,
+    17.23% -53.59%,
+    23% -40%,
+    27.23% -28.94%,
+    35% -20%,
+    41.09% -13.59%,
+    50% -10%,
+    58.91% -13.23%,
+    65% -20%,
+    72.77% -28.23%,
+    77% -40%,
+    82.77% -54.65%,
+    85% -70%,
+    100% -80%,
+    100% 100%
+  );
+  transition: clip-path 1000ms;
+}
+
+.card.expanded .text2 {
+  clip-path: polygon(
+    0% 100%,
+    0% -90%,
+    15% -80%,
+    17.23% -63.59%,
+    23% -50%,
+    27.23% -38.94%,
+    35% -30%,
+    41.09% -23.59%,
+    50% -20%,
+    58.91% -23.23%,
+    65% -30%,
+    72.77% -38.23%,
+    77% -50%,
+    82.77% -64.65%,
+    85% -80%,
+    100% -90%,
+    100% 100%
+  );
+  -webkit-clip-path: polygon(
+    0% 100%,
+    0% -90%,
+    15% -80%,
+    17.23% -63.59%,
+    23% -50%,
+    27.23% -38.94%,
+    35% -30%,
+    41.09% -23.59%,
+    50% -20%,
+    58.91% -23.23%,
+    65% -30%,
+    72.77% -38.23%,
+    77% -50%,
+    82.77% -64.65%,
+    85% -80%,
+    100% -90%,
+    100% 100%
+  );
+}
+
+.text-content {
+  transform: translateY(-160px);
+  transition: transform 1000ms;
+}
+
+.card.expanded .text-content {
+  transform: translateY(-15px);
+}
+
+.chevron {
+  bottom: 20px;
+  left: calc(50% - 15px);
+  transform-origin: 50%;
+  transform: rotate(180deg);
+  transition: transform 1000ms;
+  margin-top: 1rem;
+}
+
+.card.expanded .chevron {
+  transform: rotate(0deg);
+}
+
+.title {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 900;
+  margin: 20px 0 12px;
+}
+
+.body-text {
+  padding: 0 20px;
+}
