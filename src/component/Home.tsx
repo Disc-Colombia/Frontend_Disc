@@ -15,7 +15,7 @@ export const Home = () => {
         <div className="container_home--general">
       <div className="container_end--text">
         <div>
-          <h2>Our ecosystem</h2>
+          <h2 className="tittle_home">Our <span className="tittle_home--span">ecosystem</span></h2>
         </div>
         <p className="agenci_text--end">
           The solutions proposed by DISC have been implemented by various

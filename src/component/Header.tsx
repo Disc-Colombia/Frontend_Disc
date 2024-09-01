@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-scroll";
+import {useLocation } from "react-router-dom";
 import logo from "../img/logoDISC_sinfondo.png";
 import Col from "../img/col.png";
 import Us from "../img/us.png";
@@ -24,7 +25,7 @@ export const Header = () => {
     <>
       <div className="container_header line-bottom">
         <div className="container_logo">
-          <Link to={"/"}>
+          <Link to="home" smooth={true} duration={500} className="navegations_links">
             <img
               className="container_logo--img"
               src={logo}
@@ -38,16 +39,16 @@ export const Header = () => {
           </button>
           <div className={`container_nav ${isMenuOpen ? "open" : ""}`}>
             <nav className="container_nav--lin">
-              <Link className={`navegations_links ${location.pathname==="/"? "active":""}`} onClick={closeMenu} to={"/"}>
+              <Link to="home" smooth={true} duration={500}className={`navegations_links ${location.pathname==="/"? "active":""}`} onClick={closeMenu}>
                 Home
               </Link>
-              <Link className={`navegations_links ${location.pathname==="/services"? "active":""}`} onClick={closeMenu} to={"/services"}>
+              <Link to="services" smooth={true} duration={500} className={`navegations_links ${location.pathname==="/services"? "active":""}`} onClick={closeMenu}>
                 Services
               </Link>
-              <Link className={`navegations_links ${location.pathname==="/aboutUs"? "active":""}`} onClick={closeMenu} to={"/aboutUs"}>
+              <Link to="aboutus" smooth={true} duration={500}className={`navegations_links ${location.pathname==="/aboutUs"? "active":""}`} onClick={closeMenu}>
                 About us
               </Link>
-              <Link className={`navegations_links ${location.pathname==="/contactUs"? "active":""}`} onClick={closeMenu} to={"/contactUs"}>
+              <Link to="contactus" smooth={true} duration={500} className={`navegations_links ${location.pathname==="/contactUs"? "active":""}`} onClick={closeMenu}>
                 Contact us
               </Link>
             </nav>

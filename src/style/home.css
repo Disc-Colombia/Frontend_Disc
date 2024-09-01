@@ -1,15 +1,31 @@
 @import "./colores.css";
-.container_content--home{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.container_home--general{
-  display: flex;
 
+@media (min-width: 1024px) {
+  .container_content--home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.container_home--general {
+  display: flex;
+  flex-direction: column-reverse;
   align-items: center;
   justify-content: space-between;
+}
+.container_tittle--ecosystem{
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .container_home--general {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .container_tittle--ecosystem{
+    text-align: left;
+  }
 }
 .container_home {
   display: flex;
@@ -51,7 +67,6 @@
   }
   .home_img:hover {
     filter: brightness(100%);
-   
   }
 }
 .home_img {
@@ -78,15 +93,15 @@
   margin-left: 2rem;
   margin-right: 2rem;
 }
-.agenci_text{
+.agenci_text {
   text-align: justify;
   line-height: 1.5;
   font-family: var(--montserrat-font-family);
   font-size: 1.2rem;
   margin: 0;
 }
-.agenci_text--end{
- margin-bottom: 2rem;
- margin-left: 2rem;
- margin-right: 2rem;
+.agenci_text--end {
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }

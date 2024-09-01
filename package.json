@@ -18,12 +18,14 @@
     "react-dom": "^18.3.1",
     "react-flip-toolkit": "^7.2.4",
     "react-router-dom": "^6.26.0",
+    "react-scroll": "^1.9.0",
     "react-spring": "^9.7.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "@types/react-scroll": "^1.8.10",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "eslint": "^9.8.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
