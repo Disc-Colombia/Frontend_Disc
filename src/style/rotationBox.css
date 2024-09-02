@@ -1,8 +1,19 @@
 @import "./colores.css";
 .flip-card-container {
   perspective: 1000px; /* Controla la profundidad del efecto 3D */
-  width: 420px;
-  height: 320px;
+  width: 375px;
+  height: 310px;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.flip-card-container-img {
+  perspective: 1000px; /* Controla la profundidad del efecto 3D */
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  filter: brightness(50%);
+  border-radius: 20px;
 }
 
 .flip-card {
@@ -29,8 +40,12 @@
   justify-content: center;
   font-size: 24px;
   color: var(--White);
-  border-radius: 10px;
+  border-radius: 20px;
+  
 }
+
+
+
 
 .flip-card-front {
   background-color: var(--White);
@@ -44,7 +59,9 @@
   display: flex;
   flex-direction: column;
   padding: 3px;
-  background: linear-gradient(to right, var(--Black), var(--LogoBackgound));
+  /* background: linear-gradient(to right, var(--Black), var(--LogoBackgound)); */
+  background-color: var(--gris);
+  
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
   transform: rotateY(
     180deg
@@ -53,17 +70,17 @@
 .flip_card--tittle{
   font-family: var(--montserrat-font-family);
   text-transform: uppercase;
+  position: inherit;
+  z-index: 2;
+  text-align: center;
 }
 .flip_card--text {
   font-family: var(--montserrat-font-family);
   font-weight: 300;
-  text-align: justify;
+  text-align: left ;
   text-align-last: left;
-  hyphens: auto;
-  word-spacing: -0.05em;
-  letter-spacing: 0.02em;
-  line-height: 1.2;
-  font-size: 1.5rem;
-  margin-left: 3px;
-  margin-right: 3px;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  margin: 3px;
+  color: var(--Black);
 }

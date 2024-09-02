@@ -14,6 +14,11 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.container_end--text{
+  margin-top: 5rem;
+}
+
 .container_tittle--ecosystem{
   text-align: center;
 }
@@ -36,12 +41,26 @@
 .tittle_home {
   text-align: center;
   font-family: var(--font-makina);
+  background:-webkit-linear-gradient(-90deg,var(--Black),var(--LogoBackground));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
   font-size: 2.5rem;
   font-weight: 600;
   text-transform: uppercase;
 }
+
+.tittle_home_ecosis{
+  text-align: center;
+  font-family: var(--font-makina);
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 .tittle_home--span {
-  color: var(--LogoBackgound);
+  color: var(--LogoBackground);
 }
 .container_home--information {
   display: flex;
@@ -104,4 +123,43 @@
   margin-bottom: 2rem;
   margin-left: 2rem;
   margin-right: 2rem;
+}
+
+.demobutton{
+  border-radius: 30px;
+  width: 180px;
+  height: 40px;
+  background: #000000;
+  color: #ffff;
+  border-color: transparent;
+  align-self: center;
+  font-family: "Roboto", sans-serif;
+  font-style: medium;
+  font-size: 15px;
+  box-shadow: 0 0 0 0 rgb( 0, 0, 0, .5);
+  animation: pulse 2s infinite;
+
+}
+
+@keyframes pulse {
+  0% {
+      transform:  scale(.99);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5)
+  }
+  70% {
+      transform:  scale(1);
+      box-shadow: 0 0 0 15px rgb(0, 0, 0, 0)
+  }
+  100% {
+      transform:  scale(.99);
+      box-shadow: 0 0 0 0 rgb(0, 0, 0, 0)
+  }
+  
+}
+
+.button_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem
 }

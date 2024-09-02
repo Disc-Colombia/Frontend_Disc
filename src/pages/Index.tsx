@@ -3,7 +3,10 @@ import logo from "../img/logoDISC_sinfondo.png";
 import ColorLines from "../component/ColorLine";
 import "../style/index.css";
 import { Carrousel } from "../component/Carrousel";
+import { Services } from "../component/Services";
 import { AboutUs } from "../component/AboutUs";
+import {ContactUs} from "../component/ContactUs"
+
 export const Index = () => {
   return (
     <>
@@ -19,7 +22,9 @@ export const Index = () => {
           <ColorLines /> 
           <Home />
         </div>
+        <Services/>
         <AboutUs/>
+        <ContactUs/>
       </div>
     </>
   );

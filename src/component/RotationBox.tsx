@@ -20,10 +20,11 @@ const FlipCard = ({image,children,tittle}:RotationBoxProps) => {
         transition={{ duration: 0.6 }}
       >
         <div className="flip-card-front">
-          <img className="flip-card-container" src={image}/>
+          <h3 className='flip_card--tittle'>{tittle}</h3>
+          <img className="flip-card-container-img" src={image}/>
         </div>
         <div className="flip-card-back">
-          <h3 className='flip_card--tittle'>{tittle}</h3>
+          
           <p className='flip_card--text'>{children}</p>
         </div>
       </motion.div>

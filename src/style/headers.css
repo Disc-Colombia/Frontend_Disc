@@ -13,16 +13,16 @@
 }
 .line-bottom,
 .active {
-  border-bottom: 3px solid var(--LogoBackgound);
+  border-bottom: 3px solid var(--LogoBackground);
 }
 .container {
   display: flex;
   justify-content: space-between;
 }
 .container_logo--img {
-  width: 260px;
-  height: 100px;
-  background-color: var(--LogoBackgound);
+  width: 195px;
+  height: 60px;
+  background-color: var(--LogoBackground);
 }
 .container_nav {
   display: flex;
@@ -64,7 +64,7 @@
   /*desplazamiento del menu*/
   .container_nav.open {
     left: 0;
-    background-color: var(--LogoBackgound);
+    background-color: var(--LogoBackground);
   }
   .icono-menu {
     font-size: 3rem;
@@ -78,12 +78,12 @@
     align-items: start;
   }
 
-  .navegations_links {
+  /* .navegations_links {
     padding: 1rem 0;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: var(--GrisOscuro);
     text-decoration: none;
-  }
+  } */
 
   .navegations_links:hover {
     color: var(--White);
@@ -105,7 +105,7 @@
 .navegations_links {
   font-weight: 600;
   font-family: var(--font-makina);
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: var(--White);
   text-decoration: none;
   padding: 2px;
@@ -135,7 +135,7 @@ Footers styles here
 .footer_container {
   display: flex;
   height: auto;
-  background: linear-gradient(to right, var(--Black), var(--LogoBackgound));
+  background: linear-gradient(to right, var(--Black), var(--LogoBackground));
   flex-direction: column;
   padding-bottom: 2rem;
 }

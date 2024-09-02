@@ -52,14 +52,7 @@ export const Header = () => {
                 Contact us
               </Link>
             </nav>
-            <div className="container_flags">
-            <div className="container_flags--contry">
-              <img className="flags" src={Col} />
-            </div>
-            <div className="container_flags--contry">
-              <img className="flags usaflag" src={Us} />
-            </div>
-          </div>
+
           </div>
         
         </div>
