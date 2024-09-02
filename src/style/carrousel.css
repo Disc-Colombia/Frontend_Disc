@@ -1,9 +1,13 @@
 
-.container_carrousel{
- margin-bottom: 2rem;
-    padding: 2px;
-}
 .carousel_img{
     height: 35rem;
     filter: brightness(50%);
+    border-radius: 15px;
+}
+@media (min-width:1024px) {
+    .carousel_img{
+        
+        border-radius: 15px;
+    }
+    
 }

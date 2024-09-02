@@ -4,9 +4,8 @@ import 'normalize.css';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Header } from "./component/Header";
 import { Index } from "./pages/Index";
-import { AboutUs } from "./pages/AboutUs";
-import { Services } from "./pages/Services";
-import { ContactUs } from "./pages/ContactUs";
+
+
 //Your routers here
 const router = createBrowserRouter([
   {
@@ -16,19 +15,7 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Index />,
-      },
-      {
-      path:"/aboutUs",
-      element:<AboutUs/>
-      },
-      {
-        path:"/services",
-        element:<Services/>
-      },
-      {
-        path:"/contactUs",
-        element:<ContactUs/>
-      }
+      }, 
     ],
   },
 ]);
