@@ -46,7 +46,7 @@ export const Header = () => {
               <Link to="aboutus" smooth={true} duration={500}className={`navegations_links ${location.pathname==="/aboutUs"? "active":""}`} onClick={closeMenu}>
                 About us
               </Link>
-              <Link to="contactus" smooth={true} duration={500} className={`navegations_links ${location.pathname==="/contactUs"? "active":""}`} onClick={closeMenu}>
+              <Link to="contactUS" smooth={true} duration={500} className={`navegations_links ${location.pathname==="/contactUs"? "active":""}`} onClick={closeMenu}>
                 Contact us
               </Link>
             </nav>

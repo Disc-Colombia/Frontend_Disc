@@ -72,10 +72,20 @@ export const Footers = () => {
             <a href="https://www.instagram.com/innovationdisc/" target="_blank" rel="noopener noreferrer">
               <i className=" media bi bi-instagram"></i>
             </a>
+            <a href="https://www.facebook.com/disc.dc.58?mibextid=ZbWKwL">
             <i className=" media bi bi-facebook"></i>
+            </a>
+            
+            <a href="#">
             <i className=" media bi bi-twitter-x"></i>
+            </a>
+            <a href="#">
             <i className=" media bi bi-youtube"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/development-innovation-system/">
             <i className=" media bi bi-linkedin"></i>
+            </a>
+       
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ import * as React from "react";
 export const AboutUs = () => {
   return (
       <>
-        <div className="component-wrapper   ">
+        <div className="component-wrapper" id="aboutus">
           <div className="particle">
             <div className="particle-content">
               <div className="about-header main-padding-large slide">

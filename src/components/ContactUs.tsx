@@ -3,7 +3,7 @@ import '../styles/contactform.css';
 
 export const ContactUs: React.FC = () => {
   return (
-    <div className="contact-container">
+    <div className="contact-container" id="contactUS">
       <div className="message-box">
         <h2  className="highlight">Send Message</h2>
         <p>Send your questions or concerns below.</p>
