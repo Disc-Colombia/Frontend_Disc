@@ -1,3 +1,5 @@
+import React from "react";
+
 export type RotationBoxProps = {
   children: React.ReactNode;
   image: string;

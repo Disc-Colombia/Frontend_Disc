@@ -1,9 +1,12 @@
-import { Home } from "../component/Home";
-import logo from "../img/logoDISC_sinfondo.png";
-import ColorLines from "../component/ColorLine";
-import "../style/index.css";
-import { Carrousel } from "../component/Carrousel";
-import { AboutUs } from "../component/AboutUs";
+import { Home } from "../components/Home";
+import logo from "../imgs/logoDISC_sinfondo.png";
+import ColorLines from "../components/ColorLine";
+import "../styles/index.css";
+import { Carrousel } from "../components/Carrousel";
+import { Services } from "../components/Services";
+import { AboutUs } from "../components/AboutUs";
+import {ContactUs} from "../components/ContactUs"
+
 export const Index = () => {
   return (
     <>
@@ -19,7 +22,9 @@ export const Index = () => {
           <ColorLines /> 
           <Home />
         </div>
+        <Services/>
         <AboutUs/>
+        <ContactUs/>
       </div>
     </>
   );
