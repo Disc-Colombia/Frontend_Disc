@@ -73,7 +73,7 @@ export const AboutUs = () => {
           />
         </div>
 
-        {/* Parthners LOGOs */}
+        {/* Partners LOGOs */}
         <div className="oupartnets" style={{ margin: "20px",  background: "var(--gris-background)" }}>
           <div className="slide-hero-header">
             <p className="slide-hero-header-eyebrow quote-small">We are...</p>
