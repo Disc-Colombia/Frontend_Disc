@@ -4,7 +4,7 @@ import ColorLines from "../components/ColorLine";
 import "../styles/index.css";
 import { Carrousel } from "../components/Carrousel";
 import { Services } from "../components/Services";
-import { AboutUs } from "../components/AboutUs";
+import { AboutUs } from "../components/AboutUs.tsx";
 import {ContactUs} from "../components/ContactUs"
 
 export const Index = () => {

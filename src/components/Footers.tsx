@@ -34,7 +34,7 @@ export const Footers = () => {
               </div>
               <div className="socialinformations">
                 <i className="bi bi-whatsapp contact"></i>
-                <p className="informations_dis--paragraph">(1)202-446878</p>
+                <p className="informations_dis--paragraph">(1) 202-446878</p>
               </div>
               <div className="socialinformations">
                 <i className="bi bi-geo-alt contact"></i>
@@ -54,22 +54,24 @@ export const Footers = () => {
               </div>
               <div className="socialinformations">
                 <i className="bi bi-whatsapp contact"></i>
-                <p className="informations_dis--paragraph">(1)202-446878</p>
+                <p className="informations_dis--paragraph">(1) 202-446878</p>
               </div>
               <div className="socialinformations">
                 <i className="bi bi-geo-alt contact"></i>
                 <p className="informations_dis--paragraph">
-                  Cr 39 Cl 7 oeste 09
+                  Calle 7 Oeste 36 - 09
                 </p>
               </div>
             </div>
           </div>
-      
+
 
         <div className="footer_container--media">
           <h3 className="social_tittle">Follow us on our social media</h3>
           <div className="container_social--icon">
-            <i className=" media bi bi-instagram"></i>
+            <a href="https://www.instagram.com/innovationdisc/" target="_blank" rel="noopener noreferrer">
+              <i className=" media bi bi-instagram"></i>
+            </a>
             <i className=" media bi bi-facebook"></i>
             <i className=" media bi bi-twitter-x"></i>
             <i className=" media bi bi-youtube"></i>
@@ -81,7 +83,7 @@ export const Footers = () => {
         <hr />
         <p className="informations_dis--paragraph">
           {" "}
-          Development Innovations System C -All Rights Reserved &copy;{" "}
+          Development Innovations System C - All Rights Reserved &copy;{" "}
           {new Date().getFullYear()}
         </p>
       </div>
