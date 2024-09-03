@@ -57,6 +57,15 @@
   
   }
 }
+@media (min-width:2560px) {
+  .container_index--tittle{
+   
+    top: 20%;
+    left: 50%;
+  
+  
+  }
+}
 .tittle_index--img{
   width: 300px;
 
