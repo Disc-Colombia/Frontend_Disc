@@ -1,12 +1,14 @@
-import React from 'react';
+import * as React from "react";
 import { Box, Flex, Image, Text, useDisclosure } from '@chakra-ui/react';
 
-interface MisionCardProps {
+interface InfoCardProps {
+    title: string;
+    content: string;
+    imageSrc: string;
     className?: string;
 }
 
-export const MisionCard: React.FC<MisionCardProps> = ({ className }) => {
-    
+export const InfoCard: React.FC<InfoCardProps> = ({ title, content, imageSrc, className }) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     return (
@@ -21,11 +23,12 @@ export const MisionCard: React.FC<MisionCardProps> = ({ className }) => {
             position="relative"
             onMouseEnter={onOpen}
             onMouseLeave={onClose}
+            className={className}
         >
             <Box w="300px" h="300px">
                 <Image
-                    src="./src/imgs/us_mision.png"
-                    alt="Placeholder Image"
+                    src={imageSrc}
+                    alt={`${title} Image`}
                     w="100%"
                     h="100%"
                     borderRadius="6px 0 0 6px"
@@ -51,7 +54,7 @@ export const MisionCard: React.FC<MisionCardProps> = ({ className }) => {
                     transition="opacity 0.5s ease-in-out"
                     opacity={isOpen ? 0 : 1}
                 >
-                    MISSION
+                    {title}
                 </Text>
                 <Box
                     position="absolute"
@@ -73,10 +76,9 @@ export const MisionCard: React.FC<MisionCardProps> = ({ className }) => {
                     zIndex="2"
                     transition="left 0.4s ease-in-out"
                 >
-                    Our mission is to design and develop innovative, high-quality technological solutions that not only solve current problems but also anticipate and adapt to the future needs of our stakeholders. We are a team of experts in technology that love innovation.
+                    {content}
                 </Box>
             </Box>
         </Flex>
     );
 };
-
