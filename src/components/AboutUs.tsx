@@ -1,7 +1,6 @@
 import "../styles/aboutus.css";
-import { MisionCard } from "./MisionCard";
-import { VisionCard } from "./VisionCard";
-
+import { InfoCard } from "./InfoCard";
+import * as React from "react";
 
 export const AboutUs = () => {
   return (
@@ -51,7 +50,7 @@ export const AboutUs = () => {
         </div>
         {/* close: Component-wrapper */}
 
-        {/* SLIDE-HERO */}
+        {/* SLIDE-HERO: mission & vision */}
         <div className="slide-hero-header">
           <p className="slide-hero-header-eyebrow quote-small">
             Our Commitment...
@@ -59,14 +58,19 @@ export const AboutUs = () => {
           <h2 className="heading-three"> and Philosophy</h2>
         </div>
 
-        {/* Mission and Vision */}
         <div className="global-delivery" style={{ marginBottom: "220px" }}>
-          <div className="mision-card-wrapper">
-            <MisionCard className="mision-card" />
-          </div>
-          <div>
-            <VisionCard className="vision-card" />
-          </div>
+          <InfoCard
+              title="MISSION"
+              content="Our mission is to design and develop innovative, high-quality technological solutions that not only solve current problems but also anticipate and adapt to the future needs of our stakeholders. We are a team of experts in technology that love innovation."
+              imageSrc="./src/imgs/us_mision.png"
+              className="mision-card"
+          />
+          <InfoCard
+              title="VISION"
+              content="To be global leaders in the technology field, helping our clients enhance their quality of life and achieve new levels of success through disruptive technologies and effective digital strategies."
+              imageSrc="./src/imgs/us_vision.png"
+              className="vision-card"
+          />
         </div>
 
         {/* Parthners LOGOs */}

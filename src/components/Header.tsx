@@ -2,8 +2,6 @@ import { useState } from "react";
 import { Link } from "react-scroll";
 import {useLocation } from "react-router-dom";
 import logo from "../imgs/logoDISC_sinfondo.png";
-import Col from "../imgs/col.png";
-import Us from "../imgs/us.png";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 import "../styles/headers.css";
