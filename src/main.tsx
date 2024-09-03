@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import 'normalize.css';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Header } from "./component/Header";
+import { Header } from "./components/Header";
 import { Index } from "./pages/Index";
 
 

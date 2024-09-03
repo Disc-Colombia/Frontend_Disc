@@ -1,0 +1,71 @@
+@import "./colores.css";
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 20px;
+    border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .message-box {
+    max-width: 40%;
+    padding: 20px;
+    background-color: var(--gris-message);
+    border-radius: 10px;
+  }
+  
+  
+  .message-box .highlight {
+    font-family: var(--font-makina);
+    font-weight: bold;
+    margin-bottom: 10px;
+    background:-webkit-linear-gradient(-90deg,var(--Black),var(--LogoBackground));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+  }
+  
+  .message-box p {
+    font-family: var(--montserrat-font-family);
+    color: #333;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    gap: 15px;
+    padding: 20px;
+    background-color: var(--White);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    font-family: --montserrat-font-family;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact-form button {
+    padding: 10px;
+    font-family: --montserrat-font-family;
+    color: var(--White);
+    background-color: var(--LogoBackground);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .contact-form button:hover {
+    background-color: var(--LogoBackground);
+  }
+  

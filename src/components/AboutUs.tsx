@@ -1,0 +1,339 @@
+import "../styles/aboutus.css";
+import { MisionCard } from "./MisionCard";
+import { VisionCard } from "./VisionCard";
+
+
+export const AboutUs = () => {
+  return (
+      <>
+        <div className="component-wrapper   ">
+          <div className="particle">
+            <div className="particle-content">
+              <div className="about-header main-padding-large slide">
+                <div className="about-header-content quote-small">
+                  <p>
+                    Development Innovation System C (DISC), we are a company of
+                    innovative technological solutions that transform and enhance
+                    a digital world by offering multiple specialized services in
+                    software development and system integration. Our multilingual
+                    team has fostered strong business relationships with federal,
+                    state, local entities and NGOs worldwide. We have more than a
+                    decade of experience, with headquarters in Washington, DC.,
+                    and offices in Colombia.
+                  </p>
+                </div>
+                <div className="about-header-controls">
+                  <p className="about-header-controls-blurb heading-four">
+                    More about us
+                  </p>
+                  <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="96"
+                      height="96"
+                      viewBox="0 0 24 24"
+                  >
+                    <rect
+                        width="96"
+                        height="96"
+                        className="a"
+                        style={{ opacity: 0 }}
+                    ></rect>
+                    <path
+                        d="M183.41,3439.41,182,3438l-6,6,6,6,1.41-1.41-4.58-4.59Z"
+                        transform="translate(-168 -3432)"
+                        className="b"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* close: Component-wrapper */}
+
+        {/* SLIDE-HERO */}
+        <div className="slide-hero-header">
+          <p className="slide-hero-header-eyebrow quote-small">
+            Our Commitment...
+          </p>
+          <h2 className="heading-three"> and Philosophy</h2>
+        </div>
+
+        {/* Mission and Vision */}
+        <div className="global-delivery" style={{ marginBottom: "220px" }}>
+          <div className="mision-card-wrapper">
+            <MisionCard className="mision-card" />
+          </div>
+          <div>
+            <VisionCard className="vision-card" />
+          </div>
+        </div>
+
+        {/* Parthners LOGOs */}
+        <div className="oupartnets" style={{ margin: "20px",  background: "var(--gris-background)" }}>
+          <div className="slide-hero-header">
+            <p className="slide-hero-header-eyebrow quote-small">We are...</p>
+            <h1 className="heading-three">Partnered With</h1>
+          </div>
+          <div className="slide-hero-content">
+            <div className="logo-garden logo-garden--is-dark">
+              <div className="logo-garden-gallery">
+                <div
+                    className="logo-garden-gallery-scroller smooth"
+                    style={{ transform: "translateX(0%)" }}
+                >
+                  <div className="logo-garden-gallery-row">
+                    <div className="logo-garden-gallery-row-card">
+                      <a href="https://ads.google.com/intl/es-419_co/home/partners/become-a-partner/">
+                        <img
+                            src="src/imgs/partners/partner_1.jpeg"
+                            alt="Google Partner"
+                            width={500}
+                            height={200}
+                        />
+                      </a>
+                    </div>
+                    <div className="logo-garden-gallery-row-card">
+                      <a href="https://partner.microsoft.com/es-es/partnership">
+                        <img
+                            src="src/imgs/partners/partner_2.jpeg"
+                            alt="Microsoft Partner"
+                            width={500}
+                            height={200}
+                        />
+                      </a>
+                    </div>
+                    <div className="logo-garden-gallery-row-card">
+                      <a href="https://www.linkedin.com/company/ingram-micro-colombia/?originalSubdomain=co">
+                        <img
+                            src="src/imgs/partners/partner_3.jpeg"
+                            alt="INGRAM"
+                            width={500}
+                            height={200}
+                        />
+                      </a>
+                    </div>
+                    <div className="logo-garden-gallery-row-card">
+                      <a href="https://www.ibm.com/es-es/partnerplus">
+                        <img
+                            src="src/imgs/partners/partner_4.jpeg"
+                            alt="IBM"
+                            width={500}
+                            height={200}
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="logo-garden-gallery-row">
+                    <div className="logo-garden-gallery-row-card">
+                      <a href="https://www.delltechnologies.com/partner/en-us/partner/find-a-partner.htm">
+                        <img
+                            src="src/imgs/partners/partner_5.jpeg"
+                            alt="DELL"
+                            width={500}
+                            height={200}
+                        />
+                      </a>
+                    </div>
+                    <div className="logo-garden-gallery-row-card">
+                      <a href="https://aws.amazon.com/es/partners/">
+                        <img
+                            src="src/imgs/partners/partner_6.jpeg"
+                            alt="AWS"
+                            width={500}
+                            height={200}
+                        />
+                      </a>
+                    </div>
+                    <div className="logo-garden-gallery-row-card">
+                      <a href="https://www.adobe.com/partners/partnerfinders.html">
+                        <img
+                            src="src/imgs/partners/partner_7.jpeg"
+                            alt="ADOBE"
+                            width={500}
+                            height={200}
+                        />
+                      </a>
+                    </div>
+                    <div className="logo-garden-gallery-row-card">
+                      <a href="https://www.sap.com/index.html">
+                        <img
+                            src="src/imgs/partners/partner_8.svg"
+                            alt="SAP"
+                            width={500}
+                            height={200}
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="about-header-controls">
+          <p className="about-header-controls-blurb heading-four">
+            Our clients
+          </p>
+          <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="96"
+              height="96"
+              viewBox="0 0 24 24"
+          >
+            <rect
+                width="96"
+                height="96"
+                className="a"
+                style={{ opacity: 0 }}
+            ></rect>
+            <path
+                d="M183.41,3439.41,182,3438l-6,6,6,6,1.41-1.41-4.58-4.59Z"
+                transform="translate(-168 -3432)"
+                className="b"
+            ></path>
+          </svg>
+        </div>
+
+
+        {/* Clients LOGOs */}
+        <div className="oupartnets" style={{ margin: "20px" }}>
+          <div className="slide-hero-content">
+            <div className="logo-garden logo-garden--is-dark">
+              <div className="logo-garden-gallery">
+                <div
+                    className="logo-garden-gallery-scroller smooth"
+                    style={{ transform: "translateX(0%)" }}
+                >
+                  <div className="logo-garden-gallery-row">
+                    <div className="logo-garden-gallery-row-card">
+                      <a href="https://dc.gov/">
+                        <img
+                            src="src/imgs/clients/client_1b.png"
+                            alt="DC GOV"
+                            width={500}
+                            height={200}
+                        />
+                      </a>
+                    </div>
+                    <div className="logo-garden-gallery-row-card">
+                      <a href="https://www.mwaa.com/">
+                        <img
+                            src="src/imgs/clients/client_2b.png"
+                            alt="mwaa"
+                            width={500}
+                            height={200}
+                        />
+                      </a>
+                    </div>
+                    <div className="logo-garden-gallery-row-card">
+                      <a href="https://www.emcali.com.co/">
+                        <img
+                            src="src/imgs/clients/client_3.png"
+                            alt="EMCALI"
+                            width={500}
+                            height={200}
+                        />
+                      </a>
+                    </div>
+                    <div className="logo-garden-gallery-row-card">
+                      <a href="https://www.princegeorgescountymd.gov/">
+                        <img
+                            src="src/imgs/clients/client_4rr.jpg"
+                            alt="GEORGES COUNTRY"
+                            width={500}
+                            height={200}
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="logo-garden-gallery-row">
+                    <div className="logo-garden-gallery-row-card">
+                      <a href="https://opc-dc.gov/">
+                        <img
+                            src="src/imgs/clients/client_5.png"
+                            alt="DC OPC"
+                            width={500}
+                            height={200}
+                        />
+                      </a>
+                    </div>
+                    <div className="logo-garden-gallery-row-card">
+                      <a href="https://x.com/wmata">
+                        <img
+                            src="src/imgs/clients/client_6d.png"
+                            alt="METRO"
+                            width={500}
+                            height={200}
+                        />
+                      </a>
+                    </div>
+                    <div className="logo-garden-gallery-row-card">
+                      <a href="https://www.dcwater.com/">
+                        <img
+                            src="src/imgs/clients/client_7.png"
+                            alt=""
+                            width={500}
+                            height={200}
+                        />
+                      </a>
+                    </div>
+                    <div className="logo-garden-gallery-row-card">
+                      <a href="https://www.mindefensa.gov.co/">
+                        <img
+                            src="src/imgs/clients/client_8c.jpg"
+                            alt=""
+                            width={500}
+                            height={200}
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="logo-garden-gallery-row">
+                    <div className="logo-garden-gallery-row-card">
+
+                    </div>
+                    <div className="logo-garden-gallery-row-card">
+                      <a href="https://dslbd.dc.gov/getcertified">
+                        <img
+                            src="src/imgs/clients/client_10.jpeg"
+                            alt="CBE"
+                            width={500}
+                            height={200}
+                        />
+                      </a>
+                    </div>
+                    <div className="logo-garden-gallery-row-card">
+                      <a href="https://www.cancilleria.gov.co/">
+                        <img
+                            src="src/imgs/clients/client_9b.png"
+                            alt="Relaciones exteriores"
+                            width={500}
+                            height={200}
+                        />
+                      </a>
+                    </div>
+                    <div className="logo-garden-gallery-row-card">
+                      <a href="https://www.cancilleria.gov.co/">
+                        <img
+                            src="src/imgs/clients/client_11.png"
+                            alt="Relaciones exteriores"
+                            width={500}
+                            height={200}
+                        />
+                      </a>
+                    </div>
+                    <div className="logo-garden-gallery-row-card">
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+  );
+};
