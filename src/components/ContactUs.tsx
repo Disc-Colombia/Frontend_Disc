@@ -1,4 +1,6 @@
 import * as React from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "../styles/contactform.css";
 
 export const ContactUs: React.FC = () => {
@@ -19,8 +21,25 @@ export const ContactUs: React.FC = () => {
   };
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form Data:", data);
-    // Aquí manejar el envío del formulario
+    //Verificando que el formulario se diligencie completo
+    if (
+      data.name === "" ||
+      data.email === "" ||
+      data.phone === "" ||
+      data.message === ""
+    ) {
+      toast.warning("Please ensure all fields are completed, thank you.");
+    } else {
+      toast.success("Thank you, we'll contact you as fast as we can.");
+      setData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      })
+      // Aquí manejar el envío del formulario
+      console.log("Form Data:", data);
+    }
   };
   return (
     <div className="contact-container" id="contactus">
@@ -28,7 +47,7 @@ export const ContactUs: React.FC = () => {
         <h2 className="highlight">Send Message</h2>
         <p>Send your questions or concerns below.</p>
       </div>
-      <form className="contact-form">
+      <form className="contact-form" onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Name"
@@ -56,10 +75,9 @@ export const ContactUs: React.FC = () => {
           value={data.message}
           onChange={handleChange}
         ></textarea>
-        <button type="submit" onSubmit={handleSubmit}>
-          ¡SUMMIT!
-        </button>
+        <button type="submit">¡SUMMIT!</button>
       </form>
+      <ToastContainer />
     </div>
   );
 };
