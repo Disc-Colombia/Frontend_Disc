@@ -6,7 +6,7 @@ import { Box } from "./Box";
 
 export const Home = () => {
   return (
-    <div className="container_content--home">
+    <div className="container_content--home" >
       <div className="container_home--tittle">
         <h1 className="tittle_home">
           GOING BEYOND YOUR EXPECTATIONS!

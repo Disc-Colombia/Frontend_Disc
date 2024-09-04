@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/carrousel.css";
 export const Carrousel = () => {
   return (
-    <div className="container_carrousel">
+    <div className="container_carrousel" id="home">
       <div
         id="carouselExampleCaptions"
         className="carousel slide"
