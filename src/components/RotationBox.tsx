@@ -25,7 +25,7 @@ const FlipCard = ({image,children,tittle}:RotationBoxProps) => {
         </div>
         <div className="flip-card-back">
           
-          <p className='flip_card--text'>{children}</p>
+          <div className='flip_card--text'>{children}</div>
         </div>
       </motion.div>
     </div>

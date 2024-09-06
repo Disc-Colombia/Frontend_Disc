@@ -54,7 +54,7 @@ export const Footers = () => {
               </div>
               <div className="socialinformations">
                 <i className="bi bi-whatsapp contact"></i>
-                <p className="informations_dis--paragraph">(1) 202-446878</p>
+                <p className="informations_dis--paragraph">(57) 3502114492</p>
               </div>
               <div className="socialinformations">
                 <i className="bi bi-geo-alt contact"></i>
@@ -76,12 +76,12 @@ export const Footers = () => {
             <i className=" media bi bi-facebook"></i>
             </a>
             
-            <a href="#">
+            {/* <a href="#">
             <i className=" media bi bi-twitter-x"></i>
             </a>
             <a href="#">
             <i className=" media bi bi-youtube"></i>
-            </a>
+            </a> */}
             <a href="https://www.linkedin.com/company/development-innovation-system/">
             <i className=" media bi bi-linkedin"></i>
             </a>

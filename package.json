@@ -13,6 +13,7 @@
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
+    "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "framer-motion": "^11.3.31",
@@ -22,7 +23,8 @@
     "react-flip-toolkit": "^7.2.4",
     "react-router-dom": "^6.26.0",
     "react-scroll": "^1.9.0",
-    "react-spring": "^9.7.4"
+    "react-spring": "^9.7.4",
+    "react-toastify": "^10.0.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",

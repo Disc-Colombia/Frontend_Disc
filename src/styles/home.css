@@ -126,6 +126,9 @@
 }
 
 .demobutton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 30px;
   width: 180px;
   height: 40px;
@@ -138,7 +141,7 @@
   font-size: 15px;
   box-shadow: 0 0 0 0 rgb( 0, 0, 0, .5);
   animation: pulse 2s infinite;
-
+text-decoration: none;
 }
 
 @keyframes pulse {

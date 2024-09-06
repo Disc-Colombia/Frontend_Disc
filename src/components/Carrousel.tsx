@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/carrousel.css";
 export const Carrousel = () => {
   return (
-    <div className="container_carrousel">
+    <div className="container_carrousel" >
       <div
         id="carouselExampleCaptions"
         className="carousel slide"
@@ -36,10 +36,11 @@ export const Carrousel = () => {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img
-              rel="preload"
+              loading="lazy"
               src={image1}
               className="d-block w-100 carousel_img"
-              alt="..."
+              alt="imagen technology
+                solutions."
             />
             <div className="carousel-caption d-none d-md-block">
               <h5>Information technology consulting</h5>
@@ -51,10 +52,10 @@ export const Carrousel = () => {
           </div>
           <div className="carousel-item">
             <img
-              rel="preload"
+              loading="lazy"
               src={image2}
               className="d-block w-100 carousel_img"
-              alt="..."
+              alt="imagen services"
             />
             <div className="carousel-caption d-none d-md-block">
               <h5>Cybersecurity solutions</h5>
@@ -67,10 +68,10 @@ export const Carrousel = () => {
           </div>
           <div className="carousel-item">
             <img
-              rel="preload"
+              loading="lazy"
               src={image3}
               className="d-block w-100 carousel_img"
-              alt="..."
+              alt="imagen solutions"
             />
             <div className="carousel-caption d-none d-md-block">
               <h5>Financial solutions</h5>

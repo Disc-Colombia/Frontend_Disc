@@ -1,18 +1,29 @@
 import gobierno from "../imgs/gobierno.png";
 import ong from "../imgs/ong.png";
+import { useState } from "react";
+import { Link } from "react-scroll";
 import corporations from "../imgs/corporaciones.png";
 import "../styles/home.css";
 import { Box } from "./Box";
 
 export const Home = () => {
+  const [ linkActive,setLinkActive] = useState("");
+  const handleActive = (Link: string) => {
+    setLinkActive(Link);
+    
+  };
   return (
-    <div className="container_content--home">
+    <div className="container_content--home" >
       <div className="container_home--tittle">
         <h1 className="tittle_home">
           GOING BEYOND YOUR EXPECTATIONS!
         </h1>
         <div className="button_container">
-          <button className="demobutton">SCHEDULE DEMO</button>
+          <Link to="contactus"
+                smooth={true}
+                duration={500} className="demobutton"
+                onClick={()=>handleActive('contactus')}
+                >SCHEDULE DEMO</Link>
         </div>
       </div>
       <div className="container_home--general">

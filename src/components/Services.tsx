@@ -1,4 +1,4 @@
-import * as React from "react";
+
 import "../styles/services.css"
 import FlipCard from ".//RotationBox"
 import serviciosHumanos from "../imgs/servicios_humanos.png"
