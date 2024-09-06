@@ -12,10 +12,13 @@ export const Services = () => {
     <div id='services'>
     <div className='background-services'>
       <div className="solutions-section">
-        <h2 className="solutions-title">ADAPTABLE AND<span className='solutions-title--span'> EXPERT SOLUTIONS</span></h2>
-        <p className="solutions-description">
-          Discover our flexible technological solutions, designed to adapt to the unique needs of your organization and meet the highest standards of excellence.
-        </p>
+        <div className="titlepar--text">
+          <h2 className="solutions-title">ADAPTABLE AND<span className='solutions-title--span'> EXPERT SOLUTIONS</span></h2>
+          <p className="solutions-description">
+            Discover our flexible technological solutions, designed to adapt to the unique needs of your organization and meet the highest standards of excellence.
+          </p>
+        </div>
+        
         <div className="solutions-grid">
           <div className="solution-item">
             <h3 className='title-items-services'>Flexibility</h3>

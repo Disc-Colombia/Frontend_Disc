@@ -76,9 +76,18 @@
     gap: 30px;
   }
   
-  @media(min-width: 768px) {
+  @media(max-width: 1023px) {
+    .titlepar--text{
+      margin: 30px;
+    }
+  
     .solutions-grid {
-      grid-template-columns: repeat(2, 1fr);
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+      margin-left: 40px;
+      margin-right: 40px;
+      margin-bottom: 30px;
     }
   }
   
@@ -159,6 +168,3 @@
     color: var(--White);
     font-family: var(--montserrat-font-family);
   }
-
-
-
