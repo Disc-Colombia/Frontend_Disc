@@ -10,7 +10,7 @@
 }
 .container_home--general {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
