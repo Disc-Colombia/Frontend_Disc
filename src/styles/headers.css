@@ -203,10 +203,21 @@ Footers styles here
   justify-content: center;
   flex-direction: column;
   gap: 2rem;
+  margin-top: 2rem;
+}
+@media (min-width:1024px) {
+  .footer_container--media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
 }
 .container_social--icon {
   display: flex;
-  flex-direction: column;
+  flex-direction:row;
   align-items: center;
   column-gap: 2rem;
 }

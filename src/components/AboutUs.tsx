@@ -10,7 +10,7 @@ export const AboutUs = () => {
             <div className="particle-content">
               <div className="about-header main-padding-large slide">
                 <div className="about-header-content quote-small">
-                  <p>
+                  <p className="about_header--parrafo">
                     Development Innovation System C (DISC), we are a company of
                     innovative technological solutions that transform and enhance
                     a digital world by offering multiple specialized services in

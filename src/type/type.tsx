@@ -13,3 +13,10 @@ export type BoxProps ={
   tittle: string;
   description:string
 }
+ export type EmailProps={
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+
+ }

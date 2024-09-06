@@ -13,8 +13,8 @@ export const InfoCard: React.FC<InfoCardProps> = ({ title, content, imageSrc, cl
 
     return (
         <Flex
-            w="750px"
-            h="300px"
+            w="450px"
+            h="200px"
             bg="white"
             border="1px solid #ccc"
             boxShadow="0 4px 8px rgba(0, 0, 0, 0.1)"
@@ -35,8 +35,8 @@ export const InfoCard: React.FC<InfoCardProps> = ({ title, content, imageSrc, cl
                 />
             </Box>
             <Box
-                w="450px"
-                h="300px"
+                w="350px"
+                h="200px"
                 display="flex"
                 justifyContent="center"
                 alignItems="center"
@@ -47,7 +47,7 @@ export const InfoCard: React.FC<InfoCardProps> = ({ title, content, imageSrc, cl
                 overflow="hidden"
             >
                 <Text
-                    fontSize="36px"
+                    fontSize="20px"
                     fontWeight="bold"
                     fontFamily="'Abel', sans-serif"
                     zIndex="1"
@@ -67,7 +67,7 @@ export const InfoCard: React.FC<InfoCardProps> = ({ title, content, imageSrc, cl
                     display="flex"
                     justifyContent="center"
                     alignItems="center"
-                    fontSize="22px"
+                    fontSize="12px"
                     textAlign="justify"
                     padding="0 30px"
                     boxSizing="border-box"
