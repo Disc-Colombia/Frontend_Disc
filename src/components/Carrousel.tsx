@@ -38,7 +38,7 @@ export const Carrousel = () => {
             <img
               loading="lazy"
               src={image1}
-              className="d-block w-100 carousel_img"
+              className="d-block w-100 carousel_img img-fluid"
               alt="imagen technology
                 solutions."
             />
@@ -54,7 +54,7 @@ export const Carrousel = () => {
             <img
               loading="lazy"
               src={image2}
-              className="d-block w-100 carousel_img"
+              className="d-block w-100 carousel_img img-fluid"
               alt="imagen services"
             />
             <div className="carousel-caption d-none d-md-block">
@@ -70,7 +70,7 @@ export const Carrousel = () => {
             <img
               loading="lazy"
               src={image3}
-              className="d-block w-100 carousel_img"
+              className="d-block w-100 carousel_img img-fluid"
               alt="imagen solutions"
             />
             <div className="carousel-caption d-none d-md-block">
