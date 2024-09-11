@@ -1,17 +1,18 @@
 import gobierno from "../imgs/gobierno.png";
 import ong from "../imgs/ong.png";
-import { useState } from "react";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
+// import { useState } from "react";
+// import { Link } from "react-scroll";
 import corporations from "../imgs/corporaciones.png";
 import "../styles/home.css";
 import { Box } from "./Box";
 
 export const Home = () => {
-  const [ linkActive,setLinkActive] = useState("");
-  const handleActive = (Link: string) => {
-    setLinkActive(Link);
+  // const [ linkActive,setLinkActive] = useState("");
+  // const handleActive = (Link: string) => {
+  //   setLinkActive(Link);
     
-  };
+  // };
   return (
     <div className="container_content--home" >
       <div className="container_home--tittle">
@@ -19,10 +20,11 @@ export const Home = () => {
           GOING BEYOND YOUR EXPECTATIONS!
         </h1>
         <div className="button_container">
-          <Link to="contactus"
-                smooth={true}
-                duration={500} className="demobutton"
-                onClick={()=>handleActive('contactus')}
+          <Link to="/scheduledemo"
+          className="demobutton"
+                // smooth={true}
+                // duration={500} 
+                // onClick={()=>handleActive('contactus')}
                 >SCHEDULE DEMO</Link>
         </div>
       </div>
