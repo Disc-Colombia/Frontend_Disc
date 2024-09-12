@@ -7,7 +7,7 @@ import seguridadciber from "../imgs/seguridad_cibernetica.png"
 import soluciones from "../imgs/soluciones_financieras.png"
 import serviciocliente from "../imgs/servicio_al_cliente.png"
 
-export const Services = () => {
+export const Services: React.FC = () =>  {
   return (
     <div id='services'>
     <div className='background-services'>

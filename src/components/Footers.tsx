@@ -2,7 +2,7 @@ import logo from "../imgs/logoDISC_sinfondo.png";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../styles/headers.css";
 
-export const Footers = () => {
+export const Footers: React.FC = () => {
   return (
     <div className="footer_container">
       

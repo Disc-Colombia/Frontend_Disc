@@ -4,8 +4,9 @@ import "react-toastify/dist/ReactToastify.css";
 import "../styles/contactform.css";
 import { dataEmail } from "../router/email";
 import type { EmailProps } from "../type/type";
+
 export const ContactUs: React.FC = () => {
-  const [data, setData] =  React.useState<EmailProps>({
+  const [data, setData] = React.useState<EmailProps>({
     name: "",
     email: "",
     phone: "",
@@ -32,13 +33,13 @@ export const ContactUs: React.FC = () => {
       toast.warning("Please ensure all fields are completed, thank you.");
     } else {
       toast.success("Thank you, we'll contact you as fast as we can.");
-       dataEmail(data)
+      dataEmail(data);
       setData({
         name: "",
         email: "",
         phone: "",
         message: "",
-      })
+      });
       // Aquí manejar el envío del formulario
       console.log("Form Data:", data);
     }

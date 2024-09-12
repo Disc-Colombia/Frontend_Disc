@@ -3,7 +3,8 @@ import image2 from "../imgs/seguridad_cibernetica.png";
 import image3 from "../imgs/soluciones_financieras.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/carrousel.css";
-export const Carrousel = () => {
+
+export const Carrousel: React.FC = () =>  {
   return (
     <div className="container_carrousel" >
       <div
