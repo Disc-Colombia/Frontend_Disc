@@ -1,6 +1,6 @@
 import "../styles/aboutus.css";
 import { InfoCard } from "./InfoCard";
-import * as React from "react";
+// import * as React from "react";
 import {ClientsCarousel} from "./ClientsCarousel.tsx";
 
 export const AboutUs = () => {
