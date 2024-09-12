@@ -1,11 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { DemoProps } from "../type/type";
-import 'bootstrap-icons/font/bootstrap-icons.css';
+import "bootstrap-icons/font/bootstrap-icons.css";
 import "../styles/modalDemo.css";
+import { ToastContainer } from "react-toastify";
 import maternapp from "../imgs/maternapp.png";
+import { toast } from "react-toastify";
 export const ModalDemo = () => {
-  const redirect = useNavigate()
+  const redirect = useNavigate();
   const [data, setData] = React.useState<DemoProps>({
     FirstName: "",
     LastName: "",
@@ -26,35 +28,59 @@ export const ModalDemo = () => {
   };
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("DATOS ENVIADOS...", data);
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (
+      data.FirstName === "" ||
+      data.LastName === "" ||
+      !emailRegex.test(data.WorkerEmail) ||
+      data.CompanyName === "" ||
+      data.Title === "" ||
+      data.Phone === "" ||
+      data.Description === ""
+    ) {
+      toast.error("Dear user, all fields are required.");
+    } else {
+      console.log("ENVIANDO LOS DATOS AL SERVER...", data);
+      //envio de tados al servidor aqui
+      toast.success("Thank you, we'll contact you as fast as we can.");
+      setData({
+        FirstName: "",
+        LastName: "",
+        WorkerEmail: "",
+        CompanyName: "",
+        Title: "",
+        Phone: "",
+        Description: "",
+      });
+    }
   };
-  const handleBack =()=>{
-  redirect('/')
-  }
+  const handleBack = () => {
+    redirect("/");
+  };
   return (
     <div className="container_demo">
       <div className="container_demo--product">
         <div className="container_maternapp--image">
-          <h2 className="title_demo">Get information and execute strategy all in one place.</h2>
+          <h2 className="title_demo">
+            Get information and execute strategy all in one place.
+          </h2>
           <p className="demo_information">
-            Ready to power up your public affairs? Schedule a 30-minute
+            Ready to boost your business strategy? Schedule a 30-minute
             call/conversation with our team. We’ll discuss your goals, any
             challenges you’re facing, and the things you’re looking software.
           </p>
           <div className="container_image--product">
-          <img
-            className="maternapp_image"
-            src={maternapp}
-            alt="imagen maternapp"
-          />
+            <img
+              className="maternapp_image"
+              src={maternapp}
+              alt="imagen maternapp"
+            />
           </div>
         </div>
       </div>
       <div className="container_content">
         <div className="container_close--icon">
-          <i className="bi bi-x-circle"
-          onClick={ handleBack}
-          ></i>
+          <i className="bi bi-x-circle" onClick={handleBack}></i>
         </div>
         <div className="container_content--tittle">
           <h2 className="demotitle">Schedule a Demo</h2>
@@ -153,6 +179,7 @@ export const ModalDemo = () => {
           </div>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 };
