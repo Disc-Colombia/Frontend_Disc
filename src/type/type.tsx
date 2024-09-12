@@ -20,3 +20,13 @@ export type BoxProps ={
   message: string;
 
  }
+export type DemoProps ={
+  
+  FirstName:string;
+  LastName:string;
+  WorkerEmail:string;
+  CompanyName:string;
+  Title:string;
+  Phone:string;
+  Description:string;
+}
