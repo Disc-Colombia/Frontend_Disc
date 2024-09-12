@@ -227,6 +227,8 @@ import "../styles/aboutus.css";
 import { InfoCard } from "./InfoCard";
 import * as React from "react";
 import { ClientsCarousel } from "./ClientsCarousel";
+import us_mision from '../imgs/us_mision.png'
+import us_vision from '../imgs/us_vision.png'
 
 import {
   partner1,
@@ -298,13 +300,13 @@ export const AboutUs: React.FC = () => {
             <InfoCard
                 title="MISSION"
                 content={aboutUsContent.mission}
-                imageSrc="./src/imgs/us_mision.png"
+                imageSrc={us_mision}
                 className="mision-card"
             />
             <InfoCard
                 title="VISION"
                 content={aboutUsContent.vision}
-                imageSrc="./src/imgs/us_vision.png"
+                imageSrc={us_vision}
                 className="vision-card"
             />
           </div>
