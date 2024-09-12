@@ -4,6 +4,13 @@ import * as React from "react";
 import {ClientsCarousel} from "./ClientsCarousel.tsx";
 
 export const AboutUs: React.FC = () => {
+
+  const aboutUsContent = {
+    mission: "Our mission is to design and develop innovative, high-quality technological solutions that not only solve current problems but also anticipate and adapt to the future needs of our stakeholders. We are a team of experts in technology that love innovation.",
+    vision: "To be global leaders in the technology field, helping our clients enhance their quality of life and achieve new levels of success through disruptive technologies and effective digital strategies.",
+    // Add more static content here
+  };
+
   return (
       <>
         <div className="component-wrapper " style={{ marginTop: "80px" }}>
@@ -61,13 +68,13 @@ export const AboutUs: React.FC = () => {
           <div className="global-delivery" style={{ marginBottom: "20px" }}>
             <InfoCard
                 title="MISSION"
-                content="Our mission is to design and develop innovative, high-quality technological solutions that not only solve current problems but also anticipate and adapt to the future needs of our stakeholders. We are a team of experts in technology that love innovation."
+                content={aboutUsContent.mission}
                 imageSrc="./src/imgs/us_mision.png"
                 className="mision-card"
             />
             <InfoCard
                 title="VISION"
-                content="To be global leaders in the technology field, helping our clients enhance their quality of life and achieve new levels of success through disruptive technologies and effective digital strategies."
+                content={aboutUsContent.vision}
                 imageSrc="./src/imgs/us_vision.png"
                 className="vision-card"
             />

@@ -3,6 +3,7 @@ import image2 from "../imgs/seguridad_cibernetica.png";
 import image3 from "../imgs/soluciones_financieras.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/carrousel.css";
+import * as React from "react";
 
 export const Carrousel: React.FC = () =>  {
   return (

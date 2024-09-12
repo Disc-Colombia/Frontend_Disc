@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../styles/clientsCarousel.css'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import {
     client1,
@@ -14,7 +15,8 @@ import {
     client7,
     client8,
     client9,
-    client10
+    client10,
+    client11
 } from '../imgs/clients';
 
 export const ClientsCarousel: React.FC = () => {
@@ -28,7 +30,8 @@ export const ClientsCarousel: React.FC = () => {
         client7,
         client8,
         client9,
-        client10
+        client10,
+        client11
     ];
 
     const settings = {
@@ -72,10 +75,11 @@ export const ClientsCarousel: React.FC = () => {
             <Slider {...settings}>
                 {images.map((logo, index) => (
                     <div key={index} style={{ padding: '10px', textAlign: 'center' }}>
-                        <img
+                        <LazyLoadImage
                             src={logo}
                             alt={`Partner ${index + 1}`}
                             className="slider-image"
+                            effect="blur"
                         />
                     </div>
                 ))}
