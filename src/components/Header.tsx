@@ -3,12 +3,13 @@ import { Link } from "react-scroll";
 import logo from "../imgs/logoDISC_sinfondo.png";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../styles/headers.css";
-import { Outlet } from "react-router-dom";
+import { Outlet,useNavigate } from "react-router-dom";
 import { Footers } from "./Footers";
 
 export const Header = () => {
   const [linkActive, setLinkActive] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false); //controla estado del menu
+  const navegate =useNavigate();
   //Muestra el menu
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -20,6 +21,7 @@ export const Header = () => {
   const handleActive = (Link: string) => {
     setLinkActive(Link);
     closeMenu();
+    navegate("/")
   };
   return (
     <>

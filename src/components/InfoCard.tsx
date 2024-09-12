@@ -35,7 +35,7 @@ export const InfoCard: React.FC<InfoCardProps> = ({ title, content, imageSrc, cl
                 />
             </Box>
             <Box
-                w="350px"
+                w="300px"
                 h="200px"
                 display="flex"
                 justifyContent="center"
