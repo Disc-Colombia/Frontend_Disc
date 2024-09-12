@@ -227,9 +227,31 @@ import "../styles/aboutus.css";
 import { InfoCard } from "./InfoCard";
 import * as React from "react";
 import { ClientsCarousel } from "./ClientsCarousel";
-import { partnerImages } from "../imgs/partners";
+
+import {
+  partner1,
+  partner2,
+  partner3,
+  partner4,
+  partner5,
+  partner6,
+  partner7,
+  partner8
+} from '../imgs/partners';
 
 export const AboutUs: React.FC = () => {
+
+  const partnerImages = [
+    { src: partner1, alt: "Google Partner", link: "https://ads.google.com/intl/es-419_co/home/partners/become-a-partner/" },
+    { src: partner2, alt: "Microsoft Partner", link: "https://partner.microsoft.com/es-es/partnership" },
+    { src: partner3, alt: "INGRAM", link: "https://www.linkedin.com/company/ingram-micro-colombia/?originalSubdomain=co" },
+    { src: partner4, alt: "IBM", link: "https://www.ibm.com/es-es/partnerplus" },
+    { src: partner5, alt: "DELL", link: "https://www.delltechnologies.com/partner/en-us/partner/find-a-partner.htm" },
+    { src: partner6, alt: "AWS", link: "https://aws.amazon.com/es/partners/" },
+    { src: partner7, alt: "ADOBE", link: "https://www.adobe.com/partners/partnerfinders.html" },
+    { src: partner8, alt: "SAP", link: "https://www.sap.com/index.html" },
+  ];
+
   const aboutUsContent = {
     mission:
         "Our mission is to design and develop innovative, high-quality technological solutions that not only solve current problems but also anticipate and adapt to the future needs of our stakeholders. We are a team of experts in technology that love innovation.",
