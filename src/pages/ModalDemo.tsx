@@ -63,7 +63,7 @@ export const ModalDemo: React.FC = () => {
     } else {
       try {
         // Realizamos la petición POST al backend
-        const response = await fetch("http://127.0.0.1:8000/verify-recaptcha", {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/verify-recaptcha`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
