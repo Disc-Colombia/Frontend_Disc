@@ -1,7 +1,8 @@
 
 import '../styles/colorLine.css';
+import * as React from "react";
 
-const ColorLines = () => {
+const ColorLines: React.FC = () => {
   return (
     <div className="color-lines-container">
       <div className="color-line line1"></div>

@@ -7,7 +7,7 @@ import { Carrousel } from "../components/Carrousel";
 import { AboutUs } from "../components/AboutUs.tsx";
 import { HomeServices } from "../components/HomeServices.tsx";
 import { ContactUs } from "../components/ContactUs";
-import { CookiesComponet } from "../components/CookiesComponet";
+import { CookiesComponent } from "../components/CookiesComponent.tsx";
 import { Projects } from "../components/Projects.tsx";
 
 export const Index = () => {
@@ -26,7 +26,7 @@ export const Index = () => {
           className="container_background container_carrousell--index"
         >
           {!isVisible && (
-            <CookiesComponet
+            <CookiesComponent
               isVisible={isVisible}
               setIsVisible={setIsVisible}
             />

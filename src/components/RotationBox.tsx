@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import '../styles/rotationBox.css'; // Importa el archivo CSS
+import '../styles/rotationBox.css';
 import type { RotationBoxProps } from '../type/type';
 import { motion } from 'framer-motion';
 
@@ -31,5 +31,4 @@ const FlipCard = ({image,children,tittle}:RotationBoxProps) => {
     </div>
   );
 };
-
 export default FlipCard;

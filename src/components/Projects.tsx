@@ -1,23 +1,19 @@
-import React, { useState } from 'react';
 import maternappIcon from "../imgs/maternappicon.png";
 import saludtechIcon from "../imgs/salutechicon.png";
 import covid19Icon from "../imgs/covidicon.png";
 import covidpassportIcon from "../imgs/healthpassicon.png";
 import websitesIcon from "../imgs/yocoicon.png";
-
 import maternappBig from "../imgs/maternapp.png";
 import saludtechBig from "../imgs/covid19app.png";
 import covid19Big from "../imgs/covid19.png";
 import covidpassportBig from "../imgs/covidpassport.jpg";
 import websitesBig from "../imgs/yocoweb.jpg";
-
 import "../styles/projects.css";
+import * as React from "react";
+import { useState } from "react";
 
+export const Projects: React.FC = () => {
 
-export const Projects = () => {
-
-  
-  // Información de cada botón, con imágenes pequeñas y grandes
   const infoOptions = [
     {
       title: 'MaternApp',
@@ -62,9 +58,6 @@ export const Projects = () => {
     setSelectedInfo(option);
   };
 
-
-
-
   return (
 
     <div className='container_projects'>
@@ -77,7 +70,7 @@ export const Projects = () => {
         </div>
         <div className='container_img_content'>
 
-        <img className='img_content' src={selectedInfo.imageLarge} alt={selectedInfo.title} /> {/* Imagen grande */}
+        <img className='img_content' src={selectedInfo.imageLarge as string} alt={selectedInfo.title} /> {/* Imagen grande */}
         </div>
         
       </div>
@@ -86,7 +79,7 @@ export const Projects = () => {
       <div className='container_buttom_option'>
         {infoOptions.map((option, index) => (
           <button className='buttom_option' key={index} onClick={() => handleButtonClick(option)} >
-            <img className='img_buttom' src={option.imageSmall} alt={`Opción ${index + 1}`} /> {/* Imagen pequeña */}
+            <img className='img_buttom' src={option.imageSmall as string} alt={`Opción ${index + 1}`} /> {/* Imagen pequeña */}
           </button>
         ))}
       </div>

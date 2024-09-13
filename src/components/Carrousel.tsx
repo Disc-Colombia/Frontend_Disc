@@ -3,7 +3,7 @@ import image2 from "../imgs/seguridad_cibernetica.jpg";
 import image3 from "../imgs/soluciones_financieras.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/carrousel.css";
-import React from "react";
+import * as React from "react";
 
 export const Carrousel: React.FC = () => {
   return (
@@ -39,7 +39,7 @@ export const Carrousel: React.FC = () => {
           <div className="carousel-item active">
             <img
               loading="lazy"
-              src={image1}
+              src={image1 as string}
               className="d-block w-100 carousel_img img-fluid"
               alt="imagen technology
                 solutions."
@@ -55,7 +55,7 @@ export const Carrousel: React.FC = () => {
           <div className="carousel-item">
             <img
               loading="lazy"
-              src={image2}
+              src={image2 as string}
               className="d-block w-100 carousel_img img-fluid"
               alt="imagen services"
             />
@@ -71,7 +71,7 @@ export const Carrousel: React.FC = () => {
           <div className="carousel-item">
             <img
               loading="lazy"
-              src={image3}
+              src={image3 as string}
               className="d-block w-100 carousel_img img-fluid"
               alt="imagen solutions"
             />

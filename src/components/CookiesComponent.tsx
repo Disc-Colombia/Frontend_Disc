@@ -1,12 +1,15 @@
+import * as React from "react";
 import { useEffect } from "react";
 import Cookies from "js-cookie";
 import "../styles/cookies.css";
 import { Dispatch } from "react";
+
 type CookiesProps = {
   isVisible: boolean;
   setIsVisible: Dispatch<React.SetStateAction<boolean>>;
 };
-export const CookiesComponet = ({ isVisible, setIsVisible }: CookiesProps) => {
+
+export const CookiesComponent = ({ isVisible, setIsVisible }: CookiesProps) => {
   // Verifica si la cookie de acceptation ya existe
   useEffect(() => {
     const cookiesAccepted = Cookies.get("cookiesAccepted");

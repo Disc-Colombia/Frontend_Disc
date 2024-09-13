@@ -2,13 +2,7 @@ import "../styles/services.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import servicesimg from "../imgs/servicesimg.jpg";
 import { Link } from "react-router-dom";
-
-// import FlipCard from "./RotationBox";
-// import serviciosHumanos from "../imgs/servicios_humanos.png";
-// import consultoriaIT from "../imgs/consultoria_IT.png";
-// import seguridadciber from "../imgs/seguridad_cibernetica.png";
-// import soluciones from "../imgs/soluciones_financieras.png";
-// import serviciocliente from "../imgs/servicio_al_cliente.png";
+import * as React from "react";
 
 export const HomeServices: React.FC = () => {
   return (
@@ -68,7 +62,7 @@ export const HomeServices: React.FC = () => {
         <div className="image_services">
           <img
             className="img_content-services"
-            src={servicesimg}
+            src={servicesimg as string}
             alt="Our Services"
           />
         </div>
