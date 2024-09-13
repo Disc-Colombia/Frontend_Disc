@@ -283,6 +283,10 @@ h6 {
     letter-spacing: .2px;
     text-rendering: optimizeSpeed;
 } */
+.quote-small {
+    font-size: 2.2rem;
+}
+
 @media (max-width: 479px) {
     .quote-small {
         font-size: 1.75rem;
