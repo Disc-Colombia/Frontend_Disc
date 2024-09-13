@@ -4,11 +4,10 @@ import { DemoProps } from "../type/type";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../styles/modalDemo.css";
 import { ToastContainer, toast } from "react-toastify";
-import maternapp from "../imgs/maternapp.png";
+//import maternapp from "../imgs/maternapp.png";
 import ReCAPTCHA from 'react-google-recaptcha'
-
-export const ModalDemo: React.FC = () => {
-
+import VideoPlayer from "../components/VideoPlayer";
+export const ModalDemo = () => {
   const redirect = useNavigate();
   const [data, setData] = React.useState<DemoProps>({
     FirstName: "",
@@ -116,11 +115,12 @@ export const ModalDemo: React.FC = () => {
             challenges you’re facing, and the things you’re looking software.
           </p>
           <div className="container_image--product">
-            <img
+            <VideoPlayer />
+            {/* <img
               className="maternapp_image"
               src={maternapp as string}
               alt="imagen maternapp"
-            />
+            /> */}
           </div>
         </div>
       </div>
