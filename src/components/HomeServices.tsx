@@ -54,7 +54,7 @@ export const HomeServices: React.FC = () => {
               standards. We don’t skim on excellence or cut corners.{" "}
             </p>
             <div className="button_Service-container">
-              <Link to="/All-Services" className="view_services">
+              <Link to="/AllServices" className="view_services">
                 View All
               </Link>
             </div>
