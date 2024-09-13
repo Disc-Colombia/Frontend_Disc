@@ -3,12 +3,12 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import servicesimg from "../imgs/servicesimg.jpg";
 import { Link } from "react-router-dom";
 
-import FlipCard from "./RotationBox";
-import serviciosHumanos from "../imgs/servicios_humanos.png";
-import consultoriaIT from "../imgs/consultoria_IT.png";
-import seguridadciber from "../imgs/seguridad_cibernetica.png";
-import soluciones from "../imgs/soluciones_financieras.png";
-import serviciocliente from "../imgs/servicio_al_cliente.png";
+// import FlipCard from "./RotationBox";
+// import serviciosHumanos from "../imgs/servicios_humanos.png";
+// import consultoriaIT from "../imgs/consultoria_IT.png";
+// import seguridadciber from "../imgs/seguridad_cibernetica.png";
+// import soluciones from "../imgs/soluciones_financieras.png";
+// import serviciocliente from "../imgs/servicio_al_cliente.png";
 
 export const HomeServices: React.FC = () => {
   return (
