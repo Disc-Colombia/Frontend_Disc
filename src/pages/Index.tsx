@@ -16,9 +16,9 @@ export const Index = () => {
     <>
       <div className="container_index" id="home">
         <div className="container_index--tittle">
-          <img className="tittle_index--img" src={logo} alt="logo develoment" />
+          <img className="tittle_index--img" src={logo as string} alt="logo develoment" />
           <h2 className="text_index--tittle">
-            Innovative <span className="tittle_index--span">Results</span>{" "}
+            Innovative&nbsp; <span className="tittle_index--span">Results</span>
           </h2>
         </div>
         <div
