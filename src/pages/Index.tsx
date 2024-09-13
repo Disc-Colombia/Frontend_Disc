@@ -8,6 +8,7 @@ import { Services } from "../components/Services";
 import { AboutUs } from "../components/AboutUs.tsx";
 import { ContactUs } from "../components/ContactUs";
 import { CookiesComponet } from "../components/CookiesComponet";
+import { FloatingButtons } from "../components/FloatingButtons.tsx";
 
 export const Index = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -37,6 +38,7 @@ export const Index = () => {
         <Services />
         <AboutUs />
         <ContactUs />
+        <FloatingButtons/>
       </div>
     </>
   );

@@ -1,7 +1,7 @@
 import "../styles/aboutus.css";
 import { InfoCard } from "./InfoCard";
 import * as React from "react";
-import {ClientsCarousel} from "./ClientsCarousel.tsx";
+import { ClientsCarousel } from "./ClientsCarousel.tsx";
 
 export const AboutUs = () => {
   return (
@@ -11,7 +11,7 @@ export const AboutUs = () => {
           <div className="particle-content">
             <div className="about-header main-padding-large slide">
               <div className="about-header-content quote-small">
-                <p>
+                <p className="about_header-content--text">
                   Development Innovation System C (DISC), we are a company of
                   innovative technological solutions that transform and enhance
                   a digital world by offering multiple specialized services in
@@ -44,6 +44,31 @@ export const AboutUs = () => {
                     className="b"
                   ></path>
                 </svg>
+                {/* SLIDE-HERO: mission & vision */}
+                <div className="slide-hero-header">
+                  <p className="slide-hero-header-eyebrow quote-small">
+                    Our Commitment...
+                  </p>
+                  <h2 className="heading-three"> and Philosophy</h2>
+                </div>
+
+                <div
+                  className="global-delivery"
+                  style={{ marginBottom: "220px" }}
+                >
+                  <InfoCard
+                    title="MISSION"
+                    content="Our mission is to design and develop innovative, high-quality technological solutions that not only solve current problems but also anticipate and adapt to the future needs of our stakeholders. We are a team of experts in technology that love innovation."
+                    imageSrc="./src/imgs/us_mision.png"
+                    className="mision-card"
+                  />
+                  <InfoCard
+                    title="VISION"
+                    content="To be global leaders in the technology field, helping our clients enhance their quality of life and achieve new levels of success through disruptive technologies and effective digital strategies."
+                    imageSrc="./src/imgs/us_vision.png"
+                    className="vision-card"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -51,34 +76,8 @@ export const AboutUs = () => {
       </div>
       {/* close: Component-wrapper */}
 
-      {/* SLIDE-HERO: mission & vision */}
-      <div className="slide-hero-header">
-        <p className="slide-hero-header-eyebrow quote-small">
-          Our Commitment...
-        </p>
-        <h2 className="heading-three"> and Philosophy</h2>
-      </div>
-
-      <div className="global-delivery" style={{ marginBottom: "220px" }}>
-        <InfoCard
-          title="MISSION"
-          content="Our mission is to design and develop innovative, high-quality technological solutions that not only solve current problems but also anticipate and adapt to the future needs of our stakeholders. We are a team of experts in technology that love innovation."
-          imageSrc="./src/imgs/us_mision.png"
-          className="mision-card"
-        />
-        <InfoCard
-          title="VISION"
-          content="To be global leaders in the technology field, helping our clients enhance their quality of life and achieve new levels of success through disruptive technologies and effective digital strategies."
-          imageSrc="./src/imgs/us_vision.png"
-          className="vision-card"
-        />
-      </div>
-
       {/* Partners LOGOs */}
-      <div
-        className="oupartnets"
-        style={{ margin: "20px"}}
-      >
+      <div className="oupartnets" style={{ margin: "20px" }}>
         <div className="slide-hero-header">
           <p className="slide-hero-header-eyebrow quote-small">We are...</p>
           <h1 className="heading-three">Partnered With</h1>

@@ -6,6 +6,7 @@ import "../styles/modalDemo.css";
 import { ToastContainer } from "react-toastify";
 import maternapp from "../imgs/maternapp.png";
 import { toast } from "react-toastify";
+import VideoPlayer from "../components/VideoPlayer";
 export const ModalDemo = () => {
   const redirect = useNavigate();
   const [data, setData] = React.useState<DemoProps>({
@@ -70,11 +71,12 @@ export const ModalDemo = () => {
             challenges you’re facing, and the things you’re looking software.
           </p>
           <div className="container_image--product">
-            <img
+            <VideoPlayer />
+            {/* <img
               className="maternapp_image"
               src={maternapp}
               alt="imagen maternapp"
-            />
+            /> */}
           </div>
         </div>
       </div>

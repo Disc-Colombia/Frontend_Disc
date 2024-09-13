@@ -78,10 +78,10 @@ export const Footers = () => {
             
             {/* <a href="#">
             <i className=" media bi bi-twitter-x"></i>
-            </a>
-            <a href="#">
+            </a>*/}
+            <a href="https://www.youtube.com/@MaternAPPTV/">
             <i className=" media bi bi-youtube"></i>
-            </a> */}
+            </a> 
             <a href="https://www.linkedin.com/company/development-innovation-system/">
             <i className=" media bi bi-linkedin"></i>
             </a>
