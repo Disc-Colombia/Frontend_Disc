@@ -6,7 +6,10 @@ import "../styles/modalDemo.css";
 import { ToastContainer } from "react-toastify";
 import maternapp from "../imgs/maternapp.png";
 import { toast } from "react-toastify";
-export const ModalDemo = () => {
+import ReCAPTCHA from 'react-google-recaptcha'
+
+export const ModalDemo: React.FC = () => {
+
   const redirect = useNavigate();
   const [data, setData] = React.useState<DemoProps>({
     FirstName: "",
@@ -17,6 +20,10 @@ export const ModalDemo = () => {
     Phone: "",
     Description: "",
   });
+
+  const [captchaValid, setCaptchaValid] = React.useState(false);
+  const recaptchaRef = React.useRef<ReCAPTCHA | null>(null);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -26,9 +33,20 @@ export const ModalDemo = () => {
       [name]: value,
     });
   };
+
+  const handleCaptchaChange = (value: string | null) => {
+    if (value) {
+      setCaptchaValid(true);
+    } else {
+      setCaptchaValid(false);
+      toast.error("Please complete the CAPTCHA verification.");
+    }
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     if (
       data.FirstName === "" ||
       data.LastName === "" ||
@@ -36,12 +54,12 @@ export const ModalDemo = () => {
       data.CompanyName === "" ||
       data.Title === "" ||
       data.Phone === "" ||
-      data.Description === ""
+      data.Description === "" || !captchaValid
     ) {
-      toast.error("Dear user, all fields are required.");
+      toast.error("Dear user, all fields are required and CAPTCHA must be completed.");
     } else {
       console.log("ENVIANDO LOS DATOS AL SERVER...", data);
-      //envio de tados al servidor aqui
+
       toast.success("Thank you, we'll contact you as fast as we can.");
       setData({
         FirstName: "",
@@ -52,11 +70,15 @@ export const ModalDemo = () => {
         Phone: "",
         Description: "",
       });
+      recaptchaRef.current?.reset();
+      setCaptchaValid(false);
     }
   };
+
   const handleBack = () => {
     redirect("/");
   };
+
   return (
     <div className="container_demo">
       <div className="container_demo--product">
@@ -72,7 +94,7 @@ export const ModalDemo = () => {
           <div className="container_image--product">
             <img
               className="maternapp_image"
-              src={maternapp}
+              src={maternapp as string}
               alt="imagen maternapp"
             />
           </div>
@@ -90,73 +112,73 @@ export const ModalDemo = () => {
             <div className="container_input--label">
               <label htmlFor="FirstName">First Name:*</label>
               <input
-                className="input_demo"
-                type="text"
-                name="FirstName"
-                id="FirstName"
-                placeholder="First Name"
-                value={data.FirstName}
-                onChange={handleChange}
+                  className="input_demo"
+                  type="text"
+                  name="FirstName"
+                  id="FirstName"
+                  placeholder="First Name"
+                  value={data.FirstName}
+                  onChange={handleChange}
               />
             </div>
             <div className="container_input--label">
               <label htmlFor="LastName">Last Name:*</label>
               <input
-                className="input_demo"
-                type="text"
-                name="LastName"
-                id="LastName"
-                placeholder="First Name"
-                value={data.LastName}
-                onChange={handleChange}
+                  className="input_demo"
+                  type="text"
+                  name="LastName"
+                  id="LastName"
+                  placeholder="First Name"
+                  value={data.LastName}
+                  onChange={handleChange}
               />
             </div>
             <div className="container_input--label">
               <label htmlFor="WorkerEmail">Work Email:*</label>
               <input
-                className="input_demo"
-                type="email"
-                name="WorkerEmail"
-                id="WorkerEmail"
-                placeholder="Email"
-                value={data.WorkerEmail}
-                onChange={handleChange}
+                  className="input_demo"
+                  type="email"
+                  name="WorkerEmail"
+                  id="WorkerEmail"
+                  placeholder="Email"
+                  value={data.WorkerEmail}
+                  onChange={handleChange}
               />
             </div>
             <div className="container_input--label">
               <label htmlFor="CompanyName">Company Name:*</label>
               <input
-                className="input_demo"
-                type="text"
-                name="CompanyName"
-                id="CompanyName"
-                placeholder="Company name"
-                value={data.CompanyName}
-                onChange={handleChange}
+                  className="input_demo"
+                  type="text"
+                  name="CompanyName"
+                  id="CompanyName"
+                  placeholder="Company name"
+                  value={data.CompanyName}
+                  onChange={handleChange}
               />
             </div>
             <div className="container_input--label">
               <label htmlFor="Title">Title:*</label>
               <input
-                className="input_demo"
-                type="text"
-                name="Title"
-                id="Title"
-                placeholder="Title "
-                value={data.Title}
-                onChange={handleChange}
+                  className="input_demo"
+                  type="text"
+                  name="Title"
+                  id="Title"
+                  placeholder="Title "
+                  value={data.Title}
+                  onChange={handleChange}
               />
             </div>
             <div className="container_input--label">
               <label htmlFor="Phone">Phone:*</label>
               <input
-                className="input_demo"
-                type="tel"
-                name="Phone"
-                id="Phone"
-                placeholder="+1 999 999 9999"
-                value={data.Phone}
-                onChange={handleChange}
+                  className="input_demo"
+                  type="tel"
+                  name="Phone"
+                  id="Phone"
+                  placeholder="+1 999 999 9999"
+                  value={data.Phone}
+                  onChange={handleChange}
               />
             </div>
           </div>
@@ -164,13 +186,22 @@ export const ModalDemo = () => {
           <div className="container_input--label">
             <label htmlFor="Description">Description:*</label>
             <textarea
-              className="input_textarea"
-              name="Description"
-              id="Description"
-              value={data.Description}
-              onChange={handleChange}
+                className="input_textarea"
+                name="Description"
+                id="Description"
+                value={data.Description}
+                onChange={handleChange}
             ></textarea>
           </div>
+
+          <div className="container_input--label">
+            <ReCAPTCHA
+                ref={recaptchaRef}
+                sitekey={import.meta.env.VITE_APP_SITE_KEY as string}
+                onChange={handleCaptchaChange}
+            />
+          </div>
+
           <div className="container_btn--requestdemo">
             <button className="btn_send--demo" type="submit">
               {" "}
@@ -179,7 +210,7 @@ export const ModalDemo = () => {
           </div>
         </form>
       </div>
-      <ToastContainer />
+      <ToastContainer/>
     </div>
   );
 };
