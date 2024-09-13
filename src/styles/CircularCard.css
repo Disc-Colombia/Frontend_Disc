@@ -1,0 +1,28 @@
+/* src/components/CircularCard.css */
+.circular-card {
+    width: 120px; /* Ajusta el tamaño según tus necesidades */
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    text-align: center;
+    margin: 10px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .circular-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .circular-card-title {
+    margin: 10px 0 0;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  

@@ -6,7 +6,7 @@ import "../styles/headers.css";
 import { Outlet,useNavigate } from "react-router-dom";
 import { Footers } from "./Footers";
 
-export const Header = () => {
+export const Header: React.FC = () => {
   const [linkActive, setLinkActive] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false); //controla estado del menu
   const navegate =useNavigate();

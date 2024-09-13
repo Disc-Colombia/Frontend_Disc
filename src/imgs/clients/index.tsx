@@ -8,6 +8,7 @@ import client7 from '../clients/client_7.png';
 import client8 from '../clients/client_8c.jpg';
 import client9 from '../clients/client_9b.png'
 import client10 from '../clients/client_10.jpeg'
+import client11 from '../clients/client_11.png'
 
 export {
     client1,
@@ -19,5 +20,6 @@ export {
     client7,
     client8,
     client9,
-    client10
+    client10,
+    client11
 };

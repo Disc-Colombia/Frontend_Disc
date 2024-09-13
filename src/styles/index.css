@@ -4,9 +4,7 @@
   height: 100%;
   /* background-color: var(--SombraAzulVerdoso); */
 }
-.container_carrousell--index {
-  margin: 1rem;
-}
+
 
 .tittle_index--img {
   width: 200px;
@@ -38,11 +36,9 @@
   color: var(--White);
 }
 @media (min-width: 1024px) {
-  .container_carrousell--index {
-    margin: 3rem;
-  }
+
   .container_index--tittle {
-    margin-top: 5rem;
+    margin-top: 2rem;
     position: absolute;
     top: 50%;
     left: 50%;

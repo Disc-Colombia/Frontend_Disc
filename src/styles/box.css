@@ -1,3 +1,5 @@
+@import "./colores.css";
+
 .card {
   background: white;
   border-radius: 8px;
@@ -14,14 +16,15 @@
 }
 
 .tittle {
-  position: absolute; /* Posiciona el texto sobre la imagen */
-  top: 0; /* Posiciona el texto en la parte superior */
-  left: 50%; /* Centra horizontalmente el texto */
-  transform: translateX(-50%); /* Ajusta el centro del texto */
-  width: 100%; /* Asegura que el contenedor del texto ocupe todo el ancho */
-  text-align: center; /* Centra el texto dentro del contenedor */
+  position: absolute; 
+  top: 0; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  width: 100%; 
+  text-align: center; 
   color: var(--Black); 
-  padding: 10px; /* Espacio alrededor del texto */
+  padding: 10px;
+  
 }
 
 .container_box--imag {
@@ -35,8 +38,18 @@
 .image_box {
   max-width: 100%;
   position: relative;
-  height: auto; /* Mantiene la proporción de la imagen */
+  height: auto;
   z-index: 2;
+}
+
+.text_content--tittle {
+  font-family: var(--montserrat-font-family);
+}
+
+.text_content--text{
+  font-family: var(--montserrat-font-family);
+  text-align: justify;
+  font-size: 0.8rem;
 }
 
 @media (max-width: 767px) {
@@ -47,7 +60,7 @@
 }
 
 .card.expanded {
-  height: 500px;
+  height: 450px;
 }
 
 .label {
@@ -64,13 +77,13 @@
 .text2,
 .text-content {
   visibility: hidden; 
-  transition: visibility 0.3s ease, clip-path 1000ms; /* Asegura que la transición sea suave */
+  transition: visibility 0.3s ease, clip-path 1000ms;
 }
 
 .card.expanded .text1,
 .card.expanded .text2,
 .card.expanded .text-content {
-  visibility: visible; /* Hace el texto visible cuando la tarjeta está expandida */
+  visibility: visible;
 }
 
 .text1 {
@@ -190,11 +203,12 @@
 }
 
 .title {
-  font-family: "Alegreya Sans", sans-serif;
+  font-family: var(--montserrat-font-family), sans-serif;
   font-weight: 900;
   margin: 20px 0 12px;
 }
 
 .body-text {
+  font-family: var(--montserrat-font-family);
   padding: 0 20px;
 }

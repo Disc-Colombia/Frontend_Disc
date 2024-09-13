@@ -1,6 +1,6 @@
 import type { BoxProps } from "../type/type";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../styles/box.css"; // Asegúrate de importar tu archivo CSS aquí
+import "../styles/box.css";
 import { useState } from "react";
 
 export const Box = ({ image, children, description, tittle }: BoxProps) => {
@@ -21,11 +21,8 @@ export const Box = ({ image, children, description, tittle }: BoxProps) => {
           <i className={`bi bi-chevron-${visible ? "up" : "down"}`}></i>
         </div>
       </div>
-      {/* <div className="tittle">
-       
-      </div> */}
       <div className="text-content">
-      <h3>{tittle}</h3>
+        <h3 className="text_content--tittle">{tittle}</h3>
         <p className="text_content--text"> {children}</p>
       </div>
     </div>

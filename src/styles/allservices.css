@@ -1,0 +1,63 @@
+@import './colores.css';
+
+.container-allservices{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.initial-tittle{
+  margin-top: 20px;
+}
+
+.container-cards-services{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+/* CardGrid.css */
+.card-grid {
+    
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Distribuye las cards en 6 columnas */
+    padding: 10px;
+  }
+  
+  .card {
+    width: 200px;
+    height: 170px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin: 1px;
+    padding: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Ajuste responsivo para dos filas */
+  @media (max-width: 1200px) {
+    .card-grid {
+      grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas más pequeñas */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .card-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas aún más pequeñas */
+    }
+  }
+  
+  

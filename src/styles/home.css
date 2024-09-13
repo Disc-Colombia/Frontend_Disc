@@ -7,6 +7,11 @@
     align-items: center;
     flex-direction: column;
   }
+
+  .container_home{
+    flex-direction: row;
+  }
+  
 }
 .container_home--general {
   display: flex;
@@ -16,7 +21,7 @@
 }
 
 .container_end--text{
-  margin-top: 5rem;
+  margin-top: 4.5rem;
 }
 
 .container_tittle--ecosystem{
@@ -26,11 +31,14 @@
   .container_home--general {
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
+    flex-direction: column;
   }
+
+
   .container_tittle--ecosystem{
     text-align: left;
   }
+  
 }
 .container_home {
   display: flex;
@@ -50,6 +58,7 @@
   font-weight: 600;
   text-transform: uppercase;
 }
+
 
 .tittle_home_ecosis{
   text-align: center;
@@ -75,6 +84,7 @@
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-items: center;
+    
   }
   .container_img {
     position: relative;
@@ -87,6 +97,12 @@
   .home_img:hover {
     filter: brightness(100%);
   }
+
+  .container_home{
+    flex-direction: row;
+  }
+
+
 }
 .home_img {
   width: 260px;
@@ -96,7 +112,7 @@
   display: flex;
   flex-direction: column;
   justify-items: center;
-  align-items: center;
+  align-items: flex-start;
 }
 .tittle_agenci {
   font-family: var(--font-makina);
@@ -112,14 +128,12 @@
   margin-left: 2rem;
   margin-right: 2rem;
 }
-.agenci_text {
+
+.agenci_text--end {
   text-align: justify;
   line-height: 1.5;
   font-family: var(--montserrat-font-family);
   font-size: 1.2rem;
-  margin: 0;
-}
-.agenci_text--end {
   margin-bottom: 2rem;
   margin-left: 2rem;
   margin-right: 2rem;

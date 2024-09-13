@@ -4,10 +4,11 @@ import logo from "../imgs/logoDISC_sinfondo.png";
 import ColorLines from "../components/ColorLine";
 import "../styles/index.css";
 import { Carrousel } from "../components/Carrousel";
-import { Services } from "../components/Services";
 import { AboutUs } from "../components/AboutUs.tsx";
+import { HomeServices } from "../components/HomeServices.tsx";
 import { ContactUs } from "../components/ContactUs";
 import { CookiesComponet } from "../components/CookiesComponet";
+import { Projects } from "../components/Projects.tsx";
 
 export const Index = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -34,7 +35,8 @@ export const Index = () => {
           <ColorLines />
           <Home />
         </div>
-        <Services />
+        <Projects />
+        <HomeServices />
         <AboutUs />
         <ContactUs />
       </div>

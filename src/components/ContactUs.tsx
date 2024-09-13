@@ -4,6 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "../styles/contactform.css";
 import { dataEmail } from "../router/email";
 import type { EmailProps } from "../type/type";
+
 export const ContactUs: React.FC = () => {
   const [data, setData] =  React.useState<EmailProps>({
     name: "",
@@ -22,7 +23,7 @@ export const ContactUs: React.FC = () => {
   };
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    //Verificando que el formulario se diligencie completo
+
     if (
       data.name === "" ||
       data.email === "" ||
@@ -39,7 +40,7 @@ export const ContactUs: React.FC = () => {
         phone: "",
         message: "",
       })
-      // Aquí manejar el envío del formulario
+     
       console.log("Form Data:", data);
     }
   };

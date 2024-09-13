@@ -1,9 +1,11 @@
-import image1 from "../imgs/consultoria_IT.png";
-import image2 from "../imgs/seguridad_cibernetica.png";
-import image3 from "../imgs/soluciones_financieras.png";
+import image1 from "../imgs/consultoria_IT.jpg";
+import image2 from "../imgs/seguridad_cibernetica.jpg";
+import image3 from "../imgs/soluciones_financieras.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/carrousel.css";
-export const Carrousel = () => {
+import React from "react";
+
+export const Carrousel: React.FC = () => {
   return (
     <div className="container_carrousel" >
       <div
@@ -42,8 +44,8 @@ export const Carrousel = () => {
               alt="imagen technology
                 solutions."
             />
-            <div className="carousel-caption d-none d-md-block">
-              <h5>Information technology consulting</h5>
+            <div className="carousel-caption">
+              <h5>Information Technology Consulting</h5>
               <p>
                 IT consulting services focused on innovative technology
                 solutions.
@@ -57,8 +59,8 @@ export const Carrousel = () => {
               className="d-block w-100 carousel_img img-fluid"
               alt="imagen services"
             />
-            <div className="carousel-caption d-none d-md-block">
-              <h5>Cybersecurity solutions</h5>
+            <div className="carousel-caption">
+              <h5>Cybersecurity Solutions</h5>
               <p>
                 Providing comprehensive protection against digital threats
                 through advanced security measures and proactive defense
@@ -73,8 +75,8 @@ export const Carrousel = () => {
               className="d-block w-100 carousel_img img-fluid"
               alt="imagen solutions"
             />
-            <div className="carousel-caption d-none d-md-block">
-              <h5>Financial solutions</h5>
+            <div className="carousel-caption ">
+              <h5>Financial Solutions</h5>
               <p>
                 Delivering tailored financial strategies to optimize
                 performance, manage risks, and drive growth.

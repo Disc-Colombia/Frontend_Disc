@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Index } from "./pages/Index";
 import { ModalDemo } from "./pages/ModalDemo";
+import { AllServices} from "./pages/AllServices";
 
 //Your routers here
 const router = createBrowserRouter([
@@ -19,7 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/scheduledemo",
         element: <ModalDemo />,
-      },
+      },{
+        path:"/All-Services",
+        element: <AllServices/>
+      }
     ],
   },
 ]);
