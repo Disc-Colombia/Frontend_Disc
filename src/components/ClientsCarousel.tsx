@@ -71,7 +71,7 @@ export const ClientsCarousel: React.FC = () => {
     };
 
     return (
-        <div style={{ width: '42%', margin: '0 auto'}}>
+        <div style={{ width: '62%', margin: '0 auto'}}>
             <Slider {...settings}>
                 {images.map((logo, index) => (
                     <div key={index} style={{ padding: '10px', textAlign: 'center' }}>
