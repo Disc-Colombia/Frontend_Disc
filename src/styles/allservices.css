@@ -149,9 +149,15 @@
 }
 
 @media (max-width: 768px) {
+  .initial_paragraph-services{
+    margin: 20px;
+  }
   .card-grid-allservices  {
     grid-template-columns: repeat(1, 1fr);
   }
+
+  .card-allservices{
+    width: 100%;
+  }
 }
-  
   
