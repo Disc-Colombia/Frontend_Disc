@@ -3,9 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { DemoProps } from "../type/type";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../styles/modalDemo.css";
-import { ToastContainer } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import maternapp from "../imgs/maternapp.png";
-import { toast } from "react-toastify";
 import ReCAPTCHA from 'react-google-recaptcha'
 
 export const ModalDemo: React.FC = () => {
@@ -23,6 +22,7 @@ export const ModalDemo: React.FC = () => {
 
   const [captchaValid, setCaptchaValid] = React.useState(false);
   const recaptchaRef = React.useRef<ReCAPTCHA | null>(null);
+  //const [recaptchaToken, setRecaptchaToken] = React.useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -37,13 +37,15 @@ export const ModalDemo: React.FC = () => {
   const handleCaptchaChange = (value: string | null) => {
     if (value) {
       setCaptchaValid(true);
+      //setRecaptchaToken(value); // Guardamos el token del captcha
     } else {
       setCaptchaValid(false);
+      //setRecaptchaToken(null);
       toast.error("Please complete the CAPTCHA verification.");
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -57,21 +59,43 @@ export const ModalDemo: React.FC = () => {
       data.Description === "" || !captchaValid
     ) {
       toast.error("Dear user, all fields are required and CAPTCHA must be completed.");
+      //return;
     } else {
-      console.log("ENVIANDO LOS DATOS AL SERVER...", data);
+      try {
+        // Realizamos la petición POST al backend
+        const response = await fetch("http://127.0.0.1:8000/verify-recaptcha", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            token: recaptchaRef.current?.getValue(),
+            data,
+          }),
+        });
 
-      toast.success("Thank you, we'll contact you as fast as we can.");
-      setData({
-        FirstName: "",
-        LastName: "",
-        WorkerEmail: "",
-        CompanyName: "",
-        Title: "",
-        Phone: "",
-        Description: "",
-      });
-      recaptchaRef.current?.reset();
-      setCaptchaValid(false);
+        const result = await response.json();
+
+        if (result.success) {
+          toast.success("Thank you, we'll contact you as fast as we can.");
+          setData({
+            FirstName: "",
+            LastName: "",
+            WorkerEmail: "",
+            CompanyName: "",
+            Title: "",
+            Phone: "",
+            Description: "",
+          });
+          recaptchaRef.current?.reset();
+          setCaptchaValid(false);
+        }else {
+          toast.error("CAPTCHA verification failed.");
+        }
+      }catch (error) {
+        toast.error("Error sending the request to the server.");
+        console.error(error);
+      }
     }
   };
 
