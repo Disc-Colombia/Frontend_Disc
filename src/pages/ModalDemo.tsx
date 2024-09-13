@@ -4,7 +4,6 @@ import { DemoProps } from "../type/type";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../styles/modalDemo.css";
 import { ToastContainer, toast } from "react-toastify";
-import maternapp from "../imgs/maternapp.png";
 import ReCAPTCHA from 'react-google-recaptcha'
 import VideoPlayer from "../components/VideoPlayer";
 
