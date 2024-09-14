@@ -88,7 +88,7 @@ export const AboutUs: React.FC = () => {
         {/* close: Component-wrapper */}
 
         {/* Partners LOGOs */}
-        <div className="oupartnets" style={{margin: "20px"}}>
+        <div className="outpartnes" style={{margin: "20px"}}>
           <div className="slide-hero-header">
             <p className="slide-hero-header-eyebrow quote-small">We are...</p>
             <h1 className="heading-three">Partnered With</h1>

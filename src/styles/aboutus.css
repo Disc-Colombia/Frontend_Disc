@@ -43,9 +43,9 @@ h6 {
 
 .component-wrapper {
     /* background: linear-gradient(-90deg, var(--LogoBackground), var(--White)); */
-    position: relative;
+    /*position: relative;*/
     width: 100%;
-    z-index: 0;
+    /*z-index: 0;*/
 }
 
 .particle {
@@ -55,7 +55,7 @@ h6 {
 
 .particle-content {
     position: relative;
-    z-index: 1;
+    /*z-index: 1;*/
     height: 75rem;
 }
 .about_header-content--text {
@@ -70,7 +70,7 @@ h6 {
 }
 .particle-container {
     position: absolute;
-    z-index: 0;
+    /*z-index: 0;*/
     top: 0;
     height: 100%;
 }
@@ -95,20 +95,23 @@ h6 {
     bottom: 0;
     left: 0;
     width: 100vw;
-    z-index: -1;
+    /*z-index: -1;*/
     filter: blur(1px);
     opacity: 0.9;
 }
 
 .particle-container *:not(canvas) {
     background-color: transparent;
-    z-index: 2;
+    /*z-index: 2;*/
 }
 
 .component-content .particle {
     margin: 300px 0 0;
     height: calc(100vh - 300px);
 }
+/*.ourpartnes{*/
+/*    z-index: 1;*/
+/*}*/
 
 /*===============
 1. PANTALLAS
@@ -195,7 +198,7 @@ h6 {
 }
 .about-header-container {
     position: relative;
-    z-index: 1;
+    /*z-index: 1;*/
     padding: 0 30px;
 }
 
@@ -208,7 +211,7 @@ h6 {
 }
 .about-header .background-mask {
     text-align: center;
-    z-index: inherit;
+    /*z-index: inherit;*/
     padding: 0 50px;
 }
 
@@ -331,9 +334,9 @@ h6 {
     justify-content: center;
 }
 
-.slide-hero-content .rte {
-    z-index: 1;
-}
+/*.slide-hero-content .rte {*/
+/*    z-index: 1;*/
+/*}*/
 
 .slide-hero-content.left {
     justify-content: left;
@@ -387,7 +390,7 @@ h6 {
     }
 }
 .global-delivery-background {
-    z-index: 1;
+    /*z-index: 1;*/
     position: absolute;
     width: 90vw;
     top: 0;
