@@ -43,7 +43,8 @@ export const ContactUs: React.FC = () => {
           phone: "",
           message: "",
         });
-      } catch (error) {
+      // } catch (error) {
+      } catch{
         toast.error("There was an error sending your message. Please try again.");
       }
     }
