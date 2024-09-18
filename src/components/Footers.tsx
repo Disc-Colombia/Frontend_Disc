@@ -79,6 +79,9 @@ export const Footers: React.FC = () => {
             >
               <i className=" media bi bi-instagram"></i>
             </a>
+            <a href="https://www.youtube.com/@MaternAPPTV/">
+              <i className=" media bi bi-youtube"></i>
+            </a>
             <a href="https://www.facebook.com/disc.dc.58?mibextid=ZbWKwL">
               <i className=" media bi bi-facebook"></i>
             </a>
@@ -86,41 +89,15 @@ export const Footers: React.FC = () => {
               <i className=" media bi bi-linkedin"></i>
             </a>
           </div>
-
-          <div className="footer_container--media">
-            <h3 className="social_tittle">Follow us on our social media</h3>
-            <div className="container_social--icon">
-              <a
-                href="https://www.instagram.com/innovationdisc/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className=" media bi bi-instagram"></i>
-              </a>
-              <a href="https://www.facebook.com/disc.dc.58?mibextid=ZbWKwL">
-                <i className=" media bi bi-facebook"></i>
-              </a>
-
-              {/* <a href="#">
-            <i className=" media bi bi-twitter-x"></i>
-            </a>*/}
-              <a href="https://www.youtube.com/@MaternAPPTV/">
-                <i className=" media bi bi-youtube"></i>
-              </a>
-              <a href="https://www.linkedin.com/company/development-innovation-system/">
-                <i className=" media bi bi-linkedin"></i>
-              </a>
-            </div>
-          </div>
-          <div className="copyrights">
-            <hr />
-            <p className="informations_dis--paragraph">
-              {" "}
-              Development Innovations System C - All Rights Reserved &copy;{" "}
-              {new Date().getFullYear()}
-            </p>
-          </div>
         </div>
+      </div>
+      <div className="copyrights">
+        <hr />
+        <p className="informations_dis--paragraph">
+          {" "}
+          Development Innovations System C - All Rights Reserved &copy;{" "}
+          {new Date().getFullYear()}
+        </p>
       </div>
     </div>
   );
