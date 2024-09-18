@@ -220,7 +220,7 @@ export const ModalDemo = () => {
             ></textarea>
           </div>
 
-          <div className="container_input--label">
+          <div className="container_recapchart">
             <ReCAPTCHA
                 ref={recaptchaRef}
                 sitekey={import.meta.env.VITE_APP_SITE_KEY as string}
