@@ -39,7 +39,7 @@ export const ClientsCarousel: React.FC = () => {
         infinite: true,
         speed: 6000,
         slidesToShow: 4,
-        slidesToScroll: 1,
+        slidesToScroll: 2,
         autoplay: true,
         autoplaySpeed: 1,
         pauseOnHover: true,

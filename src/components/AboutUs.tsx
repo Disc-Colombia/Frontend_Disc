@@ -16,7 +16,7 @@ export const AboutUs: React.FC = () => {
 
   return (
   
-      <div className="component-wrapper">
+      <div className="component-wrapper" id="aboutus">
         <div className="particle">
           <div className="particle-content">
             <div className="about-header main-padding-large slide">
@@ -59,7 +59,6 @@ export const AboutUs: React.FC = () => {
                   <p className="slide-hero-header-eyebrow quote-small">
                     Our Commitment...
                   </p>
-                  <h2 className="heading-three"> and Philosophy</h2>
                 </div>
 
                 <div className="global-delivery">
