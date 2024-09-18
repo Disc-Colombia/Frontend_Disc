@@ -10,8 +10,6 @@ import { ContactUs } from "../components/ContactUs";
 import { CookiesComponent } from "../components/CookiesComponent.tsx";
 import { Projects } from "../components/Projects.tsx";
 import { FloatingButtons } from "../components/FloatingButtons.tsx";
-
-
 export const Index = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
   return (

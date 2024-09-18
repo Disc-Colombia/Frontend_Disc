@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import '../styles/allservices.css'
 import {
     VerifiedUserOutlined as VerifiedUserOutlinedIcon,
@@ -22,6 +22,10 @@ import serviciocliente from "../imgs/servicio_al_cliente.png"
 
 export const AllServices: React.FC =() =>{
 
+    useEffect(() => {
+        // Scroll instantáneo al inicio
+        window.scrollTo({ top: 0, behavior: 'instant' });
+    }, []);
     const iconStyle = { fontSize: 40, color:'#52b39d'};
 
     const cards = [
@@ -39,8 +43,9 @@ export const AllServices: React.FC =() =>{
     ];
 
     return (
+
         <div className="container-allservices">
-            <div className="container-text--allservices">
+            <div className="container-text--allservices" >
                 <h1 className="initial-tittle">
                     WHAT WE <span className="solutions-title--span">DO</span>
                 </h1>

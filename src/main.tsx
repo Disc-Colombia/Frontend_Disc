@@ -21,7 +21,7 @@ const router = createBrowserRouter([
         path: "/scheduledemo",
         element: <ModalDemo />,
       },{
-        path:"/All-Services",
+        path:"/AllServices",
         element: <AllServices/>
       }
     ],

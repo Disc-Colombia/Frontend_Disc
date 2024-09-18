@@ -1,37 +1,25 @@
 @import "./colores.css";
 
-/* .backmaternapp{
-    position: relative;
-    background-image: url("../src/imgs/maternapp.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
-} */
 .container_demo {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  /* background-color: var(--LogoBackground);
-   */
 }
 .container_demo--product {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-  .maternapp_image {
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
-  }
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.maternapp_image {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
 @media (min-width: 1024px) {
   .container_demo {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    /* background-color: var(--LogoBackground);
-       */
   }
   .container_demo--product {
     margin-left: 5rem;
@@ -65,7 +53,6 @@
 }
 .container_maternapp--image {
   margin-top: 3rem;
-  /* box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75); */
   border-radius: 10px;
 }
 .container_image--product {
@@ -84,15 +71,15 @@
 
 }
 .container_content {
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-    margin: 1rem;
-    padding: 2rem;
-    border-radius: 10px;
-    background-color: var(--LogoBackground);
-    height:auto;
-    width: auto;
-    margin-bottom: 2rem;
-  }
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: var(--LogoBackground);
+  height:auto;
+  width: auto;
+  margin-bottom: 2rem;
+}
 @media (min-width: 1024px) {
   .container_input {
     display: grid;
@@ -144,7 +131,6 @@
   color: var(--White);
   font-weight: 600;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  /* transition: color 0.3s ease, background-color 0.3s ease; */
 }
 .btn_send--demo:hover {
   background-color: var(--BlancoVerdoso);

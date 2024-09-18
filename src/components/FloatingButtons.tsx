@@ -1,5 +1,6 @@
-import React from "react";
+
 import '../styles/floatingButtons.css' // Estilos CSS para los botones
+
 export const FloatingButtons = () => {
   return (
     <div className="floating-buttons">
@@ -24,4 +25,6 @@ export const FloatingButtons = () => {
           </div>
     </div>
   );
-};
+
+
+}

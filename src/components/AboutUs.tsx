@@ -14,7 +14,7 @@ export const AboutUs: React.FC = () => {
   };
   return (
     <>
-      <div className="component-wrapper   ">
+      <div className="component-wrapper">
         <div className="particle">
           <div className="particle-content">
             <div className="about-header main-padding-large slide">
@@ -29,79 +29,76 @@ export const AboutUs: React.FC = () => {
                   decade of experience, with headquarters in Washington, DC.,
                   and offices in Colombia.
                 </p>
+                <h2 className="heading-three"> and Philosophy</h2>
               </div>
-              <div className="about-header-controls">
-                <p className="about-header-controls-blurb heading-four">
-                  More about us
-                </p>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="96"
-                  height="96"
-                  viewBox="0 0 24 24"
-                >
-                  <rect
+
+              <div
+                className="global-delivery"
+                style={{ marginBottom: "220px" }}
+              >
+                <InfoCard
+                  title="MISSION"
+                  content="Our mission is to design and develop innovative, high-quality technological solutions that not only solve current problems but also anticipate and adapt to the future needs of our stakeholders. We are a team of experts in technology that love innovation."
+                  imageSrc="./src/imgs/us_mision.png"
+                  className="mision-card"
+                />
+                <InfoCard
+                  title="VISION"
+                  content="To be global leaders in the technology field, helping our clients enhance their quality of life and achieve new levels of success through disruptive technologies and effective digital strategies."
+                  imageSrc="./src/imgs/us_vision.png"
+                  className="vision-card"
+                />
+                <div className="about-header-controls">
+                  <p className="about-header-controls-blurb heading-four">
+                    More about us
+                  </p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
                     width="96"
                     height="96"
-                    className="a"
-                    style={{ opacity: 0 }}
-                  ></rect>
-                  <path
-                    d="M183.41,3439.41,182,3438l-6,6,6,6,1.41-1.41-4.58-4.59Z"
-                    transform="translate(-168 -3432)"
-                    className="b"
-                  ></path>
-                </svg>
-                {/* SLIDE-HERO: mission & vision */}
-                <div className="slide-hero-header">
-                  <p className="slide-hero-header-eyebrow quote-small">
-                    Our Commitment...
-                  </p>
-                  <h2 className="heading-three"> and Philosophy</h2>
-                </div>
+                    viewBox="0 0 24 24"
+                  >
+                    <rect
+                      width="96"
+                      height="96"
+                      className="a"
+                      style={{ opacity: 0 }}
+                    ></rect>
+                    <path
+                      d="M183.41,3439.41,182,3438l-6,6,6,6,1.41-1.41-4.58-4.59Z"
+                      transform="translate(-168 -3432)"
+                      className="b"
+                    ></path>
+                  </svg>
+                  {/* SLIDE-HERO: mission & vision */}
+                  <div className="slide-hero-header">
+                    <p className="slide-hero-header-eyebrow quote-small">
+                      Our Commitment...
+                    </p>
+                    <h2 className="heading-three"> and Philosophy</h2>
+                  </div>
 
-                <div
-                  className="global-delivery"
-                  style={{ marginBottom: "220px" }}
-                >
-                  <InfoCard
-                    title="MISSION"
-                    content="Our mission is to design and develop innovative, high-quality technological solutions that not only solve current problems but also anticipate and adapt to the future needs of our stakeholders. We are a team of experts in technology that love innovation."
-                    imageSrc="./src/imgs/us_mision.png"
-                    className="mision-card"
-                  />
-                  <InfoCard
-                    title="VISION"
-                    content="To be global leaders in the technology field, helping our clients enhance their quality of life and achieve new levels of success through disruptive technologies and effective digital strategies."
-                    imageSrc="./src/imgs/us_vision.png"
-                    className="vision-card"
-                  />
+                  <div
+                    className="global-delivery"
+                    style={{ marginBottom: "220px" }}
+                  >
+                    <InfoCard
+                      title="MISSION"
+                      content={aboutUsContent.mission}
+                      imageSrc={us_mision as string}
+                      className="mision-card"
+                    />
+                    <InfoCard
+                      title="VISION"
+                      content={aboutUsContent.vision}
+                      imageSrc={us_vision as string}
+                      className="vision-card"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-
-          {/* SLIDE-HERO: mission & vision */}
-          {/* <div className="slide-hero-header">
-            <p className="slide-hero-header-eyebrow quote-small">Our Commitment...</p>
-            <h2 className="heading-three"> and Philosophy</h2>
-          </div>
-
-          <div className="global-delivery" style={{ marginBottom: "20px" }}>
-            <InfoCard
-                title="MISSION"
-                content={aboutUsContent.mission}
-                imageSrc={us_mision as string}
-                className="mision-card"
-            />
-            <InfoCard
-                title="VISION"
-                content={aboutUsContent.vision}
-                imageSrc={us_vision  as string}
-                className="vision-card"
-            />
-          </div>
-        </div> */}
           {/* Partners LOGOs  */}
           <div className="oupartnets" style={{ margin: "20px" }}>
             <div className="slide-hero-header">
@@ -151,15 +148,39 @@ export const AboutUs: React.FC = () => {
                       </div>
                     </div>
                   </div>
+                  {/* close: Component-wrapper */}
+                  {/* Clients LOGOs */}
+                  <div className="oupartnets" style={{ margin: "20px" }}>
+                    <div className="slide-hero-content">
+                      <ClientsCarousel />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Clients LOGOs */}
-            <div className="oupartnets" style={{ margin: "20px" }}>
-              <div className="slide-hero-content">
-                <ClientsCarousel />
-              </div>
+            <div className="about-header-controls">
+              <p className="about-header-controls-blurb heading-four">
+                Our clients
+              </p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="96"
+                height="96"
+                viewBox="0 0 24 24"
+              >
+                <rect
+                  width="96"
+                  height="96"
+                  className="a"
+                  style={{ opacity: 0 }}
+                ></rect>
+                <path
+                  d="M183.41,3439.41,182,3438l-6,6,6,6,1.41-1.41-4.58-4.59Z"
+                  transform="translate(-168 -3432)"
+                  className="b"
+                ></path>
+              </svg>
             </div>
           </div>
         </div>
