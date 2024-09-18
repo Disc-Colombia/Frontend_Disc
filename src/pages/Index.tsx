@@ -6,7 +6,7 @@ import "../styles/index.css";
 import { Carrousel } from "../components/Carrousel";
 import { AboutUs } from "../components/AboutUs.tsx";
 import { HomeServices } from "../components/HomeServices.tsx";
-import { ContactUs } from "../components/ContactUs";
+//import { ContactUs } from "../components/ContactUs";
 import { CookiesComponent } from "../components/CookiesComponent.tsx";
 import { Projects } from "../components/Projects.tsx";
 import { FloatingButtons } from "../components/FloatingButtons.tsx";
@@ -38,7 +38,6 @@ export const Index = () => {
         <Projects />
         <HomeServices />
         <AboutUs />
-        <ContactUs />
         <FloatingButtons/>
       </div>
     </>
