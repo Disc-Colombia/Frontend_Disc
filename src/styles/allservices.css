@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 100px 0 100px;
 }
 
 .initial-tittle{
@@ -12,8 +13,6 @@
 }
 
 .initial_paragraph-services{
-  margin-left: 50px;
-  margin-right: 50px;
   font-family: var(--montserrat-font-family);
   font-size: 1.2rem;
   text-align: justify;
@@ -40,7 +39,7 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  width: 400px;
+  width: 360px;
   height: 100px;
   color: var(--Black);
   border-radius: 8px;

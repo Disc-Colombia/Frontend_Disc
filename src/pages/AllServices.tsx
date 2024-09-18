@@ -51,7 +51,6 @@ export const AllServices: React.FC =() =>{
                 </h1>
                 <p className="initial_paragraph-services">
                     DISC is the trusted source for government agencies, non-profits, for-profits and Fortune 500 companies to gain best in class solutions in Information Technology and Innovation Management Solutions.
-                    <br />
                     We use best practices, and every project we undertake is based on close collaboration with our clients, ensuring that each solution is perfectly aligned with their specific goals and challenges.
                 </p>
                 <div className="container-cards-services">
