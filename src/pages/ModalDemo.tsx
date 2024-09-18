@@ -4,10 +4,10 @@ import { DemoProps } from "../type/type";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../styles/modalDemo.css";
 import { ToastContainer, toast } from "react-toastify";
+//import maternapp from "../imgs/maternapp.png";
 import ReCAPTCHA from 'react-google-recaptcha'
 import VideoPlayer from "../components/VideoPlayer";
-
-export const ModalDemo: React.FC = () => {
+export const ModalDemo = () => {
 
   const redirect = useNavigate();
   const [data, setData] = React.useState<DemoProps>({
@@ -117,6 +117,12 @@ export const ModalDemo: React.FC = () => {
           </p>
           <div className="container_image--product">
             <VideoPlayer />
+
+            {/* <img
+              className="maternapp_image"
+              src={maternapp as string}
+              alt="imagen maternapp"
+            /> */}
           </div>
         </div>
       </div>
@@ -214,7 +220,7 @@ export const ModalDemo: React.FC = () => {
             ></textarea>
           </div>
 
-          <div className="container_input--label">
+          <div className="container_recapchart">
             <ReCAPTCHA
                 ref={recaptchaRef}
                 sitekey={import.meta.env.VITE_APP_SITE_KEY as string}

@@ -86,9 +86,7 @@
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
   }
-  .container_content {
-    height: 35rem;
-  }
+
 }
 .formulario_demo {
   display: flex;
@@ -103,6 +101,8 @@
   display: flex;
   flex-direction: column;
   margin: 2px;
+  
+  
 }
 .input_demo,
 .input_textarea {
@@ -137,4 +137,9 @@
   cursor: pointer;
   color: var(--Black);
   transform: scale(1.1);
+}
+.container_recapchart{
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
 }
