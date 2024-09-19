@@ -1,19 +1,19 @@
 @import "./colores.css";
 
 @media (min-width: 1024px) {
-  .container_content--home {
+  .container_content--ecosystem {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
 
-  .container_home{
+  .container_ecosystem{
     flex-direction: row;
   }
   
 }
-.container_home--general {
+.container_ecosystem--general {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,7 +28,7 @@
   text-align: center;
 }
 @media (min-width: 1024px) {
-  .container_home--general {
+  .container_ecosystem--general {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -40,13 +40,13 @@
   }
   
 }
-.container_home {
+.container_ecosystem {
   display: flex;
   flex-direction: column;
   justify-content: center;
   /* background-color: var(--SombraAzulVerdoso); */
 }
-.tittle_home {
+.tittle_ecosystem {
   text-align: center;
   font-family: var(--font-makina);
   background:-webkit-linear-gradient(-90deg,var(--Black),var(--LogoBackground));
@@ -60,7 +60,7 @@
 }
 
 
-.tittle_home_ecosis{
+.tittle_ecosystem_ecosis{
   text-align: center;
   font-family: var(--font-makina);
   font-size: 2.5rem;
@@ -68,10 +68,10 @@
   text-transform: uppercase;
 }
 
-.tittle_home--span {
+.tittle_ecosystem--span {
   color: var(--LogoBackground);
 }
-.container_home--information {
+.container_ecosystem--information {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -79,7 +79,7 @@
   margin-top: 3rem;
 }
 @media (min-width: 1024px) {
-  .container_home--information {
+  .container_ecosystem--information {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
@@ -90,25 +90,25 @@
     position: relative;
     display: inline-block;
   }
-  .home_img {
+  .ecosystem_img {
     filter: opacity(70%);
     transition: transform 0.3s ease, z-index 0s ease;
   }
-  .home_img:hover {
+  .ecosystem_img:hover {
     filter: brightness(100%);
   }
 
-  .container_home{
+  .container_ecosystem{
     flex-direction: row;
   }
 
 
 }
-.home_img {
+.ecosystem_img {
   width: 260px;
 }
 
-.home_information {
+.ecosystem_information {
   display: flex;
   flex-direction: column;
   justify-items: center;

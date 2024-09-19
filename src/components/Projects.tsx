@@ -17,19 +17,19 @@ export const Projects: React.FC = () => {
   const infoOptions = [
     {
       title: 'MaternApp',
-      description: 'Development of a medical software for prenatal control focused on the prevention of maternal and infant morbidity and mortality during the perinatal period.',
+      description: "It's a medical software for prenatal control focused on the prevention of maternal and infant morbidity and mortality during the perinatal period.",
       imageSmall: maternappIcon, // Imagen pequeña para el botón
       imageLarge: maternappBig    // Imagen grande para la visualización
     },
     {
       title: 'SaludTech',
-      description: 'Web and Mobile App service supported by the COVID-19 WATCHR Software. It was developed by DISC in 3 different languages (English, Portuguese and Spanish).',
+      description: "It's a comprehensive web and mobile app service powered by the COVID-19 WATCHR software. Developed by DISC, it supports three languages: English, Portuguese, and Spanish.",
       imageSmall: saludtechIcon,
       imageLarge: saludtechBig
     },
     {
       title: 'COVID-19 WATCH Software',
-      description: 'Digital platform; website, mobile application, social networks, liaison platforms and AI (Artificial Intelligence), designed to help to reduce the spread of the Coronavirus',
+      description: 'A digital platform; website, mobile application, social networks, liaison platforms and AI (Artificial Intelligence), designed to help to reduce the spread of the Coronavirus.',
       imageSmall: covid19Icon,
       imageLarge: covid19Big
     },
@@ -41,7 +41,7 @@ export const Projects: React.FC = () => {
     },
     {
       title: 'Website Development',
-      description: 'Modern design, Multilingual Interface and donation capturing platforms Integration. Offering state of the art solutions to our clients',
+      description: 'Modern design, Multilingual Interface and donation capturing platforms Integration. Offering state of the art solutions to our clients.',
       imageSmall: websitesIcon,
       imageLarge: websitesBig
     }

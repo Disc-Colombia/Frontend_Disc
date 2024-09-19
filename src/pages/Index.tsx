@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Home } from "../components/Home";
+// import { Home } from "../components/Home";
 import logo from "../imgs/logoDISC_sinfondo.png";
 import ColorLines from "../components/ColorLine";
 import "../styles/index.css";
@@ -10,6 +10,7 @@ import { HomeServices } from "../components/HomeServices.tsx";
 import { CookiesComponent } from "../components/CookiesComponent.tsx";
 import { Projects } from "../components/Projects.tsx";
 import { FloatingButtons } from "../components/FloatingButtons.tsx";
+import { Ecosystem } from "../components/Ecosystem.tsx";
 export const Index = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
   return (
@@ -33,11 +34,13 @@ export const Index = () => {
           )}
           <Carrousel />
           <ColorLines />
-          <Home />
+          
         </div>
-        <Projects />
-        <HomeServices />
         <AboutUs />
+        <HomeServices />
+        <Ecosystem />
+        <Projects />
+        
         <FloatingButtons/>
       </div>
     </>
