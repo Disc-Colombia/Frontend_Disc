@@ -1,7 +1,6 @@
 @import "./colores.css";
 
 .container_content--ecosystem{
-  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,6 +12,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  margin-top: 2rem;
 }
 
 .container_ecosystem {
@@ -23,7 +23,8 @@
 }
 
 .container_end--text{
-  margin-top: 4.5rem;
+  display: flex;
+  align-items: center;
 }
 
 /* .container_tittle--ecosystem{
@@ -97,7 +98,8 @@
   background-clip: text;
   color: transparent;
   font-size: 2.5rem;
-  font-weight: 600;
+  /* font-weight: 600; */
+  margin: 20px;
   text-transform: uppercase;
 }
 
@@ -145,10 +147,11 @@
   line-height: 1.5;
   font-family: var(--montserrat-font-family);
   font-size: 1.2rem;
-  margin-bottom: 2rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
+
+
 
 .demobutton {
   display: flex;
