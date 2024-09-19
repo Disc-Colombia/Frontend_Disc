@@ -3,12 +3,11 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 type ButtomProps ={
   
-  setShowForm:React.Dispatch<React.SetStateAction<boolean>>
+  handleShowForm: () => void
 }
-export const ContactButton = ({setShowForm}:ButtomProps) => {
+export const ContactButton = ({handleShowForm}:ButtomProps) => {
   const handleContact=()=>{
-   console.log("funcionando...")
-   setShowForm(true)
+   handleShowForm();
   }
   return (
     <div className="contact_button">

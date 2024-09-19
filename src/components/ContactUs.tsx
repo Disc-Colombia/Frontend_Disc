@@ -1,21 +1,29 @@
 import * as React from "react";
+import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../styles/contactform.css";
 import { dataEmail } from "../router/email";
 import type { EmailProps } from "../type/type";
-import 'bootstrap-icons/font/bootstrap-icons.css';
-
-export const ContactUs: React.FC = () => {
+import "bootstrap-icons/font/bootstrap-icons.css";
+type ConctaProps = {
+  handleClose: () => void;
+};
+export const ContactUs = ({ handleClose }: ConctaProps) => {
+  const navegate =useNavigate()
   const [data, setData] = React.useState<EmailProps>({
     name: "",
-    email: "",
+    product: "",
+    lastname: "",
     phone: "",
+    email: "",
+    contry: "",
+    company: "",
     message: "",
   });
 
   const handleChange = (
-      e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
     setData({
@@ -28,10 +36,14 @@ export const ContactUs: React.FC = () => {
     e.preventDefault();
 
     if (
-        data.name === "" ||
-        data.email === "" ||
-        data.phone === "" ||
-        data.message === ""
+      data.name === "" ||
+      data.product === "" ||
+      data.phone === "" ||
+      data.email === "" ||
+      data.company === "" ||
+      data.contry === "" ||
+      data.message === "" ||
+      data.lastname === ""
     ) {
       toast.warning("Please ensure all fields are completed, thank you.");
     } else {
@@ -40,57 +52,121 @@ export const ContactUs: React.FC = () => {
         toast.success("Thank you, we'll contact you as fast as we can.");
         setData({
           name: "",
-          email: "",
+          product: "",
+          lastname: "",
           phone: "",
+          email: "",
+          contry: "",
+          company: "",
           message: "",
         });
-      } catch{
-        toast.error("There was an error sending your message. Please try again.");
+        navegate("/")
+      } catch {
+        toast.error(
+          "There was an error sending your message. Please try again."
+        );
       }
     }
   };
-
+  const handleExit = () => {
+    handleClose();
+  };
   return (
+    <>
+      <div className="container_close--circule">
+        <i className=" bi bi-x-circle close" onClick={handleExit}></i>
+      </div>
+      <div className="container_information--contactform">
+        <h2>Contact Form</h2>
+        <p className="text_contact--form">
+          If you would like to make a purchase, receive more information about
+          our solutions, or make any other inquiries, we kindly ask you to fill
+          out the form or call one of our regional phone numbers.
+        </p>
+      </div>
       <div className="contact-container" id="contactus">
-        
-        <div className="message-box">
-          <h2 className="highlight">Send Message</h2>
-          <p>Send your questions or concerns below.</p>
-        </div>
         <form className="contact-form" onSubmit={handleSubmit}>
-        <div className="container_close--circule">
-        <i className=" bi bi-x-circle closex--circule" ></i>
-        </div>
-          <input
+          <div className="product_information">
+            <input
+              className="input_contactform"
+              type="text"
+              placeholder="I am writing in relation to"
+              name="name"
+              value={data.name}
+              onChange={handleChange}
+            />
+            <input
+              className="input_contactform"
+              type="text"
+              placeholder="Product"
+              name="product"
+              value={data.product}
+              onChange={handleChange}
+            />
+          </div>
+          <textarea
+            rows={5}
+            placeholder="Message"
+            name="message"
+            value={data.message}
+            onChange={handleChange}
+          ></textarea>
+
+          <div className="product_information">
+            <input
+              className="input_contactform"
               type="text"
               placeholder="Name"
               name="name"
               value={data.name}
               onChange={handleChange}
-          />
-          <input
+            />
+            <input
+              className="input_contactform"
+              type="text"
+              placeholder="Lastname"
+              name="lastname"
+              value={data.lastname}
+              onChange={handleChange}
+            />
+            <input
+              className="input_contactform"
+              type="tel"
+              placeholder="Telephone: +1 999 999 999 999"
+              name="phone"
+              value={data.phone}
+              onChange={handleChange}
+            />
+            <input
+              className="input_contactform"
               type="email"
               placeholder="Email"
               name="email"
               value={data.email}
               onChange={handleChange}
-          />
-          <input
-              type="tel"
-              placeholder="Telephone"
-              name="phone"
-              value={data.phone}
+            />
+            <input
+              className="input_contactform"
+              type="text"
+              placeholder="company name"
+              name="company"
+              value={data.company}
               onChange={handleChange}
-          />
-          <textarea
-              placeholder="Message"
-              name="message"
-              value={data.message}
+            />
+            <input
+              className="input_contactform"
+              type="text"
+              placeholder="Contry"
+              name="contry"
+              value={data.contry}
               onChange={handleChange}
-          ></textarea>
+            />
+          </div>
+
           <button type="submit">Submit</button>
         </form>
         <ToastContainer />
       </div>
+    </>
   );
 };
