@@ -4,6 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "../styles/contactform.css";
 import { dataEmail } from "../router/email";
 import type { EmailProps } from "../type/type";
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export const ContactUs: React.FC = () => {
   const [data, setData] = React.useState<EmailProps>({
@@ -51,11 +52,15 @@ export const ContactUs: React.FC = () => {
 
   return (
       <div className="contact-container" id="contactus">
+        
         <div className="message-box">
           <h2 className="highlight">Send Message</h2>
           <p>Send your questions or concerns below.</p>
         </div>
         <form className="contact-form" onSubmit={handleSubmit}>
+        <div className="container_close--circule">
+        <i className=" bi bi-x-circle closex--circule" ></i>
+        </div>
           <input
               type="text"
               placeholder="Name"
