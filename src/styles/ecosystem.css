@@ -1,18 +1,13 @@
 @import "./colores.css";
 
-@media (min-width: 1024px) {
-  .container_content--ecosystem {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .container_ecosystem{
-    flex-direction: row;
-  }
-  
+.container_content--ecosystem{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+
 .container_ecosystem--general {
   display: flex;
   flex-direction: column;
@@ -20,13 +15,42 @@
   justify-content: space-between;
 }
 
+.container_ecosystem {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* background-color: var(--SombraAzulVerdoso); */
+}
+
 .container_end--text{
   margin-top: 4.5rem;
 }
 
-.container_tittle--ecosystem{
+/* .container_tittle--ecosystem{
   text-align: center;
+} */
+.container_ecosystem--information {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
 }
+
+@media (max-width: 760px) {
+  .container_ecosystem{
+    flex-direction: column;
+  }
+  .container_ecosystem--information{
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 760px) {
+  .container_ecosystem{
+    flex-direction: column;
+  }}
+
 @media (min-width: 1024px) {
   .container_ecosystem--general {
     display: flex;
@@ -34,22 +58,40 @@
     flex-direction: column;
   }
 
-
   .container_tittle--ecosystem{
     text-align: left;
   }
-  
+
+  .container_ecosystem--information {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+  }
+
+  .container_img {
+    position: relative;
+    display: inline-block;
+  }
+
+  .ecosystem_img {
+    filter: opacity(70%);
+    transition: transform 0.3s ease, z-index 0s ease;
+  }
+
+  .ecosystem_img:hover {
+    filter: brightness(100%);
+  }
+
+  .container_ecosystem {
+    flex-direction: row;
+  }
 }
-.container_ecosystem {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /* background-color: var(--SombraAzulVerdoso); */
-}
+
 .tittle_ecosystem {
   text-align: center;
   font-family: var(--font-makina);
-  background:-webkit-linear-gradient(-90deg,var(--Black),var(--LogoBackground));
+  background: -webkit-linear-gradient(-90deg, var(--Black), var(--LogoBackground));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -59,8 +101,7 @@
   text-transform: uppercase;
 }
 
-
-.tittle_ecosystem_ecosis{
+.tittle_ecosystem_ecosis {
   text-align: center;
   font-family: var(--font-makina);
   font-size: 2.5rem;
@@ -71,39 +112,7 @@
 .tittle_ecosystem--span {
   color: var(--LogoBackground);
 }
-.container_ecosystem--information {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin-bottom: 2rem;
-  margin-top: 3rem;
-}
-@media (min-width: 1024px) {
-  .container_ecosystem--information {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    justify-items: center;
-    
-  }
-  .container_img {
-    position: relative;
-    display: inline-block;
-  }
-  .ecosystem_img {
-    filter: opacity(70%);
-    transition: transform 0.3s ease, z-index 0s ease;
-  }
-  .ecosystem_img:hover {
-    filter: brightness(100%);
-  }
 
-  .container_ecosystem{
-    flex-direction: row;
-  }
-
-
-}
 .ecosystem_img {
   width: 260px;
 }
@@ -114,12 +123,14 @@
   justify-items: center;
   align-items: flex-start;
 }
+
 .tittle_agenci {
   font-family: var(--font-makina);
   font-weight: 600;
   text-transform: uppercase;
   font-size: 1.5rem;
 }
+
 .container_agenci--information {
   display: flex;
   flex-direction: column;
@@ -139,7 +150,7 @@
   margin-right: 2rem;
 }
 
-.demobutton{
+.demobutton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -153,28 +164,27 @@
   font-family: "Roboto", sans-serif;
   font-style: medium;
   font-size: 15px;
-  box-shadow: 0 0 0 0 rgb( 0, 0, 0, .5);
+  box-shadow: 0 0 0 0 rgb(0, 0, 0, .5);
   animation: pulse 2s infinite;
-text-decoration: none;
+  text-decoration: none;
 }
 
 @keyframes pulse {
   0% {
-      transform:  scale(.99);
+      transform: scale(.99);
       box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5)
   }
   70% {
-      transform:  scale(1);
+      transform: scale(1);
       box-shadow: 0 0 0 15px rgb(0, 0, 0, 0)
   }
   100% {
-      transform:  scale(.99);
+      transform: scale(.99);
       box-shadow: 0 0 0 0 rgb(0, 0, 0, 0)
   }
-  
 }
 
-.button_container{
+.button_container {
   display: flex;
   justify-content: center;
   align-items: center;
