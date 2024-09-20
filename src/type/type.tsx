@@ -15,10 +15,11 @@ export type BoxProps = {
 export type EmailProps = {
   name: string;
   product: string;
+  service:string;
   lastname: string;
   phone: string;
   email: string;
-  contry: string;
+  country: string;
   company: string;
   message: string;
 };
