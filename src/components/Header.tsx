@@ -11,11 +11,11 @@ export const Header: React.FC = () => {
   const [linkActive, setLinkActive] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false); //controla estado del menu
   const navegate =useNavigate();
-  //Muestra el menu
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  //Cierra el menu
+
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
@@ -73,16 +73,6 @@ export const Header: React.FC = () => {
                 >
                   Services
                 </Link>
-                
-                {/* <Link
-                    to="contactus"
-                    smooth={true}
-                    duration={500}
-                    className={`navegations_links ${linkActive==='contactus' ? "active" : ""}`}
-                    onClick={()=>handleActive('contactus')}
-                >
-                  Contact us
-                </Link> */}
               </nav>
             </div>
           </div>

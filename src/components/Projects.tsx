@@ -12,22 +12,21 @@ import "../styles/projects.css";
 import * as React from "react";
 import { useState } from "react";
 
-// Definir un tipo más estricto
-type InfoOption = 
-  | { 
-      title: string; 
-      description: string; 
-      imageSmall: string; 
-      videoLarge: string; 
-      imageLarge?: undefined;
-    }
-  | { 
-      title: string; 
-      description: string; 
-      imageSmall: string; 
-      imageLarge: string; 
-      videoLarge?: undefined;
-    };
+type InfoOption =
+    | {
+  title: string;
+  description: string;
+  imageSmall: string;
+  videoLarge: string;
+  imageLarge?: undefined;
+}
+    | {
+  title: string;
+  description: string;
+  imageSmall: string;
+  imageLarge: string;
+  videoLarge?: undefined;
+};
 
 export const Projects: React.FC = () => {
   const infoOptions: InfoOption[] = [
@@ -69,41 +68,38 @@ export const Projects: React.FC = () => {
     setSelectedInfo(option);
   };
 
-    
 
   return (
-    <div className='container_projects'>
-      {/* Área donde se muestra la información seleccionada */}
-      <div className='content_option'>
-        <div className='container_text'>
-          <h2 className='tittle_content'>{selectedInfo.title}</h2>
-          <p className='description_content'>{selectedInfo.description}</p>
-        </div>
-        <div className='container_content--projects'>
-          {selectedInfo.videoLarge ? (
-            <video className='video_content' autoPlay loop muted>
-              <source  className='video--' src={selectedInfo.videoLarge} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          ) : (
-            <div className='container_img_content'>
-            <img className='img_content' src={selectedInfo.imageLarge as string} alt={selectedInfo.title} />
-            </div>
-          )}
+      <div className='container_projects'>
+        <div className='content_option'>
+          <div className='container_text'>
+            <h2 className='tittle_content'>{selectedInfo.title}</h2>
+            <p className='description_content'>{selectedInfo.description}</p>
+          </div>
+          <div className='container_content--projects'>
+            {selectedInfo.videoLarge ? (
+                <video className='video_content' autoPlay loop muted>
+                  <source  className='video--' src={selectedInfo.videoLarge} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+            ) : (
+                <div className='container_img_content'>
+                  <img className='img_content' src={selectedInfo.imageLarge as string} alt={selectedInfo.title} />
+                </div>
+            )}
+          </div>
+
+
         </div>
 
-        
+        <div className='container_buttom_option'>
+          {infoOptions.map((option, index) => (
+              <button className='buttom_option' key={index} onClick={() => handleButtonClick(option)} >
+                <span className="ripple"></span>
+                <img className='img_buttom' src={option.imageSmall as string} alt={`Opción ${index + 1}`} />
+              </button>
+          ))}
+        </div>
       </div>
-
-      {/* Botones con imágenes */}
-      <div className='container_buttom_option'>
-        {infoOptions.map((option, index) => (
-          <button className='buttom_option' key={index} onClick={() => handleButtonClick(option)} >
-             <span className="ripple"></span>
-            <img className='img_buttom' src={option.imageSmall as string} alt={`Opción ${index + 1}`} /> {/* Imagen pequeña */}
-          </button>
-        ))}
-      </div>
-    </div>
   );
 };

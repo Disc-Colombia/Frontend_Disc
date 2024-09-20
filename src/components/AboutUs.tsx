@@ -1,5 +1,4 @@
 import "../styles/aboutus.css";
-import { useEffect, useRef } from 'react';
 import { InfoCard } from "./InfoCard";
 import * as React from "react";
 import { ClientsCarousel } from "./ClientsCarousel";
