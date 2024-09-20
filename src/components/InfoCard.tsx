@@ -1,6 +1,7 @@
  import * as React from "react";
  import { Box, Flex, Image, Text, useDisclosure } from '@chakra-ui/react';
  import '../styles/colores.css'
+ import '../styles/infocard.css'
 
 interface InfoCardProps {
     title: string;
@@ -34,6 +35,7 @@ export const InfoCard: React.FC<InfoCardProps> = ({ title, content, imageSrc, cl
                 />
             </Box>
             <Box
+                className="box_text--tittle"
                 w="100%"
                 h="260px"
                 display="flex"
@@ -55,6 +57,7 @@ export const InfoCard: React.FC<InfoCardProps> = ({ title, content, imageSrc, cl
                     {title}
                 </Text>
                 <Box
+                className="box-gradient"
                     position="absolute"
                     top={isOpen ? "0" : "100%"}  
                     left="0"  
