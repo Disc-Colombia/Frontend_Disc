@@ -97,7 +97,7 @@ export const ContactUs = ({ handleClose }: ConctaProps) => {
               value={data.service}
               onChange={handleChange}
             >
-              <option defaultValue={""}>--I am writing in relation to--</option>
+              <option defaultValue={""}>--I am writing in relation to select option--</option>
               <option value={"Human Service"}>Human Service </option>
               <option value={"Healthcare Systems Administration"}>
                 Healthcare Systems Administration
