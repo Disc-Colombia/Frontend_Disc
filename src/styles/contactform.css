@@ -3,47 +3,113 @@
 .contact-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   margin-top: 54px;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  position: relative; /* o absolute */
+  z-index: 10; 
 }
+.container_information--contactform{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+@media (min-width:1024px) {
+  .container_information--contactform{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 22rem;
+    margin-right: 22rem;
+  }
+  .product_information{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 1rem;
+  }
+}
+.product_information{
+display: flex;
+flex-direction: column;
+justify-content: center;
 
+}
+.container_close--circule {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.close {
+  font-size: 2rem;
+  color:var(--Black);
+  margin-right: 2rem;
+  margin-top: 2rem;
+}
 .message-box {
-  max-width: 40%;
+  width: 100%;
   padding: 20px;
-  background-color: var(--gris-message);
+
   border-radius: 10px;
 }
-
 
 .message-box .highlight {
   font-family: var(--font-makina);
   font-weight: bold;
   margin-bottom: 10px;
-  background:-webkit-linear-gradient(-90deg,var(--Black),var(--LogoBackground));
+  background: -webkit-linear-gradient(
+    -90deg,
+    var(--Black),
+    var(--LogoBackground)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
   text-align: center;
+  margin-bottom: 2rem;
 }
+.text_contact--form{
+  font-size: 1.2rem;
+  line-height: 1;
+  font-weight: 400;
+  font-family: var(--montserrat-font-family);
 
+}
 .message-box p {
   font-family: var(--montserrat-font-family);
   color: #333;
 }
-
 .contact-form {
   display: flex;
   flex-direction: column;
-  max-width: 50%;
+  width: 100%;
   gap: 15px;
   padding: 20px;
   background-color: var(--White);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 1024px) {
+  .message-box {
+    max-width: 40%;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 15px;
+    padding: 20px;
+    background-color: var(--White);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .contact-form input,
@@ -52,6 +118,7 @@
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  margin-bottom: 1rem;
 }
 
 .contact-form button {
@@ -68,4 +135,3 @@
 .contact-form button:hover {
   background-color: var(--LogoBackground);
 }
-  

@@ -1,5 +1,6 @@
  import * as React from "react";
  import { Box, Flex, Image, Text, useDisclosure } from '@chakra-ui/react';
+ import '../styles/colores.css'
 
 interface InfoCardProps {
     title: string;
@@ -30,25 +31,23 @@ export const InfoCard: React.FC<InfoCardProps> = ({ title, content, imageSrc, cl
                     alt={`${title} Image`}
                     w="100%"
                     h="100%"
-                    borderRadius="6px 0 0 6px"
                 />
             </Box>
             <Box
                 w="100%"
-                h="400px"
+                h="260px"
                 display="flex"
                 justifyContent="center"
                 alignItems="center"
                 textAlign="center"
                 bg="#f9f9f9"
-                borderRadius="0 6px 6px 0"
                 position="relative"
                 overflow="hidden"
             >
                 <Text
                     fontSize="3rem"
                     fontWeight="bold"
-                    fontFamily="'Abel', sans-serif"
+                    fontFamily='var(--font-makina)'
                     zIndex="1"
                     transition="opacity 0.5s ease-in-out"
                     opacity={isOpen ? 0 : 1}
@@ -66,12 +65,11 @@ export const InfoCard: React.FC<InfoCardProps> = ({ title, content, imageSrc, cl
                     display="flex"
                     justifyContent="center"
                     alignItems="center"
-                    fontSize="1.5rem"
+                    fontSize="1.2rem"
                     textAlign="justify"
                     padding="0 30px"
                     boxSizing="border-box"
-                    fontWeight="bold"
-                    fontFamily="'Abel', sans-serif"
+                    fontFamily= 'var(--montserrat-font-family)'
                     zIndex="2"
                     transition="top 0.4s ease-in-out"  
                 >

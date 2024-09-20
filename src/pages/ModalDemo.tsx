@@ -4,10 +4,12 @@ import { DemoProps } from "../type/type";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../styles/modalDemo.css";
 import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 //import maternapp from "../imgs/maternapp.png";
 import ReCAPTCHA from 'react-google-recaptcha'
 import VideoPlayer from "../components/VideoPlayer";
-export const ModalDemo = () => {
+export const ModalDemo: React.FC = () => {
 
   const redirect = useNavigate();
   const [data, setData] = React.useState<DemoProps>({
@@ -128,7 +130,7 @@ export const ModalDemo = () => {
       </div>
       <div className="container_content">
         <div className="container_close--icon">
-          <i className="bi bi-x-circle" onClick={handleBack}></i>
+          <i className="bi bi-x-circle modal_close" onClick={handleBack}></i>
         </div>
         <div className="container_content--tittle">
           <h2 className="demotitle">Schedule a Demo</h2>
