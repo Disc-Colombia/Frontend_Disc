@@ -25,6 +25,7 @@
 .container_end--text{
   display: flex;
   align-items: center;
+  width: 600px;
 }
 
 /* .container_tittle--ecosystem{
@@ -44,6 +45,10 @@
   }
   .container_ecosystem--information{
     flex-direction: column;
+  }
+
+  .container_end--text{
+    width: 100%;
   }
 }
 
