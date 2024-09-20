@@ -1,6 +1,14 @@
 import { useState } from "react";
+// victor
 import { useNavigate } from "react-router-dom";
-import { Home } from "../components/Home";
+// import { Home } from "../components/Home";
+// victor
+
+//cata
+//import { Home } from "../components/Home";
+// ahora ser llama ecosystem
+//cata
+
 import logo from "../imgs/logoDISC_sinfondo.png";
 import ColorLines from "../components/ColorLine";
 import "../styles/index.css";
@@ -10,9 +18,16 @@ import { HomeServices } from "../components/HomeServices.tsx";
 import { CookiesComponent } from "../components/CookiesComponent.tsx";
 import { Projects } from "../components/Projects.tsx";
 import { FloatingButtons } from "../components/FloatingButtons.tsx";
-import { ContactButton } from "../components/ContactButton.tsx";
-import { ContactUs } from "../components/ContactUs.tsx";
-import BeatLoader  from "react-spinners/BeatLoader";
+//victor
+// import { ContactButton } from "../components/ContactButton.tsx";
+// import { ContactUs } from "../components/ContactUs.tsx";
+// import BeatLoader  from "react-spinners/BeatLoader";
+//victor
+
+//cata
+import { Ecosystem } from "../components/Ecosystem.tsx";
+//cata
+
 export const Index = () => {
   const navigator =useNavigate()
   const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -43,37 +58,63 @@ export const Index = () => {
             Innovative&nbsp; <span className="tittle_index--span">Results</span>
           </h2>
         </div>
-        {showForm ? (
-          <ContactUs handleClose={handleClose}/>
-        ) : isLoading ? ( // Mostrar el loading mientras carga
-          <div className="loading">
-            <BeatLoader  color="#36d7b7" loading={isLoading} size={50} />
-           
-          </div>
-        ) : (
-          <>
-            <div
-              rel="preload"
-              className="container_background container_carrousell--index"
-            >
-              {!isVisible && (
-                <CookiesComponent
-                  isVisible={isVisible}
-                  setIsVisible={setIsVisible}
-                />
-              )}
-              <Carrousel />
-              <ColorLines />
-              <Home />
-            </div>
-            <Projects />
-            <HomeServices />
-            <AboutUs />
-            <FloatingButtons />
-          </>
-        )}
-        <ContactButton handleShowForm={handleShowForm} />{" "}
-        {/* Cambiar función */}
+
+          {/*victor*/}
+
+        {/*{showForm ? (*/}
+        {/*  <ContactUs handleClose={handleClose}/>*/}
+        {/*) : isLoading ? (*/}
+        {/*  <div className="loading">*/}
+        {/*    <BeatLoader  color="#36d7b7" loading={isLoading} size={50} />*/}
+        {/*   */}
+        {/*  </div>*/}
+        {/*) : (*/}
+        {/*  <>*/}
+        {/*    <div*/}
+        {/*      rel="preload"*/}
+        {/*      className="container_background container_carrousell--index"*/}
+        {/*    >*/}
+        {/*      {!isVisible && (*/}
+        {/*        <CookiesComponent*/}
+        {/*          isVisible={isVisible}*/}
+        {/*          setIsVisible={setIsVisible}*/}
+        {/*        />*/}
+        {/*      )}*/}
+        {/*      <Carrousel />*/}
+        {/*      <ColorLines />*/}
+        {/*      <Home />*/}
+        {/*    </div>*/}
+        {/*    <Projects />*/}
+        {/*    <HomeServices />*/}
+        {/*    <AboutUs />*/}
+        {/*    <FloatingButtons />*/}
+        {/*  </>*/}
+        {/*)}*/}
+        {/*<ContactButton handleShowForm={handleShowForm} />{" "}*/}
+          {/*victor*/}
+
+          {/*cata*/}
+        <div
+          rel="preload"
+          className="container_background container_carrousell--index"
+        >
+          {!isVisible && (
+            <CookiesComponent
+              isVisible={isVisible}
+              setIsVisible={setIsVisible}
+            />
+          )}
+          <Carrousel />
+
+        </div>
+        <AboutUs />
+        <HomeServices />
+        <Ecosystem />
+        <Projects />
+        
+        <FloatingButtons/>
+          {/*cata*/}
+
       </div>
     </>
   );

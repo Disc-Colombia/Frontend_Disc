@@ -3,20 +3,20 @@ import gobierno from "../imgs/gobierno.png";
 import ong from "../imgs/ong.png";
 import { Link } from "react-router-dom";
 import corporations from "../imgs/corporaciones.png";
-import "../styles/home.css";
+import "../styles/ecosystem.css";
 import { Box } from "./Box";
 
-export const Home: React.FC = () => {
+export const Ecosystem: React.FC = () => {
 
   return (
-      <div className="container_content--home" >
+      <div className="container_content--ecosystem" >
 
-        <div className="container_home--general">
-          <div className="tittle_home_eco--">
-            <h2 className="tittle_home_ecosis">Our <span className="tittle_home--span">ecosystem</span></h2>
+        <div className="container_ecosystem--general">
+          <div className="tittle_ecosystem_eco--">
+            <h2 className="tittle_ecosystem_ecosis">Our <span className="tittle_ecosystem--span">ecosystem</span></h2>
           </div>
 
-          <div className="container_home">
+          <div className="container_ecosystem">
 
             <div className="container_end--text">
 
@@ -30,8 +30,8 @@ export const Home: React.FC = () => {
               </p>
             </div>
 
-            <div className="container_home--information">
-              <div className="home_information">
+            <div className="container_ecosystem--information">
+              <div className="ecosystem_information">
                 <Box
                     image={gobierno as string}
                     description={"imagen gov"}
@@ -40,7 +40,7 @@ export const Home: React.FC = () => {
                   Minority-owned and certified, we are a trusted provider for government agencies in staffing, information technology, and operations services.
                 </Box>
               </div>
-              <div className="home_information">
+              <div className="ecosystem_information">
                 <Box
                     image={corporations as string}
                     description={"Corpotation"}
@@ -49,7 +49,7 @@ export const Home: React.FC = () => {
                   We deliver solutions for corporations outsourcing their technology, human resources, and healthcare strategies, supporting both commercial and government mandates.
                 </Box>
               </div>
-              <div className="home_information">
+              <div className="ecosystem_information">
                 <Box
                     image={ong as string}
                     description={"imagen ngo"}
@@ -61,8 +61,8 @@ export const Home: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="container_home--tittle">
-          <h1 className="tittle_home">
+        <div className="container_ecosystem--tittle">
+          <h1 className="tittle_ecosystem">
             GOING BEYOND YOUR EXPECTATIONS!
           </h1>
           <div className="button_container">

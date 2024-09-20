@@ -56,15 +56,6 @@ export const Header: React.FC = () => {
                   Home
                 </Link>
                 <Link
-                    to="services"
-                    smooth={true}
-                    duration={500}
-                    className={`navegations_links ${linkActive==='services'? "active" : ""}`}
-                    onClick={()=>handleActive('services')}
-                >
-                  Services
-                </Link>
-                <Link
                     to="aboutus"
                     smooth={true}
                     duration={500}
@@ -74,6 +65,16 @@ export const Header: React.FC = () => {
                   About us
                 </Link>
                 <Link
+                    to="services"
+                    smooth={true}
+                    duration={500}
+                    className={`navegations_links ${linkActive==='services'? "active" : ""}`}
+                    onClick={()=>handleActive('services')}
+                >
+                  Services
+                </Link>
+                
+                {/* <Link
                     to="contactus"
                     smooth={true}
                     duration={500}
@@ -81,7 +82,7 @@ export const Header: React.FC = () => {
                     onClick={()=>handleActive('contactus')}
                 >
                   Contact us
-                </Link>
+                </Link> */}
               </nav>
             </div>
           </div>
