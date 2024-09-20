@@ -18,7 +18,7 @@ export const ContactUs = ({ handleClose }: ConctaProps) => {
     lastname: "",
     phone: "",
     email: "",
-    contry: "",
+    country: "",
     company: "",
     message: "",
   });
@@ -42,7 +42,7 @@ export const ContactUs = ({ handleClose }: ConctaProps) => {
       data.phone === "" ||
       data.email === "" ||
       data.company === "" ||
-      data.contry === "" ||
+      data.country === "" ||
       data.message === "" ||
       data.lastname === "" ||
       data.service === ""
@@ -59,7 +59,7 @@ export const ContactUs = ({ handleClose }: ConctaProps) => {
           lastname: "",
           phone: "",
           email: "",
-          contry: "",
+          country: "",
           company: "",
           message: "",
           service: "",
@@ -174,9 +174,9 @@ export const ContactUs = ({ handleClose }: ConctaProps) => {
             <input
               className="input_contactform"
               type="text"
-              placeholder="Contry"
-              name="contry"
-              value={data.contry}
+              placeholder="Country"
+              name="country"
+              value={data.country}
               onChange={handleChange}
             />
           </div>

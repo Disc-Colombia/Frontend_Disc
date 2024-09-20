@@ -19,7 +19,7 @@ export type EmailProps = {
   lastname: string;
   phone: string;
   email: string;
-  contry: string;
+  country: string;
   company: string;
   message: string;
 };
