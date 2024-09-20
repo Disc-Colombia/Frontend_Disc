@@ -1,0 +1,19 @@
+@import "./colores.css";
+.container_videoplayer{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.videoproperties {
+    width: 350px;
+  }
+@media(min-width:1024px) {
+    .videoproperties {
+        width: 600px;
+      } 
+}
+@media(min-width:768px) {
+    .videoproperties {
+        width: 500px;
+      } 
+}

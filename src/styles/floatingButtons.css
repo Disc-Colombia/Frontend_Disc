@@ -1,0 +1,45 @@
+@import './colores.css';
+.floating-buttons {
+    position: fixed;
+    bottom: 10rem; /* Ajusta la distancia desde la parte inferior */
+    right: 10px; /* Ajusta la distancia desde la derecha */
+    display: flex;
+    flex-direction: column; /* Para que los botones queden uno sobre el otro */
+    gap: 10px; /* Espaciado entre botones */
+
+  }
+.float-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .float-btn:hover {
+    transform: scale(1.1); /* Efecto de agrandar en hover */
+  }
+  .floating_social--icon{
+    display: flex;
+    flex-direction: column;
+  }
+  .floating_social--media{
+    color: var(--LogoBackground);
+    font-size: 2rem;
+  }
+
+.float-btn:hover {
+    transform: scale(1.1); /* Efecto de agrandar en hover */
+}
+.floating_social--icon{
+    display: flex;
+    flex-direction: column;
+}
+.floating_social--media{
+    color: var(--LogoBackground);
+    font-size: 2rem;
+}
+
