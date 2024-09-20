@@ -44,11 +44,11 @@
   flex-direction: row-reverse;
   margin-top: 0;
 }
-.bi-x-circle {
+.modal_close {
   font-size: 1.5rem;
   color: var(--White);
 }
-.bi-x-circle:hover {
+.modal_close:hover {
   cursor: pointer;
 }
 .container_maternapp--image {

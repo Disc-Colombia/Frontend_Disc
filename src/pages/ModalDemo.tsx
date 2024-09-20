@@ -128,7 +128,7 @@ export const ModalDemo = () => {
       </div>
       <div className="container_content">
         <div className="container_close--icon">
-          <i className="bi bi-x-circle" onClick={handleBack}></i>
+          <i className="bi bi-x-circle modal_close" onClick={handleBack}></i>
         </div>
         <div className="container_content--tittle">
           <h2 className="demotitle">Schedule a Demo</h2>

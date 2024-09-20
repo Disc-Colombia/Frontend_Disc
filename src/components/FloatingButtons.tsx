@@ -1,5 +1,5 @@
 
-import '../styles/floatingButtons.css' // Estilos CSS para los botones
+import '../styles/floatingButtons.css' 
 
 export const FloatingButtons = () => {
   return (
