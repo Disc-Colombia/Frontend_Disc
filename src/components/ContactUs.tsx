@@ -10,9 +10,10 @@ type ConctaProps = {
   handleClose: () => void;
 };
 export const ContactUs = ({ handleClose }: ConctaProps) => {
-  const navegate =useNavigate()
+  const navegate = useNavigate();
   const [data, setData] = React.useState<EmailProps>({
     name: "",
+    service: "",
     product: "",
     lastname: "",
     phone: "",
@@ -23,7 +24,7 @@ export const ContactUs = ({ handleClose }: ConctaProps) => {
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
     setData({
@@ -43,10 +44,12 @@ export const ContactUs = ({ handleClose }: ConctaProps) => {
       data.company === "" ||
       data.contry === "" ||
       data.message === "" ||
-      data.lastname === ""
+      data.lastname === "" ||
+      data.service === ""
     ) {
       toast.warning("Please ensure all fields are completed, thank you.");
     } else {
+      console.log("soy data ...", data)
       try {
         await dataEmail(data);
         toast.success("Thank you, we'll contact you as fast as we can.");
@@ -59,8 +62,9 @@ export const ContactUs = ({ handleClose }: ConctaProps) => {
           contry: "",
           company: "",
           message: "",
+          service: "",
         });
-        navegate("/")
+        navegate("/");
       } catch {
         toast.error(
           "There was an error sending your message. Please try again."
@@ -87,14 +91,28 @@ export const ContactUs = ({ handleClose }: ConctaProps) => {
       <div className="contact-container" id="contactus">
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="product_information">
-            <input
-              className="input_contactform"
-              type="text"
-              placeholder="I am writing in relation to"
-              name="name"
-              value={data.name}
+            <select
+              className="input_selection"
+              name="service"
+              value={data.service}
               onChange={handleChange}
-            />
+            >
+              <option defaultValue={""}>--I am writing in relation to--</option>
+              <option value={"Human Service"}>Human Service </option>
+              <option value={"Healthcare Systems Administration"}>
+                Healthcare Systems Administration
+              </option>
+              <option value={"IT Consulting"}>IT Consulting</option>
+              <option value={"Cybersecurity"}>Cybersecurity</option>
+              <option value={"Customer Service"}>Customer Service</option>
+              <option value={"Finance Solutions"}>Finance Solutions</option>
+              <option value={"Mobile & Web App Development"}>
+                Mobile & Web App Development
+              </option>
+              <option value={"Data Migration & Systems Integration"}>
+                Data Migration & Systems Integration
+              </option>
+            </select>
             <input
               className="input_contactform"
               type="text"

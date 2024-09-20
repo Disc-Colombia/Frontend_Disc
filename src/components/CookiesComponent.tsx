@@ -14,10 +14,8 @@ export const CookiesComponent = ({ isVisible, setIsVisible }: CookiesProps) => {
   useEffect(() => {
     const cookiesAccepted = Cookies.get("cookiesAccepted");
     if (cookiesAccepted) {
-      console.log("Cookie Accepted:", cookiesAccepted);
       setIsVisible(true); // Mostrar banner si la cookie no existe
     } else {
-      console.log("Cookie Accepted:", cookiesAccepted);
       setIsVisible(false); // Ocultar banner si la cookie ya existe
     }
   }, [setIsVisible]);
@@ -32,10 +30,10 @@ export const CookiesComponent = ({ isVisible, setIsVisible }: CookiesProps) => {
   return (
     <div className="cookie-banner">
       <p className="cookies_information">
-      This website uses cookies to improve your experience, provide personalized
-      content, and analyze site traffic. By clicking 'Accept', you agree to the
-      use of all cookies. You can manage your preferences by clicking 'Cookie
-      Settings.
+        This website uses cookies to improve your experience, provide
+        personalized content, and analyze site traffic. By clicking 'Accept',
+        you agree to the use of all cookies. You can manage your preferences by
+        clicking 'Cookie Settings.
       </p>
       <button onClick={handleAccept}>Accept</button>
     </div>
