@@ -33,7 +33,7 @@ export const Index = () => {
             />
           )}
           <Carrousel />
-          <ColorLines />
+          {/* <ColorLines /> */}
           
         </div>
         <AboutUs />

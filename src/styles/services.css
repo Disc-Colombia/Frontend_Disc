@@ -11,7 +11,7 @@
   
   /*Componente de servicios en el home*/
 
-  .container_service{
+.container_service{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -106,19 +106,29 @@
   
 }
 
-@media(max-width: 600px) {
+@media(max-width: 760px) {
+
+
   .container_service{
     height: auto;
+    min-height:calc(100vh - 62px); ;
   }
-  .image_services{
-    width: 100%;
+  
+  .img_content-services{
+    margin: 0;
+    width: 94%;
     height: 200px;
+    
+  }
+
+  .image_services{
+    
+    object-fit: cover;
   }
   .container_text--services .my_tittle{
     font-size: 1.5rem;
     align-self: center;
   }
-
   .container_text--services .paragraph_services{
     font-size: 1.2rem;
   }
