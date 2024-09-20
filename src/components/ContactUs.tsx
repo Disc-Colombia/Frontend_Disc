@@ -152,7 +152,7 @@ export const ContactUs = ({ handleClose }: ConctaProps) => {
               <input
                   className="input_contactform"
                   type="tel"
-                  placeholder="Telephone: +1 999 999 999 999"
+                  placeholder="Telephone: +1 202-456-1414"
                   name="phone"
                   value={data.phone}
                   onChange={handleChange}
@@ -168,7 +168,7 @@ export const ContactUs = ({ handleClose }: ConctaProps) => {
               <input
                   className="input_contactform"
                   type="text"
-                  placeholder="company name"
+                  placeholder="Company name"
                   name="company"
                   value={data.company}
                   onChange={handleChange}
@@ -176,8 +176,8 @@ export const ContactUs = ({ handleClose }: ConctaProps) => {
               <input
                   className="input_contactform"
                   type="text"
-                  placeholder="Contry"
-                  name="contry"
+                  placeholder="Country"
+                  name="country"
                   value={data.country}
                   onChange={handleChange}
               />
