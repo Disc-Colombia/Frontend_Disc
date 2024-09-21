@@ -37,8 +37,8 @@ export const ClientsCarousel: React.FC = () => {
     const settings = {
         dots: false,
         infinite: true,
-        speed: 6000,
-        slidesToShow: 4,
+        speed: 8000,
+        slidesToShow: 5,
         slidesToScroll: 2,
         autoplay: true,
         autoplaySpeed: 1,
@@ -49,15 +49,17 @@ export const ClientsCarousel: React.FC = () => {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 3,
                     slidesToScroll: 1,
+                    speed:6000
                 },
             },
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
+                    speed:5000
                 },
             },
             {
@@ -65,13 +67,14 @@ export const ClientsCarousel: React.FC = () => {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
+                    speed:5000
                 },
             },
         ],
     };
 
     return (
-        <div style={{ width: '72%', margin: '0 auto'}}>
+        <div style={{ width: '100%', margin: '0 auto'}}>
             <Slider {...settings}>
                 {images.map((logo, index) => (
                     <div key={index} style={{ padding: '10px', textAlign: 'center' }}>
