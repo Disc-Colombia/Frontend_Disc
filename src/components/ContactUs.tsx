@@ -185,7 +185,7 @@ export const ContactUs = ({ handleClose }: ConctaProps) => {
 
             <button type="submit">Submit</button>
           </form>
-          <ToastContainer />
+          <ToastContainer  style={{ marginTop: 65  }}/>
         </div>
       </>
   );
