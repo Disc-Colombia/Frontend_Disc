@@ -9,7 +9,7 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   flex-direction: column;
-  position: relative; /* o absolute */
+  position: relative; 
   z-index: 10;
 }
 .container_information--contactform {
@@ -18,6 +18,8 @@
   align-items: center;
   margin-left: 2rem;
   margin-right: 2rem;
+  position: relative;
+  z-index: 3;
 }
 .product_information {
   display: flex;
@@ -38,7 +40,6 @@
     column-gap: 1rem;
   }
 }
-
 .container_close--circule {
   display: flex;
   flex-direction: row-reverse;
@@ -55,15 +56,14 @@
 
   border-radius: 10px;
 }
-
 .message-box .highlight {
   font-family: var(--font-makina);
   font-weight: bold;
   margin-bottom: 10px;
   background: -webkit-linear-gradient(
-    -90deg,
-    var(--Black),
-    var(--LogoBackground)
+          -90deg,
+          var(--Black),
+          var(--LogoBackground)
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

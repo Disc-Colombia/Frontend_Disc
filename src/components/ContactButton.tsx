@@ -12,7 +12,6 @@ export const ContactButton = ({ handleShowForm }: ButtomProps) => {
     <div className="contact_button">
       <div className="floating_button">
         <i className="floating_button bi bi-wechat" onClick={handleContact}></i>
-        {/* <i className="floating_button bi bi-marker-tip"></i> */}
       </div>
     </div>
   );

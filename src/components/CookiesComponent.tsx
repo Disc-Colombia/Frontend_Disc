@@ -21,7 +21,6 @@ export const CookiesComponent = ({ isVisible, setIsVisible }: CookiesProps) => {
   }, [setIsVisible]);
 
   const handleAccept = () => {
-    // Establece una cookie que expira en 365 días
     Cookies.set("cookiesAccepted", "true", { expires: 365 });
 
     setIsVisible(true);
@@ -30,10 +29,10 @@ export const CookiesComponent = ({ isVisible, setIsVisible }: CookiesProps) => {
   return (
     <div className="cookie-banner">
       <p className="cookies_information">
-        This website uses cookies to improve your experience, provide
-        personalized content, and analyze site traffic. By clicking 'Accept',
-        you agree to the use of all cookies. You can manage your preferences by
-        clicking 'Cookie Settings.
+          This website uses cookies to improve your experience, provide
+          personalized content, and analyze site traffic. By clicking 'Accept',
+          you agree to the use of all cookies. You can manage your preferences by
+          clicking 'Cookie Settings.
       </p>
       <button onClick={handleAccept}>Accept</button>
     </div>

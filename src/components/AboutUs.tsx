@@ -4,6 +4,10 @@ import * as React from "react";
 import { ClientsCarousel } from "./ClientsCarousel";
 import us_mision from "../imgs/us_mision.png";
 import us_vision from "../imgs/us_vision.png";
+import aboutus from "../imgs/nosotros_main.jpg"
+import aboutuswebp from "../imgs/us_vision_11zon.webp";
+import misionwebp from "../imgs/mision_11zon.webp";
+
 import { partnerImages } from "../imgs/partners/partnerInfo.tsx";
 
 export const AboutUs: React.FC = () => {
@@ -14,25 +18,38 @@ export const AboutUs: React.FC = () => {
       "To be global leaders in the technology field, helping our clients enhance their quality of life and achieve new levels of success through disruptive technologies and effective digital strategies.",
   };
 
+
+  
+
   return (
   
       <div className="component-wrapper" id="aboutus">
         <div className="particle">
           <div className="particle-content">
-            <div className="about-header main-padding-large slide">
+            <div className="about-header slide">
+            
               <div className="about-header-content quote-small">
-                <p className="about_header-content--text">
-                  Development Innovation System C (DISC), we are a company of
-                  innovative technological solutions that transform and enhance
-                  a digital world by offering multiple specialized services in
+              
+                <div className="content--text-about">
+                  <h1 className="tittle--aboutUs">Development Innovation System C (DISC)</h1>
+                  <p className="about_header-content--text">
+                  We are a company of innovative technological solutions that transform and enhance a digital world by offering multiple specialized services in
                   software development and system integration. Our multilingual
                   team has fostered strong business relationships with federal,
                   state, local entities and NGOs worldwide. We have more than a
                   decade of experience, with headquarters in Washington, DC.,
                   and offices in Colombia.
                 </p>
+                </div>
+                <div className="image--about">
+                  <picture>
+                    <source srcSet={aboutuswebp} type="image/webp"/>
+                  <img className='my_img--about' src={aboutus as string} alt="Imagen binarios" />
+                  </picture>
+                  
+                </div>
               </div>
-              <div className="about-header-controls">
+              <div className="about-header-controls main-padding-large ">
                 <p className="about-header-controls-blurb heading-four">
                   More about us
                 </p>
@@ -82,81 +99,80 @@ export const AboutUs: React.FC = () => {
               </div>
             </div>
             {/* Partners LOGOs */}
-<div className="outpartnes" style={{ margin: "20px" }}>
-<div className="slide-hero-header">
-  <p className="slide-hero-header-eyebrow quote-small">We are...</p>
-  <h1 className="heading-three">Partnered With</h1>
-</div>
-<div className="slide-hero-content">
-  <div className="logo-garden logo-garden--is-dark">
-    <div className="logo-garden-gallery">
-      <div
-        className="logo-garden-gallery-scroller smooth"
-        style={{ transform: "translateX(0%)" }}
-      >
-        <div className="logo-garden-gallery-row">
-          {partnerImages.slice(0, 4).map((partner, index) => (
-            <div key={index} className="logo-garden-gallery-row-card">
-              <a href={partner.link}>
-                <img
-                  src={partner.src}
-                  alt={partner.alt}
-                  width={500}
-                  height={200}
-                />
-              </a>
+            <div className="outpartnes" style={{ margin: "20px" }}>
+            <div className="slide-hero-header">
+              <p className="slide-hero-header-eyebrow quote-small">We are...</p>
+              <h1 className="heading-three">Partnered With</h1>
             </div>
-          ))}
-        </div>
-        <div className="logo-garden-gallery-row">
-          {partnerImages.slice(4).map((partner, index) => (
-            <div key={index} className="logo-garden-gallery-row-card">
-              <a href={partner.link}>
-                <img
-                  src={partner.src}
-                  alt={partner.alt}
-                  width={500}
-                  height={200}
-                />
-              </a>
+            <div className="slide-hero-content">
+              <div className="logo-garden logo-garden--is-dark">
+                <div className="logo-garden-gallery">
+                  <div
+                    className="logo-garden-gallery-scroller smooth"
+                    style={{ transform: "translateX(0%)" }}
+                  >
+                    <div className="logo-garden-gallery-row">
+                      {partnerImages.slice(0, 4).map((partner, index) => (
+                        <div key={index} className="logo-garden-gallery-row-card">
+                          <a href={partner.link}>
+                            <img
+                              src={partner.src}
+                              alt={partner.alt}
+                              width={500}
+                              height={200}
+                            />
+                          </a>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="logo-garden-gallery-row">
+                      {partnerImages.slice(4).map((partner, index) => (
+                        <div key={index} className="logo-garden-gallery-row-card">
+                          <a href={partner.link}>
+                            <img
+                              src={partner.src}
+                              alt={partner.alt}
+                              width={500}
+                              height={200}
+                            />
+                          </a>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
+            </div>
 
-<div className="about-header-controls">
-<p className="about-header-controls-blurb heading-four">Our clients</p>
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="96"
-  height="96"
-  viewBox="0 0 24 24"
->
-  <rect
-    width="96"
-    height="96"
-    className="a"
-    style={{ opacity: 0 }}
-  ></rect>
-  <path
-    d="M183.41,3439.41,182,3438l-6,6,6,6,1.41-1.41-4.58-4.59Z"
-    transform="translate(-168 -3432)"
-    className="b"
-  ></path>
-</svg>
-</div>
+            <div className="about-header-controls">
+            <p className="about-header-controls-blurb heading-four">Our clients</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="96"
+              height="96"
+              viewBox="0 0 24 24"
+            >
+              <rect
+                width="96"
+                height="96"
+                className="a"
+                style={{ opacity: 0 }}
+              ></rect>
+              <path
+                d="M183.41,3439.41,182,3438l-6,6,6,6,1.41-1.41-4.58-4.59Z"
+                transform="translate(-168 -3432)"
+                className="b"
+              ></path>
+            </svg>
+            </div>
 
-{/* Clients LOGOs */}
-<div className="oupartnets" style={{ margin: "20px" }}>
-<div className="slide-hero-content">
-  <ClientsCarousel />
-</div>
-</div>
-<div></div>
+            {/* Clients LOGOs */}
+            <div className="oupartnets" style={{ margin: "20px" }}>
+            <div className="slide-hero-content">
+              <ClientsCarousel />
+            </div>
+            </div>
           </div>
         </div>
       </div>

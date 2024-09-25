@@ -1,22 +1,18 @@
 @import "./colores.css";
 .contact_button {
   position: fixed;
-  bottom: 3rem; /* Ajusta la distancia desde la parte inferior */
-  right: 5px; /* Ajusta la distancia desde la derecha */
-
+  bottom: 3rem; 
+  right: 5px;
 }
 .floating_button {
   all: unset;
   border: none;
-  /* padding: 15px; */
-  border-radius: 50%; /* Hace que el botón sea completamente redondo */
+  border-radius: 50%;
  color: var(--LogoBackground);
-
   cursor: pointer;
   font-size: 50px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
-
 .floating_button:hover {
     font-size: 60px;
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);

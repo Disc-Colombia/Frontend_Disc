@@ -86,23 +86,18 @@
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
   }
-
 }
 .formulario_demo {
   display: flex;
   flex-direction: column;
 }
-
 .container_content--tittle {
   text-align: center;
 }
-
 .container_input--label {
   display: flex;
   flex-direction: column;
   margin: 2px;
-  
-  
 }
 .input_demo,
 .input_textarea {

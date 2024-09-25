@@ -7,40 +7,6 @@ import * as React from "react";
 export const HomeServices: React.FC = () => {
   return (
       <div id="services">
-        <div className="background-services">
-          <div className="solutions-section">
-            <div className="titlepar--text">
-              <h2 className="solutions-title">
-                WHY<span className="solutions-title--span"> CHOOSE US</span>
-              </h2>
-              <p className="solutions-description">
-                Our company stands out for its adaptable technology solutions,
-                expertly crafted to address the specific needs of your
-                organization while adhering to the highest standards.
-              </p>
-            </div>
-
-            <div className="solutions-grid">
-              <div className="solution-item">
-                <h3 className="title-items-services">Multilingual Services</h3>
-                <p>English - Spanish - Portuguese - Amharic.</p>
-              </div>
-              <div className="solution-item">
-                <h3 className="title-items-services">Uniting Worlds</h3>
-                <p>Effectively breaks through cultural and political barriers.</p>
-              </div>
-              <div className="solution-item">
-                <h3 className="title-items-services">Future Leaders</h3>
-                <p>We provide job opportunities for young talents.</p>
-              </div>
-              <div className="solution-item">
-                <h3 className="title-items-services">Global Reach</h3>
-                <p>Based in Washington D.C. with offices in Colombia.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div className="container_service">
           <div className="container_text--services">
             <h1 className="my_tittle">
@@ -59,9 +25,9 @@ export const HomeServices: React.FC = () => {
               </Link>
             </div>
           </div>
-          <div className="image_services">
+          <div className="img_content-services">
             <img
-                className="img_content-services"
+                className="image_services"
                 src={servicesimg as string}
                 alt="Our Services"
             />

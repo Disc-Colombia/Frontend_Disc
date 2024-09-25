@@ -7,7 +7,7 @@ import client6 from '../clients/client_6d.png';
 import client7 from '../clients/client_7.png';
 import client8 from '../clients/client_8c.jpg';
 import client9 from '../clients/client_9b.png'
-import client10 from '../clients/client_10.jpeg'
+import client10 from '../clients/client_10.png'
 import client11 from '../clients/client_11.png'
 
 export {

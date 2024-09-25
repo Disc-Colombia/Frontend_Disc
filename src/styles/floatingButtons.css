@@ -1,11 +1,11 @@
 @import './colores.css';
 .floating-buttons {
     position: fixed;
-    bottom: 10rem; /* Ajusta la distancia desde la parte inferior */
-    right: 10px; /* Ajusta la distancia desde la derecha */
+    bottom: 10rem; 
+    right: 10px; 
     display: flex;
-    flex-direction: column; /* Para que los botones queden uno sobre el otro */
-    gap: 10px; /* Espaciado entre botones */
+    flex-direction: column; 
+    gap: 10px; 
 
   }
 .float-btn {
@@ -20,7 +20,7 @@
   }
   
   .float-btn:hover {
-    transform: scale(1.1); /* Efecto de agrandar en hover */
+    transform: scale(1.1);
   }
   .floating_social--icon{
     display: flex;
@@ -32,7 +32,7 @@
   }
 
 .float-btn:hover {
-    transform: scale(1.1); /* Efecto de agrandar en hover */
+    transform: scale(1.1);
 }
 .floating_social--icon{
     display: flex;

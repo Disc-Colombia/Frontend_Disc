@@ -1,51 +1,31 @@
-.carousel_img{
-  height:auto;
+.carousel_img {
+  height: auto;
   filter: brightness(45%);
-  
-} 
+}
 /* carrousel.css */
-
-/* Ajusta el tamaño máximo del carrusel */
 .container_carrousel {
-max-width: 100vw;  /* Ancho completo de la pantalla */
-height: calc(100vh - 60px);     /* Altura completa de la pantalla */
-margin: 0 auto;
-
+  max-width: 100vw;
+  height: calc(100vh - 60px);
+  margin: 0 auto;
 }
-
-/* Asegúrarse de que las imágenes se adapten sin distorsionarse */
 .carousel-item img {
-height: calc(100vh - 60px);  /* Altura de la pantalla menos la altura del header */
-object-fit: cover;
+  height: calc(100vh - 60px);
+  object-fit: cover;
 }
-
-/* Opcional: ajustar la altura del carrusel */
-/* .carousel-inner {
-    height: 580px;
-} */
-
-/* Opcional: ajustar la altura de las imágenes del carrusel */
 .carousel-item img {
-/* height: 100%; */
-object-fit: cover;
+  /* height: 100%; */
+  object-fit: cover;
 }
-
-/* .carousel-item img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-} */
-
-.carousel-caption h5, .carousel-caption p {
-font-size: 1.5rem;  /* Ajustar el tamaño del texto para hacerlo más responsive */
+.carousel-caption h5,
+.carousel-caption p {
+  font-size: 1.5rem;
 }
 
 @media (max-width: 768px) {
-.carousel-caption h5 {
-  font-size: 1.25rem;  /* Reducir tamaño del título en pantallas pequeñas */
+  .carousel-caption h5 {
+    font-size: 1.25rem;
+  }
 }
 .carousel-caption p {
-  font-size: 1rem;  /* Reducir tamaño del texto en pantallas pequeñas */
+  font-size: 1rem;
 }
-}
-

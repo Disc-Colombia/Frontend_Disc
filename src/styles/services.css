@@ -5,100 +5,10 @@
   width: 100%;
   display: flex;
   justify-content: center;
-
 }
-
-.background-services{
-  max-width: 100vw;
-  height: calc(100vh - 62px);
-  display: flex;
-  justify-content: center !important;
-  align-items: center;
-  align-content: center;
-  background-image: url("../imgs/Technology_Artificial_Intelligence.png");
-  background-repeat: round;
-  margin-top: 5rem;
-}
-
-.solutions-section{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--gris-sombra);
-  margin: 3px;
-  width: 90%;
-  height: 90%;
-  border-radius: 8px;
-}
-
-
-
-
-/* Estilos generales de la sección */
-
-  
-  /* Título principal */
-  .solutions-title {
-    font-family: var(--font-makina);
-    color: var(--White);
-    font-size: 2.5rem;
-    font-weight: 600;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-  }
-  
-  .solutions-title--span{
-    color: var(--LogoBackground);
-  }
-  
-  /* Descripción debajo del título */
-  .solutions-description {
-    font-family: var(--montserrat-font-family);
-    font-size: 1.2rem;
-    color: var(--White);
-    margin-bottom: 40px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: justify;
-  }
-  
-  /* Estilos para el contenedor de las tarjetas */
-  .solutions-grid {
-    display: grid;
-    margin-top: 5px;
-    margin-left: 40px;
-    margin-right: 40px;
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-  
-  @media(max-width: 1023px) {
-    .titlepar--text{
-      margin: 30px;
-    }
-  
-    .solutions-grid {
-      display: flex;
-      flex-direction: column;
-      overflow: auto;
-      margin-left: 40px;
-      margin-right: 40px;
-      margin-bottom: 30px;
-    }
-  }
-  
-  @media(min-width: 1024px) {
-    .solutions-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
   /*Componente de servicios en el home*/
 
-  .container_service{
+.container_service{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -126,20 +36,24 @@
   font-size: 2.5rem;
 }
 
+.solutions-title--span{
+  color: var(--LogoBackground);
+}
+
 .paragraph_services{
   color: var(--White);
   font-family: var(--montserrat-font-family);
   font-size: 1.5rem;
 }
 
-.image_services{
+.img_content-services{
   margin: 20px;
   width: 500px;
   height: 500px;
   overflow: hidden;
 }
 
-.img_content-services{
+.image_services{
   width: 100%; 
   height: 100%; 
   object-fit: contain;
@@ -189,30 +103,29 @@
   
 }
 
-@media(max-width: 600px) {
+@media(max-width: 760px) {
+
+
   .container_service{
     height: auto;
+    min-height:calc(100vh - 62px); ;
   }
-  .image_services{
-    width: 100%;
+  
+  .img_content-services{
+    margin: 0;
+    width: 94%;
     height: 200px;
-  }
-  .titlepar--text{
-    margin: 20px;
-  }
-  .solutions-title{
-    font-size: 1.5rem;
-  }
-  .solutions-description{
-    font-size: 1rem;
-    margin-bottom: 5px;
+    
   }
 
+  .image_services{
+    
+    object-fit: cover;
+  }
   .container_text--services .my_tittle{
     font-size: 1.5rem;
     align-self: center;
   }
-
   .container_text--services .paragraph_services{
     font-size: 1.2rem;
   }
@@ -237,74 +150,4 @@
   
 }
 
-  .solution-item {
-   
-    padding: 10px;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-  }
-  
-  .solution-item:hover {
-    transform: translateY(-10px);
-  }
-  
-  .title-items-services{
-    font-family: var(--montserrat-font-family);
-    margin-bottom: 10px;
-    font-size: 24px;
-    background:-webkit-linear-gradient(180deg,var(--White),var(--LogoBackground));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-  }
-  
-  .solution-item p {
-    font-family: var(--montserrat-font-family);
-    color: var(--gris_parrafo);
-    line-height: 1.6;
-    font-size: 1.2rem;
-  }
-
-  .flipcards{
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-  }
-
-
-  .flipcards-services{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .flidcards-container{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-
-@media (min-width:1024px) {
-  .flipcards-services{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-  }
-
-  .flidcards-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-  }
-
-}
-
-  .list-services{
-    margin: 10px;
-    color: var(--White);
-    font-family: var(--montserrat-font-family);
-  }
 
