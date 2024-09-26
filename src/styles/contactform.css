@@ -7,7 +7,6 @@
   margin-top: 54px;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   flex-direction: column;
   position: relative; 
   z-index: 10;
@@ -57,7 +56,7 @@
   border-radius: 10px;
 }
 .message-box .highlight {
-  font-family: var(--font-makina);
+  font-family: var(--montserrat-font-family);
   font-weight: bold;
   margin-bottom: 10px;
   background: -webkit-linear-gradient(
@@ -71,6 +70,10 @@
   color: transparent;
   text-align: center;
   margin-bottom: 2rem;
+}
+.title_contact--form{
+  font-family: var(--font-makina);
+  font-size: 2rem;
 }
 .text_contact--form {
   font-size: 1.2rem;
@@ -118,7 +121,7 @@
 .contact-form input,
 .contact-form textarea,
 .input_selection {
-  font-family: --montserrat-font-family;
+  font-family: var(--montserrat-font-family);
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -127,7 +130,7 @@
 
 .contact-form button {
   padding: 10px;
-  font-family: --montserrat-font-family;
+  font-family: var(--montserrat-font-family);
   color: var(--White);
   background-color: var(--LogoBackground);
   border: none;

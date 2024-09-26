@@ -83,7 +83,7 @@ export const ContactUs = ({ handleClose }: ConctaProps) => {
           <i className=" bi bi-x-circle close" onClick={handleExit}></i>
         </div>
         <div className="container_information--contactform">
-          <h2>Contact Form</h2>
+          <h1 className="title_contact--form">Contact Form</h1>
           <p className="text_contact--form">
             If you would like to make a purchase, receive more information about
             our solutions, or make any other inquiries, we kindly ask you to fill
