@@ -51,8 +51,8 @@ export const Carrousel: React.FC = () => {
             />
            </picture>
             <div className="carousel-caption">
-              <h5>Information Technology Consulting</h5>
-              <p>
+              <h5 className="title_carousel--slice">Information Technology Consulting</h5>
+              <p className="text_carousel">
                 IT consulting services focused on innovative technology
                 solutions.
               </p>
@@ -69,8 +69,8 @@ export const Carrousel: React.FC = () => {
             />
             </picture>
             <div className="carousel-caption">
-              <h5>Cybersecurity Solutions</h5>
-              <p>
+              <h5  className="title_carousel--slice">Cybersecurity Solutions</h5>
+              <p className="text_carousel">
                 Providing comprehensive protection against digital threats
                 through advanced security measures and proactive defense
                 strategies.
@@ -88,8 +88,8 @@ export const Carrousel: React.FC = () => {
             />
           </picture>
             <div className="carousel-caption ">
-              <h5>Financial Solutions</h5>
-              <p>
+              <h5 className="title_carousel--slice">Financial Solutions</h5>
+              <p className="text_carousel">
                 Delivering tailored financial strategies to optimize
                 performance, manage risks, and drive growth.
               </p>

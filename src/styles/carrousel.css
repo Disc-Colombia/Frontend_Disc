@@ -1,3 +1,4 @@
+@import './colores.css';
 .carousel_img {
   height: auto;
   filter: brightness(45%);
@@ -8,17 +9,20 @@
   height: calc(100vh - 60px);
   margin: 0 auto;
 }
+.title_carousel--slice{
+  font-family: var( --font-makina);
+  font-size: 1.8rem;
+}
+.text_carousel{
+font-family: var(--montserrat-font-family);
+font-size: 1rem;
+}
 .carousel-item img {
   height: calc(100vh - 60px);
   object-fit: cover;
 }
 .carousel-item img {
-  /* height: 100%; */
   object-fit: cover;
-}
-.carousel-caption h5,
-.carousel-caption p {
-  font-size: 1.5rem;
 }
 
 @media (max-width: 768px) {
@@ -26,6 +30,4 @@
     font-size: 1.25rem;
   }
 }
-.carousel-caption p {
-  font-size: 1rem;
-}
+
