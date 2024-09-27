@@ -40,7 +40,7 @@ export const Index = () => {
                 alt="logo develoment"
             />
             <h2 className="text_index--tittle">
-              Innovative&nbsp; <span className="tittle_index--span">Results</span>
+              INNOVATIVE&nbsp; <span className="tittle_index--span">RESULTS</span>
             </h2>
           </div>
           {showForm ? (

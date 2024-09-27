@@ -48,14 +48,17 @@
 }
 
 .tittle--aboutUs{
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 10px;
+  font-weight: bolder;
   font-family: var(--font-makina);
-  background: -webkit-linear-gradient(0deg, var(--White), var(--LogoBackground));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
+  color: var(--White);
+}
+
+.tittle--aboutUs_span{
+  font-family: var(--font-makina);
+  color: var(--LogoBackground);
+  font-weight: bolder;
 }
 
 .image--about{
@@ -155,7 +158,7 @@
 }
 
 .about-header-controls svg {
-  fill: #b79967;
+  fill: var(--Black);
   transform: rotate(-90deg);
 }
 .about-header--collapsed {
@@ -217,14 +220,19 @@
   text-align: center;
 }
 
+.about-header-controls-blurb--span{
+  font-family: var(--font-makina);
+    font-weight: bolder;
+    color:var(--LogoBackground)
+}
+
  .quote-small {
     font-stretch: normal;
     font-style: normal;
     font-weight: normal;
     text-decoration: none;
-    font-family: "Lato";
-    font-weight: 600;
-    font-style: italic;
+    font-family: var(--font-makina);
+    font-weight: bolder;
     font-size: 1.575rem;
     line-height: 3.75rem;
     margin-bottom: calc((1rem - 2.375rem) + 1rem* 2);
@@ -253,8 +261,9 @@
 }
 .slide-hero-header-eyebrow {
   display: flex;
-  color: #b79967 !important;
+  color: var(--LogoBackground) !important;
   margin: 2vh 0;
+  font-family: var(--font-makina);
   font-weight: bolder;
   justify-content: center;
 }
@@ -359,13 +368,12 @@
   font-style: normal;
   font-weight: normal;
   text-decoration: none;
-  font-family: "Lato";
+  font-family: var(--font-makina);
   font-size: 2.5rem;
   line-height: 4.125rem;
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
   font-weight: 600;
-  font-family: var(--font-makina);
   text-transform: uppercase;
 }
 
@@ -375,12 +383,12 @@
   font-style: normal;
   font-weight: normal;
   text-decoration: none;
-  font-family: "Lato";
-  font-size: 2.375rem;
+  font-family: var(--font-makina);
+  font-size: 2.5rem;
   line-height: 3rem;
   margin-bottom: 1rem;
   margin-top: 1rem;
-  font-weight: 600;
+  font-weight: bolder;
 }
 
 
@@ -390,7 +398,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: Lato, serif;
+  font-family: var(--montserrat-font-family), serif;
   font-variant-ligatures: no-common-ligatures;
 }
 

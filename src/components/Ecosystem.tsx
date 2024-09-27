@@ -66,7 +66,7 @@ export const Ecosystem: React.FC = () => {
         </div>
       </div>
       <div className="container_ecosystem--tittle">
-        <h1 className="tittle_ecosystem">GOING BEYOND YOUR EXPECTATIONS!</h1>
+        <h1 className="tittle_ecosystem">GOING BEYOND YOUR&nbsp; <span className="about-header-controls-blurb--span">EXPECTATIONS!</span> </h1>
         <div className="button_container">
           <Link to="/scheduledemo" className="demobutton">
             DEMO

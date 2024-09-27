@@ -86,14 +86,10 @@
 .tittle_ecosystem {
   text-align: center;
   font-family: var(--font-makina);
-  background: -webkit-linear-gradient(-90deg, var(--Black), var(--LogoBackground));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
+  color:var(--Black);
+  font-weight: bolder;
   font-size: 2.5rem;
   margin: 20px;
-  text-transform: uppercase;
 }
 
 .tittle_ecosystem_ecosis {

@@ -31,7 +31,7 @@ export const AboutUs: React.FC = () => {
               <div className="about-header-content quote-small">
               
                 <div className="content--text-about">
-                  <h1 className="tittle--aboutUs">Development Innovation System C (DISC)</h1>
+                  <h1 className="tittle--aboutUs">DEVELOPMENT INNOVATION SYSTEM C&nbsp; <span className="tittle--aboutUs_span"> (DISC)</span></h1>
                   <p className="about_header-content--text">
                   We are a company of innovative technological solutions that transform and enhance a digital world by offering multiple specialized services in
                   software development and system integration. Our multilingual
@@ -51,7 +51,7 @@ export const AboutUs: React.FC = () => {
               </div>
               <div className="about-header-controls main-padding-large ">
                 <p className="about-header-controls-blurb heading-four">
-                  More about us
+                  OUR&nbsp; <span className="about-header-controls-blurb--span"> COMMITMENT</span>
                 </p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -72,11 +72,11 @@ export const AboutUs: React.FC = () => {
                   ></path>
                 </svg>
                 {/* SLIDE-HERO: mission & vision */}
-                <div className="slide-hero-header">
+                {/* <div className="slide-hero-header">
                   <p className="slide-hero-header-eyebrow quote-small">
                     Our Commitment...
                   </p>
-                </div>
+                </div> */}
 
                 <div className="global-delivery">
                   <div className="card_mision">
@@ -146,7 +146,7 @@ export const AboutUs: React.FC = () => {
             </div>
 
             <div className="about-header-controls">
-            <p className="about-header-controls-blurb heading-four">Our clients</p>
+            <p className="about-header-controls-blurb heading-four">OUR&nbsp; <span className="about-header-controls-blurb--span"> CLIENTS</span></p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="96"

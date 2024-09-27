@@ -48,7 +48,7 @@ export const InfoCard: React.FC<InfoCardProps> = ({ title, content, imageSrc, cl
             >
                 <Text
                     fontSize="3rem"
-                    fontWeight="bold"
+                    fontWeight="bolder"
                     fontFamily='var(--font-makina)'
                     zIndex="1"
                     transition="opacity 0.5s ease-in-out"
