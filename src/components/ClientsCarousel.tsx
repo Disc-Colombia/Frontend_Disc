@@ -38,11 +38,10 @@ export const ClientsCarousel: React.FC = () => {
         dots: false,
         infinite: true,
         speed: 8000,
-        slidesToShow: 5,
+        slidesToShow: 8,
         slidesToScroll: 2,
         autoplay: true,
         autoplaySpeed: 1,
-        pauseOnHover: true,
         cssEase: 'linear',
         swipeToSlide: true,
         responsive: [
@@ -57,7 +56,7 @@ export const ClientsCarousel: React.FC = () => {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 3,
                     slidesToScroll: 1,
                     speed:5000
                 },
@@ -65,7 +64,7 @@ export const ClientsCarousel: React.FC = () => {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 3,
                     slidesToScroll: 1,
                     speed:5000
                 },
@@ -77,7 +76,7 @@ export const ClientsCarousel: React.FC = () => {
         <div style={{ width: '100%', margin: '0 auto'}}>
             <Slider {...settings}>
                 {images.map((logo, index) => (
-                    <div key={index} style={{ padding: '10px', textAlign: 'center' }}>
+                     <div key={index} style={{ padding: '10px', textAlign: 'center' }}>
                         <LazyLoadImage
                             src={logo}
                             alt={`Partner ${index + 1}`}
