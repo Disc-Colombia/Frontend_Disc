@@ -74,7 +74,6 @@
 
 .particle-container *:not(canvas) {
   background-color: transparent;
-  /*z-index: 2;*/
 }
 
 @media (max-width: 1219px) {
@@ -152,7 +151,6 @@
 }
 .about-header-container {
   position: relative;
-  /*z-index: 1;*/
   padding: 0 30px;
 }
 
@@ -165,7 +163,6 @@
 }
 .about-header .background-mask {
   text-align: center;
-  /*z-index: inherit;*/
   padding: 0 50px;
 }
 
@@ -218,7 +215,6 @@
 
 .about-header-content {
   text-align: center;
-  /*max-width: 30em;*/
 }
 
  .quote-small {
@@ -269,10 +265,6 @@
   justify-content: center;
 }
 
-/*.slide-hero-content .rte {*/
-/*    z-index: 1;*/
-/*}*/
-
 .slide-hero-content.left {
   justify-content: left;
 }
@@ -314,7 +306,6 @@
 }
 
 .global-delivery-background {
-  /*z-index: 1;*/
   position: absolute;
   width: 90vw;
   top: 0;

@@ -5,6 +5,8 @@ import { ClientsCarousel } from "./ClientsCarousel";
 import us_mision from "../imgs/us_mision.png";
 import us_vision from "../imgs/us_vision.png";
 import aboutus from "../imgs/nosotros_main.jpg"
+import aboutuswebp from "../imgs/us_vision_11zon.webp";
+import misionwebp from "../imgs/mision_11zon.webp";
 
 import { partnerImages } from "../imgs/partners/partnerInfo.tsx";
 
@@ -40,7 +42,11 @@ export const AboutUs: React.FC = () => {
                 </p>
                 </div>
                 <div className="image--about">
+                  <picture>
+                    <source srcSet={aboutuswebp} type="image/webp"/>
                   <img className='my_img--about' src={aboutus as string} alt="Imagen binarios" />
+                  </picture>
+                  
                 </div>
               </div>
               <div className="about-header-controls main-padding-large ">
@@ -167,7 +173,6 @@ export const AboutUs: React.FC = () => {
               <ClientsCarousel />
             </div>
             </div>
-<div></div>
           </div>
         </div>
       </div>

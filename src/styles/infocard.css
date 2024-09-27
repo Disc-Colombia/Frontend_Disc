@@ -1,13 +1,8 @@
 @import './colores.css';
-
-
 @media (max-width: 768px){
-
     .box_text--tittle{
         height: 300px !important; 
     }
-
-
     .box-gradient{
         font-size: 1rem !important;
     }

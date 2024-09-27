@@ -12,7 +12,7 @@ type ConctaProps = {
 };
 
 export const ContactUs = ({ handleClose }: ConctaProps) => {
-  const navegate =useNavigate()
+  const navegate = useNavigate();
   const [data, setData] = React.useState<EmailProps>({
     name: "",
     service: "",
@@ -39,15 +39,15 @@ export const ContactUs = ({ handleClose }: ConctaProps) => {
     e.preventDefault();
 
     if (
-        data.name === "" ||
-        data.product === "" ||
-        data.phone === "" ||
-        data.email === "" ||
-        data.company === "" ||
-        data.country === "" ||
-        data.message === "" ||
-        data.lastname === "" ||
-        data.service === ""
+      data.name === "" ||
+      data.product === "" ||
+      data.phone === "" ||
+      data.email === "" ||
+      data.company === "" ||
+      data.country === "" ||
+      data.message === "" ||
+      data.lastname === "" ||
+      data.service === ""
     ) {
       toast.warning("Please ensure all fields are completed, thank you.");
     } else {
@@ -66,7 +66,7 @@ export const ContactUs = ({ handleClose }: ConctaProps) => {
           message: "",
           service: "",
         });
-        navegate("/")
+        navegate("/");
       } catch {
         toast.error(
             "There was an error sending your message. Please try again."
@@ -83,7 +83,7 @@ export const ContactUs = ({ handleClose }: ConctaProps) => {
           <i className=" bi bi-x-circle close" onClick={handleExit}></i>
         </div>
         <div className="container_information--contactform">
-          <h2>Contact Form</h2>
+          <h1 className="title_contact--form">Contact Form</h1>
           <p className="text_contact--form">
             If you would like to make a purchase, receive more information about
             our solutions, or make any other inquiries, we kindly ask you to fill
@@ -182,7 +182,6 @@ export const ContactUs = ({ handleClose }: ConctaProps) => {
                   onChange={handleChange}
               />
             </div>
-
             <button type="submit">Submit</button>
           </form>
           <ToastContainer  style={{ marginTop: 65  }}/>

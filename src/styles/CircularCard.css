@@ -1,6 +1,6 @@
 /* src/components/CircularCard.css */
 .circular-card {
-    width: 120px; /* Ajusta el tamaño según tus necesidades */
+    width: 120px;
     height: 120px;
     border-radius: 50%;
     overflow: hidden;

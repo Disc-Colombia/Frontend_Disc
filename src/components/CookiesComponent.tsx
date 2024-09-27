@@ -14,10 +14,8 @@ export const CookiesComponent = ({ isVisible, setIsVisible }: CookiesProps) => {
   useEffect(() => {
     const cookiesAccepted = Cookies.get("cookiesAccepted");
     if (cookiesAccepted) {
-      console.log("Cookie Accepted:", cookiesAccepted);
       setIsVisible(true); // Mostrar banner si la cookie no existe
     } else {
-      console.log("Cookie Accepted:", cookiesAccepted);
       setIsVisible(false); // Ocultar banner si la cookie ya existe
     }
   }, [setIsVisible]);
