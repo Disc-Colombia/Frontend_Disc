@@ -6,6 +6,8 @@ import { Header } from "./components/Header";
 import { Index } from "./pages/Index";
 import { ModalDemo } from "./pages/ModalDemo";
 import { AllServices} from "./pages/AllServices";
+import { AboutUs } from "./pages/AboutUs";
+import { HomeServices } from "./components/HomeServices";
 
 //Your routers here
 const router = createBrowserRouter([
@@ -16,6 +18,12 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Index />,
+      },{
+        path: '/aboutus',
+        element:<AboutUs/>
+      },{
+        path: '/services',
+        element:<AllServices/>
       },
       {
         path: "/scheduledemo",

@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import logo from "../imgs/logoDISC_sinfondo.png";
 import "../styles/index.css";
 import { Carrousel } from "../components/Carrousel";
-import { AboutUs } from "../components/AboutUs.tsx";
 import { HomeServices } from "../components/HomeServices.tsx";
 import { CookiesComponent } from "../components/CookiesComponent.tsx";
 import { Projects } from "../components/Projects.tsx";
@@ -12,6 +11,7 @@ import { ContactButton } from "../components/ContactButton.tsx";
 import { ContactUs } from "../components/ContactUs.tsx";
 import BeatLoader  from "react-spinners/BeatLoader";
 import { Ecosystem } from "../components/Ecosystem.tsx";
+import {Services} from '../components/Services.tsx';
 
 export const Index = () => {
   const navigator =useNavigate()
@@ -40,7 +40,7 @@ export const Index = () => {
                 alt="logo develoment"
             />
             <h2 className="text_index--tittle">
-              INNOVATIVE&nbsp; <span className="tittle_index--span">RESULTS</span>
+              INNOVATIVE RESULTS
             </h2>
           </div>
           {showForm ? (
@@ -63,8 +63,7 @@ export const Index = () => {
                   )}
                   <Carrousel />
                 </div>
-                <AboutUs />
-                <HomeServices />
+                <Services/>
                 <Ecosystem />
                 <Projects />
                 <FloatingButtons/>

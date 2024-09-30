@@ -30,7 +30,7 @@ export const Footers: React.FC = () => {
         </div>
         <div className="footer_social--networks">
           <div className="footer_container--contact">
-            <h3 className="social_tittle">Main headquarters in D.C.</h3>
+            <h3 className="social_tittle">Washington, DC</h3>
             <div className="footer_social-media">
               <div className="socialinformations">
                 <i className="bi bi-envelope contact"></i>
@@ -38,7 +38,7 @@ export const Footers: React.FC = () => {
               </div>
               <div className="socialinformations">
                 <i className="bi bi-whatsapp contact"></i>
-                <p className="informations_dis--paragraph">(1) 202-446878</p>
+                <p className="informations_dis--paragraph">(1) 202 446 8784</p>
               </div>
               <div className="socialinformations">
                 <i className="bi bi-geo-alt contact"></i>
@@ -50,7 +50,7 @@ export const Footers: React.FC = () => {
           </div>
         </div>
         <div className="footer_container--contact">
-          <h3 className="social_tittle">Colombia branch, Cali</h3>
+          <h3 className="social_tittle">Cali, Colombia</h3>
           <div className="footer_social-media">
             <div className="socialinformations">
               <i className="bi bi-envelope contact"></i>
@@ -58,7 +58,7 @@ export const Footers: React.FC = () => {
             </div>
             <div className="socialinformations">
               <i className="bi bi-whatsapp contact"></i>
-              <p className="informations_dis--paragraph">(57) 3502114492</p>
+              <p className="informations_dis--paragraph">(57) 350 211 4492</p>
             </div>
             <div className="socialinformations">
               <i className="bi bi-geo-alt contact"></i>
@@ -70,7 +70,7 @@ export const Footers: React.FC = () => {
         </div>
 
         <div className="footer_container--media">
-          <h3 className="social_tittle">Follow us on our social media</h3>
+          <h3 className="social_tittle">Follow us</h3>
           <div className="container_social--icon">
             <a
               href="https://www.instagram.com/innovationdisc/"

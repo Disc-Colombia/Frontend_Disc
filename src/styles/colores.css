@@ -15,3 +15,39 @@
   --font-makina: 'Kohne Makina', sans-serif;
                                                 
 }
+
+
+.title--span{
+  color: var(--LogoBackground);
+  font-family: var(--font-makina); 
+  font-weight: bolder;
+}
+
+.my_title--white{
+  font-family: var(--font-makina);
+  color: var(--White);
+  font-weight:  bolder;
+  font-size: 2.5rem;
+}
+
+.my_title--black{
+  font-family: var(--font-makina);
+  color: var(--Black);
+  font-weight:  bolder;
+  font-size: 2.5rem;
+}
+
+.my_paragraph--white{
+
+  font-family: var(--montserrat-font-family);
+  color: var(--White);
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+.my_paragraph--black{
+  font-family: var(--montserrat-font-family);
+  color: var(--Black);
+  font-size: 1.2rem;
+  text-align: justify;
+}

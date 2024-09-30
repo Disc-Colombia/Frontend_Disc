@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useState } from "react";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import logo from "../imgs/logoDISC_sinfondo.png";
 import logowebp from "../imgs/DISC.webp";
 
@@ -30,11 +30,10 @@ export const Header: React.FC = () => {
     <>
       <div className="container_header line-bottom">
         <div className="container_logo">
-          <Link to="home" smooth={true} duration={500}>
+          <Link to="/" onClick={() => handleActive("home")}>
             <picture>
               <source
                 className="container_logo--img"
-                onClick={() => handleActive("home")}
                 srcSet={logowebp}
                 type="image/webp"
               />
@@ -42,7 +41,6 @@ export const Header: React.FC = () => {
                 className="container_logo--img"
                 src={logo as string}
                 alt="logo development"
-                onClick={() => handleActive("home")}
               />
             </picture>
           </Link>
@@ -54,9 +52,7 @@ export const Header: React.FC = () => {
           <div className={`container_nav ${isMenuOpen ? "open" : ""}`}>
             <nav className="container_nav--lin">
               <Link
-                to="home"
-                smooth={true}
-                duration={500}
+                to="/"
                 className={`navegations_links ${
                   linkActive === "home" ? "active" : ""
                 }`}
@@ -65,9 +61,7 @@ export const Header: React.FC = () => {
                 Home
               </Link>
               <Link
-                to="aboutus"
-                smooth={true}
-                duration={500}
+                to="/aboutus"
                 className={`navegations_links ${
                   linkActive === "aboutus" ? "active" : ""
                 }`}
@@ -76,15 +70,22 @@ export const Header: React.FC = () => {
                 About us
               </Link>
               <Link
-                to="services"
-                smooth={true}
-                duration={500}
+                to="/services"
                 className={`navegations_links ${
                   linkActive === "services" ? "active" : ""
                 }`}
                 onClick={() => handleActive("services")}
               >
                 Services
+              </Link>
+              <Link
+                to="/contactus"
+                className={`navegations_links ${
+                  linkActive === "contact" ? "active" : ""
+                }`}
+                onClick={() => handleActive("contact")}
+              >
+                Contact us
               </Link>
             </nav>
           </div>
