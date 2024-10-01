@@ -21,10 +21,16 @@ export const CookiesComponent = ({ isVisible, setIsVisible }: CookiesProps) => {
   }, [setIsVisible]);
 
   const handleAccept = () => {
+  
     Cookies.set("cookiesAccepted", "true", { expires: 365 });
-
     setIsVisible(true);
     if (!isVisible) return null;
+  };
+  const rejectCookies = () => {
+    console.log("Cookies Rechazadas")
+    Cookies.remove('cookiesConsent');
+    setIsVisible(true);
+    // Aquí puedes eliminar cookies opcionales o evitar que se carguen scripts
   };
   return (
     <div className="cookie-banner">
@@ -34,7 +40,11 @@ export const CookiesComponent = ({ isVisible, setIsVisible }: CookiesProps) => {
           you agree to the use of all cookies. You can manage your preferences by
           clicking 'Cookie Settings.
       </p>
-      <button onClick={handleAccept}>Accept</button>
+      <button className="aceptcookies" value="acept" onClick={handleAccept}>Accept</button>
+      <button className="rejectcookies" value="reject" onClick={rejectCookies}>Reject</button>
+      <div>
+      <button className="configuraton_cookies"> Configuracion de Cookies</button>
+      </div>
     </div>
   );
 };

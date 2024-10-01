@@ -15,15 +15,35 @@
     font-weight: 400;
   }
   
-  .cookie-banner button {
+  /* .cookie-banner button {
     background-color:var(--LogoBackground);
     color: var(--White);
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+  } */
+  .aceptcookies{
+    background-color:var(--LogoBackground);
+    color: var(--White);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer; 
+    gap: 2rem;
+  }
+  .rejectcookies{
+    background-color:var(--Yelow);
+    color: var(--White);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer; 
+    gap: 2rem;
+    margin-left: 2rem;
   }
   
-  .cookie-banner button:hover {
+  .aceptcookies:hover {
     background-color:var(--LogoBackground)
   }
-  
+   
+  .aceptcookies:hover {
+    background-color:var(--Yelow)
+  }
