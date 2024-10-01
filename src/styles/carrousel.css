@@ -8,6 +8,7 @@
   max-width: 100vw;
   height: calc(100vh - 60px);
   margin: 0 auto;
+  pointer-events: none;
 }
 .title_carousel--slice{
   font-family: var( --font-makina);
