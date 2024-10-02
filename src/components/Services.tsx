@@ -5,7 +5,8 @@ import { useState } from 'react';
 import * as React from "react";
 import '../styles/sectionServices.css'
 
-import {
+import {SupportAgentOutlined as SupportAgentOutlinedIcon,
+    ReadMoreOutlined as ReadMoreOutlinedIcon,
     VerifiedUserOutlined as VerifiedUserOutlinedIcon,
     SettingsOutlined as SettingsOutlinedIcon,
     SettingsSuggestOutlined as SettingsSuggestOutlinedIcon,
@@ -19,6 +20,14 @@ import {
     ComputerOutlined as ComputerOutlinedIcon,
   } from "@mui/icons-material";
 
+
+  const iconStyle = { fontSize: 40, color: "#52b39d" };
+
+  const iconStyleanimate ={...iconStyle, 
+    animation: 'pulsegreen 2s infinite',
+    borderRadius: '50%', 
+    overflow: 'hidden'
+  }
 
   const CardSlider = () => {
     const [selectedSlide, setSelectedSlide] = useState('c1');
@@ -38,6 +47,7 @@ import {
               <div className="my_paragraph--white">
                 <h4>Human Service & Healthcare Systems Administration</h4>
                 <p>DISC supports a broad range of healthcare administrative and oversight processes. </p>
+                <Link to ='/Human-service' className="view_more--services"><ReadMoreOutlinedIcon style={iconStyleanimate} /></Link>
               </div>
             
           </label>
@@ -113,69 +123,84 @@ import {
     );
   };
   
+  
 
+  const cards = [
+    {
+      id: 1,
+
+      icon: <PsychologyOutlinedIcon style={iconStyle} />,
+      title: "Artificial Intelligence & Machine Learning",
+      
+    },
+    {
+      id: 2,
+      icon: <AccountTreeOutlinedIcon style={iconStyle} />,
+      title: "Database Management & Warehousing",
+      
+    },
+    {
+      id: 3,
+      
+      icon: <CloudOutlinedIcon style={iconStyle} />,
+      title: "Cloud Computing Consulting and Support",
+    }, 
+    {
+      id: 4,
+      icon: <SettingsSuggestOutlinedIcon style={iconStyle} />,
+      title: "Software Development & Maintenance",
+    },
+    {
+      id: 5,
+      icon: <BackupTableOutlinedIcon style={iconStyle} />,
+      title: "Data Migration & Systems Integration",
+      
+    },
+    {
+      id: 6,
+      icon: <ComputerOutlinedIcon style={iconStyle} />,
+      title: "Computers & Peripherals Wholesale",
+      
+    },
+    {
+      id: 7,
+      icon: <AdUnitsOutlinedIcon style={iconStyle} />,
+      title: "Mobile & Web App Development",
+      
+    },
+    {
+      id: 8,
+      icon: <GroupsOutlinedIcon style={iconStyle} />,
+      title: "Temporary Staffing Services",
+    
+    },
+    {
+      id: 9,
+      icon: <VerifiedUserOutlinedIcon style={iconStyle} />,
+      title: "CyberSecurity Consulting",
+      
+    },
+    {
+      id: 10,
+      icon: <TipsAndUpdatesOutlinedIcon style={iconStyle} />,
+      title: "Innovation Management",
+    },
+    {
+      id: 11,
+      icon: <SupportAgentOutlinedIcon style={iconStyle} />,
+      title: "Call Center Services",
+    },
+    {
+      id: 12,
+      icon: <SettingsOutlinedIcon style={iconStyle} />,
+      title: "General Services",
+    },
+  ];
+  
 export const Services: React.FC = () => {
     
 
-    const iconStyle = { fontSize: 40, color: "#52b39d" };
-
-    const cards = [
-      {
-        id: 1,
-        icon: <SettingsSuggestOutlinedIcon style={iconStyle} />,
-        title: "Software Development & Maintenance",
-      },
-      {
-        id: 2,
-        icon: <BackupTableOutlinedIcon style={iconStyle} />,
-        title: "Data Migration & Systems Integration",
-      },
-      {
-        id: 3,
-        icon: <AdUnitsOutlinedIcon style={iconStyle} />,
-        title: "Mobile & Web App Development",
-      },
-      {
-        id: 4,
-        icon: <PsychologyOutlinedIcon style={iconStyle} />,
-        title: "Artificial Intelligence & Machine Learning",
-      },
-      {
-        id: 5,
-        icon: <TipsAndUpdatesOutlinedIcon style={iconStyle} />,
-        title: "Innovation Management",
-      },
-      {
-        id: 6,
-        icon: <GroupsOutlinedIcon style={iconStyle} />,
-        title: "Temporary Staffing Services",
-      },
-      {
-        id: 7,
-        icon: <VerifiedUserOutlinedIcon style={iconStyle} />,
-        title: "CyberSecurity Consulting",
-      },
-      {
-        id: 8,
-        icon: <CloudOutlinedIcon style={iconStyle} />,
-        title: "Cloud Computing Consulting and Support",
-      },
-      {
-        id: 9,
-        icon: <AccountTreeOutlinedIcon style={iconStyle} />,
-        title: "Database Management & Warehousing",
-      },
-      {
-        id: 10,
-        icon: <ComputerOutlinedIcon style={iconStyle} />,
-        title: "Computers & Peripherals Wholesale",
-      },
-      {
-        id: 11,
-        icon: <SettingsOutlinedIcon style={iconStyle} />,
-        title: "General Services",
-      },
-    ];
+    
 
 
   return (
@@ -187,11 +212,8 @@ export const Services: React.FC = () => {
               WHAT WE<span className="title--span"> DO</span>
             </p>
             <p className="my_paragraph--white">
-              {" "}
-              DISC utilizes best practices to meet and exceed the needs of our
-              public and private sector global clients. Our flexible environment
-              is infused with technological expertise and rigorous compliance
-              standards. We don’t skim on excellence or cut corners.{" "}
+              
+            At DISC, we are committed to employing the highest industry standards and best practices to not only meet but exceed the expectations of our diverse clientele, ranging from public to private sector organizations across the globe. Our flexible and dynamic approach is deeply rooted in cutting-edge technological expertise, ensuring that we provide innovative solutions tailored to each client's unique needs. We operate within a framework of strict compliance and regulatory standards, leaving no room for shortcuts or compromises. Excellence is at the core of everything we do, driving us to consistently deliver high-quality results with precision and integrity.
             </p>          
         </div>
         <CardSlider />
@@ -210,26 +232,16 @@ export const Services: React.FC = () => {
           perfectly aligned with their specific goals and challenges.
         </p>
         <div className="container-cards-services">
-            <div className="card-grid-allservices">
-            {/* Primer grid para las 9 cartas */}
-                <div className="card-grid-main">
-                {cards.slice(0, 9).map((card) => (
-                <div key={card.id} className="card-allservices">
-                    <div className="card-icon-services">{card.icon}</div>
-                    <div className="card-title-services">{card.title}</div>
-                </div>
-                ))}
-            </div>
-        </div>
-        {/* Segundo grid para las 2 cartas restantes */}
-        <div className="card-grid-center">
-            {cards.slice(9).map((card) => (
-            <div key={card.id} className="card-allservices">
+        
+          <div className="card-grid-allservices">
+            {cards.map((card) => (
+              <div key={card.id} className="card-allservices">
                 <div className="card-icon-services">{card.icon}</div>
                 <div className="card-title-services">{card.title}</div>
-            </div>
+              </div>
             ))}
-        </div>
+          </div>
+        
         </div>
       </div>
 
