@@ -1,0 +1,80 @@
+@import "./colores.css";
+
+.container_cookiespolicy {
+  position: fixed;
+  top: -10;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: var(--White);
+  margin: 0 auto;
+  max-width: 100%;
+  justify-content: center;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+.cookies_setting--content {
+  text-align: justify;
+  margin: 2rem;
+  padding: 10px;
+}
+.title_cookies--setting {
+  font-family: var(--font-makina);
+  font-size: 2rem;
+  text-align: center;
+}
+.sitting_content,
+.setting_content--span {
+  font-family: var(--montserrat-font-family);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+.setting_content--span {
+  font-weight: 600;
+}
+.setting_cookies {
+  background-color: var(--gris-background);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: var(--montserrat-font-family);
+}
+.container_form--cookies {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ margin-left: 2rem;
+}
+.cookies_description {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-content: center;
+  column-gap: 2rem;
+  margin-bottom: 1rem;
+  
+}
+.cookie_information {
+  font-family: var(--montserrat-font-family);
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.container_btn--setting {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10rem;
+  
+}
+.btn_cookies--setting {
+  border: 2px solid var(--LogoBackground);
+  width: 5rem;
+  height: 2.5rem;
+  border-radius: 20px;
+}
+.btn_cookies--setting.acept:hover{
+background-color: var(--SombraAzulVerdoso);
+cursor: pointer;
+}

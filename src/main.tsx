@@ -6,6 +6,7 @@ import { Header } from "./components/Header";
 import { Index } from "./pages/Index";
 import { ModalDemo } from "./pages/ModalDemo";
 import { AllServices} from "./pages/AllServices";
+import { CookiesPolicy } from "./pages/CookiesPolicy";
 
 //Your routers here
 const router = createBrowserRouter([
@@ -23,6 +24,9 @@ const router = createBrowserRouter([
       },{
         path:"/AllServices",
         element: <AllServices/>
+      },{
+        path:"/cookiesPolicy",
+        element:<CookiesPolicy/>,
       }
     ],
   },

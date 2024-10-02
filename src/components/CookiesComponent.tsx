@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import Cookies from "js-cookie";
 import "../styles/cookies.css";
 import { Dispatch } from "react";
-import CookiesPolicy from "./CookiesPolicy";
+import CookiesSitting from "./CookiesSetting";
 type CookiesProps = {
   isVisible: boolean;
   setIsVisible: Dispatch<React.SetStateAction<boolean>>;
@@ -38,7 +38,7 @@ export const CookiesComponent = ({ isVisible, setIsVisible }: CookiesProps) => {
   return (
     <>
       {configuration ? (
-        <CookiesPolicy />
+        <CookiesSitting />
       ) : (
         <div className="cookie-banner">
           <p className="cookies_information">
@@ -57,12 +57,12 @@ export const CookiesComponent = ({ isVisible, setIsVisible }: CookiesProps) => {
           >
             Reject
           </button>
-          <div>
-            <button className="configuraton_cookies"
+          <div className="container_cookies--setting">
+            <button className="setting_cookies"
             onClick={handleConfiguration}
             >
               {" "}
-              Configuracion de Cookies
+              cookie settings
             </button>
           </div>
         </div>
