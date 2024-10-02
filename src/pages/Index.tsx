@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import logo from "../imgs/logoDISC_sinfondo.png";
 import "../styles/index.css";
 import { Carrousel } from "../components/Carrousel";
-import { HomeServices } from "../components/HomeServices.tsx";
 import { CookiesComponent } from "../components/CookiesComponent.tsx";
 import { Projects } from "../components/Projects.tsx";
 import { FloatingButtons } from "../components/FloatingButtons.tsx";
@@ -12,6 +11,7 @@ import { ContactUs } from "../components/ContactUs.tsx";
 import BeatLoader  from "react-spinners/BeatLoader";
 import { Ecosystem } from "../components/Ecosystem.tsx";
 import {Services} from '../components/Services.tsx';
+import { ClientsSection } from "../components/ClientsCarousel.tsx";
 
 export const Index = () => {
   const navigator =useNavigate()
@@ -64,6 +64,7 @@ export const Index = () => {
                   <Carrousel />
                 </div>
                 <Services/>
+                <ClientsSection/>
                 <Ecosystem />
                 <Projects />
                 <FloatingButtons/>

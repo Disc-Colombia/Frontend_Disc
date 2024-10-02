@@ -22,7 +22,7 @@ export const Box = ({ image, children, description, tittle }: BoxProps) => {
         </div>
       </div>
       <div className="text-content">
-        <h3 className="text_content--tittle">{tittle}</h3>
+        <h3 className="text_content--title">{tittle}</h3>
         <p className="text_content--text"> {children}</p>
       </div>
     </div>

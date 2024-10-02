@@ -1,24 +1,26 @@
 import * as React from "react";
-import gobierno from "../imgs/gobierno.png";
+import gobierno from "../imgs/gobierno.webp";
 import ong from "../imgs/ong.png";
-import { Link } from "react-router-dom";
-import corporations from "../imgs/corporaciones.png";
+import corporations from "../imgs/corporaciones.webp";
 import "../styles/ecosystem.css";
 import { Box } from "./Box";
+import { Link } from "react-router-dom";
+
+
 
 export const Ecosystem: React.FC = () => {
   return (
     <div className="container_content--ecosystem">
       <div className="container_ecosystem--general">
-        <div className="tittle_ecosystem_eco--">
-          <h2 className="tittle_ecosystem_ecosis">
-            Our <span className="tittle_ecosystem--span">ecosystem</span>
-          </h2>
+        <div className="title--ecosystem">
+          <p className="my_title--black">
+            OUR <span className="title--span">ECOSYSTEM</span>
+          </p>
         </div>
 
         <div className="container_ecosystem">
-          <div className="container_end--text">
-            <p className="agenci_text--end">
+          <div className="container--text">
+            <p className="container_text--end">
               The solutions proposed by DISC have been implemented by various
               organizations, including government agencies and Fortune 500
               companies. For over a decade, we have been a prominent resource in
@@ -65,13 +67,16 @@ export const Ecosystem: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="container_ecosystem--tittle">
-        <h1 className="tittle_ecosystem">GOING BEYOND YOUR&nbsp; <span className="about-header-controls-blurb--span">EXPECTATIONS!</span> </h1>
+      <div className="container_banner--title">
+        <div className="container_interbanner--title">
+        <p className="my_title--black">GOING BEYOND YOUR&nbsp; <span className="title--span">EXPECTATIONS!</span> </p>
         <div className="button_container">
           <Link to="/scheduledemo" className="demobutton">
             DEMO
           </Link>
         </div>
+        </div>
+       
       </div>
     </div>
   );

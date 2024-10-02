@@ -21,6 +21,7 @@
   color: var(--LogoBackground);
   font-family: var(--font-makina); 
   font-weight: bolder;
+  font-size: 2.5rem;
 }
 
 .my_title--white{

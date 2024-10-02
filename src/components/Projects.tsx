@@ -49,7 +49,7 @@ export const Projects: React.FC = () => {
       imageLarge: covid19Big
     },
     {
-      title: 'Covid-19 VACCINE PASSPORT',
+      title: 'COVID-19 VACCINE PASSPORT',
       description: 'Our company created the Covid-19 Vaccine Passport, a digital platform that provided secure proof of vaccination. This tool facilitated international travel and event participation by offering a reliable and portable record of immunization, showcasing our dedication to public health and innovation.',
       imageSmall: covidpassportIcon,
       imageLarge: covidpassportBig
@@ -71,9 +71,10 @@ export const Projects: React.FC = () => {
 
   return (
       <div className='container_projects'>
+        <div className="container--end">
         <div className='content_option'>
           <div className='container_text'>
-            <h2 className='tittle_content'>{selectedInfo.title}</h2>
+            <h2 className='title--span'>{selectedInfo.title}</h2>
             <p className='description_content'>{selectedInfo.description}</p>
           </div>
           <div className='container_content--projects'>
@@ -92,6 +93,9 @@ export const Projects: React.FC = () => {
 
         </div>
 
+        
+
+        </div>
         <div className='container_buttom_option'>
           {infoOptions.map((option, index) => (
               <button className='buttom_option' key={index} onClick={() => handleButtonClick(option)} >

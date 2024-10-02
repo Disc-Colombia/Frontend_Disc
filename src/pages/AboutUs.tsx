@@ -1,7 +1,6 @@
 import "../styles/aboutus.css";
 import * as React from "react";
 import { InfoCard } from "../components/InfoCard";
-import { ClientsCarousel } from "../components/ClientsCarousel";
 import us_mision from "../imgs/us_mision.png";
 import us_vision from "../imgs/us_vision.png";
 import aboutus from "../imgs/nosotros_main.jpg";

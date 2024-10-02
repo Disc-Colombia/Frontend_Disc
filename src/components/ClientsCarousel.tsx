@@ -19,7 +19,7 @@ import {
     client11
 } from '../imgs/clients';
 
-export const ClientsCarousel: React.FC = () => {
+const ClientsCarousel: React.FC = () => {
     const images = [
         client1,
         client2,
@@ -89,3 +89,21 @@ export const ClientsCarousel: React.FC = () => {
         </div>
     );
 };
+
+
+
+export const ClientsSection: React.FC = () => {
+    return (
+      <div className="oupartnets" style={{ margin: "20px" }}>
+        <div className="about-header-controls">
+          <p className="about-header-controls-blurb heading-four">
+            OUR&nbsp; <span className="about-header-controls-blurb--span"> CLIENTS</span>
+          </p>
+          
+        </div>
+        <div className="slide-hero-content">
+          <ClientsCarousel />
+        </div>
+      </div>
+    );
+  };

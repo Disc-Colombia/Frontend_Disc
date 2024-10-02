@@ -1,9 +1,11 @@
 import "bootstrap-icons/font/bootstrap-icons.css";
-import servicesimg from "../imgs/servicesimg.jpg";
 import { Link } from "react-router-dom";
 import { useState } from 'react';
 import * as React from "react";
+import { Tooltip, tooltipClasses,TooltipProps } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import '../styles/sectionServices.css'
+import '../styles/colores.css'
 
 import {SupportAgentOutlined as SupportAgentOutlinedIcon,
     ReadMoreOutlined as ReadMoreOutlinedIcon,
@@ -29,6 +31,21 @@ import {SupportAgentOutlined as SupportAgentOutlinedIcon,
     overflow: 'hidden'
   }
 
+  const CustomTooltip = styled(({ className, ...props }: TooltipProps) => (
+    <Tooltip {...props} arrow classes={{ popper: className }} />
+  ))(({ theme }) => ({
+    [`& .${tooltipClasses.tooltip}`]: {
+      backgroundColor: "var(--LogoBackground)",
+      fontFamily: "var(--monserrat-font-family)",
+      color: theme.palette.common.white,
+      boxShadow: theme.shadows[1],
+      fontSize: 12,
+    },
+    [`& .${tooltipClasses.arrow}`]: {
+      color: 'var(--LogoBackground)', // Color de la flecha
+    },
+  }));
+
   const CardSlider = () => {
     const [selectedSlide, setSelectedSlide] = useState('c1');
   
@@ -47,7 +64,11 @@ import {SupportAgentOutlined as SupportAgentOutlinedIcon,
               <div className="my_paragraph--white">
                 <h4>Human Service & Healthcare Systems Administration</h4>
                 <p>DISC supports a broad range of healthcare administrative and oversight processes. </p>
-                <Link to ='/Human-service' className="view_more--services"><ReadMoreOutlinedIcon style={iconStyleanimate} /></Link>
+                <CustomTooltip title="View more..."  placement='top'>
+                  <Link to ='/Human-Service' className="view_more--services"><ReadMoreOutlinedIcon style={iconStyleanimate} /></Link>
+
+                </CustomTooltip>
+                
               </div>
             
           </label>
@@ -64,7 +85,12 @@ import {SupportAgentOutlined as SupportAgentOutlinedIcon,
               <div className="my_paragraph--white">
                 <h4>IT Consulting</h4>
                 <p>Our team of experts can provide everything from staff augmentation to customized development.</p>
+                <CustomTooltip title="View more..."  placement='top'>
+                  <Link to ='/IT-Consulting' className="view_more--services"><ReadMoreOutlinedIcon style={iconStyleanimate} /></Link>
+
+              </CustomTooltip>
               </div>
+              
             
           </label>
   
@@ -80,8 +106,13 @@ import {SupportAgentOutlined as SupportAgentOutlinedIcon,
               <div className="my_paragraph--white">
                 <h4>Cybersecurity
                 </h4>
-                <p>We provide the most comprehensive data coverage for monitoring and detecting threats across digital channels.</p>
+                <p>We provide the most comprehensive data coverage for monitoring and detecting threats across digital channels and provides real-time intelligence.</p>
+                <CustomTooltip title="View more..."  placement='top'>
+                  <Link to ='/Cybersecurity' className="view_more--services"><ReadMoreOutlinedIcon style={iconStyleanimate} /></Link>
+
+                </CustomTooltip>
               </div>
+             
            
           </label>
   
@@ -97,8 +128,12 @@ import {SupportAgentOutlined as SupportAgentOutlinedIcon,
               <div className="my_paragraph--white">
                 <h4>Finance Solutions</h4>
                 <p>DISC is the premier provider for outsourced accounting support and consulting for billing, reporting, and revenue management.</p>
+                <CustomTooltip title="View more..."  placement='top'>
+                  <Link to ='/Finance-Solutions' className="view_more--services"><ReadMoreOutlinedIcon style={iconStyleanimate} /></Link>
+
+              </CustomTooltip>
               </div>
-            
+              
           </label>
 
           <input 
@@ -113,7 +148,12 @@ import {SupportAgentOutlined as SupportAgentOutlinedIcon,
               <div className="my_paragraph--white">
                 <h4>Customer Service</h4>
                 <p>From call center support to help desk operators, DISC ensures that every client interaction reflects a positive, personable, and professional impression.</p>
+                <CustomTooltip title="View more..."  placement='top'>
+                  <Link to ='/Customer-Service' className="view_more--services"><ReadMoreOutlinedIcon style={iconStyleanimate} /></Link>
+
+                </CustomTooltip>
               </div>
+             
             
           </label>
 

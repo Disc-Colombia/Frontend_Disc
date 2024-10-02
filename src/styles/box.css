@@ -5,14 +5,14 @@
   border-radius: 8px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   cursor: pointer;
-  height: 300px;
+  height: 305px;
   margin: 20px;
   padding: 0 20px;
   position: relative;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.025);
   text-align: center;
   transition: height 1000ms;
-  width: 260px;
+  width: 305px;
 }
 
 .tittle {
@@ -42,14 +42,15 @@
   z-index: 2;
 }
 
-.text_content--tittle {
+.text_content--title {
   font-family: var(--montserrat-font-family);
+  margin-top: 10px;
 }
 
 .text_content--text{
   font-family: var(--montserrat-font-family);
   text-align: justify;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 @media (max-width: 767px) {
@@ -60,7 +61,7 @@
 }
 
 .card.expanded {
-  height: 450px;
+  height: 500px;
 }
 
 .label {
@@ -204,7 +205,6 @@
 
 .title {
   font-family: var(--montserrat-font-family), sans-serif;
-  font-weight: 900;
   margin: 20px 0 12px;
 }
 

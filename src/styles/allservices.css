@@ -1,6 +1,6 @@
 
 /* Ajuste responsivo para dos filas */
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
   .card-grid-allservices  {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -25,5 +25,5 @@
   .card-allservices{
     width: 100%;
   }
-}
+} */
   

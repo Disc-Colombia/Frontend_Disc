@@ -157,6 +157,7 @@
   flex-direction: column;
   align-items: center;
   padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .about-header-controls-blurb {

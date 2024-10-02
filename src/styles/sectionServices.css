@@ -54,7 +54,6 @@
 
 
 .card--cardslider > .my_paragraph--white {
-    /* background-color: rgba(0, 0, 0, 0.548); */
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
@@ -129,7 +128,7 @@ input:checked + label .my_paragraph--white {
 }
 
 
-/*section technology partner*/
+/*section technology partner------------------------------------------------------------------------------------------------------------*/ 
 
 .container-text--allservices{
     display: flex;
@@ -178,7 +177,7 @@ input:checked + label .my_paragraph--white {
   
 
   .card-title-services {
-    font-size: 18px;
+    font-size: 1.2rem;
     margin-left: 10px;
     font-weight: bold;
   }
