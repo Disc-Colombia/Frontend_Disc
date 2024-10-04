@@ -38,7 +38,7 @@ export const CookiesComponent = ({ isVisible, setIsVisible }: CookiesProps) => {
   return (
     <>
       {configuration ? (
-        <CookiesSitting />
+        <CookiesSitting handleAccept={handleAccept} />
       ) : (
         <div className="cookie-banner">
           <p className="cookies_information">

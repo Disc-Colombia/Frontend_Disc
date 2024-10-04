@@ -1,10 +1,25 @@
-@import'./colores.css';
-.container_cookies--policy{
-    display: flex;
-    justify-content: center;
-    margin: 2rem;
-    flex-direction: column;
+@import "./colores.css";
+.container_cookies--policy {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  flex-direction: column;
 }
-.title_cookies--policy{
+.title_cookies--policy {
+  font-family: var(--font-makina);
+  font-size: 2rem;
+  font-weight: 600;
+}
+.text_cookies--policy{
+    font-family: var(--montserrat-font-family);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+.text_cookies--span{
+    font-weight: bold;
+    font-size: 1.2rem;
     font-family: var(--font-makina);
 }

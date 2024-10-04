@@ -32,3 +32,12 @@ export type DemoProps = {
   Phone: string;
   Description: string;
 };
+export type CookiesProps={
+  shareData_and_perfile:boolean,
+  storage_information:boolean,
+  activity_analysis:boolean,
+  perfil_and_publicity:boolean,
+  stadistic:boolean,
+  createPerfil:boolean,
+  shareData:boolean,
+}

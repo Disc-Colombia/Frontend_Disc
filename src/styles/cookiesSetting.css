@@ -10,7 +10,7 @@
   margin: 0 auto;
   max-width: 100%;
   justify-content: center;
-  max-height: 500px;
+  max-height: 550px;
   overflow-y: scroll;
 }
 .cookies_setting--content {
@@ -29,6 +29,8 @@
   font-size: 1.2rem;
   line-height: 1.5;
   font-weight: 300;
+  display: flex;
+  justify-content: center;
 }
 .setting_content--span {
   font-weight: 600;
@@ -68,13 +70,17 @@
   gap: 10rem;
   
 }
-.btn_cookies--setting {
+.btn_submit--cookies {
   border: 2px solid var(--LogoBackground);
-  width: 5rem;
+  width: 10rem;
   height: 2.5rem;
   border-radius: 20px;
+  
 }
 .btn_cookies--setting.acept:hover{
 background-color: var(--SombraAzulVerdoso);
 cursor: pointer;
+}
+.container_btn--submit{
+  margin-bottom: 4rem;
 }
