@@ -1,0 +1,10 @@
+@import'./colores.css';
+.container_cookies--policy{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    flex-direction: column;
+}
+.title_cookies--policy{
+    font-family: var(--font-makina);
+}

@@ -1,72 +1,67 @@
-
+import '../styles/cookiesPolicy.css';
 export const CookiesPolicy = () => {
   return (
-    <div>
-      <h2> Política de Cookies</h2>
+    <div className='container_cookies--policy'>
+      <h2 className='title_cookies--policy'> Cookies Policy</h2>
       <section>
-        Esta Política de Cookies explica cómo Development Innovation System
-        ("nosotros", "nuestro" o "nos") utiliza cookies y tecnologías de
-        seguimiento similares cuando visitas nuestro sitio web
+        This Cookies Policy explains how Development Innovation System
+        or our partners use cookies and similar tracking technologies when you visit our website
         https://discdc.com/
         <p>
           {" "}
-          1. ¿Qué son las cookies? Las cookies son pequeños archivos de texto
-          que se almacenan en tu dispositivo (ordenador, tableta, smartphone,
-          etc.) cuando visitas un sitio web. Ayudan a los sitios web a recordar
-          información sobre tu visita, como tu idioma preferido u otras
-          configuraciones, lo que facilita tu próxima visita y hace que el sitio
-          te sea más útil.{" "}
+          1. What are cookies? Cookies are small text files
+          that are stored on your device (computer, tablet, smartphone, etc.)
+          when you visit a website. They help websites remember
+          information about your visit, such as your preferred language or other settings,
+          making your next visit easier and the site more useful to you.
         </p>{" "}
         <p>
-          2. Tipos de cookies que utilizamos Utilizamos diferentes tipos de
-          cookies para varios propósitos. A continuación se explica cada una de
-          las categorías: Cookies necesarias: Estas cookies son esenciales para
-          que el sitio web funcione correctamente. Incluyen cookies que te
-          permiten iniciar sesión en áreas seguras del sitio. Cookies de
-          análisis o rendimiento: Estas cookies nos ayudan a analizar cómo
-          interactúan los visitantes con nuestro sitio web, lo que nos permite
-          mejorarlo al recopilar información anónima, como las páginas más
-          visitadas. Cookies de funcionalidad: Estas cookies permiten que el
-          sitio web ofrezca funcionalidades mejoradas y personalización, como
-          recordar tus preferencias de idioma o los detalles de inicio de
-          sesión. Cookies de publicidad o marketing: Estas cookies se utilizan
-          para mostrar anuncios que son relevantes para ti en función de tus
-          hábitos de navegación.
+          2. Types of cookies we use We use different types of
+          cookies for various purposes. Each of the categories is explained below:
+          Necessary cookies: These cookies are essential for the
+          proper functioning of the website. They include cookies that allow you
+          to log into secure areas of the site. Performance or analytics cookies:
+          These cookies help us analyze how visitors interact with our website,
+          allowing us to improve it by collecting anonymous information,
+          such as the most visited pages. Functionality cookies: These cookies
+          allow the website to offer enhanced functionality and personalization,
+          such as remembering your language preferences or login details.
+          Advertising or marketing cookies: These cookies are used
+          to display ads that are relevant to you based on your browsing habits.
         </p>{" "}
         <p>
           {" "}
-          3. Cómo utilizamos las cookies Utilizamos las cookies para: Asegurar
-          el correcto funcionamiento del sitio web. Analizar el tráfico en
-          nuestro sitio web. Proporcionar una experiencia personalizada al
-          usuario. Mostrar anuncios relevantes para los usuarios.
+          3. How we use cookies We use cookies to:
+          Ensure the proper functioning of the website.
+          Analyze traffic on our website.
+          Provide a personalized user experience.
+          Display relevant ads to users.
         </p>{" "}
         <p>
           {" "}
-          4. Gestión de las cookies Puedes controlar y gestionar las cookies de
-          diversas formas. La mayoría de los navegadores te permiten bloquear o
-          eliminar cookies. A continuación se incluyen enlaces a guías para
-          gestionar las cookies en los navegadores más comunes: Google Chrome
-          Mozilla Firefox Apple Safari Microsoft Edge Ten en cuenta que bloquear
-          las cookies podría afectar tu experiencia en nuestro sitio web.
+          4. Managing cookies You can control and manage cookies in
+          various ways. Most browsers allow you to block or delete cookies.
+          Below are links to guides for managing cookies in the most common browsers:
+          Google Chrome Mozilla Firefox Apple Safari Microsoft Edge
+          Please note that blocking cookies may affect your experience on our website.
         </p>{" "}
         <p>
           {" "}
-          5. Cookies de terceros Algunas cookies en nuestro sitio web son
-          establecidas por terceros para proporcionar servicios de análisis o
-          publicidad. Por ejemplo, utilizamos Google Analytics para rastrear el
-          tráfico y el comportamiento de los usuarios en nuestro sitio.
+          5. Third-party cookies Some cookies on our website are set
+          by third parties to provide analytics or advertising services.
+          For example, we use Google Analytics to track traffic
+          and user behavior on our site.
         </p>{" "}
         <p>
           {" "}
-          6. Cambios en esta Política de Cookies Podemos actualizar esta
-          Política de Cookies de vez en cuando. Cualquier cambio será publicado
-          en esta página con una nueva fecha de "Última actualización".
+          6. Changes to this Cookies Policy We may update this
+          Cookies Policy from time to time. Any changes will be posted
+          on this page with a new "Last Updated" date.
         </p>{" "}
         <p>
           {" "}
-          7. Contacto Si tienes alguna pregunta sobre nuestro uso de cookies,
-          puedes contactarnos a través de: Correo electrónico: [Tu correo de
-          contacto] Sitio web: https://discdc.com/
+          7. Contact If you have any questions about our use of cookies,
+          you can contact us at: Email: [Your contact email] Website: https://discdc.com/
         </p>
       </section>
     </div>
