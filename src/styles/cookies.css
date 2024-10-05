@@ -1,60 +1,59 @@
-@import './colores.css';
+@import "./colores.css";
 .cookie-banner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color:var(--gris-sombra);
-    color: var(--White);
-    padding: 15px;
-    text-align: center;
-    z-index: 1000;
-  }
-  .cookies_information{
-    font-family: var(--montserrat-font-family);
-    font-weight: 400;
-  }
-  .container_cookies--setting{
-    margin-top: 3rem;
-    margin-bottom: 2rem;
-  }
-  /* .cookie-banner button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--gris-sombra);
+  color: var(--White);
+  padding: 15px;
+  text-align: center;
+  z-index: 1000;
+}
+.cookies_information {
+  font-family: var(--montserrat-font-family);
+  font-weight: 400;
+}
+.container_cookies--setting {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+/* .cookie-banner button {
     background-color:var(--LogoBackground);
     color: var(--White);
     border: none;
     padding: 10px 20px;
     cursor: pointer;
   } */
-  .aceptcookies{
-    background-color:var(--LogoBackground);
-    color: var(--White);
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer; 
-    gap: 2rem;
-    border-radius: 5px;
-    font-family: var(--montserrat-font-family);
-  }
-  .rejectcookies{
-    background-color:var(--Yelow);
-    color: var(--White);
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer; 
-    gap: 2rem;
-    margin-left: 2rem;
-    border-radius: 5px;
-    font-family: var(--montserrat-font-family);
-  }
-  
-  .aceptcookies:hover {
-    background-color:var(--LogoBackground)
-  }
-   
-  .rejectcookies:hover {
-    background-color:var(--Yelow)
-  }
+.aceptcookies {
+  background-color: var(--LogoBackground);
+  color: var(--White);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  gap: 2rem;
+  border-radius: 5px;
+  font-family: var(--montserrat-font-family);
+}
+.rejectcookies {
+  background-color: var(--Yelow);
+  color: var(--White);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  gap: 2rem;
+  margin-left: 2rem;
+  border-radius: 5px;
+  font-family: var(--montserrat-font-family);
+}
 
+.aceptcookies:hover {
+  background-color: var(--LogoBackground);
+}
+
+.rejectcookies:hover {
+  background-color: var(--Yelow);
+}
 
 .container_cookiespolicy {
   position: fixed;
@@ -103,7 +102,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
- margin-left: 2rem;
+  margin-left: 2rem;
 }
 .cookies_description {
   display: grid;
@@ -112,9 +111,9 @@
   align-content: center;
   column-gap: 2rem;
   margin-bottom: 1rem;
-  
 }
-.cookie_information {
+.cookie_information,
+.label_text {
   font-family: var(--montserrat-font-family);
   font-weight: 400;
   font-size: 1.2rem;
@@ -124,19 +123,17 @@
   flex-direction: row;
   justify-content: center;
   gap: 10rem;
-  
 }
 .btn_submit--cookies {
   border: 2px solid var(--LogoBackground);
   width: 10rem;
   height: 2.5rem;
   border-radius: 20px;
-  
 }
-.btn_cookies--setting.acept:hover{
-background-color: var(--SombraAzulVerdoso);
-cursor: pointer;
+.btn_cookies--setting.acept:hover {
+  background-color: var(--SombraAzulVerdoso);
+  cursor: pointer;
 }
-.container_btn--submit{
+.container_btn--submit {
   margin-bottom: 4rem;
 }

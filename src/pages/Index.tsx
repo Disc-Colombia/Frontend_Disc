@@ -67,7 +67,7 @@ export const Index = () => {
                 <HomeServices />
                 <Ecosystem />
                 <Projects />
-                <FloatingButtons/>
+               
               </>
           )}
           <ContactButton handleShowForm={handleShowForm} />{" "}

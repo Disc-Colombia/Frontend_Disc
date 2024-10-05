@@ -7,6 +7,7 @@ import { Index } from "./pages/Index";
 import { ModalDemo } from "./pages/ModalDemo";
 import { AllServices} from "./pages/AllServices";
 import { CookiesPolicy } from "./pages/CookiesPolicy";
+import { FloatingButtons } from "./components/FloatingButtons";
 
 //Your routers here
 const router = createBrowserRouter([
@@ -34,5 +35,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <RouterProvider router={router} />
+    <FloatingButtons/>
   </StrictMode>
 );

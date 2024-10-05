@@ -88,7 +88,7 @@ export const CookiesComponent = ({ isVisible, setIsVisible }: CookiesProps) => {
           <div className="container_form--cookies">
             <form id="cookiesForms" onSubmit={handleSubmit}>
               <div className="cookies_description">
-                <label>
+                <label className="label_text">
                   Share data and profiles for analysis and personalized
                   advertising.
                 </label>
@@ -101,7 +101,7 @@ export const CookiesComponent = ({ isVisible, setIsVisible }: CookiesProps) => {
               </div>
 
               <div className="cookies_description">
-                <label>Storage and access to information.</label>
+                <label className="label_text">Storage and access to information.</label>
                 <input
                   type="checkbox"
                   name="storage_information"
@@ -111,7 +111,7 @@ export const CookiesComponent = ({ isVisible, setIsVisible }: CookiesProps) => {
               </div>
 
               <div className="cookies_description">
-                <label>Actively analyze device characteristics.</label>
+                <label className="label_text">Actively analyze device characteristics.</label>
                 <input
                   type="checkbox"
                   name="activity_analysis"
@@ -121,7 +121,7 @@ export const CookiesComponent = ({ isVisible, setIsVisible }: CookiesProps) => {
               </div>
 
               <div className="cookies_description">
-                <label>Personalized advertising from advertisers.</label>
+                <label className="label_text">Personalized advertising from advertisers.</label>
                 <input
                   type="checkbox"
                   name="perfil_and_publicity"
@@ -131,7 +131,7 @@ export const CookiesComponent = ({ isVisible, setIsVisible }: CookiesProps) => {
               </div>
 
               <div className="cookies_description">
-                <label>Understanding the audience through statistics.</label>
+                <label className="label_text">Understanding the audience through statistics.</label>
                 <input
                   type="checkbox"
                   name="stadistic"
@@ -141,7 +141,7 @@ export const CookiesComponent = ({ isVisible, setIsVisible }: CookiesProps) => {
               </div>
 
               <div className="cookies_description">
-                <label>Create profiles for personalized advertising</label>
+                <label className="label_text">Create profiles for personalized advertising</label>
                 <input
                   type="checkbox"
                   name="createPerfil"
