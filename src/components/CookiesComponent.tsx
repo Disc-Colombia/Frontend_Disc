@@ -51,9 +51,11 @@ export const CookiesComponent = ({ isVisible, setIsVisible }: CookiesProps) => {
     });
     setIsVisible(true);
     if (!isVisible) return null;
+    //aqui puedes correr los escripts para las cookies aceptadas
   };
   const rejectCookies = () => {
     Cookies.remove("cookiesConsent");
+    Cookies.remove("userPreferences")
     setIsVisible(true);
     // Aquí puedes eliminar cookies opcionales o evitar que se carguen scripts
   };
