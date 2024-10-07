@@ -27,6 +27,8 @@ const cookiePreferencesLabels: { [key: string]: string } = {
   createProfile: "Create profiles for personalized advertising",
 };
 
+const TRACKING_ID = process.env.VITE_APP_TRACKING_ID;
+
 export const CookiesComponent = () => {
   const [isVisible, setIsVisible] = useState<boolean>(true);
   const [isConfigurationVisible, setIsConfigurationVisible] = useState<boolean>(false);
@@ -88,32 +90,10 @@ export const CookiesComponent = () => {
     });
   };
 
-  // V1 mistral
-  // const loadGoogleAnalytics = () => {
-  //   if (typeof window.gtag === 'function' || !cookiePreferences.statistics) return; // Prevent loading multiple times and only load if statistics are enabled
-  //
-  //   const script = document.createElement("script");
-  //   script.async = true;
-  //   script.src = "https://www.googletagmanager.com/gtag/js?id=G-JZ8M7Z14GF";
-  //   document.head.appendChild(script);
-  //
-  //   window.dataLayer = window.dataLayer || [];
-  //   function gtag(...args: any[]) {
-  //     window.dataLayer.push(args);
-  //   }
-  //   window.gtag = gtag;
-  //   gtag("js", new Date());
-  //   gtag("config", "G-JZ8M7Z14GF", {
-  //     anonymize_ip: true, // For privacy reasons
-  //   });
-  //   console.log("Google Analytics loaded successfully.");
-  // };
-
-  // V2 gpt
   const loadGoogleAnalytics = () => {
-    if (!cookiePreferences.statistics) return; // Solo cargar si las estadísticas están permitidas
+    if (!cookiePreferences.statistics) return; // Only load if the statistics are allowed
 
-    // Evitar cargar múltiples veces
+    // Avoid to load multiple times
     if (typeof window.gtag !== 'undefined') {
       console.log("Google Analytics ya ha sido cargado.");
       return;
@@ -121,7 +101,7 @@ export const CookiesComponent = () => {
 
     const script = document.createElement("script");
     script.async = true;
-    script.src = "https://www.googletagmanager.com/gtag/js?id=G-JZ8M7Z14GF";
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G"+TRACKING_ID;
     script.onload = () => {
       window.dataLayer = window.dataLayer || [];
       function gtag(...args: any[]) {
@@ -129,8 +109,8 @@ export const CookiesComponent = () => {
       }
       window.gtag = gtag;
       gtag("js", new Date());
-      gtag("config", "G-JZ8M7Z14GF", {
-        anonymize_ip: true, // Anonimizar IP por privacidad
+      gtag("config", TRACKING_ID, {
+        anonymize_ip: true, // Anonymize IP for privacy
       });
       console.log("Google Analytics cargado exitosamente.");
     };
