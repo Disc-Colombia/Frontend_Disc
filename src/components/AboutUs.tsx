@@ -6,7 +6,6 @@ import us_mision from "../imgs/us_mision.png";
 import us_vision from "../imgs/us_vision.png";
 import aboutus from "../imgs/nosotros_main.jpg"
 import aboutuswebp from "../imgs/us_vision_11zon.webp";
-import misionwebp from "../imgs/mision_11zon.webp";
 
 import { partnerImages } from "../imgs/partners/partnerInfo.tsx";
 
