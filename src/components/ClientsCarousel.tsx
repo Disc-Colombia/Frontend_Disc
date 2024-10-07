@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../styles/clientsCarousel.css'
+import "../styles/aboutus.css";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import {
@@ -36,6 +37,7 @@ const ClientsCarousel: React.FC = () => {
 
     const settings = {
         dots: false,
+        arrows:false,
         infinite: true,
         speed: 8000,
         slidesToShow: 8,
@@ -96,8 +98,8 @@ export const ClientsSection: React.FC = () => {
     return (
       <div className="oupartnets" style={{ margin: "20px" }}>
         <div className="about-header-controls">
-          <p className="about-header-controls-blurb heading-four">
-            OUR&nbsp; <span className="about-header-controls-blurb--span"> CLIENTS</span>
+          <p className="my_title--black">
+            OUR<span className="title--span"> CLIENTS</span>
           </p>
           
         </div>

@@ -75,9 +75,6 @@
 }
 
 
-input {
-    display: none;
-}
 
 input:checked + label {
     width: 600px;
@@ -105,6 +102,10 @@ input:checked + label .my_paragraph--white {
     background-image: url('../imgs/services/customerservice.webp');
 }
 
+
+.input_imgs--services{
+    display: none;
+}
 
 .view_more--services{
   display: flex;
@@ -158,7 +159,7 @@ input:checked + label .my_paragraph--white {
   
   /* CardGrid.css */
   .card-grid-allservices {
-  
+    width: 1230px;
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Distribuye las cards en 3 columnas */
     
@@ -169,7 +170,7 @@ input:checked + label .my_paragraph--white {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    width: 434px;
+    width: 410px;
     height: 100px;
     color: var(--Black);
     border-radius: 8px;
@@ -177,8 +178,10 @@ input:checked + label .my_paragraph--white {
   
 
   .card-title-services {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-left: 10px;
-    font-weight: bold;
+    font-weight: bolder;
   }
   
+  
+ 

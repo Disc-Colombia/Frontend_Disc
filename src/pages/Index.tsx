@@ -12,6 +12,7 @@ import BeatLoader  from "react-spinners/BeatLoader";
 import { Ecosystem } from "../components/Ecosystem.tsx";
 import {Services} from '../components/Services.tsx';
 import { ClientsSection } from "../components/ClientsCarousel.tsx";
+import { PartnersSection } from "../components/Partners.tsx";
 
 export const Index = () => {
   const navigator =useNavigate()
@@ -67,6 +68,7 @@ export const Index = () => {
                 <ClientsSection/>
                 <Ecosystem />
                 <Projects />
+                <PartnersSection/>
                 <FloatingButtons/>
               </>
           )}

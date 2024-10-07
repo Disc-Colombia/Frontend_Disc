@@ -2,8 +2,10 @@
 
 .container_demo {
   display: flex;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
+
 }
 .container_demo--product {
   margin-left: 1rem;
@@ -35,20 +37,17 @@
 .demotitle {
   font-family: var(--font-makina);
 }
-.demo_information {
-  font-family: var(--montserrat-font-family);
-  text-align: justify;
-}
+
 .container_close--icon {
   display: flex;
   flex-direction: row-reverse;
   margin-top: 0;
 }
-.modal_close {
+.bi-x-circle {
   font-size: 1.5rem;
   color: var(--White);
 }
-.modal_close:hover {
+.bi-x-circle:hover {
   cursor: pointer;
 }
 .container_maternapp--image {
@@ -86,21 +85,26 @@
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
   }
+
 }
 .formulario_demo {
   display: flex;
   flex-direction: column;
 }
-.container_content--tittle {
-  text-align: center;
-}
+
+
+
 .container_input--label {
   display: flex;
+  font-family: var(--montserrat-font-family);
+  font-size: 1.2rem;
   flex-direction: column;
   margin: 2px;
+  
+  
 }
-.input_demo,
-.input_textarea {
+
+.input_demo, .input_textarea {
   padding: 10px;
   border-radius: 10px;
   border: none;

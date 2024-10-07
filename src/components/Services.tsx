@@ -53,6 +53,7 @@ import {SupportAgentOutlined as SupportAgentOutlinedIcon,
       <div className="wrapper--cardslider">
         <div className="container--cardslider">
           <input 
+            className="input_imgs--services"
             type="radio" 
             name="slide" 
             id="c1" 
@@ -62,7 +63,7 @@ import {SupportAgentOutlined as SupportAgentOutlinedIcon,
           <label htmlFor="c1" className="card--cardslider">
         
               <div className="my_paragraph--white">
-                <h4>Human Service & Healthcare Systems Administration</h4>
+                <p>Human Service & Healthcare Systems Administration</p>
                 <p>DISC supports a broad range of healthcare administrative and oversight processes. </p>
                 <CustomTooltip title="View more..."  placement='top'>
                   <Link to ='/Human-Service' className="view_more--services"><ReadMoreOutlinedIcon style={iconStyleanimate} /></Link>
@@ -74,6 +75,7 @@ import {SupportAgentOutlined as SupportAgentOutlinedIcon,
           </label>
   
           <input 
+          className="input_imgs--services"
             type="radio" 
             name="slide" 
             id="c2" 
@@ -83,7 +85,7 @@ import {SupportAgentOutlined as SupportAgentOutlinedIcon,
           <label htmlFor="c2" className="card--cardslider">
             
               <div className="my_paragraph--white">
-                <h4>IT Consulting</h4>
+                <p>IT Consulting</p>
                 <p>Our team of experts can provide everything from staff augmentation to customized development.</p>
                 <CustomTooltip title="View more..."  placement='top'>
                   <Link to ='/IT-Consulting' className="view_more--services"><ReadMoreOutlinedIcon style={iconStyleanimate} /></Link>
@@ -95,6 +97,7 @@ import {SupportAgentOutlined as SupportAgentOutlinedIcon,
           </label>
   
           <input 
+          className="input_imgs--services"
             type="radio" 
             name="slide" 
             id="c3" 
@@ -104,8 +107,8 @@ import {SupportAgentOutlined as SupportAgentOutlinedIcon,
           <label htmlFor="c3" className="card--cardslider">
             
               <div className="my_paragraph--white">
-                <h4>Cybersecurity
-                </h4>
+                <p>Cybersecurity
+                </p>
                 <p>We provide the most comprehensive data coverage for monitoring and detecting threats across digital channels and provides real-time intelligence.</p>
                 <CustomTooltip title="View more..."  placement='top'>
                   <Link to ='/Cybersecurity' className="view_more--services"><ReadMoreOutlinedIcon style={iconStyleanimate} /></Link>
@@ -117,6 +120,7 @@ import {SupportAgentOutlined as SupportAgentOutlinedIcon,
           </label>
   
           <input 
+          className="input_imgs--services"
             type="radio" 
             name="slide" 
             id="c4" 
@@ -126,7 +130,7 @@ import {SupportAgentOutlined as SupportAgentOutlinedIcon,
           <label htmlFor="c4" className="card--cardslider">
            
               <div className="my_paragraph--white">
-                <h4>Finance Solutions</h4>
+                <p>Finance Solutions</p>
                 <p>DISC is the premier provider for outsourced accounting support and consulting for billing, reporting, and revenue management.</p>
                 <CustomTooltip title="View more..."  placement='top'>
                   <Link to ='/Finance-Solutions' className="view_more--services"><ReadMoreOutlinedIcon style={iconStyleanimate} /></Link>
@@ -137,6 +141,7 @@ import {SupportAgentOutlined as SupportAgentOutlinedIcon,
           </label>
 
           <input 
+          className="input_imgs--services"
             type="radio" 
             name="slide" 
             id="c5" 
@@ -146,7 +151,7 @@ import {SupportAgentOutlined as SupportAgentOutlinedIcon,
           <label htmlFor="c5" className="card--cardslider">
             
               <div className="my_paragraph--white">
-                <h4>Customer Service</h4>
+                <p>Customer Service</p>
                 <p>From call center support to help desk operators, DISC ensures that every client interaction reflects a positive, personable, and professional impression.</p>
                 <CustomTooltip title="View more..."  placement='top'>
                   <Link to ='/Customer-Service' className="view_more--services"><ReadMoreOutlinedIcon style={iconStyleanimate} /></Link>

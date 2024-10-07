@@ -5,7 +5,7 @@ import * as React from "react";
 
 export const Footers: React.FC = () => {
   return (
-    <div className="footer_container">
+    <div className="footer_container" id="my_footer">
       <div className="footer_logo">
         <div className="containe_section--logo">
           <div className="footer_container--logo">
@@ -79,13 +79,13 @@ export const Footers: React.FC = () => {
             >
               <i className=" media bi bi-instagram"></i>
             </a>
-            <a href="https://www.youtube.com/@MaternAPPTV/">
+            <a href="https://www.youtube.com/@MaternAPPTV/" target="_blank">
               <i className=" media bi bi-youtube"></i>
             </a>
-            <a href="https://www.facebook.com/disc.dc.58?mibextid=ZbWKwL">
+            <a href="https://www.facebook.com/disc.dc.58?mibextid=ZbWKwL" target="_blank">
               <i className=" media bi bi-facebook"></i>
             </a>
-            <a href="https://www.linkedin.com/company/development-innovation-system/">
+            <a href="https://www.linkedin.com/company/development-innovation-system/" target="_blank">
               <i className=" media bi bi-linkedin"></i>
             </a>
           </div>

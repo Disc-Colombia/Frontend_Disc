@@ -15,9 +15,9 @@ export const ModalDemo: React.FC = () => {
   const [data, setData] = React.useState<DemoProps>({
     FirstName: "",
     LastName: "",
-    WorkerEmail: "",
-    CompanyName: "",
-    Title: "",
+    Email: "",
+    Company: "",
+    Job: "",
     Phone: "",
     Description: "",
   });
@@ -54,11 +54,10 @@ export const ModalDemo: React.FC = () => {
     if (
       data.FirstName === "" ||
       data.LastName === "" ||
-      !emailRegex.test(data.WorkerEmail) ||
-      data.CompanyName === "" ||
-      data.Title === "" ||
-      data.Phone === "" ||
-      data.Description === "" || !captchaValid
+      !emailRegex.test(data.Email) ||
+      data.Company === "" ||
+      data.Job === "" ||
+      data.Phone === "" || !captchaValid
     ) {
       toast.error("Dear user, all fields are required and CAPTCHA must be completed.");
       //return;
@@ -83,9 +82,9 @@ export const ModalDemo: React.FC = () => {
           setData({
             FirstName: "",
             LastName: "",
-            WorkerEmail: "",
-            CompanyName: "",
-            Title: "",
+            Email: "",
+            Company: "",
+            Job: "",
             Phone: "",
             Description: "",
           });
@@ -109,10 +108,10 @@ export const ModalDemo: React.FC = () => {
     <div className="container_demo">
       <div className="container_demo--product">
         <div className="container_maternapp--image">
-          <h2 className="title_demo">
-            Get information and execute strategy all in one place.
-          </h2>
-          <p className="demo_information">
+          <p className="my_title--black" style={{textAlign:'center'}}>
+            Get information and execute strategy<span className="title--span"> all in one place.</span> 
+          </p>
+          <p className="my_paragraph--black">
             Ready to boost your business strategy? Schedule a 30-minute
             call/conversation with our team. We’ll discuss your goals, any
             challenges you’re facing, and the things you’re looking software.
@@ -130,9 +129,9 @@ export const ModalDemo: React.FC = () => {
       </div>
       <div className="container_content">
         <div className="container_close--icon">
-          <i className="bi bi-x-circle modal_close" onClick={handleBack}></i>
+          <i className="bi bi-x-circle" onClick={handleBack}></i>
         </div>
-        <div className="container_content--tittle">
+        <div className="my_title--black" style={{textAlign:'center'}}>
           <h2 className="demotitle">Schedule a Demo</h2>
         </div>
         <form className="formulario_demo" onSubmit={handleSubmit}>
@@ -166,34 +165,34 @@ export const ModalDemo: React.FC = () => {
               <input
                   className="input_demo"
                   type="email"
-                  name="WorkerEmail"
-                  id="WorkerEmail"
+                  name="Email"
+                  id="Email"
                   placeholder="Email"
-                  value={data.WorkerEmail}
+                  value={data.Email}
                   onChange={handleChange}
               />
             </div>
             <div className="container_input--label">
-              <label htmlFor="CompanyName">Company Name:*</label>
+              <label htmlFor="Company">Company Name:*</label>
               <input
                   className="input_demo"
                   type="text"
-                  name="CompanyName"
-                  id="CompanyName"
-                  placeholder="Company name"
-                  value={data.CompanyName}
+                  name="Company"
+                  id="Company"
+                  placeholder="Company"
+                  value={data.Company}
                   onChange={handleChange}
               />
             </div>
             <div className="container_input--label">
-              <label htmlFor="Title">Title:*</label>
+              <label htmlFor="Job">Job:*</label>
               <input
                   className="input_demo"
                   type="text"
-                  name="Title"
-                  id="Title"
-                  placeholder="Title "
-                  value={data.Title}
+                  name="Job"
+                  id="Job"
+                  placeholder="Job "
+                  value={data.Job}
                   onChange={handleChange}
               />
             </div>
@@ -212,7 +211,7 @@ export const ModalDemo: React.FC = () => {
           </div>
 
           <div className="container_input--label">
-            <label htmlFor="Description">Description:*</label>
+            <label htmlFor="Description">Description:</label>
             <textarea
                 className="input_textarea"
                 name="Description"
@@ -235,7 +234,7 @@ export const ModalDemo: React.FC = () => {
               {" "}
               Request Demo
             </button>
-          </div>
+          </div> 
         </form>
       </div>
       <ToastContainer/>

@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../imgs/logoDISC_sinfondo.png";
 import logowebp from "../imgs/DISC.webp";
-
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../styles/headers.css";
 import { Outlet, useNavigate } from "react-router-dom";
@@ -11,7 +10,7 @@ import { Footers } from "./Footers";
 
 export const Header: React.FC = () => {
   const [linkActive, setLinkActive] = useState("");
-  const [isMenuOpen, setIsMenuOpen] = useState(false); //controla estado del menu
+  const [isMenuOpen, setIsMenuOpen] = useState(false); 
   const navegate = useNavigate();
 
   const toggleMenu = () => {

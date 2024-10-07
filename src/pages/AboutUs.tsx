@@ -4,17 +4,15 @@ import { InfoCard } from "../components/InfoCard";
 import us_mision from "../imgs/us_mision.png";
 import us_vision from "../imgs/us_vision.png";
 import aboutus from "../imgs/nosotros_main.jpg";
-import aboutuswebp from "../imgs/fondo_disc_1.webp";
-import { partnerImages } from "../imgs/partners/partnerInfo.tsx";
+import aboutuswebp from "../imgs/fondo_maternapp.webp";
 
-// Componente para la sección de encabezado
+
 const HeaderSection: React.FC = () => {
   return (
-    <div className="about-header">
       <div className="about-header-content">
         <div className="content--text-about">
-          <h1 className="tittle--aboutUs">
-            DEVELOPMENT INNOVATION SYSTEM C <span className="tittle--aboutUs_span">(DISC)</span>
+          <h1 className="my_title--white">
+            DEVELOPMENT INNOVATION SYSTEM C <span className="title--span">(DISC)</span>
           </h1>
           <p className="about_header-content--text">
             We are a company of innovative technological solutions that transform and enhance a digital world by offering multiple specialized services in software development and system integration. Our multilingual team has fostered strong business relationships with federal, state, local entities and NGOs worldwide. We have more than a decade of experience, with headquarters in Washington, DC., and offices in Colombia.
@@ -27,12 +25,10 @@ const HeaderSection: React.FC = () => {
           </picture>
         </div>
       </div>
-      
-    </div>
   );
 };
 
-// Componente para la sección de Misión y Visión
+
 const MissionVision: React.FC = () => {
   const aboutUsContent = {
     mission:
@@ -63,93 +59,19 @@ const MissionVision: React.FC = () => {
   );
 };
 
-// Componente para la sección de Partners
-const PartnersSection: React.FC = () => {
-  return (
-    <div className="outpartnes" style={{ margin: "20px" }}>
-      <div className="slide-hero-header">
-        <p className="slide-hero-header-eyebrow quote-small">We are...</p>
-        <h1 className="heading-three">Partnered With</h1>
-      </div>
-      <div className="slide-hero-content">
-        <div className="logo-garden logo-garden--is-dark">
-          <div className="logo-garden-gallery">
-            <div className="logo-garden-gallery-scroller smooth" style={{ transform: "translateX(0%)" }}>
-              <div className="logo-garden-gallery-row">
-                {partnerImages.slice(0, 4).map((partner, index) => (
-                  <div key={index} className="logo-garden-gallery-row-card">
-                    <a href={partner.link}>
-                      <img src={partner.src} alt={partner.alt} width={500} height={200} />
-                    </a>
-                  </div>
-                ))}
-              </div>
-              <div className="logo-garden-gallery-row">
-                {partnerImages.slice(4).map((partner, index) => (
-                  <div key={index} className="logo-garden-gallery-row-card">
-                    <a href={partner.link}>
-                      <img src={partner.src} alt={partner.alt} width={500} height={200} />
-                    </a>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
 
-// Componente para la sección de Clientes
-const ClientsSection: React.FC = () => {
-  return (
-    <div className="oupartnets" style={{ margin: "20px" }}>
-      <div className="about-header-controls">
-        <p className="about-header-controls-blurb heading-four">
-          OUR&nbsp; <span className="about-header-controls-blurb--span"> CLIENTS</span>
-        </p>
-        <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24">
-          <rect width="96" height="96" className="a" style={{ opacity: 0 }}></rect>
-          <path
-            d="M183.41,3439.41,182,3438l-6,6,6,6,1.41-1.41-4.58-4.59Z"
-            transform="translate(-168 -3432)"
-            className="b"
-          ></path>
-        </svg>
-      </div>
-      <div className="slide-hero-content">
-        <ClientsCarousel />
-      </div>
-    </div>
-  );
-};
-
-// Componente principal AboutUs que utiliza los subcomponentes
 export const AboutUs: React.FC = () => {
   return (
     <div className="component-wrapper" id="aboutus">
-      <div className="particle">
-        <div className="particle-content">
           <HeaderSection />
-          <div className="about-header-controls main-padding-large">
-            <p className="about-header-controls-blurb heading-four">
-              OUR&nbsp; <span className="about-header-controls-blurb--span"> COMMITMENT</span>
+
+          <div className="about-header-controls">
+            <p className="my_title--black">
+              OUR<span className="title--span"> COMMITMENT</span>
             </p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24">
-              <rect width="96" height="96" className="a" style={{ opacity: 0 }}></rect>
-              <path
-                d="M183.41,3439.41,182,3438l-6,6,6,6,1.41-1.41-4.58-4.59Z"
-                transform="translate(-168 -3432)"
-                className="b"
-              ></path>
-            </svg>
+            <MissionVision />
           </div>
-          <MissionVision />
-          <PartnersSection />
-          <ClientsSection />
-        </div>
-      </div>
+          
     </div>
   );
 };
