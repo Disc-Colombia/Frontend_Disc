@@ -89,7 +89,7 @@ export const CookiesComponent = () => {
   };
 
   const loadGoogleAnalytics = () => {
-    if (window.gtag || !cookiePreferences.statistics) return; // Prevent loading multiple times and only load if statistics are enabled
+    if (typeof window.gtag === 'function' || !cookiePreferences.statistics) return; // Prevent loading multiple times and only load if statistics are enabled
 
     const script = document.createElement("script");
     script.async = true;
@@ -97,8 +97,8 @@ export const CookiesComponent = () => {
     document.head.appendChild(script);
 
     window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      window.dataLayer.push(arguments);
+    function gtag(...args: any[]) {
+      window.dataLayer.push(args);
     }
     window.gtag = gtag;
     gtag("js", new Date());
