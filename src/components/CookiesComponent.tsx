@@ -45,6 +45,7 @@ export const CookiesComponent = () => {
     const cookiesAccepted = Cookies.get("cookiesAccepted");
     if (cookiesAccepted) {
       setIsVisible(false); // Hide banner if the cookie exists
+      loadGoogleAnalytics(); // Load Google Analytics if cookies are accepted
     }
   }, []);
 
@@ -63,6 +64,7 @@ export const CookiesComponent = () => {
     });
     setIsVisible(false);
     // here you can run some scripts for accepted cookies
+    loadGoogleAnalytics(); // Load Google Analytics when cookies are accepted
   };
 
   const handleRejectCookies = () => {
@@ -84,6 +86,26 @@ export const CookiesComponent = () => {
     Cookies.set("userPreferences", JSON.stringify(cookiePreferences), {
       expires: 365,
     });
+  };
+
+  const loadGoogleAnalytics = () => {
+    if (window.gtag || !cookiePreferences.statistics) return; // Prevent loading multiple times and only load if statistics are enabled
+
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-JZ8M7Z14GF";
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      window.dataLayer.push(arguments);
+    }
+    window.gtag = gtag;
+    gtag("js", new Date());
+    gtag("config", "G-JZ8M7Z14GF", {
+      anonymize_ip: true, // For privacy reasons
+    });
+    console.log("Google Analytics loaded successfully.");
   };
 
   if (!isVisible) {
