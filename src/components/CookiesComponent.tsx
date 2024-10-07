@@ -88,25 +88,56 @@ export const CookiesComponent = () => {
     });
   };
 
+  // V1 mistral
+  // const loadGoogleAnalytics = () => {
+  //   if (typeof window.gtag === 'function' || !cookiePreferences.statistics) return; // Prevent loading multiple times and only load if statistics are enabled
+  //
+  //   const script = document.createElement("script");
+  //   script.async = true;
+  //   script.src = "https://www.googletagmanager.com/gtag/js?id=G-JZ8M7Z14GF";
+  //   document.head.appendChild(script);
+  //
+  //   window.dataLayer = window.dataLayer || [];
+  //   function gtag(...args: any[]) {
+  //     window.dataLayer.push(args);
+  //   }
+  //   window.gtag = gtag;
+  //   gtag("js", new Date());
+  //   gtag("config", "G-JZ8M7Z14GF", {
+  //     anonymize_ip: true, // For privacy reasons
+  //   });
+  //   console.log("Google Analytics loaded successfully.");
+  // };
+
+  // V2 gpt
   const loadGoogleAnalytics = () => {
-    if (typeof window.gtag === 'function' || !cookiePreferences.statistics) return; // Prevent loading multiple times and only load if statistics are enabled
+    if (!cookiePreferences.statistics) return; // Solo cargar si las estadísticas están permitidas
+
+    // Evitar cargar múltiples veces
+    if (typeof window.gtag !== 'undefined') {
+      console.log("Google Analytics ya ha sido cargado.");
+      return;
+    }
 
     const script = document.createElement("script");
     script.async = true;
     script.src = "https://www.googletagmanager.com/gtag/js?id=G-JZ8M7Z14GF";
-    document.head.appendChild(script);
+    script.onload = () => {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(...args: any[]) {
+        window.dataLayer.push(args);
+      }
+      window.gtag = gtag;
+      gtag("js", new Date());
+      gtag("config", "G-JZ8M7Z14GF", {
+        anonymize_ip: true, // Anonimizar IP por privacidad
+      });
+      console.log("Google Analytics cargado exitosamente.");
+    };
 
-    window.dataLayer = window.dataLayer || [];
-    function gtag(...args: any[]) {
-      window.dataLayer.push(args);
-    }
-    window.gtag = gtag;
-    gtag("js", new Date());
-    gtag("config", "G-JZ8M7Z14GF", {
-      anonymize_ip: true, // For privacy reasons
-    });
-    console.log("Google Analytics loaded successfully.");
+    document.head.appendChild(script);
   };
+
 
   if (!isVisible) {
     return null;
