@@ -4,6 +4,7 @@ import Cookies from "js-cookie";
 import "../styles/cookiesComponent.css";
 import type { CookiesPropsSitting } from "../type/type";
 import { Link } from "react-router-dom";
+import axios from 'axios';
 
 // Default cookie preferences
 const cookiePreferencesDefaults: CookiesPropsSitting = {
@@ -80,7 +81,7 @@ export const CookiesComponent = () => {
     setIsConfigurationVisible(true);
   };
 
-  const handleSubmitPreferences = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmitPreferences = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     handleAcceptCookies();
 
@@ -88,6 +89,15 @@ export const CookiesComponent = () => {
     Cookies.set("userPreferences", JSON.stringify(cookiePreferences), {
       expires: 365,
     });
+
+    try {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/cookie-preferences`, cookiePreferences);
+      if (response.status === 200) {
+        console.log('Preferences saved successfully:', response.data);
+      }
+    } catch (error) {
+      console.error('Error saving preferences:', error);
+    }
   };
 
   const loadGoogleAnalytics = () => {
