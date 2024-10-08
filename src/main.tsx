@@ -28,7 +28,7 @@ const router = createBrowserRouter([
       },{
         path:"/cookiesPolicy",
         element:<CookiesPolicy/>,
-      }
+      },
     ],
   },
 ]);
