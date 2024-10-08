@@ -7,15 +7,13 @@ import { AboutUs } from "../components/AboutUs.tsx";
 import { HomeServices } from "../components/HomeServices.tsx";
 import { CookiesComponent } from "./CookiesComponent.tsx";
 import { Projects } from "../components/Projects.tsx";
-import { FloatingButtons } from "../components/FloatingButtons.tsx";
 import { ContactButton } from "../components/ContactButton.tsx";
 import { ContactUs } from "../components/ContactUs.tsx";
-import BeatLoader  from "react-spinners/BeatLoader";
+import BeatLoader from "react-spinners/BeatLoader";
 import { Ecosystem } from "../components/Ecosystem.tsx";
 
 export const Index = () => {
-  const navigator =useNavigate()
-  const [isVisible, setIsVisible] = useState<boolean>(false);
+  const navigator = useNavigate();
   const [showForm, setShowForm] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -26,10 +24,12 @@ export const Index = () => {
       setShowForm(true);
     }, 1000);
   };
+
   const handleClose = () => {
     navigator("/");
     setShowForm(false);
   };
+
   return (
       <>
         <div className="container_index" id="home">
@@ -44,10 +44,10 @@ export const Index = () => {
             </h2>
           </div>
           {showForm ? (
-              <ContactUs handleClose={handleClose}/>
+              <ContactUs handleClose={handleClose} />
           ) : isLoading ? (
               <div className="loading">
-                <BeatLoader  color="#36d7b7" loading={isLoading} size={50} />
+                <BeatLoader color="#36d7b7" loading={isLoading} size={50} />
               </div>
           ) : (
               <>
@@ -55,19 +55,13 @@ export const Index = () => {
                     rel="preload"
                     className="container_background container_carrousell--index"
                 >
-                  {!isVisible && (
-                      <CookiesComponent
-                          isVisible={isVisible}
-                          setIsVisible={setIsVisible}
-                      />
-                  )}
+                  <CookiesComponent />
                   <Carrousel />
                 </div>
                 <AboutUs />
                 <HomeServices />
                 <Ecosystem />
                 <Projects />
-               
               </>
           )}
           <ContactButton handleShowForm={handleShowForm} />{" "}
