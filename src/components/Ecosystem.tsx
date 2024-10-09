@@ -43,8 +43,8 @@ export const Ecosystem: React.FC = () => {
             <div className="ecosystem_information">
               <Box
                 image={corporations as string}
-                description={"Corpotation"}
-                tittle={"Corpotation"}
+                description={"Corporation"}
+                tittle={"Corporation"}
               >
                 We deliver solutions for corporations outsourcing their
                 technology, human resources, and healthcare strategies,
