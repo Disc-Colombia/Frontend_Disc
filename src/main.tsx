@@ -7,7 +7,6 @@ import { Index } from "./pages/Index";
 import { ModalDemo } from "./pages/ModalDemo";
 import { AllServices} from "./pages/AllServices";
 import { AboutUs } from "./pages/AboutUs";
-import { HumanService } from "./pages/HumanServices";
 
 //Your routers here
 const router = createBrowserRouter([

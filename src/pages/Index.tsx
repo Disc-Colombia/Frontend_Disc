@@ -4,7 +4,6 @@ import logo from "../imgs/logoDISC_sinfondo.png";
 import "../styles/index.css";
 import { Carrousel } from "../components/Carrousel";
 import { CookiesComponent } from "../components/CookiesComponent.tsx";
-import { Projects } from "../components/Projects.tsx";
 import { FloatingButtons } from "../components/FloatingButtons.tsx";
 import { ContactButton } from "../components/ContactButton.tsx";
 import { ContactUs } from "../components/ContactUs.tsx";

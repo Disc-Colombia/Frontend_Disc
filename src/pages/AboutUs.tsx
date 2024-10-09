@@ -3,7 +3,6 @@ import * as React from "react";
 import { InfoCard } from "../components/InfoCard";
 import us_mision from "../imgs/us_mision.png";
 import us_vision from "../imgs/us_vision.png";
-import aboutus from "../imgs/nosotros_main.jpg";
 import aboutuswebp from "../imgs/fondo_maternapp.webp";
 
 
