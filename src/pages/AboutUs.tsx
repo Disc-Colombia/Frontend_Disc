@@ -9,7 +9,9 @@ import aboutuswebp from "../imgs/fondo_maternapp.webp";
 
 const HeaderSection: React.FC = () => {
   return (
-      <div className="about-header-content">
+    <div style={{width:'100%', height:'100%'}}>
+      
+        <div className="about-header-content">
         <div className="content--text-about">
           <h1 className="my_title--white">
             DEVELOPMENT INNOVATION SYSTEM C <span className="title--span">(DISC)</span>
@@ -20,10 +22,13 @@ const HeaderSection: React.FC = () => {
         </div>
         <div className="image--about">
           <picture>
-            <source srcSet={aboutuswebp} type="image/webp" />
-            <img className="my_img--about" src={aboutus as string} alt="Imagen binarios" />
+            {/* <source srcSet={aboutuswebp} type="image/webp" /> */}
+            <img className="my_img--about" src={aboutuswebp as string} alt="Imagen binarios" />
           </picture>
         </div>
+
+    </div>
+      
       </div>
   );
 };

@@ -43,13 +43,12 @@ export const Footers: React.FC = () => {
               <div className="socialinformations">
                 <i className="bi bi-geo-alt contact"></i>
                 <p className="informations_dis--paragraph">
-                  4613 B St SE Washington,DC
+                  4613 B St SE Washington, DC
                 </p>
               </div>
             </div>
           </div>
-        </div>
-        <div className="footer_container--contact">
+          <div className="footer_container--contact">
           <h3 className="social_tittle">Cali, Colombia</h3>
           <div className="footer_social-media">
             <div className="socialinformations">
@@ -67,7 +66,9 @@ export const Footers: React.FC = () => {
               </p>
             </div>
           </div>
+          </div>
         </div>
+        
 
         <div className="footer_container--media">
           <h3 className="social_tittle">Follow us</h3>

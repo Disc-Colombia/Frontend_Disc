@@ -17,7 +17,8 @@ import {
     client8,
     client9,
     client10,
-    client11
+    client11,
+    client12
 } from '../imgs/clients';
 
 const ClientsCarousel: React.FC = () => {
@@ -32,7 +33,8 @@ const ClientsCarousel: React.FC = () => {
         client8,
         client9,
         client10,
-        client11
+        client11,
+        client12,
     ];
 
     const settings = {
@@ -78,7 +80,7 @@ const ClientsCarousel: React.FC = () => {
         <div style={{ width: '100%', margin: '0 auto'}}>
             <Slider {...settings}>
                 {images.map((logo, index) => (
-                     <div key={index} style={{ padding: '10px', textAlign: 'center' }}>
+                     <div key={index} style={{ marginLeft: '20px', textAlign: 'center' }}>
                         <LazyLoadImage
                             src={logo}
                             alt={`Partner ${index + 1}`}
@@ -97,8 +99,8 @@ const ClientsCarousel: React.FC = () => {
 export const ClientsSection: React.FC = () => {
     return (
       <div className="oupartnets" style={{ margin: "20px" }}>
-        <div className="about-header-controls">
-          <p className="my_title--black">
+        <div className="about-header--clients">
+          <p className="my_title--black" style={{textAlign:'center'}}>
             OUR<span className="title--span"> CLIENTS</span>
           </p>
           

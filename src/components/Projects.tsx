@@ -71,7 +71,7 @@ export const Projects: React.FC = () => {
 
   return (
       <div className='container_projects'>
-        <div className="container--end">
+      
         <div className='content_option'>
           <div className='container_text'>
             <h2 className='title--span'>{selectedInfo.title}</h2>
@@ -89,12 +89,6 @@ export const Projects: React.FC = () => {
                 </div>
             )}
           </div>
-
-
-        </div>
-
-        
-
         </div>
         <div className='container_buttom_option'>
           {infoOptions.map((option, index) => (

@@ -25,8 +25,9 @@ export const InfoCard: React.FC<InfoCardProps> = ({ title, content, imageSrc, cl
             onMouseLeave={onClose}
             className={className}
             flexDirection="column"
-            width={'500px'}
-            height="430px"   
+            height="100%"   
+            width='100%'
+            
         >
             <Box w="100%" h="50%">
                 <Image

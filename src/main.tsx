@@ -7,6 +7,7 @@ import { Index } from "./pages/Index";
 import { ModalDemo } from "./pages/ModalDemo";
 import { AllServices} from "./pages/AllServices";
 import { AboutUs } from "./pages/AboutUs";
+import { HumanService } from "./pages/HumanServices";
 
 //Your routers here
 const router = createBrowserRouter([
@@ -21,8 +22,8 @@ const router = createBrowserRouter([
         path: '/aboutus',
         element:<AboutUs/>
       },{
-        path: '/services',
-        element:<AllServices/>
+        // path: '/services',
+        // element:<AllServices/>
       },
       {
         path: "/scheduledemo",
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       },{
         path:"/AllServices",
         element: <AllServices/>
+      },
+      {
+        // path:"/Human-Service",
+        // element:<HumanService/>
       }
     ],
   },

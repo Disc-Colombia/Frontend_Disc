@@ -23,7 +23,7 @@ import {SupportAgentOutlined as SupportAgentOutlinedIcon,
   } from "@mui/icons-material";
 
 
-  const iconStyle = { fontSize: 40, color: "#52b39d" };
+  const iconStyle = { fontSize: 30, color: "#52b39d" };
 
   const iconStyleanimate ={...iconStyle, 
     animation: 'pulsegreen 2s infinite',
@@ -63,7 +63,7 @@ import {SupportAgentOutlined as SupportAgentOutlinedIcon,
           <label htmlFor="c1" className="card--cardslider">
         
               <div className="my_paragraph--white">
-                <p>Human Service & Healthcare Systems Administration</p>
+                <p className="title_onCard" style={{textAlign:'left'}}>Human Service & Healthcare Systems Administration</p>
                 <p>DISC supports a broad range of healthcare administrative and oversight processes. </p>
                 <CustomTooltip title="View more..."  placement='top'>
                   <Link to ='/Human-Service' className="view_more--services"><ReadMoreOutlinedIcon style={iconStyleanimate} /></Link>
@@ -85,7 +85,7 @@ import {SupportAgentOutlined as SupportAgentOutlinedIcon,
           <label htmlFor="c2" className="card--cardslider">
             
               <div className="my_paragraph--white">
-                <p>IT Consulting</p>
+                <p className="title_onCard">IT Consulting</p>
                 <p>Our team of experts can provide everything from staff augmentation to customized development.</p>
                 <CustomTooltip title="View more..."  placement='top'>
                   <Link to ='/IT-Consulting' className="view_more--services"><ReadMoreOutlinedIcon style={iconStyleanimate} /></Link>
@@ -107,7 +107,7 @@ import {SupportAgentOutlined as SupportAgentOutlinedIcon,
           <label htmlFor="c3" className="card--cardslider">
             
               <div className="my_paragraph--white">
-                <p>Cybersecurity
+                <p className="title_onCard">Cybersecurity
                 </p>
                 <p>We provide the most comprehensive data coverage for monitoring and detecting threats across digital channels and provides real-time intelligence.</p>
                 <CustomTooltip title="View more..."  placement='top'>
@@ -130,7 +130,7 @@ import {SupportAgentOutlined as SupportAgentOutlinedIcon,
           <label htmlFor="c4" className="card--cardslider">
            
               <div className="my_paragraph--white">
-                <p>Finance Solutions</p>
+                <p className="title_onCard">Finance Solutions</p>
                 <p>DISC is the premier provider for outsourced accounting support and consulting for billing, reporting, and revenue management.</p>
                 <CustomTooltip title="View more..."  placement='top'>
                   <Link to ='/Finance-Solutions' className="view_more--services"><ReadMoreOutlinedIcon style={iconStyleanimate} /></Link>
@@ -151,7 +151,7 @@ import {SupportAgentOutlined as SupportAgentOutlinedIcon,
           <label htmlFor="c5" className="card--cardslider">
             
               <div className="my_paragraph--white">
-                <p>Customer Service</p>
+                <p className="title_onCard">Customer Service</p>
                 <p>From call center support to help desk operators, DISC ensures that every client interaction reflects a positive, personable, and professional impression.</p>
                 <CustomTooltip title="View more..."  placement='top'>
                   <Link to ='/Customer-Service' className="view_more--services"><ReadMoreOutlinedIcon style={iconStyleanimate} /></Link>
@@ -256,19 +256,19 @@ export const Services: React.FC = () => {
             <p className="title_service-section my_title--white">
               WHAT WE<span className="title--span"> DO</span>
             </p>
-            <p className="my_paragraph--white">
+            <p className="my_paragraph--white" >
               
             At DISC, we are committed to employing the highest industry standards and best practices to not only meet but exceed the expectations of our diverse clientele, ranging from public to private sector organizations across the globe. Our flexible and dynamic approach is deeply rooted in cutting-edge technological expertise, ensuring that we provide innovative solutions tailored to each client's unique needs. We operate within a framework of strict compliance and regulatory standards, leaving no room for shortcuts or compromises. Excellence is at the core of everything we do, driving us to consistently deliver high-quality results with precision and integrity.
-            </p>          
+            </p>
+            <CardSlider />          
         </div>
-        <CardSlider />
       </div>
 
       <div className="container-text--allservices">
-        <p className="my_title--black">
+        <p className="my_title--black" style={{textAlign:'center'}}>
           YOUR <span className="title--span">TECHNOLOGY</span> PARTNER
         </p>
-        <p className="initial_paragraph-services">
+        <p className="my_paragraph--black">
           DISC is the trusted source for government agencies, non-profits,
           for-profits and Fortune 500 companies to gain best in class solutions
           in Information Technology and Innovation Management Solutions. We use

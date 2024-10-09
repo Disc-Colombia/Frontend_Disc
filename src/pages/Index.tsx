@@ -67,7 +67,7 @@ export const Index = () => {
                 <Services/>
                 <ClientsSection/>
                 <Ecosystem />
-                <Projects />
+                {/* <Projects /> */}
                 <PartnersSection/>
                 <FloatingButtons/>
               </>

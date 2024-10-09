@@ -1,6 +1,6 @@
 import * as React from "react";
 import gobierno from "../imgs/gobierno.webp";
-import ong from "../imgs/ong.png";
+import ong from "../imgs/ong.webp";
 import corporations from "../imgs/corporaciones.webp";
 import "../styles/ecosystem.css";
 import { Box } from "./Box";
@@ -37,9 +37,7 @@ export const Ecosystem: React.FC = () => {
                 description={"imagen gov"}
                 tittle={"Government"}
               >
-                Minority-owned and certified, we are a trusted provider for
-                government agencies in staffing, information technology, and
-                operations services.
+                We are a proudly certified minority-owned company that has earned the trust of state, local, and federal government agencies to provide staffing, information technology, and operational services.
               </Box>
             </div>
             <div className="ecosystem_information">
@@ -69,7 +67,7 @@ export const Ecosystem: React.FC = () => {
       </div>
       <div className="container_banner--title">
         <div className="container_interbanner--title">
-        <p className="my_title--black">GOING BEYOND YOUR&nbsp; <span className="title--span">EXPECTATIONS!</span> </p>
+        <p className="my_title--black"  style={{textAlign:'center'}}>GOING BEYOND YOUR&nbsp; <span className="title--span">EXPECTATIONS!</span> </p>
         <div className="button_container">
           <Link to="/scheduledemo" className="demobutton">
             DEMO
