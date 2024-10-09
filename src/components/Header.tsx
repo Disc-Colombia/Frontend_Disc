@@ -60,7 +60,7 @@ export const Header: React.FC = () => {
                 Home
               </Link>
               <Link
-                to="/about-us"
+                to="/about-us/"
                 className={`navegations_links ${
                   linkActive === "aboutus" ? "active" : ""
                 }`}
