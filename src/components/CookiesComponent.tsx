@@ -248,6 +248,34 @@ export const CookiesComponent = () => {
         }
     }, []);
 
+    const loadGoogleAnalytics = useCallback(() => {
+        if (!cookiePreferences.statistics) return; // Only load if the statistics are allowed
+
+        // Avoid to load multiple times
+        if (typeof window.gtag !== 'undefined') {
+            console.log("Google Analytics ya ha sido cargado.");
+            return;
+        }
+
+        const script = document.createElement("script");
+        script.async = true;
+        script.src = "https://www.googletagmanager.com/gtag/js?id="+TRACKING_ID;
+        script.onload = () => {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(...args: Array<string | number | object>) {
+                window.dataLayer.push(args);
+            }
+            window.gtag = gtag;
+            gtag("js", new Date());
+            gtag("config", TRACKING_ID, {
+                anonymize_ip: true, // Anonymize IP for privacy
+            });
+            console.log("Google Analytics cargado exitosamente.");
+        };
+
+        document.head.appendChild(script);
+    }, [cookiePreferences.statistics]); // Memorize the function based on cookiePreferences.statistics
+
     // Check if cookies have already been accepted
     useEffect(() => {
         const cookiesAccepted = Cookies.get("cookiesAccepted");
@@ -304,34 +332,6 @@ export const CookiesComponent = () => {
             console.error('Error saving preferences:', error);
         }
     };
-
-    const loadGoogleAnalytics = useCallback(() => {
-        if (!cookiePreferences.statistics) return; // Only load if the statistics are allowed
-
-        // Avoid to load multiple times
-        if (typeof window.gtag !== 'undefined') {
-            console.log("Google Analytics ya ha sido cargado.");
-            return;
-        }
-
-        const script = document.createElement("script");
-        script.async = true;
-        script.src = "https://www.googletagmanager.com/gtag/js?id="+TRACKING_ID;
-        script.onload = () => {
-            window.dataLayer = window.dataLayer || [];
-            function gtag(...args: Array<string | number | object>) {
-                window.dataLayer.push(args);
-            }
-            window.gtag = gtag;
-            gtag("js", new Date());
-            gtag("config", TRACKING_ID, {
-                anonymize_ip: true, // Anonymize IP for privacy
-            });
-            console.log("Google Analytics cargado exitosamente.");
-        };
-
-        document.head.appendChild(script);
-    }, [cookiePreferences.statistics]); // Memorize the function based on cookiePreferences.statistics
 
     if (!isVisible) {
         return null;
