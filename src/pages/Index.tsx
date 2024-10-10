@@ -15,7 +15,6 @@ import { PartnersSection } from "../components/Partners.tsx";
 
 export const Index = () => {
   const navigator =useNavigate()
-  const [isVisible, setIsVisible] = useState<boolean>(false);
   const [showForm, setShowForm] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -55,12 +54,7 @@ export const Index = () => {
                     rel="preload"
                     className="container_background container_carrousell--index"
                 >
-                  {!isVisible && (
-                      <CookiesComponent
-                          isVisible={isVisible}
-                          setIsVisible={setIsVisible}
-                      />
-                  )}
+                  <CookiesComponent />
                   <Carrousel />
                 </div>
                 <Services/>

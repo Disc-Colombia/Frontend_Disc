@@ -6,7 +6,6 @@ import "../styles/modalDemo.css";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
-//import maternapp from "../imgs/maternapp.png";
 import ReCAPTCHA from 'react-google-recaptcha'
 import VideoPlayer from "../components/VideoPlayer";
 export const ModalDemo: React.FC = () => {
@@ -119,11 +118,6 @@ export const ModalDemo: React.FC = () => {
           <div className="container_image--product">
             <VideoPlayer />
 
-            {/* <img
-              className="maternapp_image"
-              src={maternapp as string}
-              alt="imagen maternapp"
-            /> */}
           </div>
         </div>
       </div>
