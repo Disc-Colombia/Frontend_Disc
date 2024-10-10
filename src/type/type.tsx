@@ -26,9 +26,9 @@ export type EmailProps = {
 export type DemoProps = {
   FirstName: string;
   LastName: string;
-  WorkerEmail: string;
-  CompanyName: string;
-  Title: string;
+  Email: string;
+  Company: string;
+  Job: string;
   Phone: string;
   Description: string;
 };
