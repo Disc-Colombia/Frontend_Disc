@@ -28,7 +28,8 @@ jobs:
       - name: Set up environment variables
         run: |
           echo "VITE_API_URL=${{ secrets.VITE_API_URL }}" >> $GITHUB_ENV
-          echo "VITE_APP_SITE_KEY=${{ secrets.VITE_APP_SITE_KEY }}" >> $GITHUB_ENV    
+          echo "VITE_APP_SITE_KEY=${{ secrets.VITE_APP_SITE_KEY }}" >> $GITHUB_ENV
+          echo "VITE_APP_TRACKING_ID=${{ secrets.VITE_APP_TRACKING_ID }}" >> $GITHUB_ENV    
 
       - name: List all environment variables
         run: env
