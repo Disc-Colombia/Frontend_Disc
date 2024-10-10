@@ -1,4 +1,4 @@
-import image1 from "../imgs/consultoria_IT.jpg";
+import image1 from "../src/imgs/consultoria_IT.jpg";
 import image2 from "../imgs/seguridad_cibernetica.jpg";
 import image3 from "../imgs/soluciones_financieras.jpg";
 import imagen1webp from '../imgs/consultoria_IT.webp';
@@ -41,7 +41,7 @@ export const Carrousel: React.FC = () => {
         <div className="carousel-inner">
           <div className="carousel-item active">
            <picture>
-            <source srcSet={imagen1webp} type="image/webp"/>
+            <source srcSet={imagen1webp as string} type="image/webp"/>
            <img
               loading="lazy"
               src={image1 as string}
