@@ -5,14 +5,14 @@
   border-radius: 8px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   cursor: pointer;
-  height: 300px;
+  height: 405px;
   margin: 20px;
-  padding: 0 20px;
+  /* padding: 0 20px; */
   position: relative;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.025);
   text-align: center;
   transition: height 1000ms;
-  width: 260px;
+  width: 300px;
 }
 
 .tittle {
@@ -28,6 +28,9 @@
 }
 
 .container_box--imag {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
   position: relative;
 }
 
@@ -36,31 +39,31 @@
 }
 
 .image_box {
+  /* margin-top: 10px; */
   max-width: 100%;
   position: relative;
   height: auto;
   z-index: 2;
+  clip-path: polygon(0 0, 100% 0%, 100% 62%, 50% 100%, 0 62%);
 }
 
-.text_content--tittle {
+.text_content--title {
   font-family: var(--montserrat-font-family);
+  margin-top: 10px;
+  height: 68px;
+  align-content: center;
 }
 
 .text_content--text{
   font-family: var(--montserrat-font-family);
   text-align: justify;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
-@media (max-width: 767px) {
-  .card {
-    left: calc(50% - 20px);
-    transform: translateX(-50%);
-  }
-}
+
 
 .card.expanded {
-  height: 450px;
+  height: 590px;
 }
 
 .label {
@@ -181,6 +184,8 @@
 }
 
 .text-content {
+  margin-left: 20px;
+  margin-right: 20px;
   transform: translateY(-160px);
   transition: transform 1000ms;
 }
@@ -190,12 +195,13 @@
 }
 
 .chevron {
+  position: relative;
   bottom: 20px;
-  left: calc(50% - 15px);
   transform-origin: 50%;
   transform: rotate(180deg);
   transition: transform 1000ms;
-  margin-top: 1rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .card.expanded .chevron {
@@ -204,7 +210,6 @@
 
 .title {
   font-family: var(--montserrat-font-family), sans-serif;
-  font-weight: 900;
   margin: 20px 0 12px;
 }
 
@@ -212,3 +217,38 @@
   font-family: var(--montserrat-font-family);
   padding: 0 20px;
 }
+
+
+ /*Pantallas grandes (desktops de menos de 1200px)*/
+
+ @media screen and (max-width: 1199.98px) {  }
+
+
+
+ /*Pantallas medianas (tablets de menos de 992px) */
+ 
+ @media screen and  (max-width: 991.98px) {  }
+ 
+ 
+ 
+ /*Pantallas pequeñas (móviles en landscape de menos de 768px)*/
+ 
+ @media screen and  (max-width: 767.98px) { 
+ 
+    .card{
+      
+      height: 360px;
+      width: 250px;
+    }
+
+    .card.expanded {
+      height: 600px;
+    }
+     
+  }
+ 
+ 
+ 
+ /*Pantallas muy pequeñas (móviles en portrait de menos de 576px) */
+ 
+ @media screen and (max-width: 575.98px) {  }

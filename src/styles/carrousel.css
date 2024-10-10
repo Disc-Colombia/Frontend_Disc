@@ -16,7 +16,7 @@
 }
 .text_carousel{
 font-family: var(--montserrat-font-family);
-font-size: 1rem;
+font-size: 1.2rem;
 }
 .carousel-item img {
   height: calc(100vh - 60px);

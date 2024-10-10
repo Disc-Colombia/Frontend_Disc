@@ -1,3 +1,4 @@
+
 @import "./colores.css";
 .cookie-banner {
   position: fixed;
@@ -165,3 +166,4 @@ input[type="checkbox"]:checked::after {
   left: 50%; 
   transform: translate(-50%, -50%); 
 }
+

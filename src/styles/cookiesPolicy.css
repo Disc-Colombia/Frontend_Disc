@@ -1,5 +1,6 @@
 @import "./colores.css";
 .container_cookies--policy {
+
   display: flex;
   justify-content: center;
   margin-top: 2rem;
@@ -14,6 +15,21 @@
 }
 .text_cookies--policy{
     font-family: var(--montserrat-font-family);
+
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    flex-direction: column;
+}
+.title_cookies--policy {
+    font-family: var(--font-makina), serif;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.text_cookies--policy{
+    font-family: var(--montserrat-font-family), serif;
     font-size: 1.2rem;
     line-height: 1.5;
     text-align: justify;
@@ -45,5 +61,28 @@
 display: flex;
 flex-direction: row-reverse;
 margin-bottom: 1rem;
-
+    font-family: var(--font-makina), serif;
+}
+.btn_backSetting{
+    border: 1px solid var(--SombraAzulVerdoso);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-family: var(--montserrat-font-family), serif;
+}
+.container_policy--title{
+    display: flex;
+    justify-content: space-between;
+}
+.back-cookies{
+    font-size: 1.5rem;
+    color: var(--LogoBackground);
+    font-family: var(--montserrat-font-family), serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.container_btn--back{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 1rem;
 }

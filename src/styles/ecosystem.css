@@ -2,6 +2,7 @@
 
 .container_content--ecosystem{
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -13,130 +14,57 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 2rem;
+  max-width: 1300px;
+  margin-left: 70px;
+  margin-right: 70px;
 }
 
+.title--ecosystem{
+  margin-bottom: 16px;
+}
 
-.container_end--text{
+.container--text{
   display: flex;
   align-items: center;
-  /* width: 600px; */
-}
-.container_ecosystem--information {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin-bottom: 2rem;
-  margin-top: 3rem;
+  
 }
 
-@media (min-width: 760px) {
-  .container_ecosystem{
-    flex-direction: column;
-  }
-  .container_ecosystem--information{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .container_end--text{
-    width: 100%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container_ecosystem--general {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-  }
-
-  .container_tittle--ecosystem{
-    text-align: left;
-  }
-
-  .container_ecosystem--information {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    justify-items: center;
-  }
-
-  .container_img {
-    position: relative;
-    display: inline-block;
-  }
-
-  .ecosystem_img {
-    filter: opacity(70%);
-    transition: transform 0.3s ease, z-index 0s ease;
-  }
-
-  .ecosystem_img:hover {
-    filter: brightness(100%);
-  }
-
-  .container_ecosystem {
-    display: flex;
-    flex-direction: row;
-  }
-}
-
-.tittle_ecosystem {
-  text-align: center;
-  font-family: var(--font-makina);
-  background: -webkit-linear-gradient(-90deg, var(--Black), var(--LogoBackground));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  font-size: 2.5rem;
-  margin: 20px;
-  text-transform: uppercase;
-}
-
-.tittle_ecosystem_ecosis {
-  text-align: center;
-  font-family: var(--font-makina);
-  font-size: 2.5rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-.tittle_ecosystem--span {
-  color: var(--LogoBackground);
-}
-.ecosystem_img {
-  width: 260px;
-}
-.ecosystem_information {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: flex-start;
-}
-.tittle_agenci {
-  font-family: var(--font-makina);
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-}
-.container_agenci--information {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-.agenci_text--end {
+.container_text--end {
   text-align: justify;
   line-height: 1.5;
   font-family: var(--montserrat-font-family);
   font-size: 1.2rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  
 }
+
+/*Cards container about ecosystem*/
+
+.container_ecosystem--information {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.container_banner--title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 250px;
+  background-color: var(--SombraAzulVerdoso);
+}
+
+.container_interbanner--title{
+  max-width: 1300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .demobutton {
   display: flex;
   justify-content: center;
@@ -151,10 +79,11 @@
   font-family: var(--montserrat-font-family);
   font-style: medium;
   font-size: 15px;
-  box-shadow: 0 0 0 0 rgb(0, 0, 0, .5);
+  box-shadow: 0 0 0 0 rgb(255, 255, 255);
   animation: pulse 2s infinite;
   text-decoration: none;
 }
+
 @keyframes pulse {
   0% {
       transform: scale(.99);
@@ -169,9 +98,63 @@
       box-shadow: 0 0 0 0 rgb(0, 0, 0, 0)
   }
 }
+
 .button_container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2rem
+  
 }
+
+
+ /*Pantallas grandes (desktops de menos de 1200px)*/
+
+ @media screen and (max-width: 1199.98px) {  }
+
+
+
+ /*Pantallas medianas (tablets de menos de 992px) */
+ 
+ @media screen and  (max-width: 991.98px) {  }
+ 
+ 
+ 
+ /*Pantallas pequeñas (móviles en landscape de menos de 768px)*/
+ 
+ @media screen and  (max-width: 767.98px) { 
+  .container--text{
+    margin-left: 45px;
+  margin-right: 45px;
+  }
+ 
+  .title--ecosystem{
+    margin-left: 40px;
+    margin-right: 40px;
+    align-content: center;
+    text-align: center;
+  }
+  
+  .container_ecosystem--information{
+    flex-direction: column;
+  }
+  
+  .ecosystem_information{
+    display: flex;
+    justify-content: center;
+  }
+  .container_ecosystem--general {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .container_interbanner--title{
+    margin-left: 45px;
+    margin-right: 45px;
+  }
+     
+  }
+ 
+ 
+ 
+ /*Pantallas muy pequeñas (móviles en portrait de menos de 576px) */
+ 
+ @media screen and (max-width: 575.98px) {  }

@@ -7,7 +7,7 @@
   --gris-message: #f1f1f1;
   --BlancoVerdoso: #edf7f5;
   --LogoBackground: #52b39d; /*#f9f9f9*/
-  --SombraAzulVerdoso:rgba(82, 179, 157, 0.4);
+  --SombraAzulVerdoso:rgba(117, 211, 189, 0.178);
   --GrisOscuro: #1d1d1b;
   --gris: rgba(41, 40, 40, 0.56);
   --MoradoOscuro: #461d2d;
@@ -15,4 +15,50 @@
   --font-makina: 'Kohne Makina', sans-serif;
   --Yelow:#b9770e ;
                                                 
+}
+
+
+.title--span{
+  color: var(--LogoBackground);
+  font-family: var(--font-makina); 
+  font-weight: bolder;
+  font-size: 2.5rem;
+}
+
+.my_title--white{
+  font-family: var(--font-makina);
+  color: var(--White);
+  font-weight:  bolder;
+  font-size: 2.5rem;
+}
+
+.my_title--black{
+  font-family: var(--font-makina);
+  color: var(--Black);
+  font-weight:  bolder;
+  font-size: 2.5rem;
+}
+
+.my_paragraph--white{
+
+  font-family: var(--montserrat-font-family);
+  color: var(--White);
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+.my_paragraph--black{
+  font-family: var(--montserrat-font-family);
+  color: var(--Black);
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+/*Pantallas pequeñas (móviles en landscape de menos de 768px)*/
+
+@media screen and  (max-width: 767.98px) { 
+.my_title--black, .my_title--white, .title--span{font-size: 2rem;}
+.my_paragraph--black, .my_paragraph--white {font-size: 15px;}
+
+
 }

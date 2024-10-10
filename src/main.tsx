@@ -8,6 +8,9 @@ import { ModalDemo } from "./pages/ModalDemo";
 import { AllServices} from "./pages/AllServices";
 import { CookiesPolicy } from "./pages/CookiesPolicy";
 import { FloatingButtons } from "./components/FloatingButtons";
+import { AboutUs } from "./pages/AboutUs";
+import { Contact_Us } from "./pages/Contact_Us";
+
 
 //Your routers here
 const router = createBrowserRouter([
@@ -18,17 +21,32 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Index />,
+      },{
+        path: '/about-us/',
+        element:<AboutUs/>
+      },{
+        // path: '/services',
+        // element:<AllServices/>
       },
       {
-        path: "/scheduledemo",
+        path: "/scheduledemo/",
         element: <ModalDemo />,
       },{
-        path:"/AllServices",
+        path:"/allServices/",
         element: <AllServices/>
       },{
-        path:"/cookiesPolicy",
+        path:"/cookiesPolicy/",
         element:<CookiesPolicy/>,
       },
+      {
+        // path:"/Human-Service",
+        // element:<HumanService/>
+      },
+      {
+        path:"/contact-us/",
+        element:<Contact_Us/>,
+      }
+
     ],
   },
 ]);

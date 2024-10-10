@@ -5,7 +5,7 @@ import * as React from "react";
 
 export const Footers: React.FC = () => {
   return (
-    <div className="footer_container">
+    <div className="footer_container" id="my_footer">
       <div className="footer_logo">
         <div className="containe_section--logo">
           <div className="footer_container--logo">
@@ -30,7 +30,7 @@ export const Footers: React.FC = () => {
         </div>
         <div className="footer_social--networks">
           <div className="footer_container--contact">
-            <h3 className="social_tittle">Main headquarters in D.C.</h3>
+            <h3 className="social_tittle">Washington, DC</h3>
             <div className="footer_social-media">
               <div className="socialinformations">
                 <i className="bi bi-envelope contact"></i>
@@ -38,19 +38,18 @@ export const Footers: React.FC = () => {
               </div>
               <div className="socialinformations">
                 <i className="bi bi-whatsapp contact"></i>
-                <p className="informations_dis--paragraph">(1) 202-446878</p>
+                <p className="informations_dis--paragraph">(1) 202 446 8784</p>
               </div>
               <div className="socialinformations">
                 <i className="bi bi-geo-alt contact"></i>
                 <p className="informations_dis--paragraph">
-                  4613 B St SE Washington,DC
+                  4613 B St SE Washington, DC
                 </p>
               </div>
             </div>
           </div>
-        </div>
-        <div className="footer_container--contact">
-          <h3 className="social_tittle">Colombia branch, Cali</h3>
+          <div className="footer_container--contact">
+          <h3 className="social_tittle">Cali, Colombia</h3>
           <div className="footer_social-media">
             <div className="socialinformations">
               <i className="bi bi-envelope contact"></i>
@@ -58,7 +57,7 @@ export const Footers: React.FC = () => {
             </div>
             <div className="socialinformations">
               <i className="bi bi-whatsapp contact"></i>
-              <p className="informations_dis--paragraph">(57) 3502114492</p>
+              <p className="informations_dis--paragraph">(57) 350 211 4492</p>
             </div>
             <div className="socialinformations">
               <i className="bi bi-geo-alt contact"></i>
@@ -67,10 +66,12 @@ export const Footers: React.FC = () => {
               </p>
             </div>
           </div>
+          </div>
         </div>
+        
 
         <div className="footer_container--media">
-          <h3 className="social_tittle">Follow us on our social media</h3>
+          <h3 className="social_tittle">Follow us</h3>
           <div className="container_social--icon">
             <a
               href="https://www.instagram.com/innovationdisc/"
@@ -79,13 +80,13 @@ export const Footers: React.FC = () => {
             >
               <i className=" media bi bi-instagram"></i>
             </a>
-            <a href="https://www.youtube.com/@MaternAPPTV/">
+            <a href="https://www.youtube.com/@MaternAPPTV/" target="_blank">
               <i className=" media bi bi-youtube"></i>
             </a>
-            <a href="https://www.facebook.com/disc.dc.58?mibextid=ZbWKwL">
+            <a href="https://www.facebook.com/disc.dc.58?mibextid=ZbWKwL" target="_blank">
               <i className=" media bi bi-facebook"></i>
             </a>
-            <a href="https://www.linkedin.com/company/development-innovation-system/">
+            <a href="https://www.linkedin.com/company/development-innovation-system/" target="_blank">
               <i className=" media bi bi-linkedin"></i>
             </a>
           </div>

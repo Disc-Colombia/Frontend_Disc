@@ -25,8 +25,11 @@ export const InfoCard: React.FC<InfoCardProps> = ({ title, content, imageSrc, cl
             onMouseLeave={onClose}
             className={className}
             flexDirection="column"
+            height="100%"   
+            width='100%'
+            
         >
-            <Box w="100%" h="100%">
+            <Box w="100%" h="50%">
                 <Image
                     src={imageSrc}
                     alt={`${title} Image`}
@@ -37,38 +40,39 @@ export const InfoCard: React.FC<InfoCardProps> = ({ title, content, imageSrc, cl
             <Box
                 className="box_text--tittle"
                 w="100%"
-                h="260px"
+                h="50%"
                 display="flex"
                 justifyContent="center"
                 alignItems="center"
                 textAlign="center"
-                bg="#f9f9f9"
                 position="relative"
                 overflow="hidden"
+                bg='linear-gradient(180deg, black, rgba(14,53,84,0.8))'
             >
                 <Text
                     fontSize="3rem"
-                    fontWeight="bold"
+                    fontWeight="bolder"
                     fontFamily='var(--font-makina)'
                     zIndex="1"
+                    color='var(--White)'
                     transition="opacity 0.5s ease-in-out"
                     opacity={isOpen ? 0 : 1}
                 >
                     {title}
                 </Text>
                 <Box
-                className="box-gradient"
+                    className="box-gradient"
                     position="absolute"
                     top={isOpen ? "0" : "100%"}  
                     left="0"  
                     w="100%"
                     h="100%"  
-                    bg="linear-gradient(#92bCa6,#52b39d)"
+                    bg='linear-gradient(180deg, black, rgba(87,87,89,0.4))'
                     color="white"
                     display="flex"
                     justifyContent="center"
                     alignItems="center"
-                    fontSize="1.2rem"
+                    fontSize="1rem"
                     textAlign="justify"
                     padding="0 30px"
                     boxSizing="border-box"

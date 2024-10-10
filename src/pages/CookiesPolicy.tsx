@@ -1,49 +1,50 @@
 import { useNavigate } from "react-router-dom";
 import "../styles/cookiesPolicy.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-export const CookiesPolicy = () => {
-  const navegate = useNavigate();
-  const handleBack = () => {
-    navegate(-1);
-  };
-  return (
-    <div className="container_cookies--policy">
-      <div className="container_policy--title">
-        <div className="contener_title--btn">
-          <h2 className="title_cookies--policy"> Cookies Policy</h2>
-        </div>
-        <div className="container_btn--back">
-          <button className="btn_backSetting" onClick={handleBack}>
-            <i className="bi  bi-arrow-left-circle-fill back-cookies">
-              Back setting
-            </i>
-          </button>
-        </div>
-      </div>
 
-      <section>
-        <p className="text_cookies--policy">
-          This Cookies Policy explains how Development Innovation System or our
-          partners use cookies and similar tracking technologies when you visit
-          our website{" "}
-          <a
-            href="https://discdc.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            discdc.com{" "}
-          </a>
-        </p>
-        <p className="text_cookies--policy">
-          {" "}
-          <span className="text_cookies--span">1. What are cookies?</span>{" "}
-          Cookies are small text files that are stored on your device (computer,
-          tablet, smartphone, etc.) when you visit a website. They help websites
-          remember information about your visit, such as your preferred language
-          or other settings, making your next visit easier and the site more
-          useful to you.
-        </p>{" "}
-        <p className="text_cookies--policy">
+export const CookiesPolicy = () => {
+    const navegate = useNavigate();
+    const handleBack = () => {
+        navegate(-1);
+    };
+    return (
+        <div className="container_cookies--policy">
+            <div className="container_policy--title">
+                <div className="contener_title--btn">
+                    <h2 className="title_cookies--policy"> Cookies Policy</h2>
+                </div>
+                <div className="container_btn--back">
+                    <button className="btn_backSetting" onClick={handleBack}>
+                        <i className="bi  bi-arrow-left-circle-fill back-cookies">
+                            Back setting
+                        </i>
+                    </button>
+                </div>
+            </div>
+
+            <section>
+                <p className="text_cookies--policy">
+                    This Cookies Policy explains how Development Innovation System or our
+                    partners use cookies and similar tracking technologies when you visit
+                    our website{" "}
+                    <a
+                        href="https://discdc.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        discdc.com{" "}
+                    </a>
+                </p>
+                <p className="text_cookies--policy">
+                    {" "}
+                    <span className="text_cookies--span">1. What are cookies?</span>{" "}
+                    Cookies are small text files that are stored on your device (computer,
+                    tablet, smartphone, etc.) when you visit a website. They help websites
+                    remember information about your visit, such as your preferred language
+                    or other settings, making your next visit easier and the site more
+                    useful to you.
+                </p>{" "}
+                <p className="text_cookies--policy">
           <span className="text_cookies--span">
             2. Types of cookies we use We use different types of cookies for
             various purposes
@@ -107,5 +108,5 @@ export const CookiesPolicy = () => {
         </p>
       </section>
     </div>
-  );
+  );             
 };

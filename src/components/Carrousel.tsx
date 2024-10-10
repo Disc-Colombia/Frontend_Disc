@@ -46,14 +46,10 @@ export const Carrousel: React.FC = () => {
                 loading="lazy"
                 src={image1 as string}
                 className="d-block w-100 carousel_img img-fluid"
-                alt="imagen technology
-                solutions."
-              />
+                alt="imagen technology"/>
             </picture>
             <div className="carousel-caption">
-              <h5 className="title_carousel--slice">
-                Information Technology Consulting
-              </h5>
+              <h3 className="title_carousel--slice">Information Technology Consulting</h3>
               <p className="text_carousel">
                 IT consulting services focused on innovative technology
                 solutions.
@@ -71,7 +67,8 @@ export const Carrousel: React.FC = () => {
               />
             </picture>
             <div className="carousel-caption">
-              <h5 className="title_carousel--slice">Cybersecurity Solutions</h5>
+              <h3  className="title_carousel--slice">Cybersecurity Solutions</h3>
+
               <p className="text_carousel">
                 Providing comprehensive protection against digital threats
                 through advanced security measures and proactive defense
@@ -90,7 +87,7 @@ export const Carrousel: React.FC = () => {
               />
             </picture>
             <div className="carousel-caption ">
-              <h5 className="title_carousel--slice">Financial Solutions</h5>
+              <h3 className="title_carousel--slice">Financial Solutions</h3>
               <p className="text_carousel">
                 Delivering tailored financial strategies to optimize
                 performance, manage risks, and drive growth.
@@ -98,30 +95,6 @@ export const Carrousel: React.FC = () => {
             </div>
           </div>
         </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Next</span>
-        </button>
       </div>
     </div>
   );
