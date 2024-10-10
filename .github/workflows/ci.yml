@@ -73,6 +73,7 @@ jobs:
       - name: Build Docker image
         run: |
           docker build --build-arg VITE_API_URL=${{ secrets.VITE_API_URL }} \
+                       --build-arg VITE_APP_TRACKING_ID=${{ secrets.VITE_APP_TRACKING_ID }} \
                        --build-arg VITE_APP_SITE_KEY=${{ secrets.VITE_APP_SITE_KEY }} \
                        -t ${{ secrets.DOCKER_USERNAME }}/discweb-frontend:${{ github.sha }} .
 
