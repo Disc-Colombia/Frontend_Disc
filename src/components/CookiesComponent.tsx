@@ -253,7 +253,7 @@ export const CookiesComponent = () => {
         script.src = `https://www.googletagmanager.com/gtag/js?id=${TRACKING_ID}`;
         script.onload = () => {
             window.dataLayer = window.dataLayer || [];
-            function gtag(...args: (string | Date | Record<string, any>)[]) {
+            function gtag(...args: (string | Date | Object)[]) {
                 window.dataLayer.push(args);
             }
             window.gtag = gtag;
@@ -267,22 +267,20 @@ export const CookiesComponent = () => {
         document.head.appendChild(script);
     }, [cookiePreferences.statistics]);
 
-    // Load cookie preferences on initial render
     useEffect(() => {
         const savedPreferences = Cookies.get("userPreferences");
         if (savedPreferences) {
             setCookiePreferences(JSON.parse(savedPreferences));
         }
-    }, [loadGoogleAnalytics]);
+    }, []);
 
-    // Check if cookies have already been accepted
     useEffect(() => {
         const cookiesAccepted = Cookies.get("cookiesAccepted");
         if (cookiesAccepted) {
-            setIsVisible(false); // Hide banner if the cookie exists
-            loadGoogleAnalytics(); // Load Google Analytics if cookies are accepted
+            setIsVisible(false);
+            loadGoogleAnalytics();
         }
-    }, [loadGoogleAnalytics]); // Include loadGoogleAnalytics in the dependency array
+    }, [loadGoogleAnalytics]);
 
     const handlePreferenceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, checked } = e.target;
