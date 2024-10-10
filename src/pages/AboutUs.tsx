@@ -21,7 +21,6 @@ const HeaderSection: React.FC = () => {
         </div>
         <div className="image--about">
           <picture>
-            {/* <source srcSet={aboutuswebp} type="image/webp" /> */}
             <img className="my_img--about" src={aboutuswebp as string} alt="Imagen binarios" />
           </picture>
         </div>
