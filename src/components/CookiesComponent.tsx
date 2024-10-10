@@ -5,7 +5,7 @@ import "../styles/cookiesComponent.css";
 import type { CookiesPropsSitting } from "../type/type";
 import { Link } from "react-router-dom";
 import axios from 'axios';
-
+import "bootstrap/dist/css/bootstrap.min.css";
 // Default cookie preferences
 const cookiePreferencesDefaults: CookiesPropsSitting = {
   shareDataAndProfile: true,
@@ -194,7 +194,7 @@ export const CookiesComponent = () => {
               </button>
               <div className="container_cookies--setting">
                 <button className="setting_cookies" onClick={handleShowConfiguration}>
-                  Cookie Settings
+                <i className="bi bi-cookie btn_cookies--sitting"></i>Cookie Settings 
                 </button>
               </div>
             </div>

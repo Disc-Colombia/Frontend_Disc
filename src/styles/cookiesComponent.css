@@ -18,13 +18,6 @@
   margin-top: 3rem;
   margin-bottom: 2rem;
 }
-/* .cookie-banner button {
-    background-color:var(--LogoBackground);
-    color: var(--White);
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  } */
 .aceptcookies {
   background-color: var(--LogoBackground);
   color: var(--White);
@@ -136,4 +129,39 @@
 }
 .container_btn--submit {
   margin-bottom: 4rem;
+}
+.btn_cookies--sitting{
+  color: var(--Black);
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+/***************************AJUSTES AL CHECK BOX******************************************/
+input[type="checkbox"] {
+  width: 20px; 
+  height: 20px; 
+  -webkit-appearance: none;
+  appearance: none;
+  background-color:var(--White);
+  border: 2px solid var(--Black);
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box; /* Para asegurar que el tamaño incluye el borde */
+}
+
+input[type="checkbox"]:checked {
+  background-color:var(--LogoBackground); 
+  border-color: var(--LogoBackground); 
+}
+
+input[type="checkbox"]:checked::after {
+  content: '✔'; /* Checkmark */
+  font-size: 16px;
+  color:var(--White);
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
 }
