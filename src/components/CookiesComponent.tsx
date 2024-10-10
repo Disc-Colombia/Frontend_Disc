@@ -253,7 +253,7 @@ export const CookiesComponent = () => {
         script.src = `https://www.googletagmanager.com/gtag/js?id=${TRACKING_ID}`;
         script.onload = () => {
             window.dataLayer = window.dataLayer || [];
-            function gtag(...args: (string | Date | Object)[]) {
+            function gtag(...args: (string | Date | Record<string, any>)[]) {
                 window.dataLayer.push(args);
             }
             window.gtag = gtag;
