@@ -240,19 +240,9 @@ export const CookiesComponent = () => {
     const [isConfigurationVisible, setIsConfigurationVisible] = useState<boolean>(false);
     const [cookiePreferences, setCookiePreferences] = useState<CookiesPropsSitting>(cookiePreferencesDefaults);
 
-    // Load cookie preferences on initial render
-    useEffect(() => {
-        const savedPreferences = Cookies.get("userPreferences");
-        if (savedPreferences) {
-            setCookiePreferences(JSON.parse(savedPreferences));
-        }
-    }, []);
-
-    // Declare loadGoogleAnalytics before using it in useEffect
     const loadGoogleAnalytics = useCallback(() => {
-        if (!cookiePreferences.statistics) return; // Only load if the statistics are allowed
+        if (!cookiePreferences.statistics) return;
 
-        // Avoid to load multiple times
         if (typeof window.gtag !== 'undefined') {
             console.log("Google Analytics ya ha sido cargado.");
             return;
@@ -260,22 +250,30 @@ export const CookiesComponent = () => {
 
         const script = document.createElement("script");
         script.async = true;
-        script.src = "https://www.googletagmanager.com/gtag/js?id="+TRACKING_ID;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${TRACKING_ID}`;
         script.onload = () => {
             window.dataLayer = window.dataLayer || [];
-            function gtag(...args: Array<{ [key: string]: unknown }>) {
+            function gtag(...args: (string | Date | Object)[]) {
                 window.dataLayer.push(args);
             }
             window.gtag = gtag;
             gtag("js", new Date());
             gtag("config", TRACKING_ID, {
-                anonymize_ip: true, // Anonymize IP for privacy
+                anonymize_ip: true,
             });
             console.log("Google Analytics cargado exitosamente.");
         };
 
         document.head.appendChild(script);
-    }, [cookiePreferences.statistics]); // Memorize the function based on cookiePreferences.statistics
+    }, [cookiePreferences.statistics]);
+
+    // Load cookie preferences on initial render
+    useEffect(() => {
+        const savedPreferences = Cookies.get("userPreferences");
+        if (savedPreferences) {
+            setCookiePreferences(JSON.parse(savedPreferences));
+        }
+    }, [loadGoogleAnalytics]);
 
     // Check if cookies have already been accepted
     useEffect(() => {

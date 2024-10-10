@@ -9,11 +9,10 @@
 // export {};
 
 
-
 declare global {
     interface Window {
-        dataLayer: Array<{ [key: string]: unknown }>;  // Tipo más específico para dataLayer
-        gtag: (...args: Array<{ [key: string]: unknown }>) => void;  // Tipo más específico para gtag
+        dataLayer: unknown[];
+        gtag: (...args: (string | Date | Object)[]) => void;
     }
 }
 
