@@ -1,12 +1,12 @@
 .slider-image {
-    width: 80px;
-    height: 80px;
+    width: 125px;
+    height: 125px;
     object-fit: contain;
 }
-@media (min-width: 1024px) {
+@media screen and (max-width: 767.98px) {
     .slider-image {
-        width: 125px;
-        height: 125px;
+        width: 95px;
+        height:70px;
     }
 }
 

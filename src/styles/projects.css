@@ -1,77 +1,62 @@
 @import "./colores.css";
 
+
+.container_projects {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
 .content_option {
+  max-width: 1300px;
+  margin-top: 40px;
   text-align: center;
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
 }
+
+
+
+
 .container_text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 600px;
-  margin: 25px;
+  flex: 1;
 }
-.tittle_content {
+
+
+.title_content {
   font-family: var(--font-makina);
   color: var(--LogoBackground);
+  font-weight: bolder;
   font-size: 2.4rem;
   margin-bottom: 15px;
 }
+
 .description_content {
+  margin-top: 20px;
   font-family: var(--montserrat-font-family);
   font-size: 1.2rem;
   text-align: justify;
 }
+
+
+
 .container_content--projects {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 600px;
+  width: 500px;
   height: 400px;
   overflow: hidden;
 }
-.image-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-.image-wrapper img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.image-mask {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: white;
-  clip-path: circle(0% at 50% 50%);
-  transition: clip-path 1s ease-in-out;
-}
-.image-mask.active {
-  clip-path: circle(
-    100% at 50% 50%
-  );
-}
 
-.container_img_content {
-  width: 480px;
-  height: auto;
-}
-.img_content {
-  width: 100%;
-  max-height: 400px;
-  border-radius: 20px;
-  object-fit: contain;
-  user-select: none;
-  pointer-events: none;
-}
 .video_content {
   width: auto;
   height: 95%;
@@ -82,19 +67,50 @@
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
-.container_projects {
-  width: 100%;
-  height: calc(100vh - 60px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+
+.container_img_content {
+  width: 400px;
+  height: auto;
 }
+
+.img_content {
+  width: 100%;
+  max-height: 400px;
+  border-radius: 20px;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .container_buttom_option {
   display: flex;
   flex-direction: row;
-  margin-bottom: 20px;
+  margin: 40px 70px 20px 70px;
+  
 }
+
+
+
 
 .buttom_option {
   position: relative;
@@ -140,85 +156,7 @@
   pointer-events: none;
 }
 
-@media (max-width: 1023px) {
-  .container_projects {
-    flex-direction: column;
-    height: auto;
-  }
 
-  .content_option {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .container_text {
-    max-width: 100%;
-  }
-
-  .description_content {
-    margin: 20px;
-  }
-  .container_img_content {
-    max-width: 100%;
-  }
-
-  .buttom_option {
-    width: 65px;
-    height: 70px;
-    margin: 20px 5px 5px 5px;
-  }
-}
-
-@media (max-width: 760px) {
-  .container_projects {
-    height: auto;
-    flex-direction: column-reverse;
-  }
-
-  .content_option {
-    margin-bottom: 20px;
-  }
-
-  .container_text {
-    margin: 20px;
-  }
-
-  .description_content {
-    margin: 10px;
-  }
-
-  .container_content--projects {
-    display: flex;
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .video_content {
-    height: 400px;
-  }
-  .container_img_content {
-    width: 80vw;
-    height: auto;
-    max-height: 400px;
-    border-radius: 20px;
-  }
-
-  .img_content {
-    max-height: 400px;
-  }
-  .container_buttom_option {
-    flex-direction: row;
-    margin-bottom: 10px;
-  }
-
-  .buttom_option {
-    width: 50px;
-    height: 50px;
-  }
-}
 
 @keyframes slideHorizontal {
   0% {
@@ -235,3 +173,51 @@
 .img_content {
   animation: slideHorizontal 5s ease-in-out infinite;
 }
+
+
+
+ /*Pantallas grandes (desktops de menos de 1200px)*/
+
+ @media screen and (max-width: 1199.98px) {  }
+
+
+
+ /*Pantallas medianas (tablets de menos de 992px) */
+ 
+ @media screen and  (max-width: 991.98px) {  }
+ 
+ 
+ 
+ /*Pantallas pequeñas (móviles en landscape de menos de 768px)*/
+ 
+ @media screen and  (max-width: 767.98px) { 
+ 
+
+    .content_option{
+      flex-direction: column;
+    }
+
+    .container_text{
+      margin-left: 70px;
+      margin-right: 70px;
+    }
+ 
+    .container_content--projects {
+      width: 400px;
+    }
+
+    .container_img_content {
+      width: 300px;
+    }
+     
+    .buttom_option{
+      width: 10px;
+      height: 40px;
+    }
+  }
+ 
+ 
+ 
+ /*Pantallas muy pequeñas (móviles en portrait de menos de 576px) */
+ 
+ @media screen and (max-width: 575.98px) {  }

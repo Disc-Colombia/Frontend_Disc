@@ -1,20 +1,59 @@
 @import "./colores.css";
+
 .contact_button {
   position: fixed;
-  bottom: 3rem; 
+  justify-content: center;
+  bottom: 3rem;
   right: 5px;
 }
+
 .floating_button {
-  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
   border: none;
-  border-radius: 50%;
- color: var(--LogoBackground);
-  cursor: pointer;
+  border-radius: 15px;
+  color: var(--LogoBackground);
   font-size: 50px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  right: 0px;
+  overflow: hidden;
 }
+
+.contact_text {
+  opacity: 0;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: var(--LogoBackground);
+  white-space: nowrap;
+  position: absolute;
+  transition: opacity 0.3s ease, transform 0.3s ease; 
+}
+
 .floating_button:hover {
-    font-size: 60px;
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.floating_button:hover .contact_text {
+  opacity: 1;
+  transform: translateX(-60px); 
+}
+
+.floating_button:hover {
+  width: 180px; 
+}
+
+
+/*Pantallas pequeñas (móviles en landscape de menos de 768px)*/
+ 
+@media screen and  (max-width: 767.98px) { 
   
+ 
+  .floating_button{
+    font-size: 2.5rem;
+  }
+
+   
 }

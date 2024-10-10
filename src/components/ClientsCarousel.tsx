@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../styles/clientsCarousel.css'
+import "../styles/aboutus.css";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import {
@@ -16,10 +17,11 @@ import {
     client8,
     client9,
     client10,
-    client11
+    client11,
+    client12
 } from '../imgs/clients';
 
-export const ClientsCarousel: React.FC = () => {
+const ClientsCarousel: React.FC = () => {
     const images = [
         client1,
         client2,
@@ -31,11 +33,13 @@ export const ClientsCarousel: React.FC = () => {
         client8,
         client9,
         client10,
-        client11
+        client11,
+        client12,
     ];
 
     const settings = {
         dots: false,
+        arrows:false,
         infinite: true,
         speed: 8000,
         slidesToShow: 8,
@@ -76,7 +80,7 @@ export const ClientsCarousel: React.FC = () => {
         <div style={{ width: '100%', margin: '0 auto'}}>
             <Slider {...settings}>
                 {images.map((logo, index) => (
-                     <div key={index} style={{ padding: '10px', textAlign: 'center' }}>
+                     <div key={index} style={{ marginLeft: '20px', textAlign: 'center' }}>
                         <LazyLoadImage
                             src={logo}
                             alt={`Partner ${index + 1}`}
@@ -89,3 +93,21 @@ export const ClientsCarousel: React.FC = () => {
         </div>
     );
 };
+
+
+
+export const ClientsSection: React.FC = () => {
+    return (
+      <div className="oupartnets" style={{ margin: "20px" }}>
+        <div className="about-header--clients">
+          <p className="my_title--black" style={{textAlign:'center'}}>
+            OUR<span className="title--span"> CLIENTS</span>
+          </p>
+          
+        </div>
+        <div className="slide-hero-content">
+          <ClientsCarousel />
+        </div>
+      </div>
+    );
+  };

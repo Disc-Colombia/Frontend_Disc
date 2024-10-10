@@ -8,13 +8,13 @@ export const FloatingButtons = () => {
                 <a href="https://www.instagram.com/innovationdisc/" target="_blank" rel="noopener noreferrer">
                     <i className=" floating_social--media bi bi-instagram"></i>
                 </a>
-                <a href="https://www.facebook.com/disc.dc.58?mibextid=ZbWKwL">
+                <a href="https://www.facebook.com/disc.dc.58?mibextid=ZbWKwL" target="_blank">
                     <i className=" floating_social--media bi bi-facebook"></i>
                 </a>
-                <a href="https://www.youtube.com/@MaternAPPTV/">
-                    <i className=" floating_social--media bi bi-youtube"></i>
+                <a href="https://www.youtube.com/@MaternAPPTV/" target="_blank">
+                    <i className=" floating_social--media bi bi-youtube" ></i>
                 </a>
-                <a href="https://www.linkedin.com/company/development-innovation-system/">
+                <a href="https://www.linkedin.com/company/development-innovation-system/" target="_blank">
                     <i className=" floating_social--media bi bi-linkedin"></i>
                 </a>
 

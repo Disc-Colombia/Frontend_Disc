@@ -78,19 +78,23 @@ export const ContactUs = ({ handleClose }: ConctaProps) => {
     handleClose();
   };
   return (
-      <>
-        <div className="container_close--circule">
-          <i className=" bi bi-x-circle close" onClick={handleExit}></i>
-        </div>
         <div className="container_information--contactform">
-          <h1 className="title_contact--form">Contact Form</h1>
-          <p className="text_contact--form">
-            If you would like to make a purchase, receive more information about
-            our solutions, or make any other inquiries, we kindly ask you to fill
-            out the form or call one of our regional phone numbers.
-          </p>
-        </div>
-        <div className="contact-container" id="contactus">
+          
+          <div className="contact-container" id="contactus">
+
+          <div className="mytext--contactform">
+            <div className="container_close--circule">
+              <i className=" bi bi-x-circle close" onClick={handleExit}  style={{color:'black'}}></i>
+            </div>
+            <h1 className="my_title--black" style={{textAlign:'center'}}> <span className="title--span">CONTACT</span> US</h1>
+            <p className="my_paragraph--black">
+              If you would like to make a purchase, receive more information about
+              our solutions, or make any other inquiries, we kindly ask you to fill
+              out the form or call one of our regional phone numbers.
+            </p>
+          </div>
+
+
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="product_information">
               <select
@@ -136,19 +140,12 @@ export const ContactUs = ({ handleClose }: ConctaProps) => {
               <input
                   className="input_contactform"
                   type="text"
-                  placeholder="Name"
+                  placeholder="Full name"
                   name="name"
                   value={data.name}
                   onChange={handleChange}
               />
-              <input
-                  className="input_contactform"
-                  type="text"
-                  placeholder="Lastname"
-                  name="lastname"
-                  value={data.lastname}
-                  onChange={handleChange}
-              />
+
               <input
                   className="input_contactform"
                   type="tel"
@@ -168,24 +165,18 @@ export const ContactUs = ({ handleClose }: ConctaProps) => {
               <input
                   className="input_contactform"
                   type="text"
-                  placeholder="Company name"
+                  placeholder="Company"
                   name="company"
                   value={data.company}
                   onChange={handleChange}
               />
-              <input
-                  className="input_contactform"
-                  type="text"
-                  placeholder="Country"
-                  name="country"
-                  value={data.country}
-                  onChange={handleChange}
-              />
+              
             </div>
             <button type="submit">Submit</button>
           </form>
           <ToastContainer  style={{ marginTop: 65  }}/>
         </div>
-      </>
+        </div>
+
   );
 };
