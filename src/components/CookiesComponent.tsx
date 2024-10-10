@@ -248,6 +248,7 @@ export const CookiesComponent = () => {
         }
     }, []);
 
+    // Declare loadGoogleAnalytics before using it in useEffect
     const loadGoogleAnalytics = useCallback(() => {
         if (!cookiePreferences.statistics) return; // Only load if the statistics are allowed
 
@@ -262,7 +263,7 @@ export const CookiesComponent = () => {
         script.src = "https://www.googletagmanager.com/gtag/js?id="+TRACKING_ID;
         script.onload = () => {
             window.dataLayer = window.dataLayer || [];
-            function gtag(...args: Array<string | number | object>) {
+            function gtag(...args: Array<{ [key: string]: unknown }>) {
                 window.dataLayer.push(args);
             }
             window.gtag = gtag;

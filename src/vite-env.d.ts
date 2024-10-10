@@ -13,7 +13,7 @@
 declare global {
     interface Window {
         dataLayer: Array<{ [key: string]: unknown }>;  // Tipo más específico para dataLayer
-        gtag: (...args: Array<string | number | object>) => void;  // Tipo más específico para gtag
+        gtag: (...args: Array<{ [key: string]: unknown }>) => void;  // Tipo más específico para gtag
     }
 }
 
