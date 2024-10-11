@@ -28,7 +28,7 @@ const cookiePreferencesLabels: { [key: string]: string } = {
     createProfile: "Create profiles for personalized advertising",
 };
 
-const TRACKING_ID = import.meta.env.VITE_APP_TRACKING_ID;
+const TRACKING_ID = import.meta.env['VITE_APP_TRACKING_ID'];
 
 export const CookiesComponent = () => {
     const [isVisible, setIsVisible] = useState<boolean>(true);
@@ -91,7 +91,7 @@ export const CookiesComponent = () => {
         });
 
         try {
-            const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/cookie-preferences`, cookiePreferences);
+            const response = await axios.post(`${import.meta.env['VITE_API_URL']}/api/cookie-preferences`, cookiePreferences);
             if (response.status === 200) {
                 console.log('Preferences saved successfully:', response.data);
             }

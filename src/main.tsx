@@ -8,7 +8,6 @@ import { ModalDemo } from "./pages/ModalDemo";
 import { AllServices} from "./pages/AllServices";
 import { AboutUs } from "./pages/AboutUs";
 
-//Your routers here
 const router = createBrowserRouter([
   {
     path: "/",

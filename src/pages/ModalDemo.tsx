@@ -63,7 +63,7 @@ export const ModalDemo: React.FC = () => {
     } else {
       try {
         // Realizamos la petición POST al backend
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/verify-recaptcha`, {
+        const response = await fetch(`${import.meta.env['VITE_API_URL']}/verify-recaptcha`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -218,7 +218,7 @@ export const ModalDemo: React.FC = () => {
           <div className="container_recapchart">
             <ReCAPTCHA
                 ref={recaptchaRef}
-                sitekey={import.meta.env.VITE_APP_SITE_KEY as string}
+                sitekey={import.meta.env['VITE_APP_SITE_KEY'] as string}
                 onChange={handleCaptchaChange}
             />
           </div>

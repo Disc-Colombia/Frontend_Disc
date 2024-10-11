@@ -34,5 +34,6 @@
     "noUncheckedIndexedAccess": true,
     "noPropertyAccessFromIndexSignature": true
   },
-  "include": ["src", "src/router/email.ts", "src/**/*.ts", "declarations.d.ts" ]
+  // "include": ["src", "src/router/email.ts", "src/**/*.ts", "vite-env.d.ts"s,"declarations.d.ts" ]
+  "include": ["src", "src/router/email.ts", "src/**/*.ts"]
 }

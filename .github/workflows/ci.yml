@@ -3,12 +3,10 @@ name: FrontendDiscWeb CI
 on:
   push:
     branches:
-      - main
-      - development
+      - fixing_building
   pull_request:
     branches:
-      - main
-      - development
+      - fixing_building
 
 jobs:
   build:
