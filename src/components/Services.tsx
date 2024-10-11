@@ -32,7 +32,7 @@ import {SupportAgentOutlined as SupportAgentOutlinedIcon,
   }
 
   const CustomTooltip = styled(({ className, ...props }: TooltipProps) => (
-    <Tooltip {...props} arrow classes={{ popper: className }} />
+    <Tooltip {...props} arrow classes={{ popper: className || "" }} />
   ))(({ theme }) => ({
     [`& .${tooltipClasses.tooltip}`]: {
       backgroundColor: "var(--LogoBackground)",

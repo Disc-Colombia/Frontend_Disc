@@ -10,7 +10,6 @@ import { CookiesPolicy } from "./pages/CookiesPolicy";
 import { AboutUs } from "./pages/AboutUs";
 import { Contact_Us } from "./pages/Contact_Us";
 
-//Your routers here
 const router = createBrowserRouter([
   {
     path: "/",

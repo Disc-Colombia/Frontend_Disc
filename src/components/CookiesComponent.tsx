@@ -27,7 +27,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
    statistics: "Understanding the audience through statistics.",
    createProfile: "Create profiles for personalized advertising"
  }
- const TRACKING_ID = import.meta.env["VITE_APP_TRACKING_ID"]
+ const TRACKING_ID = import.meta.env.VITE_APP_TRACKING_ID;
  export const CookiesComponent = () => {
    const [isVisible, setIsVisible] = useState<boolean>(true);
    const [isConfigurationVisible, setIsConfigurationVisible] = useState<boolean>(false);
