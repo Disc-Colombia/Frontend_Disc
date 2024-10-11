@@ -7,12 +7,15 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "../styles/headers.css";
 import { Outlet, useNavigate } from "react-router-dom";
 import { Footers } from "./Footers";
+import {useRef }from 'react'
+import { FloatingButtons } from "./FloatingButtons";
 
 export const Header: React.FC = () => {
+  const [hasReachedFooter, setHasReachedFooter] = useState(false);
   const [linkActive, setLinkActive] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false); 
   const navegate = useNavigate();
-
+  const footerRef = useRef(null);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -25,6 +28,27 @@ export const Header: React.FC = () => {
     closeMenu();
     navegate("/");
   };
+   // useEffect para detectar el scroll hasta el footer
+   React.useEffect(() => {
+    const handleScroll = () => {
+      if (footerRef.current) {
+        const footerPosition = (footerRef.current as HTMLElement).getBoundingClientRect();
+        // Verificar si el footer es visible en la ventana del navegador
+        if (footerPosition.top <= window.innerHeight) {
+          setHasReachedFooter(true);
+        } else {
+          setHasReachedFooter(false);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  
   return (
     <>
       <div className="container_header line-bottom">
@@ -91,7 +115,10 @@ export const Header: React.FC = () => {
         </div>
       </div>
       <Outlet />
-      <Footers />
+      {!hasReachedFooter  &&(<FloatingButtons />)}
+      <div ref={footerRef}>
+        <Footers />
+      </div>
     </>
   );
 };

@@ -5,9 +5,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Index } from "./pages/Index";
 import { ModalDemo } from "./pages/ModalDemo";
-import { AllServices} from "./pages/AllServices";
+import { AllServices } from "./pages/AllServices";
 import { CookiesPolicy } from "./pages/CookiesPolicy";
-import { FloatingButtons } from "./components/FloatingButtons";
 import { AboutUs } from "./pages/AboutUs";
 import { Contact_Us } from "./pages/Contact_Us";
 
@@ -16,43 +15,50 @@ import { Contact_Us } from "./pages/Contact_Us";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Header />,
+    element: (
+      <>
+        <Header />
+      </>
+    ),
     children: [
       {
         index: true,
         element: <Index />,
-      },{
-        path: '/about-us/',
-        element:<AboutUs/>
-      },{
+      },
+      {
+        path: "/about-us/",
+        element: <AboutUs />,
+      },
+      {
         // path: '/services',
         // element:<AllServices/>
       },
       {
         path: "/scheduledemo/",
         element: <ModalDemo />,
-      },{
-        path:"/allServices/",
-        element: <AllServices/>
-      },{
-        path:"/cookiesPolicy/",
-        element:<CookiesPolicy/>,
+      },
+      {
+        path: "/allServices/",
+        element: <AllServices />,
+      },
+      {
+        path: "/cookiesPolicy/",
+        element: <CookiesPolicy />,
       },
       {
         // path:"/Human-Service",
         // element:<HumanService/>
       },
       {
-        path:"/contact-us/",
-        element:<Contact_Us/>,
-      }
-
+        path: "/contact-us/",
+        element: <Contact_Us />,
+      },
     ],
   },
 ]);
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <RouterProvider router={router} />
-    <FloatingButtons/>
   </StrictMode>
 );
