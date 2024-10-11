@@ -10,7 +10,7 @@ export const HumanService: React.FC = () => {
           <div className="container_individual--service">
               
           </div>
-          <img className='img--aboutceo' src={imgintro}></img>
+          <img className='img--aboutceo' src={imgintro as string} alt={"intro"}></img>
           <div className="texto_service">
             <p className="my_title--black">Human Service & Healthcare Systems Administration</p>
             <p className="my_paragraph--black text--aboutceo " 

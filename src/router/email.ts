@@ -5,7 +5,7 @@ const dataEmail = async (data:EmailProps) => {
     console.log("Datos enviados", data)
     try {
         const response = await axios.post(
-            `${import.meta.env.VITE_API_URL}/send-email`,
+            `${import.meta.env['VITE_API_URL']}/send-email`,
             data,
             {
                 headers: {

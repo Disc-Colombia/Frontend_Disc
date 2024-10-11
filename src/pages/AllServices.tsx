@@ -119,7 +119,7 @@ export const AllServices: React.FC = () => {
         <div className="image-grid--allservices">
           <div className="image-item">
             <picture>
-              <source srcSet={serviciosHumanoswebp} type="image/webp" />
+              <source srcSet={serviciosHumanoswebp as string} type="image/webp" />
               <img src={serviciosHumanos as string} alt="Human service" />
             </picture>
 
