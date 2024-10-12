@@ -18,13 +18,6 @@
     margin-top: 3rem;
     margin-bottom: 2rem;
 }
-/*.cookie-banner button {*/
-/*    background-color:var(--LogoBackground);*/
-/*    color: var(--White);*/
-/*    border: none;*/
-/*    padding: 10px 20px;*/
-/*    cursor: pointer;*/
-/*}*/
 .aceptcookies {
     background-color: var(--LogoBackground);
     color: var(--White);
@@ -44,7 +37,7 @@
     gap: 2rem;
     margin-left: 2rem;
     border-radius: 5px;
-    font-family: var(--montserrat-font-family);
+    font-family: var(--montserrat-font-family), sans-serif;
 }
 .aceptcookies:hover {
     background-color: var(--LogoBackground);
@@ -73,13 +66,13 @@
     padding: 10px;
 }
 .title_cookies--setting {
-    font-family: var(--font-makina);
+    font-family: var(--font-makina), sans-serif;
     font-size: 2rem;
     text-align: center;
 }
 .sitting_content,
 .setting_content--span {
-    font-family: var(--montserrat-font-family);
+    font-family: var(--montserrat-font-family), sans-serif;
     font-size: 1.2rem;
     line-height: 1.5;
     font-weight: 300;
@@ -94,7 +87,7 @@
     border: none;
     padding: 10px;
     border-radius: 5px;
-    font-family: var(--montserrat-font-family);
+    font-family: var(--montserrat-font-family), sans-serif;
 }
 .container_form--cookies {
     display: flex;
@@ -113,7 +106,7 @@
 }
 .cookie_information,
 .label_text {
-    font-family: var(--montserrat-font-family);
+    font-family: var(--montserrat-font-family), sans-serif;
     font-weight: 400;
     font-size: 1.2rem;
 }
@@ -135,4 +128,39 @@
 }
 .container_btn--submit {
     margin-bottom: 4rem;
+}
+.btn_cookies--sitting{
+    color: var(--Black);
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+/***************************AJUSTES AL CHECK BOX******************************************/
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color:var(--White);
+    border: 2px solid var(--Black);
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box; /* Para asegurar que el tamaño incluye el borde */
+}
+
+input[type="checkbox"]:checked {
+    background-color:var(--LogoBackground);
+    border-color: var(--LogoBackground);
+}
+
+input[type="checkbox"]:checked::after {
+    content: '✔'; /* Checkmark */
+    font-size: 16px;
+    color:var(--White);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

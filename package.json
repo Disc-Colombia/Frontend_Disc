@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev": "echo 'HOLA, VERIFICA QUE CONSTRUYA BIEN' && npm run build && npm run clean && vite",
+    "build": "tsc -b && vite build  && echo '\uD83C\uDF89 EQUIPO DISC, NO HUBO ERRORES \uD83C\uDF89'",
     "lint": "eslint .",
     "preview": "vite preview",
     "clean": "rm -rf dist *.tsbuildinfo"
