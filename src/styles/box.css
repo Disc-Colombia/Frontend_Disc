@@ -40,8 +40,9 @@
 
 .image_box {
   /* margin-top: 10px; */
-  max-width: 100%;
+  width: 100%;
   position: relative;
+  border-radius: 8px;
   height: auto;
   z-index: 2;
   clip-path: polygon(0 0, 100% 0%, 100% 62%, 50% 100%, 0 62%);

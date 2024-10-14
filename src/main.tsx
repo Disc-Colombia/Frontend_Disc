@@ -8,6 +8,8 @@ import { ModalDemo } from "./pages/ModalDemo";
 import { AllServices} from "./pages/AllServices";
 import { CookiesPolicy } from "./pages/CookiesPolicy";
 import { AboutUs } from "./pages/AboutUs";
+import { HumanService } from "./pages/HumanServices";
+import { ContactUs } from "./components/ContactUs";
 
 const router = createBrowserRouter([
   {
@@ -21,8 +23,11 @@ const router = createBrowserRouter([
         path: '/about-us/',
         element:<AboutUs/>
       },{
-        // path: '/services',
-        // element:<AllServices/>
+        path: '/services',
+        element:<AllServices/>
+      },{
+        path:'/contact-us/',
+        element:<ContactUs/>
       },
       {
         path: "/scheduledemo",
@@ -36,8 +41,10 @@ const router = createBrowserRouter([
         element: <CookiesPolicy />,
       },
       {
-        // path:"/Human-Service",
-        // element:<HumanService/>
+        path:"/Human-Service",
+        element:<HumanService/>
+      },{
+        
       }
     ],
   },

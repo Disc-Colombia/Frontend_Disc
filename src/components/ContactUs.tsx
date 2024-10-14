@@ -7,11 +7,39 @@ import { dataEmail } from "../router/email";
 import type { EmailProps } from "../type/type";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-type ConctaProps = {
-  handleClose: () => void;
+
+export const ContactUs: React.FC = () => {
+  
+
+  return (
+        <div className="container_information--contactform">
+          
+          <div className="contact-container" id="contactus">
+
+          <div className="mytext--contactform">
+            {/* <div className="container_close--circule">
+              <i className=" bi bi-x-circle close" onClick={handleExit}  style={{color:'black'}}></i>
+            </div> */}
+            <h1 className="my_title--black" style={{textAlign:'center'}}> <span className="title--span">CONTACT</span> US</h1>
+            <p className="my_paragraph--black">
+              If you would like to make a purchase, receive more information about
+              our solutions, or make any other inquiries, we kindly ask you to fill
+              out the form or call one of our regional phone numbers.
+            </p>
+          </div>
+
+          <ConctactForm/>
+          
+          <ToastContainer  style={{ marginTop: 65  }}/>
+        </div>
+        </div>
+
+  );
 };
 
-export const ContactUs = ({ handleClose }: ConctaProps) => {
+
+export const ConctactForm: React.FC = () => {
+
   const navegate = useNavigate();
   const [data, setData] = React.useState<EmailProps>({
     name: "",
@@ -74,28 +102,9 @@ export const ContactUs = ({ handleClose }: ConctaProps) => {
       }
     }
   };
-  const handleExit = () => {
-    handleClose();
-  };
-  return (
-        <div className="container_information--contactform">
-          
-          <div className="contact-container" id="contactus">
 
-          <div className="mytext--contactform">
-            <div className="container_close--circule">
-              <i className=" bi bi-x-circle close" onClick={handleExit}  style={{color:'black'}}></i>
-            </div>
-            <h1 className="my_title--black" style={{textAlign:'center'}}> <span className="title--span">CONTACT</span> US</h1>
-            <p className="my_paragraph--black">
-              If you would like to make a purchase, receive more information about
-              our solutions, or make any other inquiries, we kindly ask you to fill
-              out the form or call one of our regional phone numbers.
-            </p>
-          </div>
-
-
-          <form className="contact-form" onSubmit={handleSubmit}>
+  return(
+    <form className="contact-form" onSubmit={handleSubmit}>
             <div className="product_information">
               <select
                   className="input_selection"
@@ -174,9 +183,5 @@ export const ContactUs = ({ handleClose }: ConctaProps) => {
             </div>
             <button type="submit">Submit</button>
           </form>
-          <ToastContainer  style={{ marginTop: 65  }}/>
-        </div>
-        </div>
-
-  );
-};
+  )
+}

@@ -6,7 +6,7 @@
 /* carrousel.css */
 .container_carrousel {
   max-width: 100vw;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 65px);
   margin: 0 auto;
 }
 .title_carousel--slice{
@@ -18,14 +18,14 @@ font-family: var(--montserrat-font-family);
 font-size: 1.2rem;
 }
 .carousel-item img {
-  height: calc(100vh - 60px);
+  height: calc(100vh - 65px);
   object-fit: cover;
 }
 .carousel-item img {
   object-fit: cover;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .carousel-caption h5 {
     font-size: 1.25rem;
   }

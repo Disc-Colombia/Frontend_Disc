@@ -208,10 +208,12 @@ input:checked + label .my_paragraph--white {
         text-align: center;
         padding-left: 45px;
         padding-right: 45px;
+
+        
     }
 
     .container--cardslider{
-        flex-direction: column-reverse;
+        flex-direction: column;
         height: auto;
     }
 

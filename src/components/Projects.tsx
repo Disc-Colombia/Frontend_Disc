@@ -10,7 +10,7 @@ import websitesBig from "../imgs/yocoweb.jpg";
 import maternappVideo from "../video/maternappHome.mp4";
 import "../styles/projects.css";
 import * as React from "react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 type InfoOption =
     | {
@@ -77,12 +77,26 @@ export const Projects: React.FC = () => {
       }
   );
 
+  
+  const textSectionRef = useRef<HTMLDivElement | null>(null);
+
   const handleButtonClick = (option: InfoOption) => {
     setSelectedInfo(option);
+
+    // Si es móvil, desplazarse al texto
+    if (window.innerWidth <= 768 && textSectionRef.current) {
+      const sectionPosition = textSectionRef.current.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: sectionPosition - 63, // Desplazarse 65 píxeles más arriba
+        behavior: "smooth", // Animación suave
+      });
+      
+    }
   };
 
+
   return (
-      <div className="container_projects">
+      <div className="container_projects"  ref={textSectionRef}>
         <div className="content_option">
           <div className="container_text">
             <h2 className="title--span">{selectedInfo.title}</h2>

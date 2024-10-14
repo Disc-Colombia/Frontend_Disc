@@ -7,10 +7,17 @@ import aboutuswebp from "../imgs/fondo_maternapp.webp";
 
 
 const HeaderSection: React.FC = () => {
+
+  React.useEffect(() => {
+    // Scroll  al inicio
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []);
+
+
   return (
     <div style={{width:'100%', height:'100%'}}>
       
-        <div className="about-header-content">
+      <div className="about-header-content">
         <div className="content--text-about">
           <h1 className="my_title--white">
             DEVELOPMENT INNOVATION SYSTEM C <span className="title--span">(DISC)</span>
@@ -24,10 +31,8 @@ const HeaderSection: React.FC = () => {
             <img className="my_img--about" src={aboutuswebp as string} alt="Imagen binarios" />
           </picture>
         </div>
-
-    </div>
-      
       </div>
+    </div>
   );
 };
 
