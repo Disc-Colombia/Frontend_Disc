@@ -1,12 +1,13 @@
-import maternappIcon from "../imgs/maternappicon.png";
-import saludtechIcon from "../imgs/salutechicon.png";
-import covid19Icon from "../imgs/covidicon.png";
-import covidpassportIcon from "../imgs/healthpassicon.png";
-import websitesIcon from "../imgs/yocoicon.png";
-import saludtechBig from "../imgs/covid19app.png";
-import covid19Big from "../imgs/covid19.png";
-import covidpassportBig from "../imgs/covidpassport.jpg";
-import websitesBig from "../imgs/yocoweb.jpg";
+import maternappIcon from "../imgs/projects/icons/maternappicon.webp";
+import saludtechIcon from "../imgs/projects/icons/salutechicon.webp";
+import covid19Icon from "../imgs/projects/icons/covidicon.webp";
+import covidpassportIcon from "../imgs/projects/icons/healthpassicon.webp";
+import websitesIcon from "../imgs/projects/icons/yocoicon.webp";
+
+import saludtechBig from "../imgs/projects/covid19app.webp";
+import covid19Big from "../imgs/projects/covid19.webp";
+import covidpassportBig from "../imgs/projects/covidpassport.webp";
+import websitesBig from "../imgs/projects/yocoweb.webp";
 import maternappVideo from "../video/maternappHome.mp4";
 import "../styles/projects.css";
 import * as React from "react";
