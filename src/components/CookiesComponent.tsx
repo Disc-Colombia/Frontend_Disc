@@ -32,7 +32,7 @@ const cookiePreferencesLabels: { [key: string]: string } = {
 const TRACKING_ID = import.meta.env['VITE_APP_TRACKING_ID'];
 
 export const CookiesComponent = () => {
-    const [isVisible, setIsVisible] = useState<boolean>(true);
+    const [isVisible, setIsVisible] =  useState<boolean | null>(null);
     const [isConfigurationVisible, setIsConfigurationVisible] = useState<boolean>(false);
     const [cookiePreferences, setCookiePreferences] = useState<CookiesPropsSitting>(cookiePreferencesDefaults);
 
@@ -75,57 +75,63 @@ export const CookiesComponent = () => {
         if (cookiesAccepted) {
             setIsVisible(false);
             loadGoogleAnalytics();
+        }else{
+            setIsVisible(true)
         }
     }, [loadGoogleAnalytics]);
 
-    const handlePreferenceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handlePreferenceChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, checked } = e.target;
         setCookiePreferences(prevPreferences => ({
             ...prevPreferences,
             [name]: checked,
         }));
-    };
+    },[]);
 
-    const handleAcceptCookies = () => {
+    const handleAcceptCookies = useCallback(async () => {
         Cookies.set("cookiesAccepted", "true", { expires: 365 });
         Cookies.set("userPreferences", JSON.stringify(cookiePreferences), {
             expires: 365,
         });
         setIsVisible(false);
         loadGoogleAnalytics();
-    };
-
-    const handleRejectCookies = () => {
-        Cookies.remove("cookiesAccepted");
-        Cookies.remove("userPreferences");
-        setIsVisible(false);
-    };
-
-    const handleShowConfiguration = () => {
-        setIsConfigurationVisible(true);
-    };
-
-    const handleSubmitPreferences = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        handleAcceptCookies();
 
         console.log(JSON.stringify(cookiePreferences));
-        Cookies.set("userPreferences", JSON.stringify(cookiePreferences), {
-            expires: 365,
-        });
-
         try {
             const response = await axios.post<{ message: string }>(`${import.meta.env['VITE_API_URL']}/api/cookie-preferences`, cookiePreferences);
             if (response.status === 200) {
                 console.log('Preferences saved successfully:', response.data.message);
+            }else {
+                console.error('Unexpected status code:', response.status);
             }
         } catch (error) {
             console.error('Error saving preferences:', error);
         }
-    };
+    },[cookiePreferences, loadGoogleAnalytics]);
 
+    const handleRejectCookies = useCallback(() => {
+        Cookies.remove("cookiesAccepted");
+        Cookies.remove("userPreferences");
+        setIsVisible(false);
+    },[]);
+
+    const handleShowConfiguration = useCallback(() => {
+        setIsConfigurationVisible(true);
+    },[]);
+
+    const handleSubmitPreferences = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        await handleAcceptCookies();
+    },[handleAcceptCookies]);
+
+    // Check if the cookie status is still being determined
+    if (isVisible === null) {
+        return null; // Don't render anything while checking cookie status
+    }
+
+    // Check if the banner should be hidden (cookies accepted)
     if (!isVisible) {
-        return null;
+        return null; // Don't render the banner if cookies are already accepted
     }
 
     return (
