@@ -15,13 +15,11 @@ export type BoxProps = {
 export type EmailProps = {
   name: string;
   product: string;
-  service:string;
-  lastname: string;
+  service: string;
   phone: string;
   email: string;
-  country: string;
-  company: string;
   message: string;
+  company:string;
 };
 export type DemoProps = {
   FirstName: string;
@@ -33,11 +31,11 @@ export type DemoProps = {
   Description: string;
 };
 export type CookiesPropsSitting = {
-  shareDataAndProfile:boolean,
-  shareData:boolean,
-  storageInformation:boolean,
-  activityAnalysis:boolean,
-  profileAndPublicity:boolean,
-  statistics:boolean,
-  createProfile:boolean
-}
+  shareDataAndProfile: boolean;
+  shareData: boolean;
+  storageInformation: boolean;
+  activityAnalysis: boolean;
+  profileAndPublicity: boolean;
+  statistics: boolean;
+  createProfile: boolean;
+};
