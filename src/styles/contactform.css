@@ -2,7 +2,7 @@
 
 
 .container_information--contactform {
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,10 +12,9 @@
 
 .contact-container {
   display: flex;
-  width: 70%;
+  max-width: 970px;
   justify-content: center;
   align-items: center;
-  
   padding: 20px;
   border-radius: 10px;
   flex-direction: column;

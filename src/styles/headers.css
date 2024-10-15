@@ -21,9 +21,9 @@
   justify-content: space-between;
 }
 .container_logo--img {
-  width: 195px;
+  width: 170px;
   height: 60px;
-  background-color: var(--LogoBackground);
+  /* background-color: var(--LogoBackground); */
 }
 .container_nav {
   display: flex;
@@ -54,7 +54,7 @@
     position: fixed;
     top: 0;
     left: -250px;
-    width: 250px;
+    width: 200px;
     height: 100vh;
     flex-direction: column;
     justify-content: start;
@@ -71,7 +71,7 @@
   .icono-menu {
     font-size: 3rem;
     color: var(--White);
-    padding-right: 2rem;
+    padding-right: 1rem;
   }
 
   .container_nav--lin {
@@ -97,6 +97,7 @@
   color: var(--White);
   text-decoration: none;
   padding: 2px;
+  margin-bottom: 15px;
   margin-right: 2rem;
   text-transform: uppercase;
   transition: background-color 0.5s ease, transform 0.5s ease;

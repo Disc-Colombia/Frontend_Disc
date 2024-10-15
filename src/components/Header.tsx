@@ -1,8 +1,8 @@
 import * as React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../imgs/logoDISC_sinfondo.png";
-import logowebp from "../imgs/DISC.webp";
+// import logo from "../imgs/logoDISC_sinfondo.png";
+import logowebp from "../imgs/logoverde_blanco.png";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../styles/headers.css";
 import { Outlet, useNavigate } from "react-router-dom";
@@ -31,14 +31,14 @@ export const Header: React.FC = () => {
         <div className="container_logo">
           <Link to="/" onClick={() => handleActive("home")}>
             <picture>
-              <source
+              {/* <source
                 className="container_logo--img"
                 srcSet={logowebp}
                 type="image/webp"
-              />
+              /> */}
               <img
                 className="container_logo--img"
-                src={logo as string}
+                src={logowebp as string}
                 alt="logo development"
               />
             </picture>
@@ -69,7 +69,7 @@ export const Header: React.FC = () => {
                 About us
               </Link>
               <Link
-                to="/services"
+                to="/services/"
                 className={`navegations_links ${
                   linkActive === "services" ? "active" : ""
                 }`}
@@ -78,7 +78,7 @@ export const Header: React.FC = () => {
                 Services
               </Link>
               <Link
-                to="/contactus"
+                to="/contact-us/"
                 className={`navegations_links ${
                   linkActive === "contact" ? "active" : ""
                 }`}

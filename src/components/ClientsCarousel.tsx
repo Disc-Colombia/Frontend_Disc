@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import '../styles/clientsCarousel.css'
 import "../styles/aboutus.css";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-
+import { UseScrollAnimation } from "./UseScrollAnimation";
 import {
     client1,
     client2,
@@ -97,10 +97,12 @@ const ClientsCarousel: React.FC = () => {
 
 
 export const ClientsSection: React.FC = () => {
+    UseScrollAnimation();
+
     return (
       <div className="oupartnets" style={{ margin: "20px" }}>
         <div className="about-header--clients">
-          <p className="my_title--black" style={{textAlign:'center'}}>
+          <p className="my_title--black my_animation" style={{textAlign:'center'}}>
             OUR<span className="title--span"> CLIENTS</span>
           </p>
           

@@ -6,6 +6,7 @@ import { Tooltip, tooltipClasses,TooltipProps } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import '../styles/sectionServices.css'
 import '../styles/colores.css'
+import { UseScrollAnimation } from "./UseScrollAnimation";
 
 import {SupportAgentOutlined as SupportAgentOutlinedIcon,
     ReadMoreOutlined as ReadMoreOutlinedIcon,
@@ -49,8 +50,11 @@ import {SupportAgentOutlined as SupportAgentOutlinedIcon,
   const CardSlider = () => {
     const [selectedSlide, setSelectedSlide] = useState('c1');
   
+    UseScrollAnimation()
+    
+
     return (
-      <div className="wrapper--cardslider">
+      <div className="wrapper--cardslider my_animation">
         <div className="container--cardslider">
           <input 
             className="input_imgs--services"
@@ -246,17 +250,17 @@ export const Services: React.FC = () => {
     
 
     
-
+  UseScrollAnimation()
 
   return (
     <div className="big_container--servicesection">
 
       <div className="Container_our--services">
         <div className="container_service--text">
-            <p className="title_service-section my_title--white">
+            <p className="title_service-section my_title--white my_animation">
               WHAT WE<span className="title--span"> DO</span>
             </p>
-            <p className="my_paragraph--white" >
+            <p className="my_paragraph--white my_animation">
               
             At DISC, we are committed to employing the highest industry standards and best practices to not only meet but exceed the expectations of our diverse clientele, ranging from public to private sector organizations across the globe. Our flexible and dynamic approach is deeply rooted in cutting-edge technological expertise, ensuring that we provide innovative solutions tailored to each client's unique needs. We operate within a framework of strict compliance and regulatory standards, leaving no room for shortcuts or compromises. Excellence is at the core of everything we do, driving us to consistently deliver high-quality results with precision and integrity.
             </p>
@@ -265,10 +269,10 @@ export const Services: React.FC = () => {
       </div>
 
       <div className="container-text--allservices">
-        <p className="my_title--black" style={{textAlign:'center'}}>
+        <p className="my_title--black my_animation" style={{textAlign:'center'}}>
           YOUR <span className="title--span">TECHNOLOGY</span> PARTNER
         </p>
-        <p className="my_paragraph--black">
+        <p className="my_paragraph--black my_animation">
           DISC is the trusted source for government agencies, non-profits,
           for-profits and Fortune 500 companies to gain best in class solutions
           in Information Technology and Innovation Management Solutions. We use
@@ -280,7 +284,7 @@ export const Services: React.FC = () => {
         
           <div className="card-grid-allservices">
             {cards.map((card) => (
-              <div key={card.id} className="card-allservices">
+              <div key={card.id} className="card-allservices my_animation">
                 <div className="card-icon-services">{card.icon}</div>
                 <div className="card-title-services">{card.title}</div>
               </div>
