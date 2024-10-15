@@ -10,4 +10,44 @@
     }
 }
 
+.clients-carousel-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
 
+.client-logo-wrapper {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+/*.slider-image {*/
+/*    max-width: 80%;*/
+/*    max-height: 80px;*/
+/*    object-fit: contain;*/
+/*}*/
+
+.our-clients-section {
+    margin: 40px 0;
+}
+
+.clients-carousel-wrapper {
+    margin-top: 20px;
+}
+
+/* Ensure smooth animation */
+.slick-track {
+    will-change: transform;
+}
+
+@media screen and (max-width: 767.98px) {
+    .client-logo-wrapper {
+        height: 80px;
+    }
+
+    .slider-image {
+        max-height: 60px;
+    }
+}
