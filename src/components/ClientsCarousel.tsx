@@ -80,41 +80,6 @@ const ClientsCarousel: React.FC = () => {
         ],
     };
 
-    // old version
-    // return (
-    //     <div style={{ width: '100%', margin: '0 auto'}}>
-    //         <Slider {...settings}>
-    //             {images.map((logo, index) => (
-    //                  <div key={index} style={{ marginLeft: '20px', textAlign: 'center' }}>
-    //                     <LazyLoadImage
-    //                         src={logo}
-    //                         alt={`Partner ${index + 1}`}
-    //                         className="slider-image"
-    //                         effect="blur"
-    //                     />
-    //                 </div>
-    //             ))}
-    //         </Slider>
-    //     </div>
-    // );
-    //new version
-    // return (
-    //     <div className="clients-carousel-container">
-    //         <Slider {...settings}>
-    //             {images.map((logo, index) => (
-    //                 <div key={index} className="client-logo-wrapper">
-    //                     <LazyLoadImage
-    //                         src={logo}
-    //                         alt={`Partner ${index % 12 + 1}`}
-    //                         className="slider-image"
-    //                         effect="blur"
-    //                     />
-    //                 </div>
-    //             ))}
-    //         </Slider>
-    //     </div>
-    // );
-    // exp
     return (
         <div style={{ width: '100%', margin: '0 auto'}}>
             <Slider {...settings}>
@@ -138,21 +103,8 @@ const ClientsCarousel: React.FC = () => {
 export const ClientsSection: React.FC = () => {
     UseScrollAnimation();
 
-    // return (
-    //   <div className="oupartnets" style={{ margin: "20px" }}>
-    //     <div className="about-header--clients">
-    //       <p className="my_title--black my_animation" style={{textAlign:'center'}}>
-    //         OUR<span className="title--span"> CLIENTS</span>
-    //       </p>
-    //
-    //     </div>
-    //     <div className="slide-hero-content">
-    //       <ClientsCarousel />
-    //     </div>
-    //   </div>
-    // );
     return (
-        <div className="oupartnets" style={{margin: "20px"}}>
+        <div className="ourpartnets" style={{margin: "30px"}}>
             <div className="about-header--clients">
                 <p className="my_title--black my_animation" style={{textAlign: 'center'}}>
                     OUR<span className="title--span"> CLIENTS</span>
