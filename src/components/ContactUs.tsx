@@ -34,6 +34,8 @@ export const ContactUs: React.FC = () => {
 
 export const ConctactForm: React.FC = () => {
   const navegate = useNavigate();
+  const recaptchaRef = React.useRef<ReCAPTCHA | null>(null);
+  const [captchaValid, setCaptchaValid] = React.useState(false);
   const [data, setData] = React.useState<EmailProps>({
     name: "",
     service: "",
@@ -69,13 +71,13 @@ export const ConctactForm: React.FC = () => {
       !regex.test(data.email) ||
       data.phone === "" ||
       data.service === "" ||
-      !setCaptchaValid
+      !captchaValid
     ) {
       toast.warning("Please ensure all fields are completed, thank you.");
     } else {
       // console.log("soy data ...", data)
       try {
-        await dataEmail(data);
+        await dataEmail(data, recaptchaRef);
         toast.success("Thank you, we'll contact you as fast as we can.");
         setData({
           name: "",
@@ -181,19 +183,15 @@ export const ConctactForm: React.FC = () => {
           value={data.company}
           onChange={handleChange}
         />
-        <div className="container_recapchart">
-          <ReCAPTCHA
-            ref={ReCAPTCHA}
-            sitekey={import.meta.env["VITE_APP_SITE_KEY"] as string}
-            onChange={handleCaptchaChange}
-          />
-        </div>
+      </div>
+      <div className="container_recapchart">
+        <ReCAPTCHA
+          ref={recaptchaRef}
+          sitekey={import.meta.env["VITE_APP_SITE_KEY"] as string}
+          onChange={handleCaptchaChange}
+        />
       </div>
       <button type="submit">Submit</button>
     </form>
   );
 };
-function setCaptchaValid(arg0: boolean) {
-  throw new Error("Function not implemented.");
-}
-

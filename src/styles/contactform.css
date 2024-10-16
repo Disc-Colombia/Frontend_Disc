@@ -131,3 +131,8 @@
 
     
 }
+.container_recapchart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
