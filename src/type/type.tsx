@@ -1,4 +1,5 @@
 import * as React from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export type BoxProps = {
   children: React.ReactNode;
@@ -14,14 +15,11 @@ export type EmailProps = {
   email: string;
   message: string;
   company:string;
+  token:React.MutableRefObject<ReCAPTCHA | null>;
 };
 export type DemoProps = {
-  FirstName: string;
-  LastName: string;
+  FullName: string;
   Email: string;
-  Company: string;
-  Job: string;
-  Phone: string;
   Description: string;
 };
 export type CookiesPropsSitting = {

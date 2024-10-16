@@ -12,12 +12,8 @@ export const ModalDemo: React.FC = () => {
 
   const redirect = useNavigate();
   const [data, setData] = React.useState<DemoProps>({
-    FirstName: "",
-    LastName: "",
+    FullName: "",
     Email: "",
-    Company: "",
-    Job: "",
-    Phone: "",
     Description: "",
   });
 
@@ -51,14 +47,11 @@ export const ModalDemo: React.FC = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (
-      data.FirstName === "" ||
-      data.LastName === "" ||
+      data.FullName === "" ||
       !emailRegex.test(data.Email) ||
-      data.Company === "" ||
-      data.Job === "" ||
-      data.Phone === "" || !captchaValid
+       !captchaValid
     ) {
-      toast.error("Dear user, all fields are required and CAPTCHA must be completed.");
+      toast.warning("Dear user, all fields are required and CAPTCHA must be completed.");
       //return;
     } else {
       try {
@@ -79,20 +72,16 @@ export const ModalDemo: React.FC = () => {
         if (result.success) {
           toast.success("Thank you, we'll contact you as fast as we can.");
           setData({
-            FirstName: "",
-            LastName: "",
+            FullName: "",
             Email: "",
-            Company: "",
-            Job: "",
-            Phone: "",
             Description: "",
           });
           recaptchaRef.current?.reset();
           setCaptchaValid(false);
-        }else {
+        } else {
           toast.error("CAPTCHA verification failed.");
         }
-      }catch (error) {
+      } catch (error) {
         toast.error("Error sending the request to the server.");
         console.error(error);
       }
@@ -107,8 +96,8 @@ export const ModalDemo: React.FC = () => {
     <div className="container_demo">
       <div className="container_demo--product">
         <div className="container_maternapp--image">
-          <p className="my_title--black" style={{textAlign:'center'}}>
-            Get information and execute strategy<span className="title--span"> all in one place.</span> 
+          <p className="my_title--black" style={{ textAlign: 'center' }}>
+            Get information and execute strategy<span className="title--span"> all in one place.</span>
           </p>
           <p className="my_paragraph--black">
             Ready to boost your business strategy? Schedule a 30-minute
@@ -125,101 +114,55 @@ export const ModalDemo: React.FC = () => {
         <div className="container_close--icon">
           <i className="bi bi-x-circle" onClick={handleBack}></i>
         </div>
-        <div className="my_title--black" style={{textAlign:'center'}}>
+        <div className="my_title--black" style={{ textAlign: 'center' }}>
           <h2 className="demotitle">Schedule a Demo</h2>
         </div>
         <form className="formulario_demo" onSubmit={handleSubmit}>
           <div className="container_input">
             <div className="container_input--label">
-              <label htmlFor="FirstName">First Name:*</label>
+              <label htmlFor="FullName">FullName:*</label>
               <input
-                  className="input_demo"
-                  type="text"
-                  name="FirstName"
-                  id="FirstName"
-                  placeholder="First Name"
-                  value={data.FirstName}
-                  onChange={handleChange}
+                className="input_demo"
+                type="text"
+                name="FullName"
+                id="FullName"
+                placeholder="FullName"
+                value={data.FullName}
+                onChange={handleChange}
               />
             </div>
+
             <div className="container_input--label">
-              <label htmlFor="LastName">Last Name:*</label>
+              <label htmlFor="Email">Email:*</label>
               <input
-                  className="input_demo"
-                  type="text"
-                  name="LastName"
-                  id="LastName"
-                  placeholder="First Name"
-                  value={data.LastName}
-                  onChange={handleChange}
+                className="input_demo"
+                type="email"
+                name="Email"
+                id="Email"
+                placeholder="Email"
+                value={data.Email}
+                onChange={handleChange}
               />
             </div>
-            <div className="container_input--label">
-              <label htmlFor="WorkerEmail">Work Email:*</label>
-              <input
-                  className="input_demo"
-                  type="email"
-                  name="Email"
-                  id="Email"
-                  placeholder="Email"
-                  value={data.Email}
-                  onChange={handleChange}
-              />
-            </div>
-            <div className="container_input--label">
-              <label htmlFor="Company">Company Name:*</label>
-              <input
-                  className="input_demo"
-                  type="text"
-                  name="Company"
-                  id="Company"
-                  placeholder="Company"
-                  value={data.Company}
-                  onChange={handleChange}
-              />
-            </div>
-            <div className="container_input--label">
-              <label htmlFor="Job">Job:*</label>
-              <input
-                  className="input_demo"
-                  type="text"
-                  name="Job"
-                  id="Job"
-                  placeholder="Job "
-                  value={data.Job}
-                  onChange={handleChange}
-              />
-            </div>
-            <div className="container_input--label">
-              <label htmlFor="Phone">Phone:*</label>
-              <input
-                  className="input_demo"
-                  type="tel"
-                  name="Phone"
-                  id="Phone"
-                  placeholder="+1 999 999 9999"
-                  value={data.Phone}
-                  onChange={handleChange}
-              />
-            </div>
+
           </div>
 
           <div className="container_input--label">
             <label htmlFor="Description">Description:</label>
             <textarea
-                className="input_textarea"
-                name="Description"
-                id="Description"
-                value={data.Description}
-                onChange={handleChange}
+              className="input_textarea"
+              name="Description"
+              id="Description"
+              value={data.Description}
+              onChange={handleChange}
             ></textarea>
           </div>
 
           <div className="container_recapchart">
             <ReCAPTCHA
-                ref={recaptchaRef}
-                sitekey={import.meta.env['VITE_APP_SITE_KEY'] as string}
-                onChange={handleCaptchaChange}
+              ref={recaptchaRef}
+              sitekey={import.meta.env['VITE_APP_SITE_KEY'] as string}
+              onChange={handleCaptchaChange}
             />
           </div>
 
@@ -228,10 +171,10 @@ export const ModalDemo: React.FC = () => {
               {" "}
               Request Demo
             </button>
-          </div> 
+          </div>
         </form>
       </div>
-      <ToastContainer/>
+      <ToastContainer />
     </div>
   );
 };

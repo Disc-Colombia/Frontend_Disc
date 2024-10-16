@@ -44,6 +44,7 @@ export const ConctactForm: React.FC = () => {
     email: "",
     message: "",
     company: "",
+    token: recaptchaRef,
   });
 
   const handleChange = (
@@ -87,7 +88,10 @@ export const ConctactForm: React.FC = () => {
           message: "",
           company: "",
           service: "",
+         token:recaptchaRef.current?.reset(),
         });
+        recaptchaRef.current?.reset();
+        setCaptchaValid(false);
         navegate("/");
       } catch {
         toast.error(
@@ -165,6 +169,7 @@ export const ConctactForm: React.FC = () => {
           placeholder="Telephone: +1 202-456-1414"
           name="phone"
           value={data.phone}
+          
           onChange={handleChange}
         />
         <input
