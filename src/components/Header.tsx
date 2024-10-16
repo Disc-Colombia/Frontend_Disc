@@ -10,7 +10,7 @@ import { Footers } from "./Footers";
 
 export const Header: React.FC = () => {
   const [linkActive, setLinkActive] = useState("");
-  const [isMenuOpen, setIsMenuOpen] = useState(false); 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navegate = useNavigate();
 
   const toggleMenu = () => {
@@ -68,15 +68,96 @@ export const Header: React.FC = () => {
               >
                 About us
               </Link>
-              <Link
-                to="/services/"
-                className={`navegations_links ${
-                  linkActive === "services" ? "active" : ""
-                }`}
-                onClick={() => handleActive("services")}
-              >
-                Services
-              </Link>
+              <div className="container_btn--down">
+                <button
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  className={`navegations_links btn_service--down${
+                    linkActive === "aboutus" ? "active" : ""
+                  }`}
+                  
+                >
+                  Services<i className="bi bi-chevron-down icon_down"></i>
+                </button>
+                <ul
+                  className="dropdown-menu"
+                  aria-labelledby="dropdownMenuButton1"
+                >
+                  <li className="navegations_links">
+                  <Link className="dropdown-item" to="/services/"
+                    onClick={() => handleActive("services")}
+                    >
+                      Software Development & Maintenance
+                    </Link>
+                  </li>
+                  <li className="navegations_links">
+                    <Link className="dropdown-item" to="/services/"
+                    onClick={() => handleActive("services")}
+                    >
+                      Artificial Intelligence & Machine Learning
+
+                    </Link>
+                  </li>
+                  <li className="navegations_links">
+                    <Link className="dropdown-item" to="/services/"
+                    onClick={() => handleActive("services")}
+                    >
+                     CyberSecurity Consulting
+                    </Link>
+                  </li>
+                  <li className="navegations_links">
+                    <Link className="dropdown-item" to="/services/"
+                    onClick={() => handleActive("services")}
+                    >
+                     Computers & Peripherals Wholesale
+                    </Link>
+                  </li>
+                  <li className="navegations_links">
+                    <Link className="dropdown-item" to="/services/"
+                    onClick={() => handleActive("services")}
+                    >
+                      Data Migration & Systems Integration
+                    </Link>
+                  </li>
+                  <li className="navegations_links">
+                    <Link className="dropdown-item" to="/services/"
+                    onClick={() => handleActive("services")}
+                    >
+                      Innovation Management
+                    </Link>
+                  </li>
+                  <li className="navegations_links">
+                    <Link className="dropdown-item" to="/services/"
+                    onClick={() => handleActive("services")}
+                    >
+                      Something else hereCloud Computing Consulting and Support
+                    </Link>
+                  </li>
+                  <li className="navegations_links">
+                    <Link className="dropdown-item" to="/services/"
+                    onClick={() => handleActive("services")}
+                    >
+                      Mobile & Web App Development
+                    </Link>
+                  </li>
+                  <li className="navegations_links">
+                    <Link className="dropdown-item" to="/services/"
+                    onClick={() => handleActive("services")}
+                    >
+                      Temporary Staffing Services
+                    </Link>
+                  </li>
+                  <li className="navegations_links">
+                    <Link className="dropdown-item" to="/services/"
+                    onClick={() => handleActive("services")}
+                    >
+                     Database Management & Warehousing
+                    </Link>
+                  </li>
+                </ul>
+              </div>
               <Link
                 to="/contact-us/"
                 className={`navegations_links ${

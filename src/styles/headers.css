@@ -25,6 +25,9 @@
   height: 60px;
   /* background-color: var(--LogoBackground); */
 }
+.container_menu{
+  display: flex;
+}
 .container_nav {
   display: flex;
   justify-content: center;
@@ -40,10 +43,22 @@
   height: 60px;
 }
 
-.container_nav {
+.container_nav--lin {
   display: flex;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente si es necesario */
+  gap: 20px; /* Espacio entre los elementos */
 }
+.btn_service--down{
+background: none;
+border: none;
+color: var(--White);
+font-family: var(--font-makina);
 
+}
+.icon_down{
+  margin-right: 3px;
+}
 /* Ocultar el menú lateral por defecto en pantallas pequeñas */
 @media (max-width: 1024px) {
   .menu-toggle {
@@ -97,16 +112,21 @@
   color: var(--White);
   text-decoration: none;
   padding: 2px;
-  margin-bottom: 15px;
   margin-right: 2rem;
   text-transform: uppercase;
   transition: background-color 0.5s ease, transform 0.5s ease;
 }
-.navegations_links:hover {
+.navegations_links:hover{
   cursor: pointer;
   background-color: var(--SombraAzulVerdoso);
   border-radius: 10px;
   padding: 4px;
+}
+.navegations_links--li:hover{
+  cursor: pointer;
+  background-color: var(--SombraAzulVerdoso);
+  border-radius: 1px;
+  
 }
 
 /*=============================================================================*/
