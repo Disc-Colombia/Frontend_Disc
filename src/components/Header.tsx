@@ -77,7 +77,6 @@ export const Header: React.FC = () => {
                   className={`navegations_links btn_service--down${
                     linkActive === "aboutus" ? "active" : ""
                   }`}
-                  
                 >
                   Services<i className="bi bi-chevron-down icon_down"></i>
                 </button>
@@ -86,74 +85,48 @@ export const Header: React.FC = () => {
                   aria-labelledby="dropdownMenuButton1"
                 >
                   <li className="navegations_links">
-                  <Link className="dropdown-item" to="/services/"
-                    onClick={() => handleActive("services")}
+                    <Link
+                      className="dropdown-item"
+                      to="/Human-Service/"
+                      onClick={() => handleActive("services")}
                     >
-                      Software Development & Maintenance
+                      Human Service
                     </Link>
                   </li>
                   <li className="navegations_links">
-                    <Link className="dropdown-item" to="/services/"
-                    onClick={() => handleActive("services")}
+                    <Link
+                      className="dropdown-item"
+                      to="/IT-Consulting/"
+                      onClick={() => handleActive("services")}
                     >
-                      Artificial Intelligence & Machine Learning
-
+                      IT Consulting
                     </Link>
                   </li>
                   <li className="navegations_links">
-                    <Link className="dropdown-item" to="/services/"
-                    onClick={() => handleActive("services")}
+                    <Link
+                      className="dropdown-item"
+                      to="/Cybersecurity/"
+                      onClick={() => handleActive("services")}
                     >
-                     CyberSecurity Consulting
+                      Cybersecurity
                     </Link>
                   </li>
                   <li className="navegations_links">
-                    <Link className="dropdown-item" to="/services/"
-                    onClick={() => handleActive("services")}
+                    <Link
+                      className="dropdown-item"
+                      to="/Finance-Solutions/"
+                      onClick={() => handleActive("services")}
                     >
-                     Computers & Peripherals Wholesale
+                      Finance Solutions
                     </Link>
                   </li>
                   <li className="navegations_links">
-                    <Link className="dropdown-item" to="/services/"
-                    onClick={() => handleActive("services")}
+                    <Link
+                      className="dropdown-item"
+                      to="/Customer-Service/"
+                      onClick={() => handleActive("services")}
                     >
-                      Data Migration & Systems Integration
-                    </Link>
-                  </li>
-                  <li className="navegations_links">
-                    <Link className="dropdown-item" to="/services/"
-                    onClick={() => handleActive("services")}
-                    >
-                      Innovation Management
-                    </Link>
-                  </li>
-                  <li className="navegations_links">
-                    <Link className="dropdown-item" to="/services/"
-                    onClick={() => handleActive("services")}
-                    >
-                      Something else hereCloud Computing Consulting and Support
-                    </Link>
-                  </li>
-                  <li className="navegations_links">
-                    <Link className="dropdown-item" to="/services/"
-                    onClick={() => handleActive("services")}
-                    >
-                      Mobile & Web App Development
-                    </Link>
-                  </li>
-                  <li className="navegations_links">
-                    <Link className="dropdown-item" to="/services/"
-                    onClick={() => handleActive("services")}
-                    >
-                      Temporary Staffing Services
-                    </Link>
-                  </li>
-                  <li className="navegations_links">
-                    <Link className="dropdown-item" to="/services/"
-                    onClick={() => handleActive("services")}
-                    >
-                     Database Management & Warehousing
+                      Customer Service
                     </Link>
                   </li>
                 </ul>
