@@ -187,7 +187,7 @@ export const ConctactForm: React.FC = () => {
           </div>
           <button type="submit">Submit</button>
         </form>
-        <ToastContainer pstyle={{ marginTop: 65  }} autoClose={3000} />
+        <ToastContainer style={{ marginTop: 65  }} autoClose={3000} />
       </>
   );
 };
