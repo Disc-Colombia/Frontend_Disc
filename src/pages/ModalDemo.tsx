@@ -9,7 +9,7 @@ import ReCAPTCHA from 'react-google-recaptcha'
 import VideoPlayer from "../components/VideoPlayer";
 import { capitalizarNombre, validarNombre, validarEmail, validarMensaje, sanitizarInput } from "../utils/inputHelpers";
 import Tooltip from "../components/Tooltip";
-import { demoRequest } from '../router/contactDemo';
+import { demoRequest } from '../api/demoRequest.ts';
 
 export const ModalDemo: React.FC = () => {
   const redirect = useNavigate();

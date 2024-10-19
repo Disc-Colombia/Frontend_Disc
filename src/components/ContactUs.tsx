@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../styles/contactform.css";
-import { dataEmail } from "../router/email";
+import { dataEmail } from "../api/emailRequest.ts";
 import type { EmailProps } from "../type/type";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
