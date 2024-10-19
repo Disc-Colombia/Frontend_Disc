@@ -35,25 +35,25 @@ export const ModalDemo: React.FC = () => {
         break;
       case 'Email':
       {
-        // Eliminar espacios al inicio y al final
+        // Removes whitespace from the beginning and end of the string.
         newValue = value.trim();
 
-        // Convertir a minúsculas
+        // Converts all characters in the string to lowercase.
         newValue = newValue.toLowerCase();
 
-        // Eliminar espacios en medio
+        // Removes all whitespace characters within the string
         newValue = newValue.replace(/\s/g, '');
 
-        // Permitir solo caracteres válidos
+        // Filters the string to keep only valid characters (lowercase letters, digits, and specific special characters).
         newValue = newValue.replace(/[^a-z0-9@.$!_-]/g, '');
 
-        // Evitar puntos consecutivos
+        // Replaces instances of two or more consecutive periods with a single period.
         newValue = newValue.replace(/\.{2,}/g, '.');
 
-        // Evitar punto al inicio
+        // Removes a period if it appears at the start of the string.
         newValue = newValue.replace(/^\./, '');
 
-        // Asegurarse de que solo haya un '@'
+        // Placeholder for additional logic to check for the presence of the '@
         const atIndex = newValue.indexOf('@');
         if (atIndex !== -1) {
           newValue = newValue.slice(0, atIndex + 1) + newValue.slice(atIndex + 1).replace(/@/g, '');
@@ -78,7 +78,7 @@ export const ModalDemo: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Eliminar el punto final del email si existe
+    // Remove Trailing Period from Email.
     const emailValue = data.Email.endsWith('.') ? data.Email.slice(0, -1) : data.Email;
 
     const fullNameError = validarNombre(data.FullName);

@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "echo 'HOLA, ANTES DE COMPILAR VERIFIQUEMOS TU SINTAXIS' && npm run lint && echo 'VERIFICA QUE CONSTRUYA BIEN' && npm run build && npm run clean && vite",
-    "build": "tsc -b && vite build  && echo '\uD83C\uDF89 EQUIPO DISC, NO HUBO ERRORES \uD83C\uDF89'",
-    "lint": "eslint . && echo '\uD83D\uDC69\uD83C\uDFFD\u200D\uD83D\uDCBB SINTAXIS OKAY \uD83E\uDDD1\u200D\uD83D\uDCBB' ",
+    "build": "tsc -b && vite build  && echo '🎉 EQUIPO DISC, NO HUBO ERRORES 🎉'",
+    "lint": "eslint . && echo '👩🏽‍💻 SINTAXIS OKAY 🧑‍💻' ",
     "preview": "vite preview",
     "clean": "rm -rf dist *.tsbuildinfo"
   },
