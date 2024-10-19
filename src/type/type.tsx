@@ -1,11 +1,5 @@
 import * as React from "react";
 
-export type RotationBoxProps = {
-  children: React.ReactNode;
-  image: string;
-  tittle: string;
-};
-
 export type BoxProps = {
   children: React.ReactNode;
   image: string;
@@ -24,14 +18,14 @@ export type EmailProps = {
   message: string;
 };
 export type DemoProps = {
-  FirstName: string;
-  LastName: string;
+  FullName: string;
   Email: string;
-  Company: string;
-  Job: string;
-  Phone: string;
   Description: string;
 };
+export interface DemoRequestProps {
+  token: string | null;
+  data: DemoProps;
+}
 export type CookiesPropsSitting = {
   shareDataAndProfile:boolean,
   shareData:boolean,
