@@ -12,7 +12,7 @@ export class DemoRequestError extends Error {
 
 export const demoRequest = async ({ token, data }: DemoRequestProps): Promise<{ success: boolean }> => {
     try {
-        const response = await fetch(`${import.meta.env["VITE_API_URL"]}/request-demo`, {
+        const response = await fetch(`${import.meta.env["VITE_API_URL"]}/request-demo-info`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

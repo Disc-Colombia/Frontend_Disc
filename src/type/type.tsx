@@ -6,17 +6,19 @@ export type BoxProps = {
   tittle: string;
   description: string;
 };
-export type EmailProps = {
+export type ContactEmailProps = {
   name: string;
-  product: string;
   service:string;
-  lastname: string;
+  product: string;
   phone: string;
   email: string;
-  country: string;
-  company: string;
   message: string;
+  company: string;
 };
+export interface ContactRequestProps {
+  token: string | null;
+  data: ContactEmailProps;
+}
 export type DemoProps = {
   FullName: string;
   Email: string;
