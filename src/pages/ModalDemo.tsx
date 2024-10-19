@@ -9,7 +9,7 @@ import ReCAPTCHA from 'react-google-recaptcha'
 import VideoPlayer from "../components/VideoPlayer";
 import { capitalizarNombre, validarNombre, validarEmail, validarMensaje, sanitizarInput } from "../utils/inputHelpers";
 import Tooltip from "../components/Tooltip";
-import { demoRequest } from '../api/demoRequest.ts';
+import { demoRequest } from '../api/contactDemoRequest.ts';
 
 export const ModalDemo: React.FC = () => {
   const redirect = useNavigate();
@@ -196,7 +196,7 @@ export const ModalDemo: React.FC = () => {
               </Tooltip>
             </div>
 
-            <div className="container_recapchart">
+            <div className="container_recaptcha">
               <ReCAPTCHA
                   ref={recaptchaRef}
                   sitekey={import.meta.env['VITE_APP_SITE_KEY'] as string}

@@ -137,7 +137,7 @@
   color: var(--Black);
   transform: scale(1.1);
 }
-.container_recapchart{
+.container_recaptcha{
   display: flex;
   justify-content: center;
   margin-top: 1rem;
