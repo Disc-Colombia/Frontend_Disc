@@ -34,6 +34,7 @@ export const ModalDemo: React.FC = () => {
         if (newValue.length > 50) newValue = newValue.slice(0, 50);
         break;
       case 'Email':
+      {
         // Eliminar espacios al inicio y al final
         newValue = value.trim();
 
@@ -57,6 +58,7 @@ export const ModalDemo: React.FC = () => {
         if (atIndex !== -1) {
           newValue = newValue.slice(0, atIndex + 1) + newValue.slice(atIndex + 1).replace(/@/g, '');
         }
+      }
         break;
       case 'Description':
         if (newValue.length > 500) newValue = newValue.slice(0, 500);
@@ -77,7 +79,7 @@ export const ModalDemo: React.FC = () => {
     e.preventDefault();
 
     // Eliminar el punto final del email si existe
-    let emailValue = data.Email.endsWith('.') ? data.Email.slice(0, -1) : data.Email;
+    const emailValue = data.Email.endsWith('.') ? data.Email.slice(0, -1) : data.Email;
 
     const fullNameError = validarNombre(data.FullName);
     const emailError = validarEmail(emailValue);
