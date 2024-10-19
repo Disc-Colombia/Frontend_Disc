@@ -3,18 +3,19 @@ import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../styles/contactform.css";
-import { dataEmail } from "../router/email";
-import type { EmailProps } from "../type/type";
+import {contactRequest} from "../api/emailRequest.ts";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import ReCAPTCHA from "react-google-recaptcha";
+import {ContactEmailProps} from "../type/type";
 
 
 export const ContactUs: React.FC = () => {
-  
+
 
   return (
-        <div className="container_information--contactform">
-          
-          <div className="contact-container" id="contactus">
+      <div className="container_information--contactform">
+
+        <div className="contact-container" id="contactus">
 
           <div className="mytext--contactform">
             {/* <div className="container_close--circule">
@@ -29,10 +30,10 @@ export const ContactUs: React.FC = () => {
           </div>
 
           <ConctactForm/>
-          
+
           <ToastContainer  style={{ marginTop: 65  }}/>
         </div>
-        </div>
+      </div>
 
   );
 };
@@ -41,16 +42,16 @@ export const ContactUs: React.FC = () => {
 export const ConctactForm: React.FC = () => {
 
   const navegate = useNavigate();
-  const [data, setData] = React.useState<EmailProps>({
+  const [captchaValid, setCaptchaValid] = React.useState(false);
+  const recaptchaRef = React.useRef<ReCAPTCHA | null>(null);
+  const [data, setData] = React.useState<ContactEmailProps>({
     name: "",
     service: "",
     product: "",
-    lastname: "",
     phone: "",
     email: "",
-    country: "",
-    company: "",
     message: "",
+    company: ""
   });
 
   const handleChange = (
@@ -66,34 +67,39 @@ export const ConctactForm: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; //Validadcion de Email
+
     if (
-      data.name === "" ||
-      data.product === "" ||
-      data.phone === "" ||
-      data.email === "" ||
-      data.company === "" ||
-      data.country === "" ||
-      data.message === "" ||
-      data.lastname === "" ||
-      data.service === ""
+        data.name === "" ||
+        data.product === "" ||
+        data.email === "" ||
+        !regex.test(data.email) ||
+        data.phone === "" ||
+        data.service === "" ||
+        !captchaValid
     ) {
       toast.warning("Please ensure all fields are completed, thank you.");
     } else {
       console.log("soy data ...", data)
       try {
-        await dataEmail(data);
-        toast.success("Thank you, we'll contact you as fast as we can.");
-        setData({
-          name: "",
-          product: "",
-          lastname: "",
-          phone: "",
-          email: "",
-          country: "",
-          company: "",
-          message: "",
-          service: "",
+        const result = await contactRequest({
+          token: recaptchaRef.current?.getValue() || null,
+          data
         });
+        if (result.success) {
+          toast.success("Thank you, we'll contact you as fast as we can.");
+          setData({
+            name: "",
+            service: "",
+            product: "",
+            phone: "",
+            email: "",
+            message: "",
+            company: ""
+          });
+          recaptchaRef.current?.reset();
+          setCaptchaValid(false);
+        }
         navegate("/");
       } catch {
         toast.error(
@@ -102,86 +108,100 @@ export const ConctactForm: React.FC = () => {
       }
     }
   };
+  const handleCaptchaChange = (value: string | null) => {
+    if (value) {
+      setCaptchaValid(true);
+    } else {
+      setCaptchaValid(false);
+      toast.error("Please complete the CAPTCHA verification.");
+    }
+  };
 
   return(
-    <form className="contact-form" onSubmit={handleSubmit}>
-            <div className="product_information">
-              <select
-                  className="input_selection"
-                  name="service"
-                  value={data.service}
-                  onChange={handleChange}
-              >
-                <option defaultValue={""}>--I am writing in relation to--</option>
-                <option value={"Human Service"}>Human Service </option>
-                <option value={"Healthcare Systems Administration"}>
-                  Healthcare Systems Administration
-                </option>
-                <option value={"IT Consulting"}>IT Consulting</option>
-                <option value={"Cybersecurity"}>Cybersecurity</option>
-                <option value={"Customer Service"}>Customer Service</option>
-                <option value={"Finance Solutions"}>Finance Solutions</option>
-                <option value={"Mobile & Web App Development"}>
-                  Mobile & Web App Development
-                </option>
-                <option value={"Data Migration & Systems Integration"}>
-                  Data Migration & Systems Integration
-                </option>
-              </select>
-              <input
-                  className="input_contactform"
-                  type="text"
-                  placeholder="Product"
-                  name="product"
-                  value={data.product}
-                  onChange={handleChange}
-              />
-            </div>
-            <textarea
-                rows={5}
-                placeholder="Message"
-                name="message"
-                value={data.message}
-                onChange={handleChange}
-            ></textarea>
+      <form className="contact-form" onSubmit={handleSubmit}>
+        <div className="product_information">
+          <select
+              className="input_selection"
+              name="service"
+              value={data.service}
+              onChange={handleChange}
+          >
+            <option defaultValue={""}>--I am writing in relation to--</option>
+            <option value={"Human Service"}>Human Service </option>
+            <option value={"Healthcare Systems Administration"}>
+              Healthcare Systems Administration
+            </option>
+            <option value={"IT Consulting"}>IT Consulting</option>
+            <option value={"Cybersecurity"}>Cybersecurity</option>
+            <option value={"Customer Service"}>Customer Service</option>
+            <option value={"Finance Solutions"}>Finance Solutions</option>
+            <option value={"Mobile & Web App Development"}>
+              Mobile & Web App Development
+            </option>
+            <option value={"Data Migration & Systems Integration"}>
+              Data Migration & Systems Integration
+            </option>
+          </select>
+          <input
+              className="input_contactform"
+              type="text"
+              placeholder="Product"
+              name="product"
+              value={data.product}
+              onChange={handleChange}
+          />
+        </div>
+        <textarea
+            rows={5}
+            placeholder="Message"
+            name="message"
+            value={data.message}
+            onChange={handleChange}
+        ></textarea>
 
-            <div className="product_information">
-              <input
-                  className="input_contactform"
-                  type="text"
-                  placeholder="Full name"
-                  name="name"
-                  value={data.name}
-                  onChange={handleChange}
-              />
+        <div className="product_information">
+          <input
+              className="input_contactform"
+              type="text"
+              placeholder="Full name"
+              name="name"
+              value={data.name}
+              onChange={handleChange}
+          />
 
-              <input
-                  className="input_contactform"
-                  type="tel"
-                  placeholder="Telephone: +1 202-456-1414"
-                  name="phone"
-                  value={data.phone}
-                  onChange={handleChange}
-              />
-              <input
-                  className="input_contactform"
-                  type="email"
-                  placeholder="Email"
-                  name="email"
-                  value={data.email}
-                  onChange={handleChange}
-              />
-              <input
-                  className="input_contactform"
-                  type="text"
-                  placeholder="Company"
-                  name="company"
-                  value={data.company}
-                  onChange={handleChange}
-              />
-              
-            </div>
-            <button type="submit">Submit</button>
-          </form>
+          <input
+              className="input_contactform"
+              type="tel"
+              placeholder="Telephone: +1 202-456-1414"
+              name="phone"
+              value={data.phone}
+              onChange={handleChange}
+          />
+          <input
+              className="input_contactform"
+              type="email"
+              placeholder="Email"
+              name="email"
+              value={data.email}
+              onChange={handleChange}
+          />
+          <input
+              className="input_contactform"
+              type="text"
+              placeholder="Company"
+              name="company"
+              value={data.company}
+              onChange={handleChange}
+          />
+        </div>
+        <div className="container_recapchart">
+          <ReCAPTCHA
+              ref={recaptchaRef}
+              sitekey={import.meta.env["VITE_APP_SITE_KEY"] as string}
+              onChange={handleCaptchaChange}
+          />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
   )
 }

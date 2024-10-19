@@ -1,18 +1,18 @@
-import { DemoRequestProps } from "../type/type";
+import { ContactRequestProps } from "../type/type";
 
-export class DemoRequestError extends Error {
+export class ContactRequestError extends Error {
     status: number | undefined;
 
     constructor(message: string, status?: number) {
         super(message);
-        this.name = 'DemoRequestError';
+        this.name = 'ContactRequestError';
         this.status = status;
     }
 }
 
-export const demoRequest = async ({ token, data }: DemoRequestProps): Promise<{ success: boolean }> => {
+export const contactRequest = async ({ token, data }: ContactRequestProps): Promise<{ success: boolean }> => {
     try {
-        const response = await fetch(`${import.meta.env["VITE_API_URL"]}/request-demo`, {
+        const response = await fetch(`${import.meta.env["VITE_API_URL"]}/contact-form-submit`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -24,21 +24,21 @@ export const demoRequest = async ({ token, data }: DemoRequestProps): Promise<{ 
         });
 
         if (!response.ok) {
-            throw new DemoRequestError(`HTTP error! status: ${response.status}`, response.status);
+            throw new ContactRequestError(`HTTP error! status: ${response.status}`, response.status);
         }
 
         const result = await response.json();
 
         if (!result.success) {
-            throw new DemoRequestError('CAPTCHA verification failed');
+            throw new ContactRequestError('CAPTCHA verification failed');
         }
 
         return result;
     } catch (error) {
-        if (error instanceof DemoRequestError) {
+        if (error instanceof ContactRequestError) {
             throw error; // Re-throw our custom error
         }
         // For network errors or other unexpected issues
-        throw new DemoRequestError('Failed to make request', undefined);
+        throw new ContactRequestError('Failed to make request', undefined);
     }
 };
