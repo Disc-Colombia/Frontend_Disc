@@ -7,7 +7,7 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import BeatLoader from "react-spinners/BeatLoader";
 import Typography from '@mui/material/Typography';
-import { ConctactForm} from './ContactUs';
+import { ContactForm} from './ContactUs';
 
 import "../styles/contactButton.css";
 
@@ -81,7 +81,7 @@ export const ContactButton: React.FC = () => {
               out the form or call one of our regional phone numbers.
             </p>
           </div>
-            <ConctactForm/>
+            <ContactForm/>
           </Typography>
         </DialogContent>
       </BootstrapDialog>

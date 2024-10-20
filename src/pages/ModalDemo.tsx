@@ -21,6 +21,7 @@ export const ModalDemo: React.FC = () => {
 
   const [captchaValid, setCaptchaValid] = React.useState(false);
   const recaptchaRef = React.useRef<ReCAPTCHA | null>(null);
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
 
   const handleChange = (
       e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -93,6 +94,12 @@ export const ModalDemo: React.FC = () => {
       return;
     }
 
+    if (isSubmitting) {
+      return;
+    }
+
+    setIsSubmitting(true);
+
     const capitalizedName = capitalizarNombre(data.FullName);
     const sanitizedData = {
       FullName: sanitizarInput(capitalizedName),
@@ -120,6 +127,9 @@ export const ModalDemo: React.FC = () => {
     } catch (error) {
       toast.error("Error sending the request to the server.");
       console.error(error);
+    }
+    finally {
+      setIsSubmitting(false)
     }
   };
 
@@ -205,8 +215,8 @@ export const ModalDemo: React.FC = () => {
             </div>
 
             <div className="container_btn--requestdemo">
-              <button className="btn_send--demo" type="submit">
-                Request Demo
+              <button className="btn_send--demo" type="submit" disabled={isSubmitting}>
+                {isSubmitting ? 'Submitting...' : 'Request Demo'}
               </button>
             </div>
           </form>

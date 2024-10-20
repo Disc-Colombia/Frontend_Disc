@@ -2,22 +2,38 @@ import * as React from "react";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "../styles/contactform.css";
+import "../styles/contactUsForm.css";
 import {contactRequest} from "../api/contactEmailRequest.ts";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import ReCAPTCHA from "react-google-recaptcha";
 import {ContactEmailProps} from "../type/type";
-import error = toast.error;
+import Tooltip from "../components/Tooltip";
+import {
+  capitalizarNombre,
+  validarNombre,
+  validarMensaje,
+  validarEmail,
+  sanitizarInput,
+  validarProducto, validarCompany
+} from "../utils/inputHelpers.ts";
 
+
+const validServices = [
+  "Human Service",
+  "Healthcare Systems Administration",
+  "IT Consulting",
+  "Cybersecurity",
+  "Customer Service",
+  "Finance Solutions",
+  "Mobile & Web App Development",
+  "Data Migration & Systems Integration"
+];
 
 export const ContactUs: React.FC = () => {
 
-
   return (
       <div className="container_information--contactform">
-
         <div className="contact-container" id="contactus">
-
           <div className="mytext--contactform">
             <h1 className="my_title--black" style={{textAlign:'center'}}> <span className="title--span">CONTACT</span> US</h1>
             <p className="my_paragraph--black">
@@ -26,8 +42,7 @@ export const ContactUs: React.FC = () => {
               out the form or call one of our regional phone numbers.
             </p>
           </div>
-          <ConctactForm/>
-          {/*<ToastContainer pstyle={{ marginTop: 65  }} autoClose={3000} />*/}
+          <ContactForm/>
         </div>
       </div>
 
@@ -35,11 +50,12 @@ export const ContactUs: React.FC = () => {
 };
 
 
-export const ConctactForm: React.FC = () => {
+export const ContactForm: React.FC = () => {
 
   const navigate = useNavigate();
   const [captchaValid, setCaptchaValid] = React.useState(false);
   const recaptchaRef = React.useRef<ReCAPTCHA | null>(null);
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [data, setData] = React.useState<ContactEmailProps>({
     name: "",
     service: "",
@@ -54,32 +70,102 @@ export const ConctactForm: React.FC = () => {
       e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
-    setData({
-      ...data,
-      [name]: value,
-    });
+    let newValue = value;
+
+    switch(name) {
+      case 'name':
+      case 'product':
+      case 'company':
+        newValue = value.replace(/[^a-zA-Z\s]/g, '');
+        if (newValue.length > 50) newValue = newValue.slice(0, 50);
+        break;
+      case 'service':
+        // No necesita validación, ya las opciones están predefinidas
+        break;
+      case 'phone':
+        newValue = value.replace(/[^\d+]/g, '');
+        if (newValue.length > 15) newValue = newValue.slice(0, 15);
+        break;
+      case 'Email': {
+        newValue = value.trim()
+        newValue = newValue.toLowerCase();
+        newValue = newValue.replace(/\s/g, '');
+        newValue = newValue.replace(/[^a-z0-9@.$!_-]/g, '');
+        newValue = newValue.replace(/\.{2,}/g, '.');
+        newValue = newValue.replace(/^\./, '');
+        const atIndex = newValue.indexOf('@');
+        if (atIndex !== -1) {
+          newValue = newValue.slice(0, atIndex + 1) + newValue.slice(atIndex + 1).replace(/@/g, '');
+        }
+      }
+        break;
+      case 'message':
+        if (newValue.length > 500) newValue = newValue.slice(0, 500);
+        break;
+    }
+    setData(prev => ({
+      ...prev,
+      [name]: newValue
+    }));
+  };
+
+  const handleCaptchaChange = (value: string | null) => {
+    setCaptchaValid(!!value);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; //Validadcion de Email
+    const emailValue = data.email.endsWith('.') ? data.email.slice(0, -1) : data.email;
+
+    const nameError = validarNombre(data.name);
+    const productError = validarProducto(data.product);
+    const companyError = validarCompany(data.company);
+    const emailError = validarEmail(emailValue);
+    const messageError = validarMensaje(data.message);
 
     if (
-        data.name === "" ||
-        data.product === "" ||
-        data.email === "" ||
-        !regex.test(data.email) ||
+        nameError ||
+        productError ||
+        emailError ||
+        messageError ||
         data.phone === "" ||
-        data.service === "" ||
+        !validServices.includes(data.service) ||
         !captchaValid
     ) {
       toast.warning("Please ensure all fields are completed, thank you.");
+
+      // Mostrar mensajes de error específicos
+      if (nameError) toast.error(nameError);
+      if (companyError) toast.error(nameError);
+      if (productError) toast.error(productError);
+      if (emailError) toast.error(emailError);
+      if (messageError) toast.error(messageError);
+      if (data.phone === "") toast.error("Please enter a phone number.");
+      if (!validServices.includes(data.service)) toast.error("Please select a valid service.");
+      if (!captchaValid) toast.error("Please complete the CAPTCHA verification.");
       return;
     }
+
+    setIsSubmitting(true);
+
+    const sanitizedData = {
+      name: sanitizarInput(capitalizarNombre(data.name)),
+      service: sanitizarInput(data.service),
+      product: sanitizarInput(capitalizarNombre(data.product)),
+      phone: sanitizarInput(data.phone),
+      email: sanitizarInput(emailValue),
+      message: sanitizarInput(data.message),
+      company: sanitizarInput(capitalizarNombre(data.company))
+    };
+
     try {
       const token = recaptchaRef.current?.getValue() || null;
-      const result = await contactRequest({ token, data });
+      const result = await contactRequest({
+        token,
+        data: sanitizedData
+      });
+
       if (result.success) {
         toast.success("Thank you, we'll contact you as soon as possible.");
         setData({
@@ -93,48 +179,47 @@ export const ConctactForm: React.FC = () => {
         });
         recaptchaRef.current?.reset();
         setCaptchaValid(false);
-        setTimeout(() => navigate("/"), 3000); // Navigate after 3 seconds
+        setTimeout(() => navigate("/"), 3000);
       }else{
         toast.error("There was an error processing your request. Please try again.");
-      } }catch {
-      console.error("Error submitting form:", error);
+      }
+    }catch (err) {
+      console.error("Error submitting form:", err);
       toast.error("An unexpected error occurred. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
     }
-  };
-
-  const handleCaptchaChange = (value: string | null) => {
-    setCaptchaValid(!!value);
   };
 
   return(
       <>
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="product_information">
-            <select
-                className="input_selection"
-                name="service"
-                value={data.service}
-                onChange={handleChange}
-            >
-              <option defaultValue={""}>--I am writing in relation to--</option>
-              <option value={"Human Service"}>Human Service </option>
-              <option value={"Healthcare Systems Administration"}>Healthcare Systems Administration</option>
-              <option value={"IT Consulting"}>IT Consulting</option>
-              <option value={"Cybersecurity"}>Cybersecurity</option>
-              <option value={"Customer Service"}>Customer Service</option>
-              <option value={"Finance Solutions"}>Finance Solutions</option>
-              <option value={"Mobile & Web App Development"}>Mobile & Web App Development</option>
-              <option value={"Data Migration & Systems Integration"}>Data Migration & Systems Integration</option>
-            </select>
-            <input
-                className="input_contactform"
-                type="text"
-                placeholder="Product"
-                name="product"
-                value={data.product}
-                onChange={handleChange}
-            />
+            <Tooltip content="Please select a service">
+              <select
+                  className="input_selection"
+                  name="service"
+                  value={data.service}
+                  onChange={handleChange}
+              >
+                <option defaultValue={""}>--I am writing in relation to--</option>
+                {validServices.map((service) => (
+                    <option key={service} value={service}>{service}</option>
+                ))}
+              </select>
+            </Tooltip>
+            <Tooltip content="Only letters and spaces allowed">
+              <input
+                  className="input_contactform"
+                  type="text"
+                  placeholder="Product"
+                  name="product"
+                  value={data.product}
+                  onChange={handleChange}
+              />
+            </Tooltip>
           </div>
+          <Tooltip content="Enter your message. Max 500 characters.">
           <textarea
               rows={5}
               placeholder="Message"
@@ -142,41 +227,49 @@ export const ConctactForm: React.FC = () => {
               value={data.message}
               onChange={handleChange}
           ></textarea>
+          </Tooltip>
 
           <div className="product_information">
-            <input
-                className="input_contactform"
-                type="text"
-                placeholder="Full name"
-                name="name"
-                value={data.name}
-                onChange={handleChange}
-            />
-
-            <input
-                className="input_contactform"
-                type="tel"
-                placeholder="Telephone: +1 202-456-1414"
-                name="phone"
-                value={data.phone}
-                onChange={handleChange}
-            />
-            <input
-                className="input_contactform"
-                type="email"
-                placeholder="Email"
-                name="email"
-                value={data.email}
-                onChange={handleChange}
-            />
-            <input
-                className="input_contactform"
-                type="text"
-                placeholder="Company"
-                name="company"
-                value={data.company}
-                onChange={handleChange}
-            />
+            <Tooltip content="Only letters and spaces allowed">
+              <input
+                  className="input_contactform"
+                  type="text"
+                  placeholder="Full name"
+                  name="name"
+                  value={data.name}
+                  onChange={handleChange}
+              />
+            </Tooltip>
+            <Tooltip content="Only numbers and '+' allowed.">
+              <input
+                  className="input_contactform"
+                  type="tel"
+                  placeholder="Telephone: +1 202-456-1414"
+                  name="phone"
+                  value={data.phone}
+                  onChange={handleChange}
+              />
+            </Tooltip>
+            <Tooltip content="Enter a valid email address.">
+              <input
+                  className="input_contactform"
+                  type="email"
+                  placeholder="Email"
+                  name="email"
+                  value={data.email}
+                  onChange={handleChange}
+              />
+            </Tooltip>
+            <Tooltip content="Only letters and spaces allowed">
+              <input
+                  className="input_contactform"
+                  type="text"
+                  placeholder="Company"
+                  name="company"
+                  value={data.company}
+                  onChange={handleChange}
+              />
+            </Tooltip>
           </div>
           <div className="container_recaptcha">
             <ReCAPTCHA
@@ -185,7 +278,9 @@ export const ConctactForm: React.FC = () => {
                 onChange={handleCaptchaChange}
             />
           </div>
-          <button type="submit">Submit</button>
+          <button type="submit" disabled={isSubmitting}>
+            {isSubmitting ? "Submitting..." : "Submit"}
+          </button>
         </form>
         <ToastContainer style={{ marginTop: 65  }} autoClose={3000} />
       </>
