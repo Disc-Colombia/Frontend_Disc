@@ -7,16 +7,54 @@ export const validarNombre = (nombre: string): string | null => {
         return "El nombre no puede estar vacío.";
     }
     if (nombre.trim().length < 7) {
-        return "El nombre debe tener al menos 7 caracteres.";
+        return "Nombre debe tener al menos 7 caracteres.";
     }
     if (/^\s/.test(nombre)) {
-        return "El nombre no puede comenzar con un espacio.";
+        return "Nombre no puede comenzar con un espacio.";
     }
     if (/\d/.test(nombre)) {
-        return "El nombre no puede contener números.";
+        return "Nombre no puede contener números.";
     }
     if (/[^\w\s]/.test(nombre)) {
-        return "El nombre no puede contener caracteres especiales o emojis.";
+        return "Nombre no puede contener caracteres especiales o emojis.";
+    }
+    return null;
+};
+
+export const validarProducto = (nombre: string): string | null => {
+    if (nombre.trim().length === 0) {
+        return "Producto no puede ser vacío.";
+    }
+    if (nombre.trim().length < 5) {
+        return "Producto debe tener al menos 5 caracteres.";
+    }
+    if (/^\s/.test(nombre)) {
+        return "Producto no puede comenzar con un espacio.";
+    }
+    if (/\d/.test(nombre)) {
+        return "Producto no puede contener números.";
+    }
+    if (/[^\w\s]/.test(nombre)) {
+        return "El producto no puede contener caracteres especiales o emojis.";
+    }
+    return null;
+};
+
+export const validarCompany = (nombre: string): string | null => {
+    if (nombre.trim().length === 0) {
+        return "Compañía noo puede ser vacío.";
+    }
+    if (nombre.trim().length < 4) {
+        return "La compañía debe tener al menos 4 caracteres.";
+    }
+    if (/^\s/.test(nombre)) {
+        return "Compañía no puede comenzar con un espacio.";
+    }
+    if (/\d/.test(nombre)) {
+        return "Compañía no puede contener números.";
+    }
+    if (/[^\w\s]/.test(nombre)) {
+        return "Compañía no puede contener caracteres especiales o emojis.";
     }
     return null;
 };
@@ -24,20 +62,20 @@ export const validarNombre = (nombre: string): string | null => {
 export const validarEmail = (email: string): string | null => {
     const emailRegex = /^[a-z]+[a-z0-9._-]*@[a-z0-9.-]+\.[a-z]{2,4}$/;
     if (!emailRegex.test(email)) {
-        return "El email no es válido. Debe contener '@', usar solo minúsculas, y tener un formato correcto.";
+        return "Email debe contener '@' y tener un formato correcto.";
     }
     if (email.split('@').length > 2) {
         return "El email no puede contener múltiples '@'.";
     }
     if (/^[.-]|[.-]@|@[.-]|[.-]$/.test(email)) {
-        return "El nombre de usuario o dominio no pueden comenzar ni terminar con puntos o guiones.";
+        return "Email no puede comenzar ni terminar con puntos o guiones.";
     }
     return null;
 };
 
 export const validarMensaje = (mensaje: string): string | null => {
     if (mensaje.trim().length === 0) {
-        return null; // El mensaje es opcional
+        return null;
     }
     if (mensaje.trim().length < 4) {
         return "El mensaje debe tener al menos 4 caracteres.";
@@ -51,7 +89,6 @@ export const validarMensaje = (mensaje: string): string | null => {
     if (/^\s+$/.test(mensaje)) {
         return "El mensaje no puede contener solo espacios en blanco.";
     }
-    // Agregar más validaciones según sea necesario
     return null;
 };
 

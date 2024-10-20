@@ -1,4 +1,5 @@
 import * as React from "react";
+import {ReactNode} from "react";
 
 export type BoxProps = {
   children: React.ReactNode;
@@ -36,4 +37,8 @@ export type CookiesPropsSitting = {
   profileAndPublicity:boolean,
   statistics:boolean,
   createProfile:boolean
+}
+export interface TooltipProps {
+  content: string;
+  children: ReactNode;
 }

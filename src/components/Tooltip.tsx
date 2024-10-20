@@ -1,9 +1,6 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import "../styles/tooltip.css"
-interface TooltipProps {
-    content: string;
-    children: ReactNode;
-}
+import {TooltipProps} from "../type/type.tsx";
 
 const Tooltip: React.FC<TooltipProps> = ({ content, children }) => {
     return (

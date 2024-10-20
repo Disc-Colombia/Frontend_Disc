@@ -2,13 +2,20 @@ import * as React from "react";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "../styles/contactform.css";
+import "../styles/contactUsForm.css";
 import {contactRequest} from "../api/contactEmailRequest.ts";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import ReCAPTCHA from "react-google-recaptcha";
 import {ContactEmailProps} from "../type/type";
 import Tooltip from "../components/Tooltip";
-import {capitalizarNombre, validarNombre, validarMensaje, validarEmail, sanitizarInput} from "../utils/inputHelpers.ts";
+import {
+  capitalizarNombre,
+  validarNombre,
+  validarMensaje,
+  validarEmail,
+  sanitizarInput,
+  validarProducto, validarCompany
+} from "../utils/inputHelpers.ts";
 
 
 const validServices = [
@@ -35,7 +42,7 @@ export const ContactUs: React.FC = () => {
               out the form or call one of our regional phone numbers.
             </p>
           </div>
-          <ConctactForm/>
+          <ContactForm/>
         </div>
       </div>
 
@@ -43,7 +50,7 @@ export const ContactUs: React.FC = () => {
 };
 
 
-export const ConctactForm: React.FC = () => {
+export const ContactForm: React.FC = () => {
 
   const navigate = useNavigate();
   const [captchaValid, setCaptchaValid] = React.useState(false);
@@ -80,7 +87,8 @@ export const ConctactForm: React.FC = () => {
         if (newValue.length > 15) newValue = newValue.slice(0, 15);
         break;
       case 'Email': {
-        newValue = value.trim().toLowerCase();
+        newValue = value.trim()
+        newValue = newValue.toLowerCase();
         newValue = newValue.replace(/\s/g, '');
         newValue = newValue.replace(/[^a-z0-9@.$!_-]/g, '');
         newValue = newValue.replace(/\.{2,}/g, '.');
@@ -111,9 +119,9 @@ export const ConctactForm: React.FC = () => {
     const emailValue = data.email.endsWith('.') ? data.email.slice(0, -1) : data.email;
 
     const nameError = validarNombre(data.name);
-    const productError = validarNombre(data.product);
-    const companyError = validarNombre(data.company);
-    const emailError = validarEmail(data.email);
+    const productError = validarProducto(data.product);
+    const companyError = validarCompany(data.company);
+    const emailError = validarEmail(emailValue);
     const messageError = validarMensaje(data.message);
 
     if (
@@ -129,6 +137,7 @@ export const ConctactForm: React.FC = () => {
 
       // Mostrar mensajes de error específicos
       if (nameError) toast.error(nameError);
+      if (companyError) toast.error(nameError);
       if (productError) toast.error(productError);
       if (emailError) toast.error(emailError);
       if (messageError) toast.error(messageError);
@@ -145,7 +154,7 @@ export const ConctactForm: React.FC = () => {
       service: sanitizarInput(data.service),
       product: sanitizarInput(capitalizarNombre(data.product)),
       phone: sanitizarInput(data.phone),
-      email: sanitizarInput(data.email),
+      email: sanitizarInput(emailValue),
       message: sanitizarInput(data.message),
       company: sanitizarInput(capitalizarNombre(data.company))
     };

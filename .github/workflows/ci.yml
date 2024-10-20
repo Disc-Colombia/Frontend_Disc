@@ -7,12 +7,14 @@ on:
       - development
       - fixing_building
       - update_forms
+      - '*'
   pull_request:
     branches:
       - main
       - development
       - fixing_building
       - update_forms
+      - '*'
 
 jobs:
   build:
